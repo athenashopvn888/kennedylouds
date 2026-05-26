@@ -9,14 +9,14 @@ export default function AgeGate() {
 
   useEffect(() => {
     // Check local storage for previous verification
-    const verified = localStorage.getItem("afterdark_age_verified");
+    const verified = localStorage.getItem("klc_age_verified");
     if (verified !== "true") {
       setShow(true);
     }
   }, []);
 
   const handleVerify = () => {
-    localStorage.setItem("afterdark_age_verified", "true");
+    localStorage.setItem("klc_age_verified", "true");
     setShow(false);
   };
 
@@ -44,7 +44,7 @@ export default function AgeGate() {
           <div className={styles.promptState}>
             <div className={styles.logoWrap}>
               <img
-                src="/afterdarkFavicon.webp"
+                src="/banners/KennedyLoud_Favicon_512.webp"
                 alt="Kennedy Loud Cannabis"
                 className={styles.logo}
               />
