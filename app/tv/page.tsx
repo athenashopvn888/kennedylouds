@@ -687,7 +687,7 @@ export default function TVMenuPage() {
 
         {/* TV BANNER */}
         <div style={{ margin: "-40px -40px 30px -40px", width: "calc(100% + 80px)" }}>
-          <img src="/banners/FlowerTV_new.webp" alt="Kennedy Loud Cannabis — Flower TV Menu" style={{ width: "100%", display: "block" }} />
+          <img src="/banners/FlowerTV_transparent.png" alt="Kennedy Loud Cannabis — Flower TV Menu" style={{ width: "100%", display: "block" }} />
         </div>
 
         {/* GRID */}

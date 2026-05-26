@@ -212,7 +212,7 @@ export default function TV2Page() {
       <div className={styles.wrap} ref={wrapRef}>
         {/* TV BANNER */}
         <div style={{margin:"-40px -40px 30px -40px", width:"calc(100% + 80px)"}}>
-          <img src="/banners/ITEMTV_new.webp" alt="Kennedy Loud Cannabis — Items TV Menu" style={{width:"100%",display:"block"}} />
+          <img src="/banners/ITEMTV_transparent.png" alt="Kennedy Loud Cannabis — Items TV Menu" style={{width:"100%",display:"block"}} />
         </div>
         {/* GRID */}
         <div className={styles.stage}>
