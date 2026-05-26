@@ -7,8 +7,8 @@
 .main {
   position: relative;
   z-index: 1;
-  background-color: #0f0f0f;
-  color: #ffffff;
+  background-color: #f2f3f2;
+  color: #111111;
   font-family: 'Outfit', system-ui, sans-serif;
   overflow-x: hidden;
   padding-bottom: 60px;
@@ -19,7 +19,7 @@
   width: 100%;
   overflow: hidden;
   margin-top: 92px;
-  background-color: #0a0b0a;
+  background-color: #f2f3f2;
 }
 
 .welcomeBannerContainer {
@@ -50,7 +50,7 @@
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  background-color: #0f0f0f;
+  background-color: #f2f3f2;
 }
 
 /* Chrome silver shimmer overlay */
@@ -136,14 +136,8 @@
   line-height: 1.05;
   margin: 0 0 8px;
   letter-spacing: -0.02em;
-  /* Chrome metallic gradient matching the banners */
-  background: linear-gradient(160deg, #ffffff 0%, #c8ffa0 25%, #9DFF20 50%, #6abf10 75%, #ffffff 100%);
-  background-size: 200% 200%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  animation: chromeShift 4s ease-in-out infinite;
-  filter: drop-shadow(0 0 20px rgba(157,255,32,0.3));
+  color: #111111;
+  filter: none;
 }
 
 @keyframes chromeShift {
@@ -153,7 +147,7 @@
 
 .brandSub {
   font-size: clamp(14px, 2vw, 18px);
-  color: #7a8a7a;
+  color: #666666;
   font-style: italic;
   font-weight: 600;
   margin: 0 0 20px;
@@ -333,8 +327,8 @@
 /* ── EXPLORE CATEGORIES ── */
 .categoriesSection {
   padding: 80px 24px;
-  background-color: #141414;
-  border-top: 1px solid rgba(255,255,255,0.05);
+  background-color: #e8eae8;
+  border-top: 1px solid rgba(0,0,0,0.07);
 }
 
 .container {
@@ -353,13 +347,13 @@
   font-size: clamp(28px, 4vw, 42px);
   font-weight: 900;
   letter-spacing: -0.02em;
-  color: white;
+  color: #111111;
   margin-bottom: 12px;
 }
 
 .sectionSubtitle {
   font-size: 16px;
-  color: #7a8a7a;
+  color: #666666;
   max-width: 600px;
   margin: 0 auto;
 }
@@ -438,7 +432,7 @@
 /* ── FEATURED PRODUCTS ── */
 .featuredSection {
   padding: 80px 0;
-  background-color: #0a0b0a;
+  background-color: #f2f3f2;
 }
 
 .featuredScroll {
@@ -471,36 +465,34 @@
 /* ── SEO TEXT PANEL ── */
 .seoSection {
   padding: 80px 0;
-  background-color: #0d0f0d;
+  background-color: #e8eae8;
 }
 
 .seoPanel {
-  background: rgba(20,24,20,0.8);
-  backdrop-filter: blur(16px);
-  border: 1px solid rgba(157,255,32,0.10);
+  background: #ffffff;
+  border: 1px solid rgba(0,0,0,0.08);
   border-radius: 24px;
   padding: 44px;
   max-width: 860px;
   margin: 0 auto;
   text-align: center;
-  color: #7a8a7a;
-  box-shadow: 0 20px 60px rgba(0,0,0,0.6), 0 0 0 1px rgba(157,255,32,0.04) inset;
+  color: #555555;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.08);
   position: relative;
   overflow: hidden;
 }
 
-/* Neon top line */
 .seoPanel::before {
   content: '';
   position: absolute;
   top: 0; left: 0; right: 0;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, #9DFF20, transparent);
-  opacity: 0.5;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #7ed60a, transparent);
+  opacity: 0.7;
 }
 
 .seoPanelTitle {
-  color: #e8f0e8;
+  color: #111111;
   font-size: 26px;
   font-weight: 900;
   margin-bottom: 18px;
@@ -518,7 +510,7 @@
 /* ── REVIEWS ── */
 .reviewsSection {
   padding: 80px 0;
-  background-color: #0a0b0a;
+  background-color: #f2f3f2;
 }
 
 .reviewsHeader {
@@ -534,9 +526,9 @@
   margin-top: 8px;
 }
 
-.reviewsStars { color: #9DFF20; font-size: 22px; letter-spacing: 2px; }
-.reviewsAvg   { font-size: 20px; font-weight: 900; color: #fff; }
-.reviewsCount { font-size: 14px; color: #7a8a7a; }
+.reviewsStars { color: #7ed60a; font-size: 22px; letter-spacing: 2px; }
+.reviewsAvg   { font-size: 20px; font-weight: 900; color: #111111; }
+.reviewsCount { font-size: 14px; color: #666666; }
 
 .reviewsGrid {
   display: grid;
@@ -555,17 +547,17 @@
 }
 
 .rvCard {
-  background: rgba(20,24,20,0.75);
-  backdrop-filter: blur(8px);
-  border: 1px solid rgba(157,255,32,0.07);
+  background: #ffffff;
+  border: 1px solid rgba(0,0,0,0.07);
   border-radius: 18px;
   padding: 20px;
   transition: all 0.25s ease;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
 }
 
 .rvCard:hover {
-  border-color: rgba(157,255,32,0.22);
-  box-shadow: 0 4px 24px rgba(0,0,0,0.4), 0 0 16px rgba(157,255,32,0.06);
+  border-color: rgba(126,214,10,0.3);
+  box-shadow: 0 6px 24px rgba(0,0,0,0.10), 0 0 0 1px rgba(126,214,10,0.15);
 }
 
 .rvTop {
@@ -578,21 +570,21 @@
 .rvAvatar {
   width: 36px; height: 36px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #1b4d1b, #9DFF20);
+  background: linear-gradient(135deg, #2d6a2d, #7ed60a);
   display: flex;
   align-items: center;
   justify-content: center;
   font-weight: 900;
   font-size: 16px;
-  color: #0a0b0a;
+  color: #fff;
   flex-shrink: 0;
 }
 
 .rvMeta { display: flex; flex-direction: column; flex: 1; min-width: 0; }
-.rvName { font-weight: 800; font-size: 14px; color: #e8f0e8; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.rvDate { font-size: 11px; color: #4a5a4a; }
-.rvStars { color: #9DFF20; font-size: 13px; letter-spacing: 1px; }
-.rvText  { font-size: 14px; color: #7a8a7a; line-height: 1.6; }
+.rvName { font-weight: 800; font-size: 14px; color: #111111; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.rvDate { font-size: 11px; color: #999999; }
+.rvStars { color: #7ed60a; font-size: 13px; letter-spacing: 1px; }
+.rvText  { font-size: 14px; color: #555555; line-height: 1.6; }
 
 .reviewCtaRow { display: flex; justify-content: center; gap: 16px; margin-top: 10px; }
 
@@ -619,8 +611,8 @@
 /* ── FAQs ── */
 .faqSection {
   padding: 80px 0;
-  background-color: #0d0f0d;
-  border-top: 1px solid rgba(157,255,32,0.05);
+  background-color: #e8eae8;
+  border-top: 1px solid rgba(0,0,0,0.06);
 }
 
 .faqContainer {
@@ -630,24 +622,25 @@
 }
 
 .faqItem {
-  background: rgba(20,24,20,0.8);
-  border: 1px solid rgba(157,255,32,0.07);
+  background: #ffffff;
+  border: 1px solid rgba(0,0,0,0.07);
   border-radius: 16px;
   margin-bottom: 10px;
   overflow: hidden;
   transition: all 0.3s ease;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
 }
 
 .faqItem[open] {
-  border-color: rgba(157,255,32,0.28);
-  box-shadow: 0 0 24px rgba(157,255,32,0.08);
+  border-color: rgba(126,214,10,0.4);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08), 0 0 0 1px rgba(126,214,10,0.2);
 }
 
 .faqQuestion {
   padding: 20px 24px;
   font-size: 16px;
   font-weight: 800;
-  color: #e8f0e8;
+  color: #111111;
   cursor: pointer;
   list-style: none;
   display: flex;
@@ -661,7 +654,7 @@
 .faqQuestion::after {
   content: '+';
   font-size: 22px;
-  color: #9DFF20;
+  color: #7ed60a;
   transition: transform 0.25s ease;
   font-weight: 300;
 }
@@ -671,14 +664,14 @@
 .faqAnswer {
   padding: 0 24px 20px;
   font-size: 15px;
-  color: #7a8a7a;
+  color: #555555;
   line-height: 1.7;
 }
 
 /* ── STORE LOCATION ── */
 .storeSection {
   padding: 80px 0 20px;
-  background-color: #0a0b0a;
+  background-color: #f2f3f2;
 }
 
 .storeGrid {
@@ -691,16 +684,17 @@
 .storeCard {
   text-align: center;
   padding: 36px 24px;
-  background: rgba(20,24,20,0.7);
-  border: 1px solid rgba(157,255,32,0.08);
+  background: #ffffff;
+  border: 1px solid rgba(0,0,0,0.07);
   border-radius: 20px;
   transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
 }
 
 .storeCard:hover {
   transform: translateY(-4px);
-  border-color: rgba(157,255,32,0.22);
-  box-shadow: 0 12px 32px rgba(0,0,0,0.5), 0 0 20px rgba(157,255,32,0.06);
+  border-color: rgba(126,214,10,0.3);
+  box-shadow: 0 12px 32px rgba(0,0,0,0.10), 0 0 0 1px rgba(126,214,10,0.15);
 }
 
 .storeIcon {
@@ -712,19 +706,19 @@
 .storeCardTitle {
   font-size: 18px;
   font-weight: 900;
-  color: #e8f0e8;
+  color: #111111;
   margin-bottom: 10px;
   letter-spacing: -0.01em;
 }
 
 .storeCardText {
   font-size: 15px;
-  color: #7a8a7a;
+  color: #555555;
   line-height: 1.6;
 }
 
 .storeHighlight {
-  color: #9DFF20;
+  color: #5aaa00;
   font-weight: 800;
 }
 

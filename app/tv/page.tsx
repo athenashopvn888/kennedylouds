@@ -535,7 +535,6 @@ const TICKER_SLIDES = [
   "200+ Strains In Stock — Open 24 Hours",
   "ALL SALES ARE FINAL",
   "🎮 Play Games at kennedyloudcannabis.com/games",
-  "📲 Text your order to {{PHONE_DISPLAY}}",
 ];
 
 function VerticalTicker() {
@@ -688,7 +687,7 @@ export default function TVMenuPage() {
 
         {/* TV BANNER */}
         <div style={{ margin: "-40px -40px 30px -40px", width: "calc(100% + 80px)" }}>
-          <img src="/banners/KennedyLoud_FlowerTV.webp" alt="Kennedy Loud Cannabis — Flower TV Menu" style={{ width: "100%", display: "block" }} />
+          <img src="/banners/FlowerTV_new.webp" alt="Kennedy Loud Cannabis — Flower TV Menu" style={{ width: "100%", display: "block" }} />
         </div>
 
         {/* GRID */}

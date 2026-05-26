@@ -7,70 +7,71 @@
 
 /* ── CSS VARIABLES ── */
 :root {
-  /* Neutral dark backgrounds — no green tint so neon green POPS */
-  --bg-primary:      #0f0f0f;
-  --bg-secondary:    #141414;
-  --bg-card:         #1c1c1c;
-  --bg-card-hover:   #242424;
-  --bg-glass:        rgba(20, 20, 20, 0.88);
-  --bg-panel:        rgba(22, 22, 22, 0.96);
+  /* ── LIGHT SILVER / WHITE THEME ── */
+  --bg-primary:      #f2f3f2;
+  --bg-secondary:    #e8eae8;
+  --bg-card:         #ffffff;
+  --bg-card-hover:   #f8faf8;
+  --bg-glass:        rgba(255, 255, 255, 0.92);
+  --bg-panel:        rgba(255, 255, 255, 0.97);
 
-  /* Kennedy Loud brand — NEON GREEN */
-  --neon:            #9DFF20;
-  --neon-dim:        #72c214;
-  --neon-glow:       rgba(157, 255, 32, 0.4);
-  --neon-glow-soft:  rgba(157, 255, 32, 0.15);
-  --neon-glow-xs:    rgba(157, 255, 32, 0.07);
+  /* Kennedy Loud brand — NEON GREEN (kept strong against white) */
+  --neon:            #7ed60a;
+  --neon-bright:     #9DFF20;
+  --neon-dim:        #5aaa00;
+  --neon-glow:       rgba(126, 214, 10, 0.4);
+  --neon-glow-soft:  rgba(126, 214, 10, 0.15);
+  --neon-glow-xs:    rgba(126, 214, 10, 0.07);
 
   /* Chrome / silver */
-  --chrome-hi:       #ffffff;
-  --chrome-mid:      #d0d0d0;
+  --chrome-hi:       #111111;
+  --chrome-mid:      #444444;
   --chrome-dim:      #888888;
-  --chrome-dark:     #333333;
+  --chrome-dark:     #cccccc;
 
   /* Legacy green aliases */
   --green-deep:      #1b4d1b;
-  --green-dark:      #0d1f0d;
-  --green-mid:       #2d7a2d;
-  --green-light:     #9DFF20;
+  --green-dark:      #2d6a2d;
+  --green-mid:       #4a9a4a;
+  --green-light:     #7ed60a;
   --green-pale:      #f0fde4;
   --green-mist:      #d4f5b0;
 
   /* Sale/hot */
-  --sale-red:        #ff3b3b;
-  --hot-orange:      #FF5400;
-  --hot-gradient:    linear-gradient(135deg, #FF5400, #ff3b3b);
+  --sale-red:        #e53e3e;
+  --hot-orange:      #dd6b20;
+  --hot-gradient:    linear-gradient(135deg, #dd6b20, #e53e3e);
 
   /* Gradients */
-  --neon-gradient:   linear-gradient(135deg, #1b4d1b 0%, #2d7a2d 40%, #9DFF20 100%);
-  --chrome-gradient: linear-gradient(160deg, #ffffff 0%, #c0c0c0 30%, #666666 60%, #9DFF20 100%);
-  --dark-gradient:   linear-gradient(180deg, #161616 0%, #0f0f0f 100%);
-  --card-gradient:   linear-gradient(145deg, #1e1e1e 0%, #181818 100%);
+  --neon-gradient:   linear-gradient(135deg, #2d6a2d 0%, #4a9a4a 40%, #9DFF20 100%);
+  --chrome-gradient: linear-gradient(160deg, #111111 0%, #333333 40%, #666666 100%);
+  --dark-gradient:   linear-gradient(180deg, #e8eae8 0%, #f2f3f2 100%);
+  --card-gradient:   linear-gradient(145deg, #ffffff 0%, #f8faf8 100%);
 
   /* Tier colors */
-  --tier-exotic:     #ff6b2b;
-  --tier-premium:    #c0a020;
-  --tier-aaa:        #4a9eff;
-  --tier-aa:         #0D9488;
-  --tier-budget:     #6B7280;
+  --tier-exotic:     #c0390a;
+  --tier-premium:    #b7860c;
+  --tier-aaa:        #1a56db;
+  --tier-aa:         #0d7a6a;
+  --tier-budget:     #4a5568;
 
-  /* Text — brighter for contrast */
-  --text-primary:    #ffffff;
-  --text-secondary:  #aaaaaa;
-  --text-muted:      #666666;
-  --text-accent:     #9DFF20;
+  /* Text — dark on light */
+  --text-primary:    #111111;
+  --text-secondary:  #555555;
+  --text-muted:      #999999;
+  --text-accent:     #5aaa00;
 
   /* Borders */
-  --border-subtle:   rgba(255, 255, 255, 0.06);
-  --border-glow:     rgba(157, 255, 32, 0.28);
-  --border-chrome:   rgba(255, 255, 255, 0.10);
+  --border-subtle:   rgba(0, 0, 0, 0.07);
+  --border-glow:     rgba(126, 214, 10, 0.35);
+  --border-chrome:   rgba(0, 0, 0, 0.10);
 
-  /* Shadows */
-  --shadow-card:       0 4px 24px rgba(0, 0, 0, 0.5), 0 1px 0 rgba(255,255,255,0.03) inset;
-  --shadow-card-hover: 0 12px 48px rgba(0, 0, 0, 0.7), 0 0 0 1px rgba(157,255,32,0.20), 0 0 30px rgba(157,255,32,0.10);
-  --shadow-neon:       0 0 20px rgba(157,255,32,0.5), 0 0 60px rgba(157,255,32,0.2);
-  --shadow-neon-sm:    0 0 12px rgba(157,255,32,0.4), 0 0 30px rgba(157,255,32,0.15);
-  --shadow-xl:         0 24px 64px rgba(0, 0, 0, 0.7);
+  /* Shadows — softer for light mode */
+  --shadow-card:       0 2px 12px rgba(0,0,0,0.08), 0 1px 3px rgba(0,0,0,0.05);
+  --shadow-card-hover: 0 8px 32px rgba(0,0,0,0.14), 0 0 0 2px rgba(126,214,10,0.25);
+  --shadow-neon:       0 0 16px rgba(126,214,10,0.5), 0 0 40px rgba(126,214,10,0.2);
+  --shadow-neon-sm:    0 0 10px rgba(126,214,10,0.4), 0 0 24px rgba(126,214,10,0.15);
+  --shadow-xl:         0 20px 60px rgba(0,0,0,0.15);
 
   /* Radius */
   --radius-sm:  10px;
@@ -123,23 +124,22 @@ body::before {
   position: fixed;
   inset: 0;
   background:
-    radial-gradient(ellipse 80% 50% at 10% 0%,   rgba(157,255,32,0.05) 0%, transparent 55%),
-    radial-gradient(ellipse 60% 40% at 90% 100%,  rgba(157,255,32,0.04) 0%, transparent 50%),
-    radial-gradient(ellipse 100% 100% at 50% 50%, rgba(45,106,79,0.04) 0%, transparent 70%);
+    radial-gradient(ellipse 70% 40% at 0% 0%,   rgba(126,214,10,0.06) 0%, transparent 55%),
+    radial-gradient(ellipse 50% 30% at 100% 100%, rgba(126,214,10,0.04) 0%, transparent 50%);
   pointer-events: none;
   z-index: 0;
 }
 
-/* Subtle noise/grain texture */
+/* Subtle silver grain texture */
 body::after {
   content: '';
   position: fixed;
   inset: 0;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.035'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.025'/%3E%3C/svg%3E");
   background-size: 200px 200px;
   pointer-events: none;
   z-index: 0;
-  opacity: 0.6;
+  opacity: 0.5;
 }
 
 a { color: inherit; text-decoration: none; }
