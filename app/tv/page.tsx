@@ -683,7 +683,19 @@ export default function TVMenuPage() {
         grouped[t].push(f);
       }
 
-      const oz = (grouped["BUDGET"]||[]).filter(f => f.price28g);
+      // OZ: pull from ALL tiers — any flower with 28g pricing (matches original TVMenu)
+      const oz: Flower[] = [];
+      const ozSeen = new Set<string>();
+      // First add any explicitly OZ-tier items
+      for (const f of (grouped["OZ"] || [])) {
+        if (!ozSeen.has(f.sku)) { oz.push(f); ozSeen.add(f.sku); }
+      }
+      // Then add items from all other tiers that have 28g pricing
+      for (const tier of ["EXOTIC","PREMIUM","AAA+","AA","BUDGET"]) {
+        for (const f of (grouped[tier] || [])) {
+          if (f.price28g && !ozSeen.has(f.sku)) { oz.push(f); ozSeen.add(f.sku); }
+        }
+      }
       setOzFlowers(oz);
 
       if (grouped["BUDGET"]) {
