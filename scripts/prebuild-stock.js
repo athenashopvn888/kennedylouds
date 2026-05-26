@@ -10,6 +10,7 @@ const fs = require('fs');
 const path = require('path');
 
 const APPS_SCRIPT_URL = process.env.APPS_SCRIPT_URL || '';
+const STORE_CODE = process.env.STORE_CODE || 'KLC01';
 const FLOWERS_PATH = path.join(__dirname, '..', 'app', 'lib', 'flowers.json');
 const ITEMS_PATH = path.join(__dirname, '..', 'app', 'lib', 'items.json');
 
@@ -22,7 +23,7 @@ async function main() {
   console.log('[prebuild] Fetching live stock from Apps Script...');
 
   try {
-    const url = `${APPS_SCRIPT_URL}?store=KLC01`;
+    const url = `${APPS_SCRIPT_URL}?store=${STORE_CODE}`;
     const res = await fetch(url, { signal: AbortSignal.timeout(30000) });
 
     if (!res.ok) {

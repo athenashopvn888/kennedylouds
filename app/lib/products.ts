@@ -66,7 +66,7 @@ export async function fetchLiveProducts(): Promise<{
   }
 
   try {
-    const res = await fetch(`${APPS_SCRIPT_URL}?store=KLC01`, {
+    const res = await fetch(`${APPS_SCRIPT_URL}?store=${process.env.STORE_CODE || 'KLC01'}`, {
       next: { revalidate: 300 }, // Cache for 5 min during build
     });
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
