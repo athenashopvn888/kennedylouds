@@ -20,7 +20,7 @@ export const SEO_PAGES: SeoPageData[] = [
     h1: "Brampton Weed Dispensary — Kennedy Loud Cannabis",
     icon: "✨",
     heroTagline: "Premium Cannabis on Jane St · Open 24 Hours · Walk-In Welcome",
-    banner: "/banners/after_dark_welcome_banner.webp",
+    banner: "/banners/KennedyLoud_Welcome_Banner.webp",
     sections: [
       {
         heading: "Brampton's Premier Cannabis Destination",
@@ -138,7 +138,7 @@ export const SEO_PAGES: SeoPageData[] = [
     h1: "Weed Store Near Mississauga — Kennedy Loud Cannabis",
     icon: "🚗",
     heroTagline: "Just Minutes From Mississauga via Highway 410 & 401 · Open 24 Hours",
-    banner: "/banners/after_dark_welcome_banner.webp",
+    banner: "/banners/KennedyLoud_Welcome_Banner.webp",
     sections: [
       {
         heading: "The Closest Quality Dispensary to Mississauga",
@@ -179,7 +179,7 @@ export const SEO_PAGES: SeoPageData[] = [
     h1: "Cannabis Dispensary Near Me — Brampton",
     icon: "🗺️",
     heroTagline: "Walk-In Welcome · Open 24 Hours · 200+ Strains In Stock",
-    banner: "/banners/after_dark_welcome_banner.webp",
+    banner: "/banners/KennedyLoud_Welcome_Banner.webp",
     sections: [
       {
         heading: "Find Premium Cannabis Near You in Brampton",
