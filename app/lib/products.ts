@@ -1,4 +1,4 @@
-﻿/* -- Product & Item Types -- */
+/* -- Product & Item Types -- */
 export interface FlowerProduct {
   sku: string;
   name: string;

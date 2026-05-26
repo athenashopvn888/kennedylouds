@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useState } from "react";
 import Navbar from "../components/Navbar";
@@ -101,7 +101,7 @@ export default function DeliveryPage() {
         <div className={styles.ctaSection}>
           <p className={styles.ctaText}>
             Can&apos;t wait? Visit us in-store at <strong>49 Hillcrest Ave, Unit 104, Brampton</strong> —
-            open <strong>24 hours</strong>. Call <strong>{{PHONE_DISPLAY}}</strong>.
+            open <strong>24 hours</strong>. Call <strong>(437) 237-2286</strong>.
           </p>
         </div>
       </div>

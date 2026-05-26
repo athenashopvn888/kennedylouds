@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
@@ -78,7 +78,7 @@ const LOCAL_FAQS = [
   },
   {
     q: "Where is Kennedy Loud Cannabis located?",
-    a: "We are located at 49 Hillcrest Ave, Unit 104, Brampton, ON L6W 1Y7. Visit us in person or call us at {{PHONE_DISPLAY}}. Free evening street parking is available.",
+    a: "We are located at 49 Hillcrest Ave, Unit 104, Brampton, ON L6W 1Y7. Visit us in person or call us at (437) 237-2286. Free evening street parking is available.",
   },
   {
     q: "What is the cheapest weed at Kennedy Loud Cannabis?",
@@ -210,7 +210,7 @@ export default function HomePage() {
           {/* Brand branding */}
           <div className={styles.brandBlock}>
             <span className={styles.brandIcon}>🌙</span>
-            <h1 className={styles.brandTitle}>{{STORE_NAME_UPPER}}</h1>
+            <h1 className={styles.brandTitle}>KENNEDY LOUD CANNABIS</h1>
             <p className={styles.brandSub}>Premium Cannabis Dispensary</p>
             <div className={styles.brandBadge}>Open 24 Hours</div>
           </div>

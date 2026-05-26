@@ -1,4 +1,4 @@
-﻿/* ── Tier-specific SEO content for below-the-fold sections ── */
+/* ── Tier-specific SEO content for below-the-fold sections ── */
 
 export interface TierSeoData {
   seoTitle: string;

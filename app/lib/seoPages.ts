@@ -1,4 +1,4 @@
-﻿/* ── Geo-targeted SEO landing pages for Brampton/Weston keywords ── */
+/* ── Geo-targeted SEO landing pages for Brampton/Weston keywords ── */
 
 export interface SeoPageData {
   slug: string;
@@ -44,7 +44,7 @@ export const SEO_PAGES: SeoPageData[] = [
       },
       {
         heading: "Serving Brampton, Toronto & Mississauga",
-        body: "Kennedy Loud Cannabis proudly serves customers from across the Greater Toronto Area. Whether you're coming from Weston, Mount Dennis, North Brampton, Etobicoke, Mississauga, Brampton, or downtown Toronto, we welcome you. Our 24-hour operation means you can visit on your own schedule. Call us at {{PHONE_DISPLAY}} or visit us at 49 Hillcrest Ave, Unit 104, Brampton, ON L6W 1Y7.",
+        body: "Kennedy Loud Cannabis proudly serves customers from across the Greater Toronto Area. Whether you're coming from Weston, Mount Dennis, North Brampton, Etobicoke, Mississauga, Brampton, or downtown Toronto, we welcome you. Our 24-hour operation means you can visit on your own schedule. Call us at (437) 237-2286 or visit us at 49 Hillcrest Ave, Unit 104, Brampton, ON L6W 1Y7.",
       },
     ],
     faqs: [

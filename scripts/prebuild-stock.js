@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Prebuild script: Fetches live stock data from Apps Script
  * and writes flowers.json + items.json before Next.js builds.
  *

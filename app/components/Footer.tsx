@@ -1,4 +1,4 @@
-﻿import Link from "next/link";
+import Link from "next/link";
 import styles from "./Footer.module.css";
 
 export default function Footer() {
@@ -9,7 +9,7 @@ export default function Footer() {
           {/* Column 1 — Store Description */}
           <div className={styles.col}>
             <div className={styles.brand}>
-              {{STORE_NAME_UPPER}}
+              KENNEDY LOUD CANNABIS
             </div>
             <p className={styles.desc}>
               Your Local Cannabis Dispensary At 49 Hillcrest Ave, Unit 104, Brampton. Visit
@@ -45,7 +45,7 @@ export default function Footer() {
             </div>
             <div className={styles.infoBlock}>
               <span className={styles.infoLabel}>Phone:</span>
-              <span><a href="tel:+14372372286" style={{color: "inherit"}}>{{PHONE_DISPLAY}}</a></span>
+              <span><a href="tel:+14372372286" style={{color: "inherit"}}>(437) 237-2286</a></span>
             </div>
             <div className={styles.infoBlock}>
               <span className={styles.infoLabel}>Hours:</span>

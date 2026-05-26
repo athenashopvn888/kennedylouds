@@ -1,4 +1,4 @@
-﻿export interface ItemEffects {
+export interface ItemEffects {
   effects: { emoji: string; label: string }[];
   description: string;
   metaDescription: string;

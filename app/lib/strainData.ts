@@ -1,4 +1,4 @@
-﻿/* -- Auto-generated strain effects & SEO descriptions -- */
+/* -- Auto-generated strain effects & SEO descriptions -- */
 
 interface StrainEffects {
   effects: { emoji: string; label: string }[];

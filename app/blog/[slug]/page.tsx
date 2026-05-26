@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useState, useEffect } from "react";
 import { useParams } from "next/navigation";
@@ -128,7 +128,7 @@ export default function BlogPostPage() {
 
         <div className={styles.cta}>
           <p>
-            <strong>Kennedy Loud Cannabis</strong> — 49 Hillcrest Ave, Unit 104, Brampton · Open 24 Hours · {{PHONE_DISPLAY}}
+            <strong>Kennedy Loud Cannabis</strong> — 49 Hillcrest Ave, Unit 104, Brampton · Open 24 Hours · (437) 237-2286
           </p>
           <Link href="/exotic" className={styles.ctaBtn}>Browse Our Menu</Link>
         </div>

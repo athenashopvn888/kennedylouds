@@ -32,7 +32,7 @@ export default function Navbar() {
       {/* Top bar — logo + open now */}
       <div className={styles.topBar}>
         <Link href="/" className={styles.logo} style={{ display: "flex", alignItems: "center", gap: "8px", textDecoration: "none" }}>
-          <span style={{ fontSize: "24px" }}>{{BRAND_ICON_EMOJI}}</span>
+          <span style={{ fontSize: "24px" }}>🔊</span>
           <span style={{
             fontFamily: "var(--font-display)",
             fontWeight: 900,
@@ -41,7 +41,7 @@ export default function Navbar() {
             color: "white",
             textShadow: "0 0 12px rgba(255,255,255,0.2)"
           }}>
-            {{STORE_NAME_UPPER}}
+            KENNEDY LOUD CANNABIS
           </span>
         </Link>
         <div className={styles.topBarRight}>
