@@ -48,11 +48,12 @@ export default function GamesPage() {
 
       <section style={{ width: "100%", overflow: "hidden", marginTop: "92px" }}>
         <img
-          src="/banners/10_Games.webp"
-          alt="Games Arcade — Flappy Bud, Snake Munchies, Brick Breaker 420"
+          src="/banners/KennedyLoud_Games_Arcade.webp"
+          alt="Kennedy Loud Cannabis Games Arcade — Play Flappy Bud, Snake Munchies, Brick Breaker 420"
           style={{ width: "100%", height: "auto", display: "block", objectFit: "contain" }}
         />
       </section>
+
 
       <div
         style={{

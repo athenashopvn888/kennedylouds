@@ -531,11 +531,11 @@ function AddOnsCard({ items, hiIdx }: { items: Item[]; hiIdx: number }) {
    VERTICAL TICKER
    ============================================================ */
 const TICKER_SLIDES = [
-  "🔥 Mohawk Medicine — 2655 Eglinton Ave E, Scarborough",
-  "200+ Strains In Stock",
-  "Open 24 Hours",
+  "🔊 Kennedy Loud Cannabis — 49 Hillcrest Ave Unit 104, Brampton",
+  "200+ Strains In Stock — Open 24 Hours",
   "ALL SALES ARE FINAL",
-  "🎮 Play Games at mohawkmedicine.com/games",
+  "🎮 Play Games at kennedyloudcannabis.com/games",
+  "📲 Text your order to {{PHONE_DISPLAY}}",
 ];
 
 function VerticalTicker() {
@@ -688,7 +688,7 @@ export default function TVMenuPage() {
 
         {/* TV BANNER */}
         <div style={{ margin: "-40px -40px 30px -40px", width: "calc(100% + 80px)" }}>
-          <img src="/banners/25_Mohawk_FlowerTV.webp" alt="Mohawk Medicine TV Menu" style={{ width: "100%", display: "block" }} />
+          <img src="/banners/KennedyLoud_FlowerTV.webp" alt="Kennedy Loud Cannabis — Flower TV Menu" style={{ width: "100%", display: "block" }} />
         </div>
 
         {/* GRID */}

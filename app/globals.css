@@ -7,26 +7,26 @@
 
 /* ── CSS VARIABLES ── */
 :root {
-  /* Core dark backgrounds */
-  --bg-primary:      #0a0b0a;
-  --bg-secondary:    #111413;
-  --bg-card:         #141714;
-  --bg-card-hover:   #1a1f1a;
-  --bg-glass:        rgba(14, 18, 14, 0.82);
-  --bg-panel:        rgba(20, 23, 20, 0.95);
+  /* Neutral dark backgrounds — no green tint so neon green POPS */
+  --bg-primary:      #0f0f0f;
+  --bg-secondary:    #141414;
+  --bg-card:         #1c1c1c;
+  --bg-card-hover:   #242424;
+  --bg-glass:        rgba(20, 20, 20, 0.88);
+  --bg-panel:        rgba(22, 22, 22, 0.96);
 
   /* Kennedy Loud brand — NEON GREEN */
   --neon:            #9DFF20;
   --neon-dim:        #72c214;
-  --neon-glow:       rgba(157, 255, 32, 0.35);
-  --neon-glow-soft:  rgba(157, 255, 32, 0.12);
-  --neon-glow-xs:    rgba(157, 255, 32, 0.06);
+  --neon-glow:       rgba(157, 255, 32, 0.4);
+  --neon-glow-soft:  rgba(157, 255, 32, 0.15);
+  --neon-glow-xs:    rgba(157, 255, 32, 0.07);
 
   /* Chrome / silver */
   --chrome-hi:       #ffffff;
-  --chrome-mid:      #c8d0c8;
-  --chrome-dim:      #7a8a7a;
-  --chrome-dark:     #2e3a2e;
+  --chrome-mid:      #d0d0d0;
+  --chrome-dim:      #888888;
+  --chrome-dark:     #333333;
 
   /* Legacy green aliases */
   --green-deep:      #1b4d1b;
@@ -43,31 +43,31 @@
 
   /* Gradients */
   --neon-gradient:   linear-gradient(135deg, #1b4d1b 0%, #2d7a2d 40%, #9DFF20 100%);
-  --chrome-gradient: linear-gradient(160deg, #ffffff 0%, #b0c8b0 30%, #4a6a4a 60%, #9DFF20 100%);
-  --dark-gradient:   linear-gradient(180deg, #111413 0%, #0a0b0a 100%);
-  --card-gradient:   linear-gradient(145deg, #161a16 0%, #111413 100%);
+  --chrome-gradient: linear-gradient(160deg, #ffffff 0%, #c0c0c0 30%, #666666 60%, #9DFF20 100%);
+  --dark-gradient:   linear-gradient(180deg, #161616 0%, #0f0f0f 100%);
+  --card-gradient:   linear-gradient(145deg, #1e1e1e 0%, #181818 100%);
 
-  /* Tier colors (kept from master) */
+  /* Tier colors */
   --tier-exotic:     #ff6b2b;
   --tier-premium:    #c0a020;
   --tier-aaa:        #4a9eff;
   --tier-aa:         #0D9488;
   --tier-budget:     #6B7280;
 
-  /* Text */
-  --text-primary:    #e8f0e8;
-  --text-secondary:  #9aaa9a;
-  --text-muted:      #556055;
+  /* Text — brighter for contrast */
+  --text-primary:    #ffffff;
+  --text-secondary:  #aaaaaa;
+  --text-muted:      #666666;
   --text-accent:     #9DFF20;
 
   /* Borders */
-  --border-subtle:   rgba(157, 255, 32, 0.08);
-  --border-glow:     rgba(157, 255, 32, 0.25);
-  --border-chrome:   rgba(200, 208, 200, 0.12);
+  --border-subtle:   rgba(255, 255, 255, 0.06);
+  --border-glow:     rgba(157, 255, 32, 0.28);
+  --border-chrome:   rgba(255, 255, 255, 0.10);
 
   /* Shadows */
-  --shadow-card:       0 4px 24px rgba(0, 0, 0, 0.6), 0 1px 0 rgba(157,255,32,0.04) inset;
-  --shadow-card-hover: 0 12px 48px rgba(0, 0, 0, 0.8), 0 0 0 1px rgba(157,255,32,0.18), 0 0 30px rgba(157,255,32,0.10);
+  --shadow-card:       0 4px 24px rgba(0, 0, 0, 0.5), 0 1px 0 rgba(255,255,255,0.03) inset;
+  --shadow-card-hover: 0 12px 48px rgba(0, 0, 0, 0.7), 0 0 0 1px rgba(157,255,32,0.20), 0 0 30px rgba(157,255,32,0.10);
   --shadow-neon:       0 0 20px rgba(157,255,32,0.5), 0 0 60px rgba(157,255,32,0.2);
   --shadow-neon-sm:    0 0 12px rgba(157,255,32,0.4), 0 0 30px rgba(157,255,32,0.15);
   --shadow-xl:         0 24px 64px rgba(0, 0, 0, 0.7);

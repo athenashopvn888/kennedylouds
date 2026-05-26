@@ -23,6 +23,7 @@ const BENTO_TIERS = [
     price: "$7-$10/g",
     banner: "/banners/KennedyLoud_Premium.webp",
     className: styles.bentoPremium,
+    bgPos: "center center",
   },
   {
     name: "AAA+",
@@ -62,8 +63,8 @@ const EXPLORE_CATEGORIES = [
   { name: "Pre-Rolls", slug: "items/prerolls", banner: "/banners/KennedyLoud_Pre_Rolls.webp", icon: "🚬" },
   { name: "Accessories", slug: "items/add-ons", banner: "/banners/KennedyLoud_Accessories.webp", icon: "➕" },
   { name: "Cigarettes", slug: "items/cigarettes", banner: "/banners/KennedyLoud_Cigarettes.webp", icon: "🏷️" },
-  { name: "Magic Stuff", slug: "items/magic", banner: "/banners/KennedyLoud_Magic_Stuff.webp", icon: "🍄" },
-  { name: "Games Arcade", slug: "games", banner: "/banners/10_Games.webp", icon: "🎮" },
+  { name: "Magic Stuff", slug: "items/magic", banner: "/banners/KennedyLoud_FAQ_Info.webp", icon: "🍄" },
+  { name: "Games Arcade", slug: "games", banner: "/banners/KennedyLoud_Games_Arcade.webp", icon: "🎮" },
 ];
 
 /* ── Local FAQs for Jane St ── */
@@ -215,7 +216,10 @@ export default function HomePage() {
             <div className={styles.brandBadge}>Open 24 Hours</div>
           </div>
 
-          {/* Bento Grid */}
+          {/* Sound wave equalizer — KLC signature */}
+          <div className={styles.soundWaveBar}>
+            {[...Array(10)].map((_, i) => <span key={i} />)}
+          </div>
           <div className={styles.bentoGrid}>
             {BENTO_TIERS.map((tier) => (
               <Link
