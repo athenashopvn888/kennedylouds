@@ -193,7 +193,7 @@ export default function HomePage() {
       <section className={styles.welcomeBannerSection}>
         <div className={styles.welcomeBannerContainer}>
           <img
-            src="/banners/after_dark_welcome_banner.webp"
+            src="/banners/KennedyLoud_Welcome_Banner.webp"
             alt="Welcome to Kennedy Loud Cannabis — Premium Brampton Cannabis Dispensary"
             className={styles.welcomeBannerImg}
           />
@@ -209,7 +209,7 @@ export default function HomePage() {
         <div className={styles.heroContent}>
           {/* Brand branding */}
           <div className={styles.brandBlock}>
-            <span className={styles.brandIcon}>🌙</span>
+            <span className={styles.brandIcon}>🔊</span>
             <h1 className={styles.brandTitle}>KENNEDY LOUD CANNABIS</h1>
             <p className={styles.brandSub}>Premium Cannabis Dispensary</p>
             <div className={styles.brandBadge}>Open 24 Hours</div>
@@ -295,15 +295,15 @@ export default function HomePage() {
       <section className={styles.seoSection}>
         <div className={styles.container}>
           <div className={styles.seoPanel}>
-            <h2 className={styles.seoPanelTitle}>Jane Street's Premier After-Hours Dispensary</h2>
+            <h2 className={styles.seoPanelTitle}>Brampton's Loudest Cannabis Dispensary — Open 24 Hours</h2>
             <p className={styles.seoPanelText}>
-              Welcome to <strong>Kennedy Loud Cannabis</strong>, your premier after-hours cannabis destination on Jane Street in Brampton. When the sun goes down, we come alive — offering an electrifying selection of top-shelf strains, from ultra-rare exotics to solid everyday budget picks.
+              Welcome to <strong>Kennedy Loud Cannabis</strong>, Brampton's premier 24-hour cannabis destination at 49 Hillcrest Ave, Unit 104. We bring the heat around the clock — an electrifying selection of top-shelf strains, from ultra-rare exotics to solid everyday budget picks. Loud by name, loud by nature.
             </p>
             <p className={styles.seoPanelText}>
-              Open 24 hours, Kennedy Loud Cannabis is the night owl's paradise. Our live menu is constantly refreshed with the freshest drops, premium prerolls, artisan edibles, and everything in between. Whether you're winding down after a late shift or kicking off a legendary night out, our knowledgeable staff is here to light your way. The night is young — that's the After Dark promise.
+              Open 24 hours, 7 days a week — Kennedy Loud never sleeps. Our live menu is constantly refreshed with the freshest drops, premium prerolls, artisan edibles, and everything in between. Whether you're winding down after a late shift or stocking up for the weekend, our knowledgeable staff is always here for you.
             </p>
             <p className={styles.seoPanelText}>
-              Searching for a dispensary near Jane Street, Weston, or Mount Dennis that's open late? Kennedy Loud Cannabis is your 24-hour destination for premium flower, potent prerolls, and artisan edibles. Our six-tier pricing system means quality cannabis at every budget level.
+              Searching for a dispensary near Kennedy Rd, Brampton or the greater Peel Region? Kennedy Loud Cannabis is your 24-hour destination for premium flower, potent prerolls, and artisan edibles. Our six-tier pricing system means quality cannabis at every budget level — starting from just $3/g.
             </p>
           </div>
         </div>
@@ -416,7 +416,7 @@ export default function HomePage() {
               <p className={styles.storeCardText}>
                 Open 7 Days a Week
                 <br />
-                <span className={styles.storeHighlight}>Open Open 24 Hours</span>
+                <span className={styles.storeHighlight}>Open 24 Hours</span>
               </p>
             </div>
             <div className={styles.storeCard}>
@@ -425,7 +425,7 @@ export default function HomePage() {
               <p className={styles.storeCardText}>
                 No appointment needed
                 <br />
-                <span className={styles.storeHighlight}>Jane St, Brampton</span>
+                <span className={styles.storeHighlight}>Hillcrest Ave, Brampton</span>
               </p>
             </div>
           </div>
@@ -433,7 +433,7 @@ export default function HomePage() {
           {/* Map wrapper */}
           <div className={styles.mapWrap}>
             <iframe
-              src="https://maps.google.com/maps?q=1664%20Jane%20St,%20Brampton,%20ON%20M9N%202S1&t=&z=15&ie=UTF8&iwloc=&output=embed"
+              src="https://maps.google.com/maps?q=49+Hillcrest+Ave+Unit+104+Brampton+ON+L6W+1Y7&t=&z=15&ie=UTF8&iwloc=&output=embed"
               width="100%"
               height="350"
               style={{ border: 0, display: "block" }}
