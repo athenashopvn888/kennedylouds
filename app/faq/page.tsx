@@ -7,6 +7,9 @@ export const metadata: Metadata = {
   title: "FAQ — Kennedy Loud Cannabis | Brampton Dispensary Questions",
   description:
     "Frequently asked questions about Kennedy Loud Cannabis in Brampton. Hours, location, products, pricing, promotions, and everything you need to know before visiting.",
+  alternates: {
+    canonical: "https://kennedyloudcannabis.com/faq",
+  },
 };
 
 const FAQ_CATEGORIES = [

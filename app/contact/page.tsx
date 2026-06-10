@@ -4,13 +4,16 @@ import Footer from "../components/Footer";
 import styles from "./contact.module.css";
 
 export const metadata: Metadata = {
-  title: "Contact Us — Kennedy Loud Cannabis | 49 Hillcrest Ave, Unit 104, Brampton",
+  title: "Contact Us — Kennedy Loud Cannabis | 190 Kennedy Rd S Unit 104, Brampton",
   description:
-    "Visit Kennedy Loud Cannabis at 49 Hillcrest Ave, Unit 104, Brampton, ON L6W 1Y7. Open 24 hours, 7 days a week. Walk-ins welcome.",
+    "Visit Kennedy Loud Cannabis at 190 Kennedy Rd S Unit 104, Brampton, ON L6W 3R1. Open 24 Hours a day, 7 days a week. Walk-ins welcome.",
+  alternates: {
+    canonical: "https://kennedyloudcannabis.com/contact",
+  },
   openGraph: {
     title: "Contact Kennedy Loud Cannabis — Brampton Dispensary",
     description:
-      "49 Hillcrest Ave, Unit 104, Brampton. Open 24 hours, 7 days a week. Premium cannabis, always fire.",
+      "190 Kennedy Rd S Unit 104, Brampton. Open 24 Hours a day, 7 days a week. Premium cannabis, always fire.",
   },
 };
 
