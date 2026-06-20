@@ -44,14 +44,6 @@ export default function ContactPage() {
                 <br />
                 <span className={styles.infoMuted}>Jane St &amp; Lawrence Ave W</span>
               </p>
-              <a
-                href="https://maps.google.com/?q=49+Hillcrest+Ave,+Unit+104,+Brampton,+ON+L6W+1Y7"
-                target="_blank"
-                rel="noopener noreferrer"
-                className={styles.infoBtn}
-              >
-                Get Directions →
-              </a>
             </div>
 
             {/* Hours */}
@@ -128,16 +120,6 @@ export default function ContactPage() {
 
           {/* Map */}
           <div className={styles.mapSection}>
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2884.225547632616!2d-79.50005702382025!3d43.689444971099616!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b31494094ad85%3A0x5ae85accb8bd6200!2s1664%20Jane%20St%2C%20Brampton%2C%20ON%20M9N%202S1!5e0!3m2!1sen!2sca!4v1"
-              width="100%"
-              height="400"
-              style={{ border: 0 }}
-              allowFullScreen
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              title="Kennedy Loud Cannabis — 49 Hillcrest Ave, Unit 104, Brampton"
-            ></iframe>
           </div>
         </div>
       </section>

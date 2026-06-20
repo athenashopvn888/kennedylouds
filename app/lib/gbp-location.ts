@@ -24,8 +24,8 @@ export const gbpLocation = {
     "Accessories"
   ],
   menuUrl: "/",
-  directionsUrl: "https://maps.google.com/?q=49+Hillcrest+Ave,+Unit+104,+Brampton,+ON+L6W+1Y7",
-  mapEmbedUrl: "https://maps.google.com/maps?q=49%20Hillcrest%20Ave%2C%20Unit%20104%2C%20Brampton%2C%20ON%20L6W%201Y7&t=&z=15&ie=UTF8&iwloc=&output=embed",
+  directionsUrl: "",
+  mapEmbedUrl: "",
   latitude: "43.6894",
   longitude: "-79.7516",
   hours: ["Open 24 Hours"],

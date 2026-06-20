@@ -101,20 +101,9 @@ const jsonLd = {
       closes: "23:59",
     },
   ],
-  sameAs: [
-    "https://maps.google.com/?q=49+Hillcrest+Ave,+Unit+104,+Brampton,+ON+L6W+1Y7",
-    "https://maps.google.com/?q=49+Hillcrest+Ave,+Unit+104,+Brampton,+ON+L6W+1Y7",
-  ],
-  hasMap: "https://maps.google.com/?q=49+Hillcrest+Ave,+Unit+104,+Brampton,+ON+L6W+1Y7",
   areaServed: {
     "@type": "City",
     name: "Brampton",
-  },
-  aggregateRating: {
-    "@type": "AggregateRating",
-    ratingValue: "5.0",
-    reviewCount: "15",
-    bestRating: "5",
   },
 };
 
