@@ -18,33 +18,33 @@ interface BlogPost {
   published: string;
 }
 
-/* ── Static Blog Posts (always shown) ── */
+/* â”€â”€ Static Blog Posts (always shown) â”€â”€ */
 const STATIC_POSTS = [
   {
     slug: "indica-vs-sativa-vs-hybrid",
-    title: "Indica vs Sativa vs Hybrid — What's the Difference?",
+    title: "Indica vs Sativa vs Hybrid â€” What's the Difference?",
     excerpt: "Not sure which type to pick? We break down the effects, best uses, and top strains for each category so you can shop with confidence.",
     date: "2026-05-10",
     category: "Guides",
-    emoji: "🌿",
+    emoji: "ðŸŒ¿",
     readTime: "5 min",
   },
   {
     slug: "how-to-choose-thc-level",
     title: "How to Choose the Right THC Level for You",
-    excerpt: "From 24% budget strains to 39% exotic fire — here's how to pick the THC percentage that matches your tolerance and desired experience.",
+    excerpt: "From 24% budget strains to 39% exotic fire â€” here's how to pick the THC percentage that matches your tolerance and desired experience.",
     date: "2026-05-08",
     category: "Guides",
-    emoji: "🔬",
+    emoji: "ðŸ”¬",
     readTime: "4 min",
   },
   {
     slug: "edibles-dosing-guide",
-    title: "Edibles Dosing Guide — Start Low, Go Slow",
+    title: "Edibles Dosing Guide â€” Start Low, Go Slow",
     excerpt: "First time trying edibles? Our dosing chart covers everything from 5mg micro-doses to 100mg+ for experienced users.",
     date: "2026-05-05",
     category: "Guides",
-    emoji: "🍬",
+    emoji: "ðŸ¬",
     readTime: "6 min",
   },
   {
@@ -53,37 +53,29 @@ const STATIC_POSTS = [
     excerpt: "200+ strains, transparent pricing from $3/g, lab-tested products, and open Open 24 Hours. Here's what makes us different.",
     date: "2026-05-03",
     category: "News",
-    emoji: "🔥",
+    emoji: "ðŸ”¥",
     readTime: "3 min",
   },
   {
     slug: "vape-pen-vs-flower",
-    title: "Vape Pen vs Flower — Which Should You Choose?",
+    title: "Vape Pen vs Flower â€” Which Should You Choose?",
     excerpt: "Convenience vs tradition. We compare effects, cost, discretion, and flavor to help you decide between vaping and smoking.",
     date: "2026-04-28",
     category: "Guides",
-    emoji: "💨",
+    emoji: "ðŸ’¨",
     readTime: "5 min",
   },
   {
     slug: "brampton-cannabis-laws-2026",
-    title: "Brampton Cannabis Laws in 2026 — What You Need to Know",
+    title: "Brampton Cannabis Laws in 2026 â€” What You Need to Know",
     excerpt: "Age limits, public consumption rules, possession limits, and where you can legally smoke in Brampton. Stay informed.",
     date: "2026-04-25",
     category: "News",
-    emoji: "⚖️",
+    emoji: "âš–ï¸",
     readTime: "4 min",
   },
 ];
 
-/* ── Google Reviews ── */
-const REVIEWS = [
-  { name: "Mike R.", rating: 5, text: "Best dispensary in the Brampton area. Staff is super knowledgeable and the exotic strains are legit fire.", date: "2 weeks ago" },
-  { name: "Sarah L.", rating: 5, text: "Love that they're open Open 24 Hours. The selection is insane — over 200 strains. My go-to spot.", date: "1 month ago" },
-  { name: "James T.", rating: 5, text: "Tried the Buy 2g Get 1g Free deal on the AAA+ and it was incredible value.", date: "3 weeks ago" },
-  { name: "Priya K.", rating: 5, text: "Clean store, friendly staff, great edible selection. The gummies are perfectly dosed.", date: "1 week ago" },
-  { name: "Alex D.", rating: 5, text: "Finally a dispensary that lists everything with actual THC percentages and per-gram pricing.", date: "2 weeks ago" },
-];
 
 function truncate(text: string, len: number) {
   if (text.length <= len) return text;
@@ -117,7 +109,7 @@ export default function BlogContent() {
       <section className={styles.hero}>
         <div className={styles.heroInner}>
           <h1 className={styles.heroH1}>
-            📝 Kennedy Loud Cannabis <span className={styles.heroAccent}>Blog</span>
+            ðŸ“ Kennedy Loud Cannabis <span className={styles.heroAccent}>Blog</span>
           </h1>
           <p className={styles.heroSub}>
             Cannabis guides, strain reviews, and dispensary news from Brampton&apos;s
@@ -138,10 +130,10 @@ export default function BlogContent() {
                   href={`/blog/${post.slug}`}
                   className={styles.postCard}
                 >
-                  <div className={styles.postEmoji}>📰</div>
+                  <div className={styles.postEmoji}>ðŸ“°</div>
                   <div className={styles.postMeta}>
                     <span className={styles.postCategory}>Blog</span>
-                    <span className={styles.postDot}>·</span>
+                    <span className={styles.postDot}>Â·</span>
                     <span className={styles.postTime}>{post.author}</span>
                   </div>
                   <h3 className={styles.postTitle}>{post.title}</h3>
@@ -162,38 +154,6 @@ export default function BlogContent() {
         </section>
       )}
 
-      {/* Reviews Section */}
-      <section className={styles.reviewsSection}>
-        <div className={styles.container}>
-          <div className={styles.reviewsHeader}>
-            <h2 className={styles.reviewsTitle}>⭐ What Our Customers Say</h2>
-            <div className={styles.reviewsRating}>
-              <span className={styles.reviewsStars}>★★★★★</span>
-              <span className={styles.reviewsScore}>5.0</span>
-              <span className={styles.reviewsCount}>on Google</span>
-            </div>
-          </div>
-          <div className={styles.reviewsGrid}>
-            {REVIEWS.map((r, i) => (
-              <div key={i} className={styles.reviewCard}>
-                <div className={styles.reviewTop}>
-                  <div className={styles.reviewAvatar}>{r.name.charAt(0)}</div>
-                  <div>
-                    <div className={styles.reviewName}>{r.name}</div>
-                    <div className={styles.reviewDate}>{r.date}</div>
-                  </div>
-                  <div className={styles.reviewStars}>
-                    {"★".repeat(r.rating)}
-                  </div>
-                </div>
-                <p className={styles.reviewText}>{r.text}</p>
-              </div>
-            ))}
-          </div>
-          <div className={styles.reviewsCta}>
-          </div>
-        </div>
-      </section>
 
       {/* Static Blog Posts */}
       <section className={styles.postsSection}>
@@ -205,7 +165,7 @@ export default function BlogContent() {
                 <div className={styles.postEmoji}>{post.emoji}</div>
                 <div className={styles.postMeta}>
                   <span className={styles.postCategory}>{post.category}</span>
-                  <span className={styles.postDot}>·</span>
+                  <span className={styles.postDot}>Â·</span>
                   <span className={styles.postTime}>{post.readTime}</span>
                 </div>
                 <h3 className={styles.postTitle}>{post.title}</h3>
@@ -228,7 +188,7 @@ export default function BlogContent() {
         <div className={styles.ctaInner}>
           <h2 className={styles.ctaTitle}>Ready to Shop?</h2>
           <p className={styles.ctaSub}>
-            200+ strains · Exotic to Budget · Open Open 24 Hours
+            200+ strains Â· Exotic to Budget Â· Open Open 24 Hours
           </p>
           <div className={styles.ctaBtns}>
             <Link href="/exotic" className={styles.ctaBtn}>
