@@ -5,11 +5,11 @@ import AgeGate from "./components/AgeGate";
 export const metadata: Metadata = {
   metadataBase: new URL("https://kennedyloudcannabis.com"),
   title: {
-    default: "Kennedy Loud Cannabis — Premium Cannabis Dispensary, Brampton",
+    default: "Kennedy Road Brampton Dispensary | Kennedy Loud Cannabis",
     template: "%s | Kennedy Loud Cannabis",
   },
   description:
-    "Shop 200+ premium cannabis strains at Kennedy Loud Cannabis. Exotic, Premium, AAA+, AA & Budget flower from $3/g. Brampton's uplifting dispensary at 49 Hillcrest Ave, Unit 104. Open 24 Hours.",
+    "Kennedy Loud Cannabis is a Brampton dispensary near Kennedy Rd and Hillcrest Ave with flower, pre-rolls, vapes, edibles, concentrates, accessories, and adult 19+ info. Open 24 Hours.",
   keywords: [
     "cannabis dispensary Brampton",
     "weed store Brampton",
@@ -31,9 +31,9 @@ export const metadata: Metadata = {
     locale: "en_CA",
     url: "https://kennedyloudcannabis.com",
     siteName: "Kennedy Loud Cannabis",
-    title: "Kennedy Loud Cannabis — Premium Brampton Cannabis Dispensary",
+    title: "Kennedy Road Brampton Dispensary | Kennedy Loud Cannabis",
     description:
-      "200+ strains from $3/g. Exotic to Budget. Brampton's uplifting dispensary at 49 Hillcrest Ave, Unit 104. Open 24 Hours.",
+      "Kennedy Loud Cannabis is a Brampton dispensary near Kennedy Rd and Hillcrest Ave with flower, pre-rolls, vapes, edibles, concentrates, accessories, and adult 19+ info. Open 24 Hours.",
     images: [
       {
         url: "https://kennedyloudcannabis.com/wp-content/uploads/2026/04/46Oi5.jpg",
@@ -45,8 +45,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Kennedy Loud Cannabis — Brampton's Uplifting Dispensary",
-    description: "200+ strains from $3/g. Open 24 Hours at 49 Hillcrest Ave, Unit 104, Brampton.",
+    title: "Kennedy Road Brampton Dispensary | Kennedy Loud Cannabis",
+    description: "Kennedy Loud Cannabis is a Brampton dispensary near Kennedy Rd and Hillcrest Ave with flower, pre-rolls, vapes, edibles, concentrates, accessories, and adult 19+ info. Open 24 Hours.",
     images: ["https://kennedyloudcannabis.com/wp-content/uploads/2026/04/46Oi5.jpg"],
   },
   robots: {
