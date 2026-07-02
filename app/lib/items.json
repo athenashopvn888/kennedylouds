@@ -144,42 +144,6 @@
     "promoImage": null
   },
   {
-    "sku": "1020",
-    "name": "TIME LIGHTS",
-    "slug": "time-lights",
-    "category": "CIGARETTES",
-    "type": "",
-    "thc": "",
-    "mg": "",
-    "price": "$25",
-    "image": "https://pub-eb3e1fe18a43477eabc885cfb791d97c.r2.dev/products/1019-TIMES-FULL.webp",
-    "promoImage": null
-  },
-  {
-    "sku": "1023",
-    "name": "* ROLLED GOLD FULL",
-    "slug": "rolled-gold-full",
-    "category": "CIGARETTES",
-    "type": "",
-    "thc": "",
-    "mg": "",
-    "price": "$25",
-    "image": "https://pub-eb3e1fe18a43477eabc885cfb791d97c.r2.dev/products/Rolled-Gold-Full-Flavor-1-800x800.png.webp",
-    "promoImage": null
-  },
-  {
-    "sku": "1026",
-    "name": "BELMONT KS (PACK ONLY)",
-    "slug": "belmont-ks-pack-only",
-    "category": "CIGARETTES",
-    "type": "",
-    "thc": "",
-    "mg": "",
-    "price": "$15",
-    "image": "https://pub-eb3e1fe18a43477eabc885cfb791d97c.r2.dev/products/1026-BELMONT.webp",
-    "promoImage": null
-  },
-  {
     "sku": "1054",
     "name": "ZYN NICOTINE POUCHES",
     "slug": "zyn-nicotine-pouches",
@@ -213,30 +177,6 @@
     "mg": "",
     "price": "$20",
     "image": "https://pub-eb3e1fe18a43477eabc885cfb791d97c.r2.dev/products/assortednicotinepouches600.webp",
-    "promoImage": null
-  },
-  {
-    "sku": "1065",
-    "name": "ELF 23000 – 5% | 23K PUFFS",
-    "slug": "elf-23000-5-23k-puffs",
-    "category": "VAPE PENS",
-    "type": "",
-    "thc": "",
-    "mg": "",
-    "price": "$35",
-    "image": "https://pub-eb3e1fe18a43477eabc885cfb791d97c.r2.dev/products/1065-Elfbar.jpg",
-    "promoImage": null
-  },
-  {
-    "sku": "1073",
-    "name": "GEEK MAX – 5% | 20K–30K PUFFS | MANY FLAVORS",
-    "slug": "geek-max-5-20k30k-puffs-many-flavors",
-    "category": "VAPE PENS",
-    "type": "",
-    "thc": "",
-    "mg": "",
-    "price": "$35",
-    "image": "https://pub-eb3e1fe18a43477eabc885cfb791d97c.r2.dev/products/GEEKMAX500x500HQ.webp",
     "promoImage": null
   },
   {
@@ -276,18 +216,6 @@
     "promoImage": null
   },
   {
-    "sku": "1083",
-    "name": "OVNS MAX – 5% | 3K PUFFS",
-    "slug": "ovns-max-5-3k-puffs",
-    "category": "VAPE PENS",
-    "type": "",
-    "thc": "",
-    "mg": "",
-    "price": "$30",
-    "image": "https://pub-eb3e1fe18a43477eabc885cfb791d97c.r2.dev/products/OVNS.webp",
-    "promoImage": null
-  },
-  {
     "sku": "1084",
     "name": "OVNS DISPOSABLE – 5% | 8ML | MANY FLAVORS",
     "slug": "ovns-disposable-5-8ml-many-flavors",
@@ -297,6 +225,30 @@
     "mg": "",
     "price": "$35",
     "image": "https://pub-eb3e1fe18a43477eabc885cfb791d97c.r2.dev/products/OVNS500x500HQ.webp",
+    "promoImage": null
+  },
+  {
+    "sku": "1085",
+    "name": "Level X Boost G2 device kit",
+    "slug": "level-x-boost-g2-device-kit",
+    "category": "VAPE PENS",
+    "type": "",
+    "thc": "",
+    "mg": "",
+    "price": "$15",
+    "image": "https://pub-eb3e1fe18a43477eabc885cfb791d97c.r2.dev/products/1085-Level-X-Boost-G2-device-kit.webp",
+    "promoImage": null
+  },
+  {
+    "sku": "1086",
+    "name": "Level X G2 pod",
+    "slug": "level-x-g2-pod",
+    "category": "VAPE PENS",
+    "type": "",
+    "thc": "",
+    "mg": "",
+    "price": "$35",
+    "image": "https://pub-eb3e1fe18a43477eabc885cfb791d97c.r2.dev/products/1086-Level-X-G2-pod.webp",
     "promoImage": null
   },
   {
@@ -312,39 +264,15 @@
     "promoImage": null
   },
   {
-    "sku": "1097",
-    "name": "MOVEMENT LV 18K – 5% | 18K PUFFS | MANY FLAVORS",
-    "slug": "movement-lv-18k-5-18k-puffs-many-flavors",
+    "sku": "1093",
+    "name": "Flavour Beast e-liquid salt",
+    "slug": "flavour-beast-e-liquid-salt",
     "category": "VAPE PENS",
     "type": "",
     "thc": "",
     "mg": "",
     "price": "$35",
-    "image": "https://pub-eb3e1fe18a43477eabc885cfb791d97c.r2.dev/products/movementpurplepunch.webp",
-    "promoImage": null
-  },
-  {
-    "sku": "1098",
-    "name": "NEXA PIX – 5% | 35K PUFFS | MANY FLAVORS",
-    "slug": "nexa-pix-5-35k-puffs-many-flavors",
-    "category": "VAPE PENS",
-    "type": "",
-    "thc": "",
-    "mg": "",
-    "price": "$35",
-    "image": "https://pub-eb3e1fe18a43477eabc885cfb791d97c.r2.dev/products/strawberryicenexapix35kdisposable1.webp",
-    "promoImage": null
-  },
-  {
-    "sku": "1099",
-    "name": "SALE CROWN BAR – AL FAKHER 10k",
-    "slug": "sale-crown-bar-al-fakher-10k",
-    "category": "VAPE PENS",
-    "type": "",
-    "thc": "",
-    "mg": "",
-    "price": "$25",
-    "image": "https://pub-eb3e1fe18a43477eabc885cfb791d97c.r2.dev/products/AlFakherCrownBarCrystal10kLowNicotineDisposableVape-10000Puffs-18mlBlueberryIceBlissVapes.webp",
+    "image": "https://pub-eb3e1fe18a43477eabc885cfb791d97c.r2.dev/products/1093-Flavour-Beast-e-liquid-salt.webp",
     "promoImage": null
   },
   {
@@ -444,18 +372,6 @@
     "promoImage": null
   },
   {
-    "sku": "547, 548, 549",
-    "name": "THC SYRUP 500MG",
-    "slug": "thc-syrup-500mg",
-    "category": "CONCENTRATES",
-    "type": "",
-    "thc": "",
-    "mg": "500mg",
-    "price": "$25",
-    "image": "https://pub-eb3e1fe18a43477eabc885cfb791d97c.r2.dev/products/CANAVIS-THC-infused-SYRUP-ALL-FLAVOURS.jpeg",
-    "promoImage": null
-  },
-  {
     "sku": "564, 565, 566",
     "name": "DANK CHOCO BAR 1500MG",
     "slug": "dank-choco-bar-1500mg",
@@ -525,6 +441,18 @@
     "mg": "1000mg / 2000mg",
     "price": "$40",
     "image": "https://pub-eb3e1fe18a43477eabc885cfb791d97c.r2.dev/products/stellargummies600x600.webp",
+    "promoImage": null
+  },
+  {
+    "sku": "615",
+    "name": "STELLAR GUMMIES 500MG",
+    "slug": "stellar-gummies-500mg",
+    "category": "EDIBLES",
+    "type": "",
+    "thc": "",
+    "mg": "500mg",
+    "price": "$25",
+    "image": "https://pub-eb3e1fe18a43477eabc885cfb791d97c.r2.dev/products/615_Stellar500.webp",
     "promoImage": null
   },
   {
@@ -732,18 +660,6 @@
     "promoImage": null
   },
   {
-    "sku": "800, 801, 802",
-    "name": "GAS GANG DISPO VAPE 1G",
-    "slug": "gas-gang-dispo-vape-1g",
-    "category": "VAPE DISPOSABLE",
-    "type": "i/h/s",
-    "thc": "98%+",
-    "mg": "",
-    "price": "$45",
-    "image": "https://pub-eb3e1fe18a43477eabc885cfb791d97c.r2.dev/products/GasGang.jpg",
-    "promoImage": null
-  },
-  {
     "sku": "803, 804, 805",
     "name": "2g GAS GANG Vol.3 HYBRID",
     "slug": "2g-gas-gang-vol3-hybrid",
@@ -753,18 +669,6 @@
     "mg": "",
     "price": "$50",
     "image": "https://pub-eb3e1fe18a43477eabc885cfb791d97c.r2.dev/products/gasgang2gvol3assorted.webp",
-    "promoImage": null
-  },
-  {
-    "sku": "810",
-    "name": "DRIZZLE SWITCH 3in1 / 1G",
-    "slug": "drizzle-switch-3in1-1g",
-    "category": "VAPE DISPOSABLE",
-    "type": "i/h/s",
-    "thc": "98%+",
-    "mg": "",
-    "price": "$40",
-    "image": "",
     "promoImage": null
   },
   {
@@ -780,39 +684,15 @@
     "promoImage": null
   },
   {
-    "sku": "820, 821, 822",
-    "name": "DRIZZLE DISPO VAPE 1G",
-    "slug": "drizzle-dispo-vape-1g",
-    "category": "VAPE DISPOSABLE",
-    "type": "i/h/s",
-    "thc": "98%+",
-    "mg": "",
-    "price": "$40",
-    "image": "https://pub-eb3e1fe18a43477eabc885cfb791d97c.r2.dev/products/820-Drizzle-pod-vape-pen.jpg",
-    "promoImage": null
-  },
-  {
-    "sku": "854",
-    "name": "HASH ON SALE  AFGAN , BLACK MOROCCAN, TURKISH",
-    "slug": "hash-on-sale-afgan-black-moroccan-turkish",
-    "category": "CONCENTRATES",
+    "sku": "836",
+    "name": "*CLEARANCE* ZLAB ZPODS ASSORTED 2 ML",
+    "slug": "clearance-zlab-zpods-assorted-2-ml",
+    "category": "VAPE PENS",
     "type": "",
     "thc": "",
     "mg": "",
-    "price": "$20",
-    "image": "https://pub-eb3e1fe18a43477eabc885cfb791d97c.r2.dev/products/200-Hash-e1643386480827.jpeg",
-    "promoImage": null
-  },
-  {
-    "sku": "856, 857",
-    "name": "BLONDIE MOROCON HASH",
-    "slug": "blondie-morocon-hash",
-    "category": "CONCENTRATES",
-    "type": "",
-    "thc": "",
-    "mg": "",
-    "price": "$30",
-    "image": "https://pub-eb3e1fe18a43477eabc885cfb791d97c.r2.dev/products/ChatGPT-Image-Mar-5-2026-053847-PM.png",
+    "price": "$1",
+    "image": "",
     "promoImage": null
   },
   {
@@ -828,63 +708,15 @@
     "promoImage": null
   },
   {
-    "sku": "863, 864, 865, 866, 867",
-    "name": "HASH 3G",
-    "slug": "hash-3g",
+    "sku": "876, 877, 878",
+    "name": "RESIN TAG ALONG 2G HYBRID, IND, SAT",
+    "slug": "resin-tag-along-2g-hybrid-ind-sat",
     "category": "CONCENTRATES",
     "type": "",
     "thc": "",
-    "mg": "",
-    "price": "$40",
-    "image": "",
-    "promoImage": null
-  },
-  {
-    "sku": "868",
-    "name": "*NEW* AFGHAN HASH",
-    "slug": "new-afghan-hash",
-    "category": "CONCENTRATES",
-    "type": "",
-    "thc": "",
-    "mg": "",
-    "price": "$25",
-    "image": "https://pub-eb3e1fe18a43477eabc885cfb791d97c.r2.dev/products/Afghan-Hash.webp",
-    "promoImage": null
-  },
-  {
-    "sku": "887, 888, 889",
-    "name": "GOOBER VAPE PEN 1G",
-    "slug": "goober-vape-pen-1g",
-    "category": "VAPE DISPOSABLE",
-    "type": "i/h/s",
-    "thc": "98%+",
-    "mg": "",
-    "price": "$35",
-    "image": "https://pub-eb3e1fe18a43477eabc885cfb791d97c.r2.dev/products/Goober-1g-disposable-vape-pen.jpg",
-    "promoImage": null
-  },
-  {
-    "sku": "900, 901, 902",
-    "name": "DRIZZLE DIAMOND PRE-ROLLS 1G",
-    "slug": "drizzle-diamond-pre-rolls-1g",
-    "category": "PREROLLS",
-    "type": "i/h/s",
-    "thc": "40%+",
-    "mg": "",
-    "price": "$20",
-    "image": "",
-    "promoImage": null
-  },
-  {
-    "sku": "910",
-    "name": "DRIZZLE DELTA D9",
-    "slug": "drizzle-delta-d9",
-    "category": "PREROLLS",
-    "type": "i/h/s",
-    "thc": "40%+",
     "mg": "",
     "price": "$50",
-    "image": "https://pub-eb3e1fe18a43477eabc885cfb791d97c.r2.dev/products/DRIZZLE-DELTA-D9.jpg",
+    "image": "https://pub-eb3e1fe18a43477eabc885cfb791d97c.r2.dev/products/876-RESIN-TAG-ALONG-2G-HYBRID.webp",
     "promoImage": null
   },
   {

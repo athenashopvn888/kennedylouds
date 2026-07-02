@@ -10,7 +10,8 @@ const fs = require('fs');
 const path = require('path');
 
 const APPS_SCRIPT_URL = process.env.APPS_SCRIPT_URL || '';
-const STORE_CODE = process.env.STORE_CODE || 'KLC01';
+// Temporary override: use PL60 stock while the KLC01 POS email feed is glitching.
+const STORE_CODE = 'PL601';
 const FLOWERS_PATH = path.join(__dirname, '..', 'app', 'lib', 'flowers.json');
 const ITEMS_PATH = path.join(__dirname, '..', 'app', 'lib', 'items.json');
 

@@ -66,7 +66,8 @@ export async function fetchLiveProducts(): Promise<{
   }
 
   try {
-    const res = await fetch(`${APPS_SCRIPT_URL}?store=${process.env.STORE_CODE || 'KLC01'}`, {
+    // Temporary override: use PL60 stock while the KLC01 POS email feed is glitching.
+    const res = await fetch(`${APPS_SCRIPT_URL}?store=PL601`, {
       next: { revalidate: 300 }, // Cache for 5 min during build
     });
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
