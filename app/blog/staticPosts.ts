@@ -39,7 +39,7 @@ export const STATIC_POSTS: StaticBlogPost[] = [
     meta_description: "Adult 19+ guide to Kennedy Loud Cannabis around Kennedy Road / Brampton, with local store-page checks, menu-category context, and safe visit planning.",
     h1: "Kennedy Loud Cannabis Local Store Guide for Adults 19+",
     excerpt: "Kennedy Loud Cannabis guide for adults 19+ reviewing store information around Kennedy Road / Brampton.",
-    author: "Athena SEO Team",
+    author: "The Kennedy Loud Cannabis Team",
     date: "2026-07-02",
     category: "Store Guide",
     readTime: "4 min",
