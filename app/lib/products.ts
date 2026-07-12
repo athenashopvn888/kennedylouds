@@ -237,13 +237,13 @@ export const CATEGORY_CONFIG: Record<string, CategoryInfo> = {
   CIGARETTES: {
     banner: "/banners/KennedyLoud_Cigarettes.webp",
     name: "Cigarettes", slug: "cigarettes", color: "#78716c", icon: "🏷️",
-    seoTitle: "Native Cigarettes Brampton — Discount Tobacco at Kennedy Loud Cannabis",
-    seoIntro: "Discount native cigarettes at Kennedy Loud Cannabis, Brampton. Premium and value brands at the best prices on Hillcrest Ave.",
-    seoDescription: "Kennedy Loud Cannabis is your go-to source for affordable native cigarettes in Brampton. We carry a wide selection of premium and value tobacco brands at competitive prices. Located at 49 Hillcrest Ave, Unit 104 in the heart of Brampton, we're open daily 24 hours. Stop by for the best cigarette prices in the neighbourhood.",
+    seoTitle: "Native Cigarettes Brampton - Brands And Prices at Kennedy Loud Cannabis",
+    seoIntro: "Shop native cigarettes in Brampton at Kennedy Loud Cannabis with listed brands like Canadian, Canadian Goose, Canadian Classics, Putters, Rolled Gold, Nexus, Time, Backwoods, Grabba, and nicotine pouches.",
+    seoDescription: "Kennedy Loud Cannabis lists native cigarette packs at $25 for many brands, plus 10 x Premium Mix Cigarettes at $3, nicotine pouches from Velo, Pablo, and Killa at $20, Grabba at $5, Grabba Shaker at $19, and Backwoods options from $20-$25. Visit 49 Hillcrest Ave, Unit 104 in Brampton and check the live cigarette menu for current stock.",
     faqs: [
-      { q: "Do you sell cigarettes at Kennedy Loud Cannabis?", a: "Yes! We carry a wide selection of native cigarette brands at competitive prices." },
-      { q: "What cigarette brands do you carry?", a: "We stock a variety of premium and value native cigarette brands. Visit us to see our full in-store selection." },
-      { q: "Are your cigarette prices competitive?", a: "Absolutely. We offer some of the best cigarette prices in the Brampton area of Brampton." },
+      { q: "Do you sell native cigarettes at Kennedy Loud Cannabis?", a: "Yes. The cigarette menu includes brands such as Canadian Lights, Canadian Full, Canadian Menthol, Canadian Goose, Canadian Classics, Putters, Rolled Gold, Nexus, and Time." },
+      { q: "How much are cigarettes at Kennedy Loud Cannabis?", a: "Many native cigarette packs are listed at $25. The menu also lists 10 x Premium Mix Cigarettes at $3, nicotine pouches at $20, Grabba at $5, Grabba Shaker at $19, and Backwoods options from $20-$25." },
+      { q: "Do cigarette brands and prices change?", a: "Yes. Brand mix, flavours, carton options, and prices can rotate, so check the live cigarette category before visiting Hillcrest Ave." },
     ],
   },
 };

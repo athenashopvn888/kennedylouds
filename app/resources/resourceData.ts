@@ -87,14 +87,14 @@ export const RESOURCE_PAGES: ResourceArticle[] = [
   {
     slug: "native-smokes-guide",
     title: "Native Cigarettes Brampton Guide",
-    metaDescription: "Find Kennedy Loud Cannabis native cigarettes in Brampton with category links for cigarettes, accessories, flower, pre-rolls, and the Hillcrest Ave visit page.",
+    metaDescription: "Find Kennedy Loud Cannabis native cigarettes in Brampton with brands and prices including Canadian, Canadian Goose, Canadian Classics, Putters, Nexus, Time, Backwoods, Grabba, and 10 x Premium Mix.",
     eyebrow: "Cigarettes",
-    summary: "A stronger cigarette category resource for shoppers who search native cigarettes Brampton and want the tobacco lane beside the cannabis menu.",
+    summary: "A stronger cigarette category resource with real Brampton cigarette brands, listed prices, and tobacco add-ons from the Kennedy Loud menu.",
     sections: [
-      { heading: "Use The Cigarette Category First", body: "The cigarette page is the direct route for shoppers looking for native cigarettes in Brampton at Kennedy Loud Cannabis. It keeps tobacco shoppers out of unrelated flower pages while still connecting them to the rest of the Hillcrest Ave menu." },
-      { heading: "Pair With Accessories", body: "A cigarette stop often overlaps with papers, lighters, grinders, trays, and other small accessories. Cigarette and accessory paths sit close together so shoppers can plan one stop instead of searching the site twice." },
-      { heading: "Keep Brand Details Flexible", body: "Native cigarette brands, carton options, and exact selection can change. Use the live category or in-store counter for current options instead of relying on fixed inventory promises." },
-      { heading: "Connect It Back To Cannabis", body: "Many Kennedy Loud shoppers browse cigarettes alongside flower, pre-rolls, edibles, or THC vapes. The guide keeps that relationship clear while making /items/cigarettes easy to find from the resource hub." },
+      { heading: "Cigarette Brands On The Menu", body: "The Kennedy Loud cigarette lane lists Canadian Lights, Canadian Full, Canadian Menthol, Canadian Goose Full, Canadian Goose Lights, Canadian Classics Original, Canadian Classics Silver, Putters, Rolled Gold Lights, Nexus Full, Nexus Lights, and Time Full." },
+      { heading: "Listed Cigarette Prices", body: "Most native cigarette packs in the current menu are listed at $25 each. The 10 x Premium Mix Cigarettes item is listed at $3, giving Brampton shoppers a low-cost quick-pick option on the Hillcrest Ave menu." },
+      { heading: "Pouches, Grabba, And Backwoods", body: "The tobacco section also includes nicotine pouches from Velo, Pablo, and Killa listed at $20, Grabba listed at $5, Grabba Shaker in RedRose or Red Herring listed at $19, Backwoods assorted flavours listed from $20-$25, and new Backwoods flavours listed at $25." },
+      { heading: "Check Current Stock", body: "Brand mix, flavour mix, carton availability, and prices can rotate. Use /items/cigarettes for the current Kennedy Loud cigarette menu before visiting, then pair the stop with accessories, flower, pre-rolls, edibles, or THC vapes if needed." },
     ],
     quickLinks: [
       { label: "Cigarettes", href: "/items/cigarettes" },
