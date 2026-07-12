@@ -63,11 +63,32 @@ const EXPLORE_CATEGORIES = [
   { name: "Pre-Rolls", slug: "items/prerolls", banner: "/banners/KennedyLoud_Pre_Rolls.webp" },
   { name: "Accessories", slug: "items/add-ons", banner: "/banners/KennedyLoud_Accessories.webp" },
   { name: "Cigarettes", slug: "items/cigarettes", banner: "/banners/KennedyLoud_Cigarettes.webp" },
-  { name: "Magic Stuff", slug: "items/magic", banner: "/banners/KennedyLoud_FAQ_Info.webp" },
+  { name: "Magic Stuff", slug: "items/magic", banner: "/banners/KennedyLoud_Magic_Stuff.webp" },
   { name: "Games Arcade", slug: "games", banner: "/banners/KennedyLoud_Games_Arcade.webp" },
 ];
 
-/* -- Local FAQs for Jane St -- */
+const RESOURCE_LINKS = [
+  {
+    href: "/resources/hillcrest-24-hour-visit-guide",
+    label: "24-hour visit",
+    title: "Hillcrest Ave pull-up guide",
+    body: "Menu-first notes for late-night, early-morning, and regular Brampton visits.",
+  },
+  {
+    href: "/resources/loud-flower-tier-guide",
+    label: "Flower tiers",
+    title: "Pick the loud shelf faster",
+    body: "Exotic, Premium, AAA+, AA, and Budget explained without the maze.",
+  },
+  {
+    href: "/resources/vapes-concentrates-guide",
+    label: "Format guide",
+    title: "Vapes and concentrates",
+    body: "Shortcuts for THC vapes, concentrates, accessories, and stronger format browsing.",
+  },
+];
+
+/* -- Local FAQs for Hillcrest Ave -- */
 const LOCAL_FAQS = [
   {
     q: "What are the hours for Kennedy Loud Cannabis?",
@@ -323,6 +344,30 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* -- RESOURCE SIGNAL BOARD -- */}
+      <section className={styles.resourceSignal}>
+        <div className={styles.resourceSignalInner}>
+          <div className={styles.resourceCopy}>
+            <span className={styles.resourceEyebrow}>KLC resources</span>
+            <h2>Local guides tuned for the Hillcrest Ave shop.</h2>
+            <p>
+              Built for shoppers who want the useful page fast: visit planning, flower tier logic,
+              native smokes, vapes, concentrates, and the Brampton GBP landing page.
+            </p>
+            <Link href="/resources" className={styles.resourceMainLink}>Open Resource Hub</Link>
+          </div>
+          <div className={styles.resourceCards}>
+            {RESOURCE_LINKS.map((resource) => (
+              <Link key={resource.href} href={resource.href} className={styles.resourceCard}>
+                <span>{resource.label}</span>
+                <h3>{resource.title}</h3>
+                <p>{resource.body}</p>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* -- CLIENT-SIDE GOOGLE REVIEWS SHOWCASE -- */}
       <section className={styles.reviewsSection}>
         <div className={styles.container}>
@@ -438,3 +483,4 @@ export default function HomePage() {
     </main>
   );
 }
+

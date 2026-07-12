@@ -18,7 +18,7 @@ const FAQ_CATEGORIES = [
     faqs: [
       { q: "Where is Kennedy Loud Cannabis located?", a: "We are located at 49 Hillcrest Ave, Unit 104, Brampton, ON L6W 1Y7. We're easily accessible by TTC bus routes and close to major highways like the 401." },
       { q: "What are your hours?", a: "We are open Open 24 Hours a day, 7 days a week, 365 days a year. Walk in anytime — no appointment needed." },
-      { q: "Is there parking nearby?", a: "Yes. Free street parking is available nearby on Jane St and surrounding streets in the evenings. We're also easily accessible by TTC buses." },
+      { q: "Is there parking nearby?", a: "Yes. Free street parking is available nearby on Hillcrest Ave and nearby streets in the evenings. We're also easily accessible by local transit routes." },
       { q: "How far are you from Mississauga?", a: "We're just 5 minutes from the Gardiner Expressway and 7 minutes from the Don Valley Parkway. We're one of the closest dispensaries to the Ontario border." },
       { q: "What's the best way to get to Kennedy Loud Cannabis?", a: "We're easily accessible by car, bus, or foot. By TTC bus, the 35 Jane bus stops right near our store. Free parking is available on surrounding streets." },
     ],
@@ -86,7 +86,7 @@ export default function FAQPage() {
         {/* FAQ Banner */}
         <section style={{ width: "100%", overflow: "hidden", marginTop: "92px" }}>
           <img
-            src="/banners/07_FAQ.webp"
+            src="/banners/KennedyLoud_FAQ_Info.webp"
             alt="Kennedy Loud Cannabis FAQ — Your Questions Answered"
             style={{ width: "100%", height: "auto", display: "block", objectFit: "contain" }}
           />
@@ -122,3 +122,5 @@ export default function FAQPage() {
     </>
   );
 }
+
+

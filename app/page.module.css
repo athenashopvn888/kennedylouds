@@ -458,6 +458,107 @@
   scroll-snap-align: start;
 }
 
+.resourceSignal {
+  padding: 76px 24px;
+  background:
+    linear-gradient(135deg, rgba(157, 255, 32, 0.12), transparent 32%),
+    linear-gradient(180deg, #111612 0%, #060806 100%);
+  color: #fff;
+}
+
+.resourceSignalInner {
+  width: min(100% - 2rem, 1180px);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 0.82fr 1.18fr;
+  gap: 22px;
+  align-items: stretch;
+}
+
+.resourceCopy {
+  border: 1px solid rgba(157, 255, 32, 0.2);
+  border-radius: 18px;
+  padding: 30px;
+  background:
+    radial-gradient(circle at 18% 20%, rgba(157, 255, 32, 0.16), transparent 34%),
+    rgba(0, 0, 0, 0.36);
+  box-shadow: 0 22px 70px rgba(0, 0, 0, 0.34);
+}
+
+.resourceEyebrow,
+.resourceCard span {
+  display: inline-flex;
+  width: fit-content;
+  padding: 7px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(157, 255, 32, 0.45);
+  color: #9dff20;
+  background: rgba(157, 255, 32, 0.1);
+  font-size: 12px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0;
+}
+
+.resourceCopy h2 {
+  font-size: clamp(32px, 4.7vw, 58px);
+  line-height: 0.98;
+  margin: 16px 0;
+  letter-spacing: 0;
+}
+
+.resourceCopy p,
+.resourceCard p {
+  color: rgba(255, 255, 255, 0.72);
+  line-height: 1.6;
+}
+
+.resourceMainLink {
+  display: inline-flex;
+  width: fit-content;
+  margin-top: 12px;
+  padding: 12px 16px;
+  border-radius: 12px;
+  background: #9dff20;
+  color: #071006;
+  text-decoration: none;
+  font-weight: 900;
+}
+
+.resourceCards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.resourceCard {
+  min-height: 250px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+  padding: 22px;
+  text-decoration: none;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  background:
+    linear-gradient(160deg, rgba(157, 255, 32, 0.1), rgba(255, 204, 55, 0.08)),
+    rgba(255, 255, 255, 0.04);
+}
+
+.resourceCard h3 {
+  margin: 0;
+  font-size: 25px;
+  line-height: 1.02;
+}
+
+@media (max-width: 860px) {
+  .resourceSignalInner,
+  .resourceCards {
+    grid-template-columns: 1fr;
+  }
+}
+
 @media (max-width: 600px) {
   .scrollItem { flex: 0 0 240px; }
 }

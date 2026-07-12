@@ -4,16 +4,16 @@ import Footer from "../components/Footer";
 import styles from "./contact.module.css";
 
 export const metadata: Metadata = {
-  title: "Contact Us — Kennedy Loud Cannabis | 190 Kennedy Rd S Unit 104, Brampton",
+  title: "Contact Us - Kennedy Loud Cannabis | 49 Hillcrest Ave Unit 104, Brampton",
   description:
-    "Visit Kennedy Loud Cannabis at 190 Kennedy Rd S Unit 104, Brampton, ON L6W 3R1. Open 24 Hours a day, 7 days a week. Walk-ins welcome.",
+    "Visit Kennedy Loud Cannabis at 49 Hillcrest Ave Unit 104, Brampton, ON L6W 1Y7. Open 24 Hours a day, 7 days a week. Walk-ins welcome.",
   alternates: {
     canonical: "https://kennedyloudcannabis.com/contact",
   },
   openGraph: {
     title: "Contact Kennedy Loud Cannabis — Brampton Dispensary",
     description:
-      "190 Kennedy Rd S Unit 104, Brampton. Open 24 Hours a day, 7 days a week. Premium cannabis, always fire.",
+      "49 Hillcrest Ave Unit 104, Brampton. Open 24 Hours a day, 7 days a week. Premium cannabis, always fire.",
   },
 };
 
@@ -25,7 +25,7 @@ export default function ContactPage() {
       {/* ── Hero ── */}
       <section className={styles.hero} style={{ paddingTop: "92px" }}>
         <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 20px" }}>
-          <img src="/banners/08_Contact_Us.webp" alt="Contact Us" style={{ width: "100%", height: "auto", display: "block", borderRadius: "var(--radius-lg)" }} />
+          <img src="/banners/KennedyLoud_Contact_Us.webp" alt="Contact Us" style={{ width: "100%", height: "auto", display: "block", borderRadius: "var(--radius-lg)" }} />
         </div>
       </section>
 
@@ -42,7 +42,7 @@ export default function ContactPage() {
                 <br />
                 Brampton, ON L6W 1Y7
                 <br />
-                <span className={styles.infoMuted}>Jane St &amp; Lawrence Ave W</span>
+                <span className={styles.infoMuted}>Hillcrest Ave, Brampton</span>
               </p>
             </div>
 
@@ -129,3 +129,4 @@ export default function ContactPage() {
     </main>
   );
 }
+

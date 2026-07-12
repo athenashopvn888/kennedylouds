@@ -159,10 +159,10 @@ export interface CategoryInfo {
 
 export const CATEGORY_CONFIG: Record<string, CategoryInfo> = {
   EDIBLES: {
-    banner: "/banners/KennedyLoud_Edibles_Concentrates_More.webp",
+    banner: "/banners/KennedyLoud_Edibles.webp",
     name: "Edibles", slug: "edibles", color: "#f97316", icon: "🍬",
     seoTitle: "Cannabis Edibles Brampton — Gummies, Chocolates & Drinks",
-    seoIntro: "Browse the full cannabis edibles menu at Kennedy Loud Cannabis on Brampton St, Brampton. We carry THC gummies, chocolates, drinks, and more from top Canadian brands.",
+    seoIntro: "Browse the full cannabis edibles menu at Kennedy Loud Cannabis on Hillcrest Ave, Brampton. We carry THC gummies, chocolates, drinks, and more from top Canadian brands.",
     seoDescription: "Looking for cannabis edibles in Brampton? Kennedy Loud Cannabis stocks a wide range of THC-infused gummies, chocolates, beverages, and baked goods. Our edibles range from micro-dose options for beginners to high-potency products for experienced consumers. All products are lab-tested and sourced from licensed Canadian producers. Visit us at 49 Hillcrest Ave, Unit 104 — open daily 24 hours.",
     faqs: [
       { q: "What cannabis edibles do you carry?", a: "We stock THC gummies, chocolates, beverages, capsules, and baked goods from top Canadian brands. Potencies range from 10mg to 1000mg+ THC." },
@@ -224,6 +224,7 @@ export const CATEGORY_CONFIG: Record<string, CategoryInfo> = {
     ],
   },
   "MAGIC & OTHERS": {
+    banner: "/banners/KennedyLoud_Magic_Stuff.webp",
     name: "Magic Stuff", slug: "magic", color: "#64748b", icon: "*",
     seoTitle: "Magic Stuff - Specialty Items",
     seoIntro: "Browse current menu for available specialty products. Availability may vary by store.",
@@ -237,7 +238,7 @@ export const CATEGORY_CONFIG: Record<string, CategoryInfo> = {
     banner: "/banners/KennedyLoud_Cigarettes.webp",
     name: "Cigarettes", slug: "cigarettes", color: "#78716c", icon: "🏷️",
     seoTitle: "Native Cigarettes Brampton — Discount Tobacco at Kennedy Loud Cannabis",
-    seoIntro: "Discount native cigarettes at Kennedy Loud Cannabis, Brampton. Premium and value brands at the best prices on Brampton St.",
+    seoIntro: "Discount native cigarettes at Kennedy Loud Cannabis, Brampton. Premium and value brands at the best prices on Hillcrest Ave.",
     seoDescription: "Kennedy Loud Cannabis is your go-to source for affordable native cigarettes in Brampton. We carry a wide selection of premium and value tobacco brands at competitive prices. Located at 49 Hillcrest Ave, Unit 104 in the heart of Brampton, we're open daily 24 hours. Stop by for the best cigarette prices in the neighbourhood.",
     faqs: [
       { q: "Do you sell cigarettes at Kennedy Loud Cannabis?", a: "Yes! We carry a wide selection of native cigarette brands at competitive prices." },
@@ -296,3 +297,5 @@ export function formatPrice(p: PricePoint | null): string {
   if (p.sale !== null) return `$${p.sale}`;
   return `$${p.regular}`;
 }
+
+
