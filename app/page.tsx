@@ -219,7 +219,7 @@ export default function HomePage() {
 
   return (
     <main className={styles.main}>
-      {/* -- NAVBAR -- */}
+      {/* NAVBAR */}
       <Navbar />
 
       {/* -- WELCOME BANNER -- */}

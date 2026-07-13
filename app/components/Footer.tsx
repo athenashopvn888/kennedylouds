@@ -6,7 +6,7 @@ export default function Footer() {
     <footer className={styles.footer}>
       <div className={styles.inner}>
         <div className={styles.grid}>
-          {/* Column 1 — Store Description */}
+          {/* Column 1  Store Description */}
           <div className={styles.col}>
             <div className={styles.brand}>
               KENNEDY LOUD CANNABIS
@@ -26,7 +26,7 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Column 2 — Contact Info */}
+          {/* Column 2  Contact Info */}
           <div className={styles.col}>
             <h3 className={styles.colTitle}>Contact Info</h3>
             <div className={styles.infoBlock}>
@@ -45,7 +45,7 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Column 3 — Quick Links */}
+          {/* Column 3  Quick Links */}
           <div className={styles.col}>
             <h3 className={styles.colTitle}>Quick Links</h3>
             <nav className={styles.links}>
@@ -76,7 +76,7 @@ export default function Footer() {
 
         <div className={styles.bottom}>
           <p>
-            © {new Date().getFullYear()} Kennedy Loud Cannabis. Must be 19+ to
+             {new Date().getFullYear()} Kennedy Loud Cannabis. Must be 19+ to
             enter. Please consume responsibly.
           </p>
         </div>
