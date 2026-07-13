@@ -33,18 +33,18 @@ export default function DeliveryContent() {
       <Navbar />
       <div className={styles.content}>
         <h1 className={styles.pageTitle}>
-          Delivery <span className={styles.highlight}>Coming Soon</span>
+          Delivery <span className={styles.highlight}>Updates</span>
         </h1>
         <p className={styles.pageSubtitle}>
-          Kennedy Loud Cannabis is launching delivery across Brampton.
-          Sign up below to be the first to know when we go live - and get an exclusive launch-day deal.
+          Kennedy Loud Cannabis is preparing delivery information for Brampton shoppers.
+          Sign up below if you want an update when details are ready.
         </p>
 
         {/* Email signup */}
         <div className={styles.formSection}>
-          <h2 className={styles.formTitle}>Get Notified When We Launch</h2>
+          <h2 className={styles.formTitle}>Get Delivery Updates</h2>
           <p className={styles.formDesc}>
-            Enter your email to join our delivery waitlist. We&apos;ll send you one email when delivery goes live.
+            Enter your email to join the delivery update list. We&apos;ll send one update when local details are ready.
           </p>
           <form onSubmit={handleSubmit}>
             <div className={styles.inputRow}>
@@ -68,7 +68,7 @@ export default function DeliveryContent() {
           </form>
           {status === "success" && (
             <p className={styles.successMsg}>
-              You&apos;re on the list! We&apos;ll notify you when delivery launches.
+              You&apos;re on the list. We&apos;ll notify you when delivery details are ready.
             </p>
           )}
           {status === "error" && (
@@ -82,18 +82,18 @@ export default function DeliveryContent() {
         <div className={styles.infoGrid}>
           <div className={styles.infoCard}>
             <span className={styles.infoIcon}>BOX</span>
-            <h3 className={styles.infoTitle}>Same-Day Delivery</h3>
-            <p className={styles.infoDesc}>Order before 6 PM, delivered same day across Brampton.</p>
+            <h3 className={styles.infoTitle}>Delivery Updates</h3>
+            <p className={styles.infoDesc}>Watch this page for local availability updates before planning delivery.</p>
           </div>
           <div className={styles.infoCard}>
             <span className={styles.infoIcon}>AREA</span>
-            <h3 className={styles.infoTitle}>Brampton Area</h3>
-            <p className={styles.infoDesc}>Serving the entire National Capital Region.</p>
+            <h3 className={styles.infoTitle}>Hillcrest Ave / Brampton</h3>
+            <p className={styles.infoDesc}>Built around Kennedy Loud Cannabis at 49 Hillcrest Ave, Unit 104.</p>
           </div>
           <div className={styles.infoCard}>
             <span className={styles.infoIcon}>$</span>
-            <h3 className={styles.infoTitle}>Same Great Prices</h3>
-            <p className={styles.infoDesc}>All in-store promotions apply to delivery orders too.</p>
+            <h3 className={styles.infoTitle}>Current Store Menu</h3>
+            <p className={styles.infoDesc}>Use the menu categories to confirm current products before visiting.</p>
           </div>
         </div>
 
