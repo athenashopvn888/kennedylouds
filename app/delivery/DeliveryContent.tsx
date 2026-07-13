@@ -16,15 +16,14 @@ export default function DeliveryContent() {
     setStatus("loading");
 
     try {
-      // Save to Google Sheets via Apps Script
-      const res = await fetch(
+      await fetch(
         `https://script.google.com/macros/s/AKfycbySrZYxI-NNnXfxY1jXOqHgT2HQi4zst2Fgte6FXTeymat_W_r0o1E3P83EfnVCjEk0/exec?action=delivery_email&email=${encodeURIComponent(email)}&store=KLC01`,
         { method: "GET", mode: "no-cors" }
       );
       setStatus("success");
       setEmail("");
     } catch {
-      setStatus("success"); // no-cors always succeeds visually
+      setStatus("success");
     }
   }
 
@@ -40,7 +39,6 @@ export default function DeliveryContent() {
           Sign up below if you want an update when details are ready.
         </p>
 
-        {/* Email signup */}
         <div className={styles.formSection}>
           <h2 className={styles.formTitle}>Get Delivery Updates</h2>
           <p className={styles.formDesc}>
@@ -78,7 +76,6 @@ export default function DeliveryContent() {
           )}
         </div>
 
-        {/* Info cards */}
         <div className={styles.infoGrid}>
           <div className={styles.infoCard}>
             <span className={styles.infoIcon}>BOX</span>
@@ -97,10 +94,9 @@ export default function DeliveryContent() {
           </div>
         </div>
 
-        {/* CTA */}
         <div className={styles.ctaSection}>
           <p className={styles.ctaText}>
-            Can&apos;t wait? Visit us in-store at <strong>49 Hillcrest Ave, Unit 104, Brampton</strong> - open <strong>24 hours</strong>. Call <strong>(437) 237-2286</strong>.
+            Until delivery details are ready, visit us in-store at <strong>49 Hillcrest Ave, Unit 104, Brampton</strong> - open <strong>24 hours</strong>. Call <strong>(437) 237-2286</strong>.
           </p>
         </div>
       </div>
@@ -108,4 +104,3 @@ export default function DeliveryContent() {
     </main>
   );
 }
-

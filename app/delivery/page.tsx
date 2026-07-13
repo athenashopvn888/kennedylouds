@@ -2,8 +2,9 @@ import type { Metadata } from "next";
 import DeliveryContent from "./DeliveryContent";
 
 export const metadata: Metadata = {
-  title: "Delivery Coming Soon — Kennedy Loud Cannabis | Brampton",
-  description: "Get notified when Kennedy Loud Cannabis launches same-day weed delivery across Brampton and surrounding areas.",
+  title: "Delivery Updates - Kennedy Loud Cannabis | Brampton",
+  description:
+    "Kennedy Loud Cannabis delivery updates for Brampton shoppers. Check this page for local delivery information as details are prepared.",
   alternates: {
     canonical: "https://kennedyloudcannabis.com/delivery",
   },
