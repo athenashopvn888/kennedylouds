@@ -57,7 +57,7 @@ const BENTO_TIERS = [
 
 /* -- Explore Categories Config (New Banners) -- */
 const EXPLORE_CATEGORIES = [
-  { name: "Vape Pens", slug: "items/vapes", banner: "/banners/KennedyLoud_THC_Vape.webp" },
+  { name: "THC Vape", slug: "items/vapes", banner: "/banners/KennedyLoud_THC_Vape.webp" },
   { name: "Nic Vape", slug: "items/vape-disposables", banner: "/banners/KennedyLoud_Nic_Vape.webp" },
   { name: "Concentrates", slug: "items/concentrates", banner: "/banners/KennedyLoud_Concentrates.webp" },
   { name: "Pre-Rolls", slug: "items/prerolls", banner: "/banners/KennedyLoud_Pre_Rolls.webp" },
@@ -69,13 +69,13 @@ const EXPLORE_CATEGORIES = [
 
 const RESOURCE_LINKS = [
   {
-    href: "/resources/hillcrest-24-hour-visit-guide",
-    label: "24-hour visit",
+    href: "/resources/hillcrest-ave-visit-guide",
+    label: "Hillcrest visit",
     title: "Hillcrest Ave pull-up guide",
     body: "Menu-first notes for late-night, early-morning, and regular Brampton visits.",
   },
   {
-    href: "/resources/loud-flower-tier-guide",
+    href: "/resources/flower-tier-guide",
     label: "Flower tiers",
     title: "Pick the loud shelf faster",
     body: "Exotic, Premium, AAA+, AA, and Budget explained without the maze.",
@@ -352,7 +352,7 @@ export default function HomePage() {
             <h2>Local guides tuned for the Hillcrest Ave shop.</h2>
             <p>
               Built for shoppers who want the useful page fast: visit planning, flower tier logic,
-              native smokes, vapes, concentrates, and the Brampton GBP landing page.
+              native smokes, vapes, concentrates, and the Brampton visit page.
             </p>
             <Link href="/resources" className={styles.resourceMainLink}>Open Resource Hub</Link>
           </div>
