@@ -66,7 +66,7 @@ export default function Footer() {
               <Link href="/info/brampton-weed-dispensary">Brampton Dispensary</Link>
               <Link href="/info/cheap-weed-brampton">Cheap Weed Brampton</Link>
               <Link href="/info/native-cigarettes-brampton">Native Cigarettes</Link>
-              <Link href="/info/weed-store-near-mississauga">Weed Store Near Mississauga</Link>
+              <Link href="/info/weed-store-near-hillcrest-ave">Weed Store Near Hillcrest Ave</Link>
               <Link href="/weed-dispensary-brampton/">
                 Kennedy Loud Cannabis Weed Dispensary in Brampton
               </Link>

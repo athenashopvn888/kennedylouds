@@ -4,9 +4,9 @@ import Footer from "../components/Footer";
 import styles from "./faq.module.css";
 
 export const metadata: Metadata = {
-  title: "FAQ — Kennedy Loud Cannabis | Brampton Dispensary Questions",
+  title: "FAQ - Kennedy Loud Cannabis | Brampton Dispensary Questions",
   description:
-    "Frequently asked questions about Kennedy Loud Cannabis in Brampton. Hours, location, products, pricing, bundle offers, and everything you need to know before visiting.",
+    "Frequently asked questions about Kennedy Loud Cannabis in Brampton. Hours, location, menu categories, pricing notes, delivery updates, and visit basics.",
   alternates: {
     canonical: "https://kennedyloudcannabis.com/faq",
   },
@@ -14,51 +14,48 @@ export const metadata: Metadata = {
 
 const FAQ_CATEGORIES = [
   {
-    title: "📍 Location & Hours",
+    title: "Location & Hours",
     faqs: [
-      { q: "Where is Kennedy Loud Cannabis located?", a: "We are located at 49 Hillcrest Ave, Unit 104, Brampton, ON L6W 1Y7. We're easily accessible by TTC bus routes and close to major highways like the 401." },
-      { q: "What are your hours?", a: "We are open Open 24 Hours a day, 7 days a week, 365 days a year. Walk in anytime — no appointment needed." },
-      { q: "Is there parking nearby?", a: "Yes. Free street parking is available nearby on Hillcrest Ave and nearby streets in the evenings. We're also easily accessible by local transit routes." },
-      { q: "How far are you from Mississauga?", a: "We're just 5 minutes from the Gardiner Expressway and 7 minutes from the Don Valley Parkway. We're one of the closest dispensaries to the Ontario border." },
-      { q: "What's the best way to get to Kennedy Loud Cannabis?", a: "We're easily accessible by car, bus, or foot. By TTC bus, the 35 Jane bus stops right near our store. Free parking is available on surrounding streets." },
+      { q: "Where is Kennedy Loud Cannabis located?", a: "Kennedy Loud Cannabis is located at 49 Hillcrest Ave, Unit 104, Brampton, ON L6W 1Y7." },
+      { q: "What are your hours?", a: "The store lists Open 24 Hours. Bring valid 19+ government ID when visiting." },
+      { q: "Is there parking nearby?", a: "For parking or transit details, use the current map listing or contact the store before visiting." },
+      { q: "What nearby areas are useful for this location?", a: "This Brampton location is useful for shoppers around Hillcrest Ave, Kennedy Road, Queen Street, Main Street, Downtown Brampton, and Bramalea." },
+      { q: "What's the best way to get to Kennedy Loud Cannabis?", a: "Confirm your route with the current map listing before visiting, especially if you are coming from outside Brampton." },
     ],
   },
   {
-    title: "🌿 Products & Menu",
+    title: "Products & Menu",
     faqs: [
-      { q: "What products do you carry?", a: "We carry over 200 strains of cannabis flower across 5 quality tiers (Exotic, Premium, AAA+, AA, Budget), plus edibles (gummies, chocolates, baked goods), vape pens, disposable vapes, concentrates (shatter, wax, hash, diamonds, live resin), pre-rolled joints, native cigarettes, and accessories." },
-      { q: "Do you have a live menu?", a: "Yes! Our online menu at kennedyloudcannabis.com updates in real time with current stock, prices, THC levels, and availability. You can check what's in stock before you visit." },
-      { q: "What are your flower tiers?", a: "Exotic ($10-$12/g, THC 35-39%) — ultra-rare top-shelf genetics. Premium ($7-$10/g, THC 32-34%) — connoisseur-grade. AAA+ ($5-$6/g, THC 30-32%) — heavy hitters, our most popular tier. AA ($4/g, THC 27-29%) — quality daily drivers. Budget ($3/g, THC 24-27%) — reliable value flower." },
-      { q: "Do you sell edibles?", a: "Yes! We carry a variety of edibles including gummies, chocolates, baked goods, and more. THC content varies. Check our live menu for current availability." },
-      { q: "Do you sell vapes?", a: "Yes — both disposable vapes and refillable vape pens. We carry both nicotine vapes and THC vapes from top brands." },
-      { q: "Do you sell native cigarettes?", a: "Yes! We carry one of the widest selections of native cigarettes in downtown Brampton, including premium and value brands in multiple varieties." },
+      { q: "What products are on the site?", a: "The site includes category information for flower tiers, edibles, vape pens, disposable vapes, concentrates, pre-rolls, native cigarettes, accessories, and specialty items. Current availability can change." },
+      { q: "Do you have a menu online?", a: "Yes. You can browse menu and category information online before visiting. Confirm current details before making a special trip." },
+      { q: "What are your flower tiers?", a: "The flower menu is organized into tiers such as Exotic, Premium, AAA+, AA, and Budget so shoppers can compare posted product levels more easily." },
+      { q: "Do you sell edibles?", a: "The site includes an edibles category. Check current category details before visiting for a specific edible product." },
+      { q: "Do you sell vapes?", a: "The site includes THC Vape and Nic Vape categories. Check current category pages for listed items." },
+      { q: "Do you sell native cigarettes?", a: "The site includes a cigarettes category. Check the current brand mix before visiting Hillcrest Ave." },
     ],
   },
   {
-    title: "💰 Pricing & Bundle Offers",
+    title: "Pricing & Bundle Notes",
     faqs: [
-      { q: "What is the cheapest weed you sell?", a: "Our Budget tier starts at $3/g with value ounces from $40. Our AA tier is $4/g. These are the most competitive prices you'll find in Brampton." },
-      { q: "What bundle pricing do you offer?", a: "Flower bundle pricing includes a 3g total option — the 3g total is shown clearly before purchase. Our Exotic, Premium, and AAA+ tiers also offer 6g bundle pricing, with 6g total pricing." },
-      { q: "Do you have ounce deals?", a: "Yes! Budget ounces from $40, AA ounces from $90, AAA+ ounces from $100. All with freshness and quality guaranteed." },
-      { q: "How does bundle pricing work?", a: "The 3g bundle pricing applies to every tier automatically. The 6g bundle pricing applies to Exotic, Premium, and AAA+ tiers. These are our standard everyday bundle offers." },
-      { q: "How does the tier pricing work?", a: "Each flower strain is graded into one of five quality tiers. The tier determines the per-gram price. This transparent system means you always know exactly what you're paying — no confusing markups or inconsistent pricing." },
+      { q: "What is the cheapest weed you sell?", a: "Budget-oriented flower options are listed in the menu when available. Check current pricing and availability before visiting." },
+      { q: "What bundle pricing do you show?", a: "Flower bundle pricing is shown by tier where listed. The Exotic, Premium, and AAA+ tiers show 3g and 6g bundle pricing in the current tier setup." },
+      { q: "Do you have ounce deals?", a: "Ounce and bundle details can change as stock rotates. Check the current menu for the latest pricing information." },
+      { q: "How does tier pricing work?", a: "Flower is organized into tier pages so shoppers can compare posted per-gram pricing and bundle information before visiting." },
     ],
   },
   {
-    title: "🛒 Shopping & Experience",
+    title: "Shopping & Delivery",
     faqs: [
-      { q: "Do I need an appointment?", a: "No! Kennedy Loud Cannabis is walk-in only. Just show up anytime — we're open Open 24 Hours." },
-      { q: "Can I order online?", a: "Currently, Kennedy Loud Cannabis is an in-store shopping experience only. You can browse our live menu online to see what's in stock before visiting." },
-      { q: "Do you offer delivery?", a: "Delivery is coming soon! Visit our delivery page to sign up for email notifications when we launch our delivery service." },
-      { q: "What payment methods do you accept?", a: "We accept cash and debit. No credit cards at this time." },
-      { q: "Can your staff help me choose a strain?", a: "Absolutely! Our knowledgeable budtenders are here to help. Whether you're a first-time buyer or a seasoned connoisseur, we can recommend strains based on your preferences, desired effects, and budget." },
-      { q: "Is there a minimum purchase?", a: "No minimum purchase required. You can buy as little as 1 gram." },
+      { q: "Do I need an appointment?", a: "No appointment is listed as required. Bring valid 19+ government ID when visiting." },
+      { q: "Can I order online?", a: "Currently, Kennedy Loud Cannabis is an in-store shopping experience. You can browse menu and category information online before visiting." },
+      { q: "Do you offer delivery?", a: "Delivery information is being prepared. Visit the delivery page for updates." },
+      { q: "What payment methods do you accept?", a: "The site lists cash and debit. Contact the store before visiting if payment details are important for your trip." },
+      { q: "Can staff help me choose?", a: "Staff can help adult 19+ shoppers compare menu categories, product styles, and budget ranges during posted store hours." },
     ],
   },
 ];
 
 export default function FAQPage() {
-  // JSON-LD for FAQ page
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -83,11 +80,10 @@ export default function FAQPage() {
       <main className={styles.main}>
         <Navbar />
 
-        {/* FAQ Banner */}
         <section style={{ width: "100%", overflow: "hidden", marginTop: "92px" }}>
           <img
             src="/banners/KennedyLoud_FAQ_Info.webp"
-            alt="Kennedy Loud Cannabis FAQ — Your Questions Answered"
+            alt="Kennedy Loud Cannabis FAQ"
             style={{ width: "100%", height: "auto", display: "block", objectFit: "contain" }}
           />
         </section>
@@ -95,7 +91,7 @@ export default function FAQPage() {
         <div className={styles.content}>
           <h1 className={styles.pageTitle}>Frequently Asked Questions</h1>
           <p className={styles.pageSubtitle}>
-            Everything you need to know about Kennedy Loud Cannabis — Brampton&apos;s premium dispensary at 49 Hillcrest Ave, Unit 104 in Brampton.
+            Everything you need to know about Kennedy Loud Cannabis at 49 Hillcrest Ave, Unit 104 in Brampton.
           </p>
 
           {FAQ_CATEGORIES.map((cat) => (
@@ -113,14 +109,13 @@ export default function FAQPage() {
           <div className={styles.ctaSection}>
             <h2 className={styles.ctaTitle}>Still have questions?</h2>
             <p className={styles.ctaText}>
-              Call us at <strong>(437) 577-2589</strong> or visit us at 49 Hillcrest Ave, Unit 104, Brampton.
+              Call Kennedy Loud Cannabis at <a href="tel:+14372372286">(437) 237-2286</a> or visit 49 Hillcrest Ave, Unit 104 in Brampton.
             </p>
           </div>
         </div>
+
         <Footer />
       </main>
     </>
   );
 }
-
-

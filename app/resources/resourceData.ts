@@ -70,12 +70,12 @@ export const RESOURCE_PAGES: ResourceArticle[] = [
       {
         heading: "Know The Stop Before You Go",
         body:
-          "Kennedy Loud Cannabis is at 49 Hillcrest Ave Unit 104 in Brampton, close to Kennedy Road, Queen Street, Main Street, and Brampton Transit connections. Bring valid 19+ ID, pick your category path, and keep one backup lane in mind in case the menu rotated since your last visit.",
+          "Kennedy Loud Cannabis is at 49 Hillcrest Ave Unit 104 in Brampton, close to Kennedy Road, Queen Street, Main Street, and Brampton Transit connections. Bring valid 19+ ID, pick your category path, and keep one backup category in mind in case the menu rotated since your last visit.",
       },
       {
         heading: "Choose Flower By Tier",
         body:
-          "Flower shoppers can start with the tier ladder: Exotic for the loudest shelf, Premium for strong bag appeal, AAA+ and AA for everyday value, and Budget for the lowest-price flower lane. That keeps the first decision simple before comparing strains.",
+          "Flower shoppers can start with the tier ladder: Exotic, Premium, AAA+, AA, and Budget. That keeps the first decision simple before comparing current flower listings.",
       },
       {
         heading: "Use Format Paths When Flower Is Not The Plan",
@@ -102,7 +102,7 @@ export const RESOURCE_PAGES: ResourceArticle[] = [
       "Use the Kennedy Loud Cannabis menu map for Brampton shoppers near Kennedy Road and Hillcrest Ave looking for flower, pre-rolls, edibles, vapes, concentrates, cigarettes, and accessories.",
     eyebrow: "Menu map",
     summary:
-      "A Kennedy Road and Hillcrest Ave shortcut for shoppers who want the right KLC menu lane fast.",
+      "A Kennedy Road and Hillcrest Ave shortcut for shoppers who want the right KLC category fast.",
     sections: [
       {
         heading: "Search By What You Came For",
@@ -117,7 +117,7 @@ export const RESOURCE_PAGES: ResourceArticle[] = [
       {
         heading: "Use KLC Banners As The Shelf Map",
         body:
-          "Kennedy Loud uses store-branded category banners across the site, so the menu feels like a clear shelf map: loud flower, vape lanes, cigarette counter, accessories, and specialty products each get their own lane.",
+          "Kennedy Loud uses store-branded category banners across the site, so the menu feels like a clear shelf map: flower tiers, vape categories, cigarette counter, accessories, and specialty products each get their own section.",
       },
       {
         heading: "Let Product Pages Handle Rotation",
@@ -139,12 +139,12 @@ export const RESOURCE_PAGES: ResourceArticle[] = [
       "Compare Kennedy Loud Cannabis flower tiers in Brampton, including Exotic, Premium, AAA+, AA, and Budget menu paths.",
     eyebrow: "Flower tiers",
     summary:
-      "A plain-English guide to the Kennedy Loud flower shelf for shoppers comparing tier, price lane, and menu style.",
+      "A plain-English guide to the Kennedy Loud flower shelf for shoppers comparing tier, price range, and menu style.",
     sections: [
       {
         heading: "Exotic And Premium",
         body:
-          "Exotic and Premium are the loudest shelf signals on the KLC menu. These are the lanes to start with when a shopper wants top-shelf browsing, stronger bag appeal, or a flower page with more premium positioning.",
+          "Exotic and Premium are the higher-tier shelf signals on the KLC menu. These are the categories to start with when a shopper wants higher-tier flower browsing.",
       },
       {
         heading: "AAA+ And AA",
@@ -154,7 +154,7 @@ export const RESOURCE_PAGES: ResourceArticle[] = [
       {
         heading: "Budget Flower",
         body:
-          "Budget is the value lane for shoppers looking for the lowest-price flower path at Kennedy Loud. The page points shoppers to current listings instead of promising a fixed strain or batch.",
+          "Budget is the value category for shoppers looking for the lowest-price flower path at Kennedy Loud. The page points shoppers to current listings instead of promising a fixed strain or batch.",
       },
       {
         heading: "Why Tiers Make KLC Easier",
@@ -184,7 +184,7 @@ export const RESOURCE_PAGES: ResourceArticle[] = [
           "A 24-hour visit usually works best when the first choice is already made. Flower shoppers can pick a tier, vape shoppers can jump to THC Vape or Nic Vape, and cigarette shoppers can head straight to the cigarette category.",
       },
       {
-        heading: "Keep One Backup Lane",
+        heading: "Keep One Backup Category",
         body:
           "Menus rotate. A simple backup plan keeps the trip smooth: Premium if Exotic is not the move, AA if Budget is picked over, pre-rolls if flower comparison feels too slow, or accessories if the visit is about support gear.",
       },
@@ -218,17 +218,17 @@ export const RESOURCE_PAGES: ResourceArticle[] = [
       {
         heading: "THC Vape Path",
         body:
-          "The THC Vape lane is for shoppers looking for cannabis vape formats such as vape pens, cartridge-style options, and vape-first browsing. Keeping this path separate from flower makes the site faster for shoppers who already know the format they want.",
+          "The THC Vape category is for shoppers looking for cannabis vape formats such as vape pens, cartridge-style options, and vape-first browsing. Keeping this path separate from flower makes the site faster for shoppers who already know the format they want.",
       },
       {
         heading: "Nic Vape And Pouches",
         body:
-          "Kennedy Loud menu categories include Nic Vape and nicotine pouch listings. Nicotine products are for adult shoppers only and carry serious health risks, so this guide keeps the lane focused on menu location and current product checks.",
+          "Kennedy Loud menu categories include Nic Vape and nicotine pouch listings. Nicotine products are for adult shoppers only and carry serious health risks, so this guide keeps the page focused on menu location and current product checks.",
       },
       {
         heading: "Concentrates Path",
         body:
-          "Concentrates deserve their own lane because hash, shatter-style products, resin-style extracts, and similar formats are a different shopping decision than flower or edibles. The category page is where current options belong.",
+          "Concentrates deserve their own category because hash, shatter-style products, resin-style extracts, and similar formats are a different shopping decision than flower or edibles. The category page is where current options belong.",
       },
       {
         heading: "Accessories Close The Loop",
@@ -250,7 +250,7 @@ export const RESOURCE_PAGES: ResourceArticle[] = [
       "Find Kennedy Loud Cannabis cigarette and native smoke menu paths in Brampton with Canadian, Canadian Goose, Canadian Classics, Putters, Nexus, Time, Backwoods, Grabba, and nicotine pouch notes.",
     eyebrow: "Cigarettes",
     summary:
-      "A cigarette counter guide using the brands and price lanes present on the Kennedy Loud menu.",
+      "A cigarette counter guide using the brands and price ranges present on the Kennedy Loud menu.",
     sections: [
       {
         heading: "Cigarette Brands On The Menu",
@@ -258,7 +258,7 @@ export const RESOURCE_PAGES: ResourceArticle[] = [
           "The Kennedy Loud menu lists cigarette options including Canadian Lights, Canadian Full, Canadian Menthol, Canadian Goose Full, Canadian Goose Lights, Canadian Classics Original, Canadian Classics Silver, Putters, Rolled Gold Lights, Nexus Full, Nexus Lights, and Time Full.",
       },
       {
-        heading: "Listed Price Lanes",
+        heading: "Listed Price Ranges",
         body:
           "Many native cigarette pack listings on the current menu show $25. The menu also includes 10 x Premium Mix Cigarettes at $3, nicotine pouches, Grabba, Grabba Shaker, and Backwoods listings with their own prices.",
       },

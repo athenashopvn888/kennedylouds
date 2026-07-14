@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Contact Kennedy Loud Cannabis — Brampton Dispensary",
     description:
-      "49 Hillcrest Ave Unit 104, Brampton. Open 24 Hours a day, 7 days a week. Premium cannabis, always fire.",
+      "49 Hillcrest Ave Unit 104, Brampton. Open 24 Hours a day, 7 days a week. Check current menu categories before visiting.",
   },
 };
 
@@ -93,22 +93,22 @@ export default function ContactPage() {
               <p className={styles.infoText}>
                 No appointment needed.
                 <br />
-                Just walk in and our staff will
+                Just walk in and staff can
                 <br />
-                help you find the perfect strain.
+                help with current menu questions.
               </p>
               <div className={styles.featureList}>
                 <div className={styles.featureItem}>
                   <span className={styles.featureCheck}>✓</span>
-                  200+ strains in stock
+                  Flower tiers and menu categories
                 </div>
                 <div className={styles.featureItem}>
                   <span className={styles.featureCheck}>✓</span>
-                  Lab-tested &amp; safe
+                  Current product details
                 </div>
                 <div className={styles.featureItem}>
                   <span className={styles.featureCheck}>✓</span>
-                  Knowledgeable budtenders
+                  Adult 19+ store support
                 </div>
                 <div className={styles.featureItem}>
                   <span className={styles.featureCheck}>✓</span>

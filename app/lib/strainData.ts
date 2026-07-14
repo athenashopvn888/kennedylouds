@@ -1,4 +1,4 @@
-/* -- Auto-generated strain effects & SEO descriptions -- */
+/* Auto-generated strain display helpers */
 
 interface StrainEffects {
   effects: { emoji: string; label: string }[];
@@ -7,29 +7,29 @@ interface StrainEffects {
 }
 
 const INDICA_EFFECTS = [
-  { emoji: "\uD83D\uDECB\uFE0F", label: "Couch Lock" },
-  { emoji: "\uD83D\uDE0C", label: "Relax" },
-  { emoji: "\uD83C\uDF19", label: "Sleepy" },
+  { emoji: "INFO", label: "Indica" },
+  { emoji: "MENU", label: "Menu Details" },
+  { emoji: "19+", label: "Adult Use" },
 ];
 
 const SATIVA_EFFECTS = [
-  { emoji: "\u26A1", label: "Energize" },
-  { emoji: "\uD83C\uDFA8", label: "Creative" },
-  { emoji: "\uD83C\uDFAF", label: "Focus" },
+  { emoji: "INFO", label: "Sativa" },
+  { emoji: "MENU", label: "Menu Details" },
+  { emoji: "19+", label: "Adult Use" },
 ];
 
 const HYBRID_EFFECTS = [
-  { emoji: "\u2696\uFE0F", label: "Balanced" },
-  { emoji: "\uD83D\uDE04", label: "Uplifting" },
-  { emoji: "\uD83C\uDF3F", label: "Calm" },
+  { emoji: "INFO", label: "Hybrid" },
+  { emoji: "MENU", label: "Menu Details" },
+  { emoji: "19+", label: "Adult Use" },
 ];
 
 const TIER_DESCRIPTIONS: Record<string, string> = {
-  EXOTIC: "ultra-rare, top-shelf exotic",
-  PREMIUM: "premium connoisseur-grade",
-  "AAA+": "heavy-hitting AAA+",
-  AA: "quality daily-driver AA",
-  BUDGET: "value-packed budget",
+  EXOTIC: "Exotic flower tier",
+  PREMIUM: "Premium flower tier",
+  "AAA+": "AAA+ flower tier",
+  AA: "AA flower tier",
+  BUDGET: "Budget flower tier",
 };
 
 export function getStrainData(
@@ -40,7 +40,7 @@ export function getStrainData(
 ): StrainEffects {
   const typeLabel =
     type === "indica" ? "Indica" : type === "sativa" ? "Sativa" : "Hybrid";
-  const tierDesc = TIER_DESCRIPTIONS[tier] || tier.toLowerCase();
+  const tierDesc = TIER_DESCRIPTIONS[tier] || `${tier} flower tier`;
   const effects =
     type === "indica"
       ? INDICA_EFFECTS
@@ -48,27 +48,13 @@ export function getStrainData(
       ? SATIVA_EFFECTS
       : HYBRID_EFFECTS;
 
-  const description = `${name} is a ${tierDesc} ${typeLabel} strain${
-    thc ? ` testing at ${thc} THC` : ""
-  }. Known for its ${effects
-    .map((e) => e.label.toLowerCase())
-    .join(", ")} effects, this ${typeLabel.toLowerCase()} delivers ${
-    type === "indica"
-      ? "deep body relaxation and a heavy, sedating high perfect for unwinding after a long day"
-      : type === "sativa"
-      ? "an uplifting cerebral buzz and creative energy ideal for daytime use"
-      : "a balanced experience combining physical relaxation with mental clarity"
-  }. Available in-store at Kennedy Loud Cannabis, Brampton.`;
+  const description = `${name} is listed as a ${tierDesc} ${typeLabel} flower option${
+    thc ? ` with a posted THC value of ${thc}` : ""
+  }. Product details, pricing, and availability can change, so confirm the current menu before visiting Kennedy Loud Cannabis in Brampton.`;
 
   const metaDescription = `${name} - ${tierDesc} ${typeLabel}${
-    thc ? ` at ${thc} THC` : ""
-  }. ${
-    type === "indica"
-      ? "Relaxing body high."
-      : type === "sativa"
-      ? "Uplifting cerebral buzz."
-      : "Balanced hybrid effects."
-  } Walk-in welcome at Kennedy Loud Cannabis Brampton. Real-time stock.`;
+    thc ? ` with posted ${thc} THC` : ""
+  }. Confirm current menu details before visiting Kennedy Loud Cannabis Brampton.`;
 
   return { effects, description, metaDescription };
 }

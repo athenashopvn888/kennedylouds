@@ -33,7 +33,7 @@ export async function generateMetadata({
     description: seo?.seoIntro || `Shop ${flowers.length} ${tierInfo.config.name.toLowerCase()} cannabis strains at Kennedy Loud Cannabis.`,
     openGraph: {
       title: `${tierInfo.config.name} Flower | Kennedy Loud Cannabis`,
-      description: `${flowers.length} curated ${tierInfo.config.name.toLowerCase()} strains in stock now. From $${tierInfo.config.unitPrice}/g.`,
+      description: `${flowers.length} listed ${tierInfo.config.name.toLowerCase()} flower entries. Confirm current pricing and availability before visiting Kennedy Loud Cannabis.`,
     },
   };
 }

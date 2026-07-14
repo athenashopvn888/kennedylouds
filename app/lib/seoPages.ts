@@ -37,9 +37,9 @@ export const SEO_PAGES: SeoPageData[] = [
           "Kennedy Loud lists 24-hour access for Brampton shoppers. Late-night and early-morning visitors can check the menu path, bring valid 19+ ID, and use the FAQ or contact page for store basics.",
       },
       {
-        heading: "Brampton And Peel Visits",
+        heading: "Brampton And Hillcrest Ave Visits",
         body:
-          "The Hillcrest Ave shop is positioned for shoppers around Kennedy Road, Queen Street, Main Street, central Brampton, and nearby Peel trips. Category pages carry current products and prices as the menu rotates.",
+          "The Hillcrest Ave shop is positioned for shoppers around Kennedy Road, Queen Street, Main Street, central Brampton, Downtown Brampton, and Bramalea. Category pages carry current products and prices as the menu rotates.",
       },
     ],
     faqs: [
@@ -57,7 +57,7 @@ export const SEO_PAGES: SeoPageData[] = [
       },
       {
         q: "How should I choose a flower tier?",
-        a: "Start with the shelf that matches the trip: Exotic or Premium for the loudest lanes, AAA+ or AA for everyday value, and Budget for the lowest-price flower path.",
+        a: "Start with the shelf that matches the trip: Exotic or Premium for higher-tier browsing, AAA+ or AA for everyday value, and Budget for the lowest-price flower path.",
       },
     ],
   },
@@ -74,12 +74,12 @@ export const SEO_PAGES: SeoPageData[] = [
       {
         heading: "Start With Budget And AA",
         body:
-          "Kennedy Loud separates the value flower lanes so shoppers can compare Budget and AA without digging through premium shelves first. That makes the cheap weed path easier to use from a phone before visiting.",
+          "Kennedy Loud separates value flower categories so shoppers can compare Budget and AA without digging through higher-tier shelves first. That makes the cheap weed path easier to use from a phone before visiting.",
       },
       {
         heading: "Compare Up The Tier Ladder",
         body:
-          "If the value lane is not the move, shoppers can step up into AAA+, Premium, or Exotic. The point is simple: choose the shelf first, then compare the current strains inside that shelf.",
+          "If the value category is not the move, shoppers can step up into AAA+, Premium, or Exotic. The point is simple: choose the shelf first, then compare the current strains inside that shelf.",
       },
       {
         heading: "Use Current Menu Pages",
@@ -123,7 +123,7 @@ export const SEO_PAGES: SeoPageData[] = [
           "The Kennedy Loud menu includes cigarette listings such as Canadian Lights, Canadian Full, Canadian Menthol, Canadian Goose Full, Canadian Goose Lights, Canadian Classics Original, Canadian Classics Silver, Putters, Rolled Gold Lights, Nexus Full, Nexus Lights, and Time Full.",
       },
       {
-        heading: "Price Lanes From Current Listings",
+        heading: "Price Ranges From Current Listings",
         body:
           "Many native cigarette pack listings show $25. The menu also includes 10 x Premium Mix Cigarettes at $3, nicotine pouches, Grabba, Grabba Shaker, and Backwoods listings with their own menu prices.",
       },
@@ -154,19 +154,19 @@ export const SEO_PAGES: SeoPageData[] = [
     ],
   },
   {
-    slug: "weed-store-near-mississauga",
-    title: "Weed Store Near Mississauga | Kennedy Loud Cannabis Brampton",
+    slug: "weed-store-near-hillcrest-ave",
+    title: "Weed Store Near Hillcrest Ave | Kennedy Loud Cannabis Brampton",
     metaDescription:
-      "Kennedy Loud Cannabis is a 24-hour Brampton weed store on Hillcrest Ave for shoppers coming from Mississauga, Peel, Kennedy Road, and nearby routes.",
-    h1: "Weed Store Near Mississauga",
-    icon: "410",
-    heroTagline: "A Brampton cannabis stop for Mississauga and Peel shoppers.",
+      "Kennedy Loud Cannabis is a 24-hour Brampton weed store at 49 Hillcrest Ave, Unit 104, near Kennedy Road, Queen Street, Main Street, and Downtown Brampton.",
+    h1: "Weed Store Near Hillcrest Ave",
+    icon: "KLC",
+    heroTagline: "A Brampton cannabis stop at 49 Hillcrest Ave, Unit 104.",
     banner: "/banners/KennedyLoud_Homepage_Hero.webp",
     sections: [
       {
-        heading: "Brampton Stop From Mississauga",
+        heading: "Brampton Stop On Hillcrest Ave",
         body:
-          "Kennedy Loud Cannabis sits at 49 Hillcrest Ave, Unit 104 in Brampton. For shoppers coming from Mississauga or other Peel routes, the site keeps flower, edibles, vapes, concentrates, cigarettes, accessories, and specialty paths easy to scan before leaving.",
+          "Kennedy Loud Cannabis sits at 49 Hillcrest Ave, Unit 104 in Brampton. The site keeps flower, edibles, vapes, concentrates, cigarettes, accessories, and specialty paths easy to scan before visiting.",
       },
       {
         heading: "Use The Menu Before The Drive",
@@ -181,7 +181,7 @@ export const SEO_PAGES: SeoPageData[] = [
       {
         heading: "Current Listings Belong On Product Pages",
         body:
-          "The Mississauga guide explains the route and shopping flow. Current strains, flavours, brands, and prices belong on the category and product pages because the menu can rotate.",
+          "This Hillcrest Ave guide explains the local shopping flow. Current strains, flavours, brands, and prices belong on the category and product pages because the menu can rotate.",
       },
     ],
     faqs: [
@@ -190,11 +190,11 @@ export const SEO_PAGES: SeoPageData[] = [
         a: "Kennedy Loud Cannabis is at 49 Hillcrest Ave, Unit 104, Brampton, ON L6W 1Y7.",
       },
       {
-        q: "Can Mississauga shoppers visit Kennedy Loud?",
-        a: "Yes. The Brampton shop is positioned for Peel-area shoppers, including visitors coming from Mississauga routes.",
+        q: "Is Kennedy Loud Cannabis on Hillcrest Ave?",
+        a: "Yes. Kennedy Loud Cannabis is listed at 49 Hillcrest Ave, Unit 104 in Brampton.",
       },
       {
-        q: "What should I check before driving from Mississauga?",
+        q: "What should I check before visiting Hillcrest Ave?",
         a: "Check the category page that matches your trip: flower tier, edibles, pre-rolls, vapes, concentrates, cigarettes, accessories, or Magic Stuff.",
       },
     ],
@@ -215,7 +215,7 @@ export const SEO_PAGES: SeoPageData[] = [
           "Kennedy Loud Cannabis is located at 49 Hillcrest Ave, Unit 104 in Brampton. Nearby shoppers can use the menu to pick a flower tier or format category before visiting.",
       },
       {
-        heading: "Choose The Right Lane",
+        heading: "Choose The Right Category",
         body:
           "The site is organized for fast decisions: Exotic, Premium, AAA+, AA, Budget, edibles, pre-rolls, THC Vape, Nic Vape, concentrates, cigarettes, accessories, and Magic Stuff.",
       },
@@ -256,6 +256,7 @@ const LEGACY_SEO_REDIRECTS: Record<string, string> = {
   "cheap-weed-york": "cheap-weed-brampton",
   "native-cigarettes-york": "native-cigarettes-brampton",
   "dispensary-near-me-york": "dispensary-near-me-brampton",
+  "weed-store-near-mississauga": "weed-store-near-hillcrest-ave",
 };
 
 export function getLegacySeoRedirect(slug: string): string | undefined {

@@ -12,7 +12,7 @@ export const gbpLocation = {
   phone: "(437) 237-2286",
   phoneIntl: "+14372372286",
   neighborhood: "Kennedy Road / Brampton",
-  nearbyAreas: ["Kennedy Road", "Downtown Brampton", "Queen Street", "Main Street", "Brampton", "Peel Region", "Brampton Transit", "Bramalea"],
+  nearbyAreas: ["Kennedy Road", "Downtown Brampton", "Queen Street", "Main Street", "Brampton", "Brampton Transit", "Bramalea"],
   products: [
     "Flower",
     "Pre-rolls",
@@ -30,11 +30,11 @@ export const gbpLocation = {
   longitude: "-79.7516",
   hours: ["Open 24 Hours"],
   seoTitle: "Kennedy Loud Cannabis | Weed Dispensary in Brampton",
-  metaDescription: "Kennedy Loud Cannabis is a local weed dispensary in Brampton offering flower, pre-rolls, edibles, vapes, concentrates, CBD, and service for adults 19+.",
+  metaDescription: "Kennedy Loud Cannabis is a local weed dispensary in Brampton with flower, pre-roll, edible, vape, concentrate, accessory, cigarette, and specialty category information for adults 19+.",
   localLandmarks: ["Kennedy Road", "Downtown Brampton", "Queen Street"],
-  introVariant: "Welcome to Kennedy Loud Cannabis, your premier weed dispensary in Brampton situated right on 49 Hillcrest Ave, Unit 104. We are dedicated to providing adults 19+ with top-tier weed, premium cannabis flower, pre-rolls, edibles, THC vapes, concentrates, and CBD products. If you are looking for a trusted cannabis store near Kennedy Road / Brampton or a weed shop near Downtown Brampton, stop by today to consult with our knowledgeable staff.",
-  neighborhoodDescription: "Located in the vibrant Kennedy Road / Brampton district, our cannabis store fits right into this active and historic community, surrounded by local retail shops and convenient transit links.",
-  parkingNote: "Dedicated customer parking is available directly on-site",
-  transitNote: "Conveniently accessible via Brampton Transit routes serving Kennedy Road.",
+  introVariant: "Kennedy Loud Cannabis is listed at 49 Hillcrest Ave, Unit 104 in Brampton. Adults 19+ can use this page to review store details, menu categories, hours, and contact information before visiting.",
+  neighborhoodDescription: "Kennedy Loud Cannabis is located near Hillcrest Ave and Kennedy Road in Brampton.",
+  parkingNote: "Check the current map listing, posted signs, or contact the store for parking details before visiting.",
+  transitNote: "Check the current map listing or Brampton Transit information before visiting by transit.",
   sectionTitle: "Serving Customers Near Kennedy Road and Brampton"
 };
