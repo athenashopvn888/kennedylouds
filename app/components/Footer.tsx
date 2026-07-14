@@ -6,27 +6,20 @@ export default function Footer() {
     <footer className={styles.footer}>
       <div className={styles.inner}>
         <div className={styles.grid}>
-          {/* Column 1  Store Description */}
           <div className={styles.col}>
-            <div className={styles.brand}>
-              KENNEDY LOUD CANNABIS
-            </div>
+            <div className={styles.brand}>KENNEDY LOUD CANNABIS</div>
             <p className={styles.desc}>
-              Your Local Cannabis Dispensary At 49 Hillcrest Ave, Unit 104, Brampton. Visit
-              Kennedy Loud Cannabis For Premium Flower, Edibles, Vapes &amp; More.
-              Open 24 Hours.
+              Your local cannabis dispensary at 49 Hillcrest Ave, Unit 104,
+              Brampton. Visit Kennedy Loud Cannabis for premium flower,
+              edibles, vapes, cigarettes, accessories, and more. Open 24 Hours.
             </p>
             <div className={styles.buttons}>
-              <Link
-                href="/#menu"
-                className={styles.btnPrimary}
-              >
+              <Link href="/#menu" className={styles.btnPrimary}>
                 View Menu
               </Link>
             </div>
           </div>
 
-          {/* Column 2  Contact Info */}
           <div className={styles.col}>
             <h3 className={styles.colTitle}>Contact Info</h3>
             <div className={styles.infoBlock}>
@@ -37,7 +30,11 @@ export default function Footer() {
             </div>
             <div className={styles.infoBlock}>
               <span className={styles.infoLabel}>Phone:</span>
-              <span><a href="tel:+14372372286" style={{color: "inherit"}}>(437) 237-2286</a></span>
+              <span>
+                <a href="tel:+14372372286" style={{ color: "inherit" }}>
+                  (437) 237-2286
+                </a>
+              </span>
             </div>
             <div className={styles.infoBlock}>
               <span className={styles.infoLabel}>Hours:</span>
@@ -45,7 +42,6 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Column 3  Quick Links */}
           <div className={styles.col}>
             <h3 className={styles.colTitle}>Quick Links</h3>
             <nav className={styles.links}>
@@ -57,18 +53,23 @@ export default function Footer() {
               <Link href="/budget">Budget Flower</Link>
               <Link href="/items/edibles">Edibles</Link>
               <Link href="/items/cigarettes">Cigarettes</Link>
-              <Link href="/items/vapes">Vape Pens</Link>
+              <Link href="/items/vapes">THC Vape</Link>
+              <Link href="/items/vape-disposables">Nic Vape</Link>
+              <Link href="/items/magic">Magic Stuff</Link>
               <Link href="/resources">Resources</Link>
-              <Link href="/resources/hillcrest-24-hour-visit-guide">Hillcrest Visit Guide</Link>
-              <Link href="/resources/loud-flower-tier-guide">Flower Tier Guide</Link>
+              <Link href="/resources/hillcrest-ave-visit-guide">Hillcrest Visit Guide</Link>
+              <Link href="/resources/flower-tier-guide">Flower Tier Guide</Link>
+              <Link href="/resources/native-smokes-brampton-guide">Native Smokes Guide</Link>
               <Link href="/faq">FAQ</Link>
-              <Link href="/delivery">Delivery (Coming Soon)</Link>
+              <Link href="/delivery">Delivery</Link>
               <Link href="/games">Games Arcade</Link>
-              <Link href="/info/york-weed-dispensary">Brampton Dispensary</Link>
-              <Link href="/info/cheap-weed-york">Cheap Weed Brampton</Link>
-              <Link href="/info/native-cigarettes-york">Native Cigarettes</Link>
-              <Link href="/info/weed-store-near-mississauga">Weed Store Near Mississauga</Link>
-              <Link href="/weed-dispensary-brampton/">Kennedy Loud Cannabis Weed Dispensary in Brampton</Link>
+              <Link href="/info/brampton-weed-dispensary">Brampton Dispensary</Link>
+              <Link href="/info/cheap-weed-brampton">Cheap Weed Brampton</Link>
+              <Link href="/info/native-cigarettes-brampton">Native Cigarettes</Link>
+              <Link href="/info/weed-store-near-hillcrest-ave">Weed Store Near Hillcrest Ave</Link>
+              <Link href="/weed-dispensary-brampton/">
+                Kennedy Loud Cannabis Weed Dispensary in Brampton
+              </Link>
               <Link href="/contact">Contact Us</Link>
             </nav>
           </div>
@@ -76,8 +77,8 @@ export default function Footer() {
 
         <div className={styles.bottom}>
           <p>
-             {new Date().getFullYear()} Kennedy Loud Cannabis. Must be 19+ to
-            enter. Please consume responsibly.
+            Copyright {new Date().getFullYear()} Kennedy Loud Cannabis. Must be
+            19+ to enter. Please consume responsibly.
           </p>
         </div>
       </div>

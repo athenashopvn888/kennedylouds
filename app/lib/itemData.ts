@@ -11,76 +11,75 @@ export function getItemData(category: string, name: string): ItemEffects {
   if (cat === "EDIBLES") {
     return {
       effects: [
-        { emoji: "🕒", label: "Long Lasting" },
-        { emoji: "😌", label: "Body High" },
-        { emoji: "🍬", label: "Flavorful" },
+        { emoji: "INFO", label: "Edibles" },
+        { emoji: "MENU", label: "Menu Details" },
+        { emoji: "19+", label: "Adult Use" },
       ],
-      description: `${name} is a premium cannabis edible available at {{STORE_NAME}}. Made with high-quality distillate or full-spectrum extract, it provides a consistent, long-lasting, and discreet experience. Perfect for those who prefer not to smoke while still enjoying the full benefits of cannabis.`,
-      metaDescription: `Buy ${name} cannabis edibles in {{CITY}} at {{STORE_NAME}}. Consistent, discreet, and long-lasting effects. Walk-in available 24/7.`,
-      consume: "Start low and go slow. We recommend starting with 5-10mg of THC. Edibles can take 45 to 120 minutes to take full effect. Wait at least 2 hours before consuming more.",
+      description: `${name} appears in the edibles category at Kennedy Loud Cannabis. Review current menu details before visiting, because product availability and potency can change.`,
+      metaDescription: `Review ${name} edible information in Brampton at Kennedy Loud Cannabis. Confirm current menu details before visiting.`,
+      consume: "Start low and go slow. Follow the package directions. Edibles can take 45 to 120 minutes to take full effect.",
     };
   }
 
   if (cat.includes("VAPE")) {
     return {
       effects: [
-        { emoji: "💨", label: "Fast Acting" },
-        { emoji: "⚡", label: "Potent" },
-        { emoji: "🤫", label: "Discreet" },
+        { emoji: "INFO", label: "Vape" },
+        { emoji: "MENU", label: "Menu Details" },
+        { emoji: "19+", label: "Adult Use" },
       ],
-      description: `${name} is a high-quality vape product available at {{STORE_NAME}}. Designed for convenience and discretion, this vape delivers smooth, flavorful vapor and rapid effects. Engineered for reliability, it ensures a premium experience from the first pull to the last.`,
-      metaDescription: `Shop ${name} vape pens and cartridges in {{CITY}} at {{STORE_NAME}}. Fast-acting and potent. Walk-in available 24/7.`,
-      consume: "Take 1-2 small puffs and wait 10-15 minutes to gauge the effects before consuming more. Do not chain-vape to avoid burning the coil.",
+      description: `${name} appears in the vape category at Kennedy Loud Cannabis. Review current menu details before visiting, because product formats, flavours, and availability can change.`,
+      metaDescription: `Review ${name} vape information in Brampton at Kennedy Loud Cannabis. Confirm current menu details before visiting.`,
+      consume: "Use as directed on the packaging. Start with a small amount and wait before using more.",
     };
   }
 
   if (cat === "CONCENTRATES") {
     return {
       effects: [
-        { emoji: "🚀", label: "Highly Potent" },
-        { emoji: "⚡", label: "Fast Acting" },
-        { emoji: "💎", label: "Pure" },
+        { emoji: "INFO", label: "Concentrate" },
+        { emoji: "MENU", label: "Menu Details" },
+        { emoji: "19+", label: "Adult Use" },
       ],
-      description: `${name} is a premium cannabis concentrate known for its exceptional purity and potency. Crafted using advanced extraction techniques, it preserves the rich terpene profile of the original strain for maximum flavor and effect. Available now at {{STORE_NAME}}.`,
-      metaDescription: `Buy ${name} cannabis concentrate in {{CITY}} at {{STORE_NAME}}. Highly potent and pure extracts. Walk-in available 24/7.`,
-      consume: "Best consumed using a dab rig, concentrate pen, or by sprinkling a small amount over flower. Due to its high potency, start with an extremely small amount (the size of a grain of rice).",
+      description: `${name} appears in the concentrates category at Kennedy Loud Cannabis. Confirm current product details, format, and availability before visiting.`,
+      metaDescription: `Review ${name} concentrate information in Brampton at Kennedy Loud Cannabis. Confirm current menu details before visiting.`,
+      consume: "Use as directed on the packaging. Concentrates can be high potency, so start with a very small amount.",
     };
   }
 
   if (cat === "PREROLLS") {
     return {
       effects: [
-        { emoji: "🌿", label: "Classic High" },
-        { emoji: "⏱️", label: "Quick Onset" },
-        { emoji: "🤝", label: "Shareable" },
+        { emoji: "INFO", label: "Pre-Roll" },
+        { emoji: "MENU", label: "Menu Details" },
+        { emoji: "19+", label: "Adult Use" },
       ],
-      description: `${name} is a ready-to-smoke pre-roll made from premium cannabis flower. Perfectly ground and expertly rolled for a smooth, even burn every time. Skip the rolling and enjoy a high-quality smoke straight out of the tube.`,
-      metaDescription: `Get ${name} pre-rolled joints in {{CITY}} at {{STORE_NAME}}. Premium flower, perfectly rolled. Walk-in available 24/7.`,
-      consume: "Light the end evenly while rotating the joint to prevent canoeing. Take smooth, slow inhales. Wait 10-15 minutes after a few puffs to gauge the effects.",
+      description: `${name} appears in the pre-roll category at Kennedy Loud Cannabis. Check current menu details before visiting, since strain, pack size, and availability can change.`,
+      metaDescription: `Review ${name} pre-roll information in Brampton at Kennedy Loud Cannabis. Confirm current menu details before visiting.`,
+      consume: "Use as directed on the packaging. Start with a small amount and wait before using more.",
     };
   }
 
   if (cat === "MAGIC & OTHERS") {
     return {
       effects: [
-        { emoji: "🌀", label: "Specialty" },
-        { emoji: "🧠", label: "Mind Expanding" },
-        { emoji: "✨", label: "Euphoric" },
+        { emoji: "INFO", label: "Specialty" },
+        { emoji: "MENU", label: "Menu Details" },
+        { emoji: "19+", label: "Adult Use" },
       ],
-      description: `${name} is a premium specialty product curated for quality and consistency. Whether you are careful use for mental clarity or exploring a deeper journey, this product delivers a reliable and profound experience.`,
-      metaDescription: `Shop ${name} specialty specialty items in {{CITY}} at {{STORE_NAME}}. High quality and consistent. Walk-in available 24/7.`,
-      consume: "For careful use, consume 0.1g - 0.3g. For a full experience, start with 1g - 2g. Always consume in a safe, comfortable environment. Effects can take 30-90 minutes to onset.",
+      description: `${name} appears in the specialty item category at Kennedy Loud Cannabis. Confirm current product details and availability before visiting.`,
+      metaDescription: `Review ${name} specialty item information in Brampton at Kennedy Loud Cannabis. Confirm current menu details before visiting.`,
+      consume: "Use as directed on the packaging.",
     };
   }
 
-  // Fallback for Add-Ons, Cigarettes, etc.
   return {
     effects: [
-      { emoji: "⭐", label: "Premium Quality" },
-      { emoji: "✅", label: "Reliable" },
+      { emoji: "INFO", label: "Product Info" },
+      { emoji: "MENU", label: "Menu Details" },
     ],
-    description: `${name} is a top-quality product available right now at {{STORE_NAME}}. We source only the best products to ensure our customers are fully satisfied.`,
-    metaDescription: `Buy ${name} in {{CITY}} at {{STORE_NAME}}. Premium quality and best prices. Walk-in available 24/7.`,
+    description: `${name} appears in the Kennedy Loud Cannabis menu. Confirm current product details and availability before visiting the Brampton store.`,
+    metaDescription: `Review ${name} information in Brampton at Kennedy Loud Cannabis. Confirm current menu details before visiting.`,
     consume: "Use as directed on the packaging.",
   };
 }

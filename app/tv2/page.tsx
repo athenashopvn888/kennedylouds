@@ -135,7 +135,7 @@ function ItemCard({ title, accent, items, hiIdx, preset }: {
 /* -- TICKER -- */
 const TICKER_SLIDES = [
   "🔊 Kennedy Loud Cannabis — 49 Hillcrest Ave Unit 104, Brampton",
-  "200+ Strains In Stock — Open 24 Hours",
+  "Flower Tiers, Edibles, Vapes, Concentrates",
   "Pre-Rolls · Edibles · Vapes · Concentrates",
   "ALL SALES ARE FINAL",
   "🎮 Play Games at kennedyloudcannabis.com/games",

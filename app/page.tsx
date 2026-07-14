@@ -57,7 +57,7 @@ const BENTO_TIERS = [
 
 /* -- Explore Categories Config (New Banners) -- */
 const EXPLORE_CATEGORIES = [
-  { name: "Vape Pens", slug: "items/vapes", banner: "/banners/KennedyLoud_THC_Vape.webp" },
+  { name: "THC Vape", slug: "items/vapes", banner: "/banners/KennedyLoud_THC_Vape.webp" },
   { name: "Nic Vape", slug: "items/vape-disposables", banner: "/banners/KennedyLoud_Nic_Vape.webp" },
   { name: "Concentrates", slug: "items/concentrates", banner: "/banners/KennedyLoud_Concentrates.webp" },
   { name: "Pre-Rolls", slug: "items/prerolls", banner: "/banners/KennedyLoud_Pre_Rolls.webp" },
@@ -69,13 +69,13 @@ const EXPLORE_CATEGORIES = [
 
 const RESOURCE_LINKS = [
   {
-    href: "/resources/hillcrest-24-hour-visit-guide",
-    label: "24-hour visit",
+    href: "/resources/hillcrest-ave-visit-guide",
+    label: "Hillcrest visit",
     title: "Hillcrest Ave pull-up guide",
     body: "Menu-first notes for late-night, early-morning, and regular Brampton visits.",
   },
   {
-    href: "/resources/loud-flower-tier-guide",
+    href: "/resources/flower-tier-guide",
     label: "Flower tiers",
     title: "Pick the loud shelf faster",
     body: "Exotic, Premium, AAA+, AA, and Budget explained without the maze.",
@@ -96,15 +96,15 @@ const LOCAL_FAQS = [
   },
   {
     q: "What cannabis products do you carry?",
-    a: "We carry five tiers of premium flower: Exotic ($10-$12/g), Premium ($7-$10/g), AAA+ ($5-$6/g), AA ($4/g), and Budget ($3/g), plus a wide variety of edibles, prerolls, vapes, and concentrates.",
+    a: "The site organizes menu categories for flower tiers, edibles, pre-rolls, vapes, concentrates, accessories, cigarettes, and specialty items. Confirm current product details before visiting.",
   },
   {
     q: "Where is Kennedy Loud Cannabis located?",
-    a: "We are located at 49 Hillcrest Ave, Unit 104, Brampton, ON L6W 1Y7. Visit us in person or call us at (437) 237-2286. Free evening street parking is available.",
+    a: "We are located at 49 Hillcrest Ave, Unit 104, Brampton, ON L6W 1Y7. Visit us in person or call us at (437) 237-2286. Check posted signs or the map listing for parking details.",
   },
   {
     q: "What is the cheapest weed at Kennedy Loud Cannabis?",
-    a: "Our budget flower starts at just $3/g. We also offer AA daily drivers from $4/g and AAA+ heavy hitters from $5-$6/g. View our budget menu for our latest deals.",
+    a: "Budget flower is shown from $3/g, with AA and AAA+ tiers listed separately. Confirm current pricing and availability on the menu before visiting.",
   },
 ];
 
@@ -312,7 +312,7 @@ export default function HomePage() {
           <div className={styles.sectionHeader}>
             <h2 className={styles.sectionTitle}>Featured Strains</h2>
             <p className={styles.sectionSubtitle}>
-              Staff picks and top sellers dynamically updated from our real-time stock sheet.
+              Featured menu entries from the current Kennedy Loud Cannabis flower list.
             </p>
           </div>
 
@@ -330,15 +330,15 @@ export default function HomePage() {
       <section className={styles.seoSection}>
         <div className={styles.container}>
           <div className={styles.seoPanel}>
-            <h2 className={styles.seoPanelTitle}>Brampton's Loudest Cannabis Dispensary - Open 24 Hours</h2>
+            <h2 className={styles.seoPanelTitle}>Kennedy Loud Cannabis In Brampton - Open 24 Hours</h2>
             <p className={styles.seoPanelText}>
-              Welcome to <strong>Kennedy Loud Cannabis</strong>, Brampton's premier 24-hour cannabis destination at 49 Hillcrest Ave, Unit 104. We bring the heat around the clock - an electrifying selection of top-shelf strains, from ultra-rare exotics to solid everyday budget picks. Loud by name, loud by nature.
+              <strong>Kennedy Loud Cannabis</strong> is listed at 49 Hillcrest Ave, Unit 104 in Brampton. The site is organized around flower tiers, edibles, pre-rolls, vapes, concentrates, cigarettes, accessories, and specialty categories.
             </p>
             <p className={styles.seoPanelText}>
-              Open 24 hours, 7 days a week - Kennedy Loud never sleeps. Our live menu is constantly refreshed with the freshest drops, premium prerolls, artisan edibles, and everything in between. Whether you're winding down after a late shift or stocking up for the weekend, our knowledgeable staff can help during listed store hours.
+              The store lists Open 24 Hours. Use the current category pages to compare posted product details before visiting, especially if you are looking for a specific flower tier or format.
             </p>
             <p className={styles.seoPanelText}>
-              Searching for a dispensary near Kennedy Rd, Brampton or the greater Peel Region? Kennedy Loud Cannabis is your 24-hour destination for premium flower, potent prerolls, and artisan edibles. Our six-tier pricing system means quality cannabis at every budget level - starting from just $3/g.
+              Shoppers around Hillcrest Ave, Kennedy Road, Downtown Brampton, Queen Street, Main Street, and Bramalea can use the resource pages for visit planning and category shortcuts.
             </p>
           </div>
         </div>
@@ -352,7 +352,7 @@ export default function HomePage() {
             <h2>Local guides tuned for the Hillcrest Ave shop.</h2>
             <p>
               Built for shoppers who want the useful page fast: visit planning, flower tier logic,
-              native smokes, vapes, concentrates, and the Brampton GBP landing page.
+              native smokes, vapes, concentrates, and the Brampton visit page.
             </p>
             <Link href="/resources" className={styles.resourceMainLink}>Open Resource Hub</Link>
           </div>
