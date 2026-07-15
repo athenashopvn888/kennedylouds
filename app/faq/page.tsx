@@ -20,13 +20,13 @@ const FAQ_CATEGORIES = [
       { q: "What are your hours?", a: "The store lists Open 24 Hours. Bring valid 19+ government ID when visiting." },
       { q: "Is there parking nearby?", a: "For parking or transit details, use the current map listing or contact the store before visiting." },
       { q: "What nearby areas are useful for this location?", a: "This Brampton location is useful for shoppers around Hillcrest Ave, Kennedy Road, Queen Street, Main Street, Downtown Brampton, and Bramalea." },
-      { q: "What's the best way to get to Kennedy Loud Cannabis?", a: "Confirm your route with the current map listing before visiting, especially if you are coming from outside Brampton." },
+      { q: "What's the simplest way to get to Kennedy Loud Cannabis?", a: "Confirm your route with the current map listing before visiting, especially if you are coming from outside Brampton." },
     ],
   },
   {
     title: "Products & Menu",
     faqs: [
-      { q: "What products are on the site?", a: "The site includes category information for flower tiers, edibles, vape pens, disposable vapes, concentrates, pre-rolls, native cigarettes, accessories, and specialty items. Current availability can change." },
+      { q: "What products are on the site?", a: "The site includes category information for flower tiers, edibles, vape pens, disposable vapes, concentrates, pre-rolls, native cigarettes, accessories, and specialty items. Current menu details can change." },
       { q: "Do you have a menu online?", a: "Yes. You can browse menu and category information online before visiting. Confirm current details before making a special trip." },
       { q: "What are your flower tiers?", a: "The flower menu is organized into tiers such as Exotic, Premium, AAA+, AA, and Budget so shoppers can compare posted product levels more easily." },
       { q: "Do you sell edibles?", a: "The site includes an edibles category. Check current category details before visiting for a specific edible product." },
@@ -37,7 +37,7 @@ const FAQ_CATEGORIES = [
   {
     title: "Pricing & Bundle Notes",
     faqs: [
-      { q: "What is the cheapest weed you sell?", a: "Budget-oriented flower options are listed in the menu when available. Check current pricing and availability before visiting." },
+      { q: "What is the cheapest weed you sell?", a: "Budget-oriented flower options are listed in the menu when available. Check current pricing and menu details before visiting." },
       { q: "What bundle pricing do you show?", a: "Flower bundle pricing is shown by tier where listed. The Exotic, Premium, and AAA+ tiers show 3g and 6g bundle pricing in the current tier setup." },
       { q: "Do you have ounce deals?", a: "Ounce and bundle details can change as stock rotates. Check the current menu for the latest pricing information." },
       { q: "How does tier pricing work?", a: "Flower is organized into tier pages so shoppers can compare posted per-gram pricing and bundle information before visiting." },

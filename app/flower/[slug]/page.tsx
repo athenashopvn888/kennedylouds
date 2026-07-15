@@ -28,8 +28,11 @@ export async function generateMetadata({
   const strainData = getStrainData(flower.name, flower.type, flower.tier, flower.thc);
 
   return {
-    title: `${flower.name} | ${tierName} ${flower.type === "indica" ? "Indica" : flower.type === "sativa" ? "Sativa" : "Hybrid"} | THC ${flower.thc} | Kennedy Loud Cannabis Brampton`,
+    title: `${flower.name} | ${tierName} ${flower.type === "indica" ? "Indica" : flower.type === "sativa" ? "Sativa" : "Hybrid"} | Kennedy Loud Cannabis Brampton`,
     description: strainData.metaDescription,
+    alternates: {
+      canonical: `https://kennedyloudcannabis.com/flower/${slug}`,
+    },
     openGraph: {
       title: `${flower.name} | Kennedy Loud Cannabis`,
       description: strainData.metaDescription,
@@ -232,7 +235,7 @@ export default async function FlowerPage({
                 </div>
               </div>
 
-              {/* Effects */}
+              {/* Menu notes */}
               <div className={styles.effectsRow}>
                 {strainData.effects.map((e) => (
                   <span key={e.label} className={styles.effectPill}>

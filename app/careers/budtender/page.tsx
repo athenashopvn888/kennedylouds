@@ -6,7 +6,7 @@ import BudtenderApplicationForm from "./BudtenderApplicationForm";
 import styles from "./budtender.module.css";
 
 export const metadata: Metadata = {
-  title: "Budtender Or Manager Application | Kennedy Loud Cannabis",
+  title: { absolute: "Budtender Or Manager Application | Kennedy Loud Cannabis" },
   description:
     "Apply for budtender or manager opportunities at Kennedy Loud Cannabis in Brampton. Submit availability, retail experience, motivation, determination, and customer-service answers.",
   alternates: {

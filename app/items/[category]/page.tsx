@@ -30,7 +30,10 @@ export async function generateMetadata({
 
   return {
     title: catInfo.config.seoTitle || `${catInfo.config.name} — ${items.length} Products`,
-    description: catInfo.config.seoIntro || `Shop ${items.length} ${catInfo.config.name.toLowerCase()} at Kennedy Loud Cannabis.`,
+    description: catInfo.config.seoIntro || `Browse the ${catInfo.config.name.toLowerCase()} category at Kennedy Loud Cannabis.`,
+    alternates: {
+      canonical: `https://kennedyloudcannabis.com/items/${catSlug}`,
+    },
   };
 }
 

@@ -30,10 +30,13 @@ export async function generateMetadata({
 
   return {
     title: seo?.seoTitle || `${tierInfo.config.name} Cannabis Flower — ${flowers.length} Strains`,
-    description: seo?.seoIntro || `Shop ${flowers.length} ${tierInfo.config.name.toLowerCase()} cannabis strains at Kennedy Loud Cannabis.`,
+    description: seo?.seoIntro || `Browse the ${tierInfo.config.name.toLowerCase()} flower tier at Kennedy Loud Cannabis.`,
+    alternates: {
+      canonical: `https://kennedyloudcannabis.com/${tierSlug}`,
+    },
     openGraph: {
       title: `${tierInfo.config.name} Flower | Kennedy Loud Cannabis`,
-      description: `${flowers.length} listed ${tierInfo.config.name.toLowerCase()} flower entries. Confirm current pricing and availability before visiting Kennedy Loud Cannabis.`,
+      description: `Browse the ${tierInfo.config.name.toLowerCase()} flower tier and posted menu details before visiting Kennedy Loud Cannabis.`,
     },
   };
 }

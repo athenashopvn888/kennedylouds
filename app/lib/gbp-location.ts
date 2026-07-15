@@ -1,4 +1,3 @@
-// Auto-generated Google Business Profile Local SEO Location Configuration
 export const gbpLocation = {
   storeName: "Kennedy Loud Cannabis",
   domain: "kennedyloudcannabis.com",

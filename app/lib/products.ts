@@ -98,7 +98,7 @@ export const TIER_CONFIG: Record<
     slug: "exotic",
     color: "#f59e0b",
     icon: "\uD83D\uDD25",
-    tagline: "Ultra-rare, top-shelf genetics \u00B7 THC 35-39%",
+    tagline: "Explore the Exotic flower tier",
     banner: "/banners/KennedyLoud_Exotic.webp",
     unitPrice: 20,
     deal3g: { label: "3g bundle", total: "3G", price: 40 },
@@ -109,7 +109,7 @@ export const TIER_CONFIG: Record<
     slug: "premium",
     color: "#a78bfa",
     icon: "\uD83D\uDC8E",
-    tagline: "Premium flower tier \u00B7 THC 32-34%",
+    tagline: "Explore the Premium flower tier",
     banner: "/banners/KennedyLoud_Premium.webp",
     unitPrice: 15,
     deal3g: { label: "3g bundle", total: "3G", price: 30 },
@@ -120,7 +120,7 @@ export const TIER_CONFIG: Record<
     slug: "aaa",
     color: "#22d3ee",
     icon: "\u26A1",
-    tagline: "Heavy hitters, proven strains \u00B7 THC 30-32%",
+    tagline: "Explore the AAA+ flower tier",
     banner: "/banners/KennedyLoud_AAA_Plus.webp",
     unitPrice: 10,
     deal3g: { label: "3g bundle", total: "3G", price: 20 },
@@ -131,7 +131,7 @@ export const TIER_CONFIG: Record<
     slug: "aa",
     color: "#34d399",
     icon: "\u2726",
-    tagline: "Quality daily drivers \u00B7 THC 27-29%",
+    tagline: "Explore the AA flower tier",
     banner: "/banners/KennedyLoud_AA.webp",
     unitPrice: 4,
     deal3g: null,
@@ -142,7 +142,7 @@ export const TIER_CONFIG: Record<
     slug: "budget",
     color: "#94a3b8",
     icon: "\uD83D\uDCB0",
-    tagline: "Shreds & value OZs \u00B7 From $40/oz",
+    tagline: "Explore the Budget flower tier",
     banner: "/banners/KennedyLoud_Budget.webp",
     unitPrice: 3,
     deal3g: { label: "$10 / 3g Special", total: "3G", price: 10 },
@@ -163,10 +163,10 @@ export const CATEGORY_CONFIG: Record<string, CategoryInfo> = {
     name: "Edibles", slug: "edibles", color: "#f97316", icon: "🍬",
     seoTitle: "Cannabis Edibles Brampton | Kennedy Loud Cannabis",
     seoIntro: "Browse edible category information at Kennedy Loud Cannabis on Hillcrest Ave in Brampton.",
-    seoDescription: "Review edible-related menu categories at Kennedy Loud Cannabis in Brampton and confirm current menu details before visiting. This page is intended for general category browsing and does not promise current product availability.",
+    seoDescription: "Review edible-related menu categories at Kennedy Loud Cannabis in Brampton and confirm current menu details before visiting. This page is intended for general category browsing and does not promise current product menu details.",
     faqs: [
       { q: "What edible information can shoppers review?", a: "Visitors can use this page to review edibles category information and then confirm current menu details before visiting Kennedy Loud Cannabis." },
-      { q: "Does this page guarantee current edible availability?", a: "No. This page is for general category browsing; customers should confirm current menu details before visiting." },
+      { q: "Does this page guarantee current edible menu details?", a: "No. This page is for general category browsing; customers should confirm current menu details before visiting." },
     ],
   },
   "VAPE PENS": {
@@ -177,7 +177,7 @@ export const CATEGORY_CONFIG: Record<string, CategoryInfo> = {
     seoDescription: "Kennedy Loud Cannabis includes vape pen category information in Brampton. From THC vape category browsing to nicotine vape category browsing, shoppers can review menu information before visiting 49 Hillcrest Ave, Unit 104.",
     faqs: [
       { q: "What vape pen information can shoppers review?", a: "Visitors can review THC vape and nicotine vape category information, then confirm current menu details before visiting Kennedy Loud Cannabis." },
-      { q: "Does this page guarantee vape availability?", a: "No. Vape category details can change, so customers should confirm the current menu before visiting." },
+      { q: "Does this page guarantee vape menu details?", a: "No. Vape category details can change, so customers should confirm the current menu before visiting." },
     ],
   },
   "VAPE DISPOSABLE": {
@@ -185,10 +185,10 @@ export const CATEGORY_CONFIG: Record<string, CategoryInfo> = {
     name: "Nic Vape", slug: "vape-disposables", color: "#a78bfa", icon: "💨",
     seoTitle: "Disposable Vapes Brampton | Kennedy Loud Cannabis",
     seoIntro: "Review disposable vape category information at Kennedy Loud Cannabis in Brampton.",
-    seoDescription: "Kennedy Loud Cannabis includes disposable vape category information for Brampton shoppers. Product details and availability can change, so confirm the current menu before visiting 49 Hillcrest Ave, Unit 104.",
+    seoDescription: "Kennedy Loud Cannabis includes disposable vape category information for Brampton shoppers. Product details and menu details can change, so confirm the current menu before visiting 49 Hillcrest Ave, Unit 104.",
     faqs: [
       { q: "What disposable vape information can shoppers review?", a: "Visitors can use this page to review disposable vape category information and then confirm current menu details before visiting." },
-      { q: "Does disposable vape availability change?", a: "Yes. Product selection can change, so shoppers should use the current menu before making a special trip." },
+      { q: "Does disposable vape menu details change?", a: "Yes. Product selection can change, so shoppers should use the current menu before making a special trip." },
     ],
   },
   CONCENTRATES: {
@@ -196,10 +196,10 @@ export const CATEGORY_CONFIG: Record<string, CategoryInfo> = {
     name: "Concentrates", slug: "concentrates", color: "#f59e0b", icon: "💎",
     seoTitle: "Cannabis Concentrates Brampton | Kennedy Loud Cannabis",
     seoIntro: "Browse concentrates category information at Kennedy Loud Cannabis in Brampton.",
-    seoDescription: "Review concentrate-related menu categories at Kennedy Loud Cannabis in Brampton and confirm current menu details before visiting. This page is intended for general category browsing and does not promise current product availability.",
+    seoDescription: "Review concentrate-related menu categories at Kennedy Loud Cannabis in Brampton and confirm current menu details before visiting. This page is intended for general category browsing and does not promise current product menu details.",
     faqs: [
       { q: "What concentrate information can shoppers review?", a: "Visitors can use this page to review concentrates category information and then confirm current menu details before visiting Kennedy Loud Cannabis." },
-      { q: "Does this page guarantee current concentrate availability?", a: "No. Category details can change, so customers should confirm the current menu before visiting." },
+      { q: "Does this page guarantee current concentrate menu details?", a: "No. Category details can change, so customers should confirm the current menu before visiting." },
     ],
   },
   PREROLLS: {
@@ -209,7 +209,7 @@ export const CATEGORY_CONFIG: Record<string, CategoryInfo> = {
     seoDescription: "Kennedy Loud Cannabis includes pre-roll category information for Brampton shoppers. Review the category, confirm current menu details, and visit 49 Hillcrest Ave, Unit 104 during posted store hours.",
     faqs: [
       { q: "What pre-roll information can shoppers review?", a: "Visitors can review pre-roll category information and then confirm current menu details before visiting Kennedy Loud Cannabis." },
-      { q: "Does this page guarantee current pre-roll availability?", a: "No. Category details can change, so customers should confirm the current menu before visiting." },
+      { q: "Does this page guarantee current pre-roll menu details?", a: "No. Category details can change, so customers should confirm the current menu before visiting." },
     ],
   },
   "ADD ONS": {
@@ -226,11 +226,11 @@ export const CATEGORY_CONFIG: Record<string, CategoryInfo> = {
     banner: "/banners/KennedyLoud_Magic_Stuff.webp",
     name: "Magic Stuff", slug: "magic", color: "#64748b", icon: "*",
     seoTitle: "Magic Stuff - Specialty Items",
-    seoIntro: "Browse current menu for available specialty products. Availability may vary by store.",
-    seoDescription: "Specialty items are listed when they are carried on the menu. Product availability may vary by store and by day. Check current category details before visiting.",
+    seoIntro: "Browse current menu for available specialty products. Menu details may vary by store.",
+    seoDescription: "Specialty items are listed when they are carried on the menu. Product menu details may vary by store and by day. Check current category details before visiting.",
     faqs: [
       { q: "What specialty items are available?", a: "Selection varies by store and by day. Check the current menu for available specialty products." },
-      { q: "Does availability vary by location?", a: "Yes. Specialty item availability may vary by store, so please check the current menu for this location." },
+      { q: "Does menu details vary by location?", a: "Yes. Specialty item menu details may vary by store, so please check the current menu for this location." },
     ],
   },
   CIGARETTES: {
@@ -296,5 +296,4 @@ export function formatPrice(p: PricePoint | null): string {
   if (p.sale !== null) return `$${p.sale}`;
   return `$${p.regular}`;
 }
-
 

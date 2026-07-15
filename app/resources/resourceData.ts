@@ -105,7 +105,7 @@ export const RESOURCE_PAGES: ResourceArticle[] = [
       "A Kennedy Road and Hillcrest Ave shortcut for shoppers who want the right KLC category fast.",
     sections: [
       {
-        heading: "Search By What You Came For",
+        heading: "Choose What You Came For",
         body:
           "Some shoppers want cheap flower, some want a THC vape, some want cigarettes, and some want one quick route to edibles or pre-rolls. The menu map keeps each intent close instead of forcing every visit through one broad cannabis page.",
       },
@@ -159,7 +159,7 @@ export const RESOURCE_PAGES: ResourceArticle[] = [
       {
         heading: "Why Tiers Make KLC Easier",
         body:
-          "A tiered flower menu lets shoppers pick the shelf first, then compare strains inside that shelf. It also keeps premium, everyday, and budget searches from blending into one noisy list.",
+          "A tiered flower menu lets shoppers pick the shelf first, then compare listings inside that shelf without blending every menu lane into one list.",
       },
     ],
     quickLinks: [
@@ -181,7 +181,7 @@ export const RESOURCE_PAGES: ResourceArticle[] = [
       {
         heading: "Pick Before You Leave",
         body:
-          "A 24-hour visit usually works best when the first choice is already made. Flower shoppers can pick a tier, vape shoppers can jump to THC Vape or Nic Vape, and cigarette shoppers can head straight to the cigarette category.",
+          "A 24-hour visit is easier when the first choice is already made. Flower shoppers can pick a tier, vape shoppers can open the vape category, and cigarette shoppers can head straight to the cigarette category.",
       },
       {
         heading: "Keep One Backup Category",
@@ -302,7 +302,7 @@ export const RESOURCE_PAGES: ResourceArticle[] = [
       {
         heading: "Keep It Menu-Focused",
         body:
-          "This page is a navigation guide only. It does not provide dosing instructions, consumption instructions, medical claims, therapeutic claims, effect promises, or safety claims.",
+          "Use the specialty category to compare product names, package sizes, posted details, and related menu links before visiting.",
       },
       {
         heading: "Check Current Selection",

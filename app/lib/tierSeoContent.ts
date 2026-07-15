@@ -11,12 +11,12 @@ export const TIER_SEO: Record<string, TierSeoData> = {
   EXOTIC: {
     seoTitle: "Exotic Cannabis Flower Brampton | Kennedy Loud Cannabis",
     seoIntro:
-      "Review Exotic flower category information at Kennedy Loud Cannabis in Brampton. Confirm current strains, pricing, and availability before visiting Hillcrest Ave.",
+      "Review Exotic flower category information at Kennedy Loud Cannabis in Brampton. Confirm current strains, pricing, and menu details before visiting Hillcrest Ave.",
     sections: [
       {
         heading: "Exotic Flower Category",
         body:
-          "The Exotic tier is used for higher-end flower options on the Kennedy Loud Cannabis menu. Product names, THC details, and availability can rotate, so use the current tier page before visiting.",
+          "The Exotic tier is used for higher-end flower options on the Kennedy Loud Cannabis menu. Product names, item details, and menu details can rotate, so use the current tier page before visiting.",
       },
       {
         heading: "Posted Exotic Tier Math",
@@ -32,7 +32,7 @@ export const TIER_SEO: Record<string, TierSeoData> = {
     faqs: [
       { q: "What is Exotic cannabis flower?", a: "Exotic is a higher-end flower tier on the Kennedy Loud Cannabis menu." },
       { q: "How much does Exotic flower cost?", a: "The tier setup lists Exotic at $20/g, with 3g and 6g bundle pricing where listed. Confirm current product details before visiting." },
-      { q: "Does Exotic availability change?", a: "Yes. Strain names, THC details, pricing, and availability can rotate." },
+      { q: "Does Exotic menu details change?", a: "Yes. Strain names, item details, pricing, and menu details can rotate." },
     ],
   },
 
@@ -44,7 +44,7 @@ export const TIER_SEO: Record<string, TierSeoData> = {
       {
         heading: "Premium Flower Category",
         body:
-          "The Premium tier helps shoppers compare higher-tier flower options without mixing them into the value categories. Availability and pricing can change as the menu rotates.",
+          "The Premium tier helps shoppers compare higher-tier flower options without mixing them into the value categories. Menu details and pricing can change as the menu rotates.",
       },
       {
         heading: "Posted Premium Tier Math",
@@ -60,19 +60,19 @@ export const TIER_SEO: Record<string, TierSeoData> = {
     faqs: [
       { q: "What is Premium cannabis flower?", a: "Premium is a flower tier used on the Kennedy Loud Cannabis menu." },
       { q: "How much does Premium flower cost?", a: "The tier setup lists Premium at $15/g, with 3g and 6g bundle pricing where listed." },
-      { q: "Should I confirm Premium availability?", a: "Yes. Current product details should be confirmed before visiting." },
+      { q: "Should I confirm Premium menu details?", a: "Yes. Current product details should be confirmed before visiting." },
     ],
   },
 
   "AAA+": {
     seoTitle: "AAA+ Cannabis Flower Brampton | Kennedy Loud Cannabis",
     seoIntro:
-      "Browse AAA+ flower category information for Kennedy Loud Cannabis in Brampton. Confirm current strains, prices, and availability before visiting.",
+      "Browse AAA+ flower category information for Kennedy Loud Cannabis in Brampton. Confirm current strains, prices, and menu details before visiting.",
     sections: [
       {
         heading: "AAA+ Flower Category",
         body:
-          "AAA+ is one of the flower tiers used to help shoppers compare product levels on the Kennedy Loud Cannabis menu. Current strain availability and pricing can change.",
+          "AAA+ is one of the flower tiers used to help shoppers compare product levels on the Kennedy Loud Cannabis menu. Current strain menu details and pricing can change.",
       },
       {
         heading: "Posted AAA+ Tier Math",
@@ -88,7 +88,7 @@ export const TIER_SEO: Record<string, TierSeoData> = {
     faqs: [
       { q: "What is AAA+ cannabis flower?", a: "AAA+ is a flower tier used for menu organization at Kennedy Loud Cannabis." },
       { q: "How much does AAA+ flower cost?", a: "The tier setup lists AAA+ at $10/g, with 3g and 6g bundle pricing where listed." },
-      { q: "Does AAA+ availability change?", a: "Yes. Flower availability can rotate, so check the current page before visiting." },
+      { q: "Does AAA+ menu details change?", a: "Yes. Flower menu details can rotate, so check the current page before visiting." },
     ],
   },
 
@@ -117,12 +117,12 @@ export const TIER_SEO: Record<string, TierSeoData> = {
   BUDGET: {
     seoTitle: "Budget Cannabis Brampton | Kennedy Loud Cannabis",
     seoIntro:
-      "Browse budget flower category information at Kennedy Loud Cannabis in Brampton. Confirm current value options and availability before visiting.",
+      "Browse budget flower category information at Kennedy Loud Cannabis in Brampton. Confirm current value options and menu details before visiting.",
     sections: [
       {
         heading: "Budget Flower Category",
         body:
-          "The Budget tier helps shoppers find value-oriented flower options when they are listed. Product details, pricing, and availability can change as the menu rotates.",
+          "The Budget tier helps shoppers find value-oriented flower options when they are listed. Product details, pricing, and menu details can change as the menu rotates.",
       },
       {
         heading: "Posted Budget Tier Math",
@@ -133,7 +133,7 @@ export const TIER_SEO: Record<string, TierSeoData> = {
     faqs: [
       { q: "What is Budget flower?", a: "Budget is a value-oriented flower tier on the Kennedy Loud Cannabis menu." },
       { q: "How much does Budget flower cost?", a: "The tier setup lists Budget at $3/g, with a $10 / 3g special where listed." },
-      { q: "Does Budget availability change?", a: "Yes. Check the current Budget page before visiting Kennedy Loud Cannabis." },
+      { q: "Does Budget menu details change?", a: "Yes. Check the current Budget page before visiting Kennedy Loud Cannabis." },
     ],
   },
 };

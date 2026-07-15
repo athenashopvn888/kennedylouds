@@ -3,7 +3,7 @@ import ResourceView from "./ResourceView";
 import { RESOURCE_CANONICAL, RESOURCE_HUB } from "./resourceData";
 
 export const metadata: Metadata = {
-  title: "Kennedy Loud Cannabis Resources | Brampton Menu And Visit Guides",
+  title: { absolute: "Kennedy Loud Cannabis Resources | Brampton Menu And Visit Guides" },
   description: RESOURCE_HUB.metaDescription,
   alternates: { canonical: RESOURCE_CANONICAL },
 };

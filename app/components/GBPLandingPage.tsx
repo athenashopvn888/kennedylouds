@@ -1,4 +1,3 @@
-// Auto-generated Google Business Profile Local SEO Landing Page Component
 import Link from "next/link";
 import styles from "./GBPLandingPage.module.css";
 import { gbpLocation } from "../lib/gbp-location";
@@ -205,7 +204,7 @@ export function GBPLandingPage() {
       <section className={styles.section}>
         <h2 className={styles.h2}>Helpful Category Links Before You Visit</h2>
         <p className={styles.infoText}>
-          These internal links are provided as planning shortcuts for adults 19+ who want to understand the main menu sections before visiting {gbpLocation.storeName}. They do not confirm live product availability, pricing, or checkout details.
+          These category links help adults 19+ understand the main menu sections before visiting {gbpLocation.storeName}. Confirm current item and price details through the menu or staff.
         </p>
         <div className={styles.productGrid}>
           {categoryGuideLinks.map((item) => (

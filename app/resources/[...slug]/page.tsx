@@ -17,7 +17,7 @@ export async function generateMetadata({
   if (!page) return {};
 
   return {
-    title: `${page.title} | Kennedy Loud Cannabis`,
+    title: { absolute: page.title },
     description: page.metaDescription,
     alternates: { canonical: `${RESOURCE_SITE}${page.path}` },
   };

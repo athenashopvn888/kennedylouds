@@ -104,7 +104,7 @@ const LOCAL_FAQS = [
   },
   {
     q: "What is the cheapest weed at Kennedy Loud Cannabis?",
-    a: "Budget flower is shown from $3/g, with AA and AAA+ tiers listed separately. Confirm current pricing and availability on the menu before visiting.",
+    a: "Budget flower is shown from $3/g, with AA and AAA+ tiers listed separately. Confirm current pricing and menu details on the menu before visiting.",
   },
 ];
 
