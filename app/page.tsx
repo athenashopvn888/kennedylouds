@@ -222,6 +222,17 @@ export default function HomePage() {
       {/* NAVBAR */}
       <Navbar />
 
+      <section className={styles.hiringCallout} aria-label="Hiring at Kennedy Loud Cannabis" style={{ "--hire-accent": "#9DFF20", "--hire-accent-soft": "rgba(157, 255, 32, 0.14)", "--hire-accent-border": "rgba(157, 255, 32, 0.34)" } as React.CSSProperties}>
+        <div className={styles.hiringCalloutInner}>
+          <div>
+            <span className={styles.hiringEyebrow}>Budtenders / Managers Wanted</span>
+            <h2>Join Kennedy Loud</h2>
+            <p>Kennedy Loud is taking online applications for budtender and manager roles. We are looking for motivated, reliable people with strong customer energy. Online applications only. Please do not call the store about hiring.</p>
+          </div>
+          <Link href="/careers/budtender" className={styles.hiringButton}>Apply Online</Link>
+        </div>
+      </section>
+
       {/* -- WELCOME BANNER -- */}
       <section className={styles.welcomeBannerSection}>
         <div className={styles.welcomeBannerContainer}>
@@ -230,18 +241,6 @@ export default function HomePage() {
             alt="Welcome to Kennedy Loud Cannabis - Premium Brampton Cannabis Dispensary"
             className={styles.welcomeBannerImg}
           />
-        </div>
-      </section>
-
-      {/* -- BENTO MOSAIC HERO -- */}
-      <section className={styles.hiringCallout} aria-label="Hiring at Kennedy Loud Cannabis" style={{ "--hire-accent": "#9DFF20", "--hire-accent-soft": "rgba(157, 255, 32, 0.14)", "--hire-accent-border": "rgba(157, 255, 32, 0.34)" } as React.CSSProperties}>
-        <div className={styles.hiringCalloutInner}>
-          <div>
-            <span className={styles.hiringEyebrow}>Budtenders / Managers Wanted</span>
-            <h2>Join Kennedy Loud</h2>
-            <p>Hillcrest Ave needs loud energy in the best way: motivated, reliable, and ready to learn. Online applications only. Please do not call the store about hiring.</p>
-          </div>
-          <Link href="/careers/budtender" className={styles.hiringButton}>Apply Online</Link>
         </div>
       </section>
 
