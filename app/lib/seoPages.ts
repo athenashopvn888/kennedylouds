@@ -24,7 +24,7 @@ export const SEO_PAGES: SeoPageData[] = [
       {
         heading: "Kennedy Loud On Hillcrest Ave",
         body:
-          "Kennedy Loud Cannabis is located at 49 Hillcrest Ave, Unit 104 in Brampton. The site is built around quick shopper paths: flower tiers, edibles, pre-rolls, THC Vape, Nic Vape, concentrates, cigarettes, accessories, Magic Stuff, and the Brampton visit page.",
+          "Kennedy Loud Cannabis is located at 49 Hillcrest Ave, Unit 104 in Brampton. The site is built around quick customer visit steps: flower tiers, edibles, pre-rolls, THC Vape, Nic Vape, concentrates, cigarettes, accessories, Magic Stuff, and the Brampton visit page.",
       },
       {
         heading: "A Menu Built Around Loud Choices",
@@ -34,7 +34,7 @@ export const SEO_PAGES: SeoPageData[] = [
       {
         heading: "Open 24 Hours",
         body:
-          "Kennedy Loud lists 24-hour access for Brampton shoppers. Late-night and early-morning visitors can check the menu path, bring valid 19+ ID, and use the FAQ or contact page for store basics.",
+          "Kennedy Loud lists 24-hour access for Brampton shoppers. Late-night and early-morning visitors can check the menu category, bring valid 19+ ID, and use the FAQ or contact page for store basics.",
       },
       {
         heading: "Brampton And Hillcrest Ave Visits",
@@ -114,7 +114,7 @@ export const SEO_PAGES: SeoPageData[] = [
       "Kennedy Loud Cannabis lists native cigarettes and tobacco add-ons in Brampton, including Canadian, Canadian Goose, Canadian Classics, Putters, Nexus, Time, Backwoods, Grabba, and nicotine pouches.",
     h1: "Native Cigarettes Brampton",
     icon: "19+",
-    heroTagline: "Cigarette, tobacco, and nicotine menu paths at the Hillcrest Ave shop.",
+    heroTagline: "Cigarette, tobacco, and nicotine menu categories at the Hillcrest Ave shop.",
     banner: "/banners/KennedyLoud_Cigarettes.webp",
     sections: [
       {
@@ -215,7 +215,7 @@ export const SEO_PAGES: SeoPageData[] = [
           "Kennedy Loud Cannabis is located at 49 Hillcrest Ave, Unit 104 in Brampton. Nearby shoppers can use the menu to pick a flower tier or format category before visiting.",
       },
       {
-        heading: "Choose The Right Category",
+        heading: "Start With A Matching Category",
         body:
           "The site is organized for fast decisions: Exotic, Premium, AAA+, AA, Budget, edibles, pre-rolls, THC Vape, Nic Vape, concentrates, cigarettes, accessories, and Magic Stuff.",
       },

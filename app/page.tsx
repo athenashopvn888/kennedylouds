@@ -234,6 +234,17 @@ export default function HomePage() {
       </section>
 
       {/* -- BENTO MOSAIC HERO -- */}
+      <section className={styles.hiringCallout} aria-label="Hiring at Kennedy Loud Cannabis" style={{ "--hire-accent": "#9DFF20", "--hire-accent-soft": "rgba(157, 255, 32, 0.14)", "--hire-accent-border": "rgba(157, 255, 32, 0.34)" } as React.CSSProperties}>
+        <div className={styles.hiringCalloutInner}>
+          <div>
+            <span className={styles.hiringEyebrow}>Budtenders / Managers Wanted</span>
+            <h2>Join Kennedy Loud</h2>
+            <p>Hillcrest Ave needs loud energy in the best way: motivated, reliable, and ready to learn. Online applications only. Please do not call the store about hiring.</p>
+          </div>
+          <Link href="/careers/budtender" className={styles.hiringButton}>Apply Online</Link>
+        </div>
+      </section>
+
       <section className={styles.hero}>
         <div className={styles.heroBg} />
         <div className={styles.heroOverlay} />
