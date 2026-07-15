@@ -130,7 +130,7 @@ export const SEO_PAGES: SeoPageData[] = [
       {
         heading: "Adult Tobacco Boundary",
         body:
-          "Smoking and nicotine use carry serious health risks. This page is for adult 19+ menu navigation only. Brand mix, flavours, and prices can rotate, so check the cigarette category before visiting.",
+          "This page gives adults 19+ menu-navigation guidance. Check the current cigarette category for listed brands, flavours, prices, and package details before visiting.",
       },
       {
         heading: "One Hillcrest Ave Stop",

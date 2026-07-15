@@ -223,7 +223,7 @@ export const RESOURCE_PAGES: ResourceArticle[] = [
       {
         heading: "Nic Vape And Pouches",
         body:
-          "Kennedy Loud menu categories include Nic Vape and nicotine pouch listings. Nicotine products are for adult shoppers only and carry serious health risks, so this guide keeps the page focused on menu location and current product checks.",
+          "Kennedy Loud menu categories include Nic Vape and nicotine pouch listings for adults 19+. Use this guide for menu location, then review the current listing and package details before choosing.",
       },
       {
         heading: "Concentrates Path",
@@ -265,7 +265,7 @@ export const RESOURCE_PAGES: ResourceArticle[] = [
       {
         heading: "Adult Tobacco Boundary",
         body:
-          "Smoking and nicotine use carry serious health risks. This page is for adult 19+ menu clarity and store navigation only, and shoppers should check the cigarette category for the current brand mix before visiting.",
+          "This page gives adults 19+ menu and store-navigation guidance. Check the current cigarette category for listed brands and review the package details before choosing.",
       },
       {
         heading: "Pair With The Right Store Path",
