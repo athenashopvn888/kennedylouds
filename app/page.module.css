@@ -18,7 +18,7 @@
 .welcomeBannerSection {
   width: 100%;
   overflow: hidden;
-  margin-top: 92px;
+  margin-top: 0;
   background-color: #f2f3f2;
 }
 
@@ -881,7 +881,7 @@
 .hiringCallout {
   position: relative;
   z-index: 2;
-  padding: 18px 20px 0;
+  padding: 110px 20px 18px;
   background: #030712;
 }
 
@@ -950,7 +950,7 @@
 
 @media (max-width: 760px) {
   .hiringCallout {
-    padding: 14px 14px 0;
+    padding: 106px 14px 16px;
   }
 
   .hiringCalloutInner {
