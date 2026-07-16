@@ -129,8 +129,12 @@
 }
 
 /* ── Scrollable link bar ── */
-.scrollBar {
+.scrollShell {
+  position: relative;
   border-top: 1px solid rgba(157, 255, 32, 0.07);
+}
+
+.scrollBar {
   overflow-x: auto;
   overflow-y: hidden;
   -webkit-overflow-scrolling: touch;
@@ -141,11 +145,15 @@
 .scrollInner {
   display: flex;
   gap: 4px;
-  padding: 7px 20px;
+  padding: 7px 64px 7px 20px;
   min-width: max-content;
   max-width: 1440px;
   margin: 0 auto;
 }
+
+.scrollAdvance { position: absolute; top: 0; right: 0; bottom: 0; z-index: 2; width: 44px; min-width: 44px; padding: 0; border: 0; color: #9DFF20; background: linear-gradient(90deg, rgba(8,10,8,0), rgba(8,10,8,.98) 42%); cursor: pointer; font: inherit; font-size: 30px; line-height: 1; }
+.scrollAdvance:hover { color: #c8ff6e; }
+.scrollAdvance:focus-visible { outline: 2px solid #9DFF20; outline-offset: -4px; }
 
 .pill {
   display: inline-flex;
@@ -198,3 +206,7 @@
   background: #facc15;
   border-color: #facc15;
 }
+
+@media (prefers-reduced-motion: reduce) { .scrollAdvance, .pill { transition: none; } }
+
+@media (max-width: 563px) { .brand { display: none; } }
