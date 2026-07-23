@@ -8,9 +8,16 @@ export default function AgeGate() {
   const [underage, setUnderage] = useState(false);
 
   useEffect(() => {
+    const path = window.location.pathname;
+    if (path.startsWith("/staff-photo")) {
+      return;
+    }
+
     // Check local storage for previous verification
     const verified = localStorage.getItem("klc_age_verified");
     if (verified !== "true") {
+      // This client-only gate must initialize from browser storage after hydration.
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setShow(true);
     }
   }, []);
@@ -43,6 +50,7 @@ export default function AgeGate() {
         ) : (
           <div className={styles.promptState}>
             <div className={styles.logoWrap}>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src="/banners/KennedyLoud_Favicon_512.webp"
                 alt="Kennedy Loud Cannabis"
