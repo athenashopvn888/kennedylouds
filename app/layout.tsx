@@ -77,7 +77,7 @@ const jsonLd = {
   name: "Kennedy Loud Cannabis",
   description: "Cannabis dispensary at 49 Hillcrest Ave, Unit 104 in Brampton, ON. Shop exotic, premium, AAA+, AA, and budget flower tiers plus edibles, prerolls, and vapes. Open 24 Hours.",
   url: "https://kennedyloudcannabis.com",
-  telephone: "+14372372286",
+  telephone: "+12892061181",
   image: "https://kennedyloudcannabis.com/wp-content/uploads/2026/04/7Clmh.jpg",
   priceRange: "$3 - $12/g",
   address: {
