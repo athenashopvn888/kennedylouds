@@ -101,7 +101,7 @@ const LOCAL_FAQS = [
   },
   {
     q: "Where is Kennedy Loud Cannabis located?",
-    a: "We are located at 49 Hillcrest Ave, Unit 104, Brampton, ON L6W 1Y7. Visit us in person or call us at (437) 237-2286. Check posted signs or the map listing for parking details.",
+    a: "We are located at 49 Hillcrest Ave, Unit 104, Brampton, ON L6W 1Y7. Visit us in person or call us at +1 (289) 206-1181. Check posted signs or the map listing for parking details.",
   },
   {
     q: "What is the cheapest weed at Kennedy Loud Cannabis?",

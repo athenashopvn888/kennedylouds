@@ -96,7 +96,7 @@ export default function DeliveryContent() {
 
         <div className={styles.ctaSection}>
           <p className={styles.ctaText}>
-            Until delivery details are ready, visit us in-store at <strong>49 Hillcrest Ave, Unit 104, Brampton</strong> - open <strong>24 hours</strong>. Call <strong>(437) 237-2286</strong>.
+            Until delivery details are ready, visit us in-store at <strong>49 Hillcrest Ave, Unit 104, Brampton</strong> - open <strong>24 hours</strong>. Call <strong>+1 (289) 206-1181</strong>.
           </p>
         </div>
       </div>

@@ -109,7 +109,7 @@ export default function FAQPage() {
           <div className={styles.ctaSection}>
             <h2 className={styles.ctaTitle}>Still have questions?</h2>
             <p className={styles.ctaText}>
-              Call Kennedy Loud Cannabis at <a href="tel:+14372372286">(437) 237-2286</a> or visit 49 Hillcrest Ave, Unit 104 in Brampton.
+              Call Kennedy Loud Cannabis at <a href="tel:+12892061181">+1 (289) 206-1181</a> or visit 49 Hillcrest Ave, Unit 104 in Brampton.
             </p>
           </div>
         </div>

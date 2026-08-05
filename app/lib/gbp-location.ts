@@ -8,8 +8,8 @@ export const gbpLocation = {
   address: "49 Hillcrest Ave, Unit 104, Brampton, ON L6W 1Y7",
   streetAddress: "49 Hillcrest Ave, Unit 104",
   postalCode: "L6W 1Y7",
-  phone: "(437) 237-2286",
-  phoneIntl: "+14372372286",
+  phone: "+1 (289) 206-1181",
+  phoneIntl: "+12892061181",
   neighborhood: "Kennedy Road / Brampton",
   nearbyAreas: ["Kennedy Road", "Downtown Brampton", "Queen Street", "Main Street", "Brampton", "Brampton Transit", "Bramalea"],
   products: [
