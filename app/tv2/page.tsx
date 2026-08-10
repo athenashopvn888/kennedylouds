@@ -138,7 +138,7 @@ const TICKER_SLIDES = [
   "Flower Tiers, Edibles, Vapes, Concentrates",
   "Pre-Rolls · Edibles · Vapes · Concentrates",
   "ALL SALES ARE FINAL",
-  "🎮 Play Games at kennedyloudcannabis.com/games",
+  "DELIVERY MENU at kennedyloudcannabis.com/delivery",
 ];
 
 function VerticalTicker() {

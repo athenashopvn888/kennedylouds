@@ -65,7 +65,6 @@ const EXPLORE_CATEGORIES = [
   { name: "Accessories", slug: "items/add-ons", banner: "/banners/KennedyLoud_Accessories.webp" },
   { name: "Cigarettes", slug: "items/cigarettes", banner: "/banners/KennedyLoud_Cigarettes.webp" },
   { name: "Magic Stuff", slug: "items/magic", banner: "/banners/KennedyLoud_Magic_Stuff.webp" },
-  { name: "Games Arcade", slug: "games", banner: "/banners/KennedyLoud_Games_Arcade.webp" },
 ];
 
 const RESOURCE_LINKS = [
