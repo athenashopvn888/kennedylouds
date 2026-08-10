@@ -675,7 +675,7 @@ const TICKER_SLIDES = [
   "🔊 Kennedy Loud Cannabis — 49 Hillcrest Ave Unit 104, Brampton",
   "Flower Tiers, Edibles, Vapes, Concentrates",
   "ALL SALES ARE FINAL",
-  "🎮 Play Games at kennedyloudcannabis.com/games",
+  "DELIVERY MENU at kennedyloudcannabis.com/delivery",
 ];
 
 function VerticalTicker() {
