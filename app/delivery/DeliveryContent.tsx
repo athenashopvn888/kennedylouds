@@ -111,7 +111,6 @@ export default function DeliveryContent() {
     </section>
     <section className={styles.deliveryDetails} aria-label="Kennedy Loud Cannabis delivery details">
       <strong>$60 PRODUCT MINIMUM</strong>
-      <a href="sms:+13655444779"><span>DELIVERY TEXT NUMBER</span> +1 (365) 544-4779</a>
     </section>
     <section className={styles.loyalty} aria-labelledby="loyalty-title">
       <div><p>SAVE ON A LATER ORDER</p><h2 id="loyalty-title">Member Loyalty Savings</h2></div>
