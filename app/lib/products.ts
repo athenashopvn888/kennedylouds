@@ -170,25 +170,25 @@ export const CATEGORY_CONFIG: Record<string, CategoryInfo> = {
     ],
   },
   "VAPE PENS": {
-    banner: "/banners/KennedyLoud_THC_Vape.webp",
-    name: "THC Vape", slug: "vapes", color: "#8b5cf6", icon: "💨",
-    seoTitle: "Vape Pens Brampton | Kennedy Loud Cannabis",
-    seoIntro: "Browse THC and nicotine vape category information at Kennedy Loud Cannabis in Brampton. Confirm current listed items before visiting 49 Hillcrest Ave.",
-    seoDescription: "Kennedy Loud Cannabis includes vape pen category information in Brampton. From THC vape category browsing to nicotine vape category browsing, shoppers can review menu information before visiting 49 Hillcrest Ave, Unit 104.",
+    banner: "/banners/KennedyLoud_Nic_Vape.webp",
+    name: "Nic Vape", slug: "vapes", color: "#8b5cf6", icon: "💨",
+    seoTitle: "Nic Vape Brampton | Kennedy Loud Cannabis",
+    seoIntro: "Browse the current Nic Vape category at Kennedy Loud Cannabis in Brampton for listed product names, formats, package details, and prices.",
+    seoDescription: "Use the Nic Vape category to compare the nicotine vape products currently listed before visiting Kennedy Loud Cannabis at 49 Hillcrest Ave, Unit 104.",
     faqs: [
-      { q: "What vape pen information can shoppers review?", a: "Visitors can review THC vape and nicotine vape category information, then confirm current menu details before visiting Kennedy Loud Cannabis." },
-      { q: "Does this page guarantee vape menu details?", a: "No. Vape category details can change, so customers should confirm the current menu before visiting." },
+      { q: "What is listed on the Nic Vape page?", a: "Use this page to compare the nicotine vape product names, package details, and prices currently listed." },
+      { q: "Where should shoppers check device details?", a: "Review each item listing and product package for the current format and device details." },
     ],
   },
   "VAPE DISPOSABLE": {
-    banner: "/banners/KennedyLoud_Nic_Vape.webp",
-    name: "Nic Vape", slug: "vape-disposables", color: "#a78bfa", icon: "💨",
-    seoTitle: "Disposable Vapes Brampton | Kennedy Loud Cannabis",
-    seoIntro: "Review disposable vape category information at Kennedy Loud Cannabis in Brampton.",
-    seoDescription: "Kennedy Loud Cannabis includes disposable vape category information for Brampton shoppers. Product details and menu details can change, so confirm the current menu before visiting 49 Hillcrest Ave, Unit 104.",
+    banner: "/banners/KennedyLoud_THC_Vape.webp",
+    name: "THC Vape", slug: "vape-disposables", color: "#a78bfa", icon: "💨",
+    seoTitle: "THC Vape Disposables Brampton | Kennedy Loud Cannabis",
+    seoIntro: "Browse the current THC Vape category at Kennedy Loud Cannabis in Brampton for listed product names, formats, package details, and prices.",
+    seoDescription: "Use the THC Vape category to compare the cannabis vape products currently listed before visiting Kennedy Loud Cannabis at 49 Hillcrest Ave, Unit 104.",
     faqs: [
-      { q: "What disposable vape information can shoppers review?", a: "Visitors can use this page to review disposable vape category information and then confirm current menu details before visiting." },
-      { q: "Does disposable vape menu details change?", a: "Yes. Product selection can change, so shoppers should use the current menu before making a special trip." },
+      { q: "What is listed on the THC Vape page?", a: "Use this page to compare the THC vape product names, package details, and prices currently listed." },
+      { q: "Where should shoppers check product details?", a: "Review each item listing and product package for the current format and device details." },
     ],
   },
   CONCENTRATES: {
@@ -296,4 +296,3 @@ export function formatPrice(p: PricePoint | null): string {
   if (p.sale !== null) return `$${p.sale}`;
   return `$${p.regular}`;
 }
-
