@@ -126,7 +126,7 @@ export const RESOURCE_PAGES: ResourceArticle[] = [
       },
     ],
     quickLinks: [
-      { label: "THC Vape", href: "/items/vapes" },
+      { label: "THC Vape", href: "/items/vape-disposables" },
       { label: "Pre-rolls", href: "/items/prerolls" },
       { label: "Cigarettes", href: "/items/cigarettes" },
     ],
@@ -159,7 +159,7 @@ export const RESOURCE_PAGES: ResourceArticle[] = [
       {
         heading: "Why Tiers Make KLC Easier",
         body:
-          "A tiered flower menu lets shoppers pick the shelf first, then compare listings inside that shelf without blending every menu lane into one list.",
+          "A tiered flower menu lets shoppers pick the shelf first, then compare listings inside that shelf without mixing every category into one list.",
       },
     ],
     quickLinks: [
@@ -237,8 +237,8 @@ export const RESOURCE_PAGES: ResourceArticle[] = [
       },
     ],
     quickLinks: [
-      { label: "THC Vape", href: "/items/vapes" },
-      { label: "Nic Vape", href: "/items/vape-disposables" },
+      { label: "THC Vape", href: "/items/vape-disposables" },
+      { label: "Nic Vape", href: "/items/vapes" },
       { label: "Concentrates", href: "/items/concentrates" },
     ],
   },
