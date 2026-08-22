@@ -22,7 +22,7 @@ function validateCatalog(label, products, requiredField) {
     throw new Error(`Invalid response: ${label} must be an array`);
   }
 
-  const seenSkus = new Set();
+  const seenIdentities = new Set();
   for (const [index, product] of products.entries()) {
     if (!product || typeof product !== 'object' || Array.isArray(product)) {
       throw new Error(`Invalid response: ${label}[${index}] must be an object`);
@@ -32,10 +32,15 @@ function validateCatalog(label, products, requiredField) {
     if (!sku) {
       throw new Error(`Invalid response: ${label}[${index}] has no SKU`);
     }
-    if (seenSkus.has(sku)) {
-      throw new Error(`Invalid response: duplicate ${label} SKU ${sku}`);
+    const slug = normalizeSku(product.slug);
+    if (!slug) {
+      throw new Error(`Invalid response: ${label}[${index}] has no slug`);
     }
-    seenSkus.add(sku);
+    const identity = `${sku}|${slug}`;
+    if (seenIdentities.has(identity)) {
+      throw new Error(`Invalid response: duplicate ${label} identity ${identity}`);
+    }
+    seenIdentities.add(identity);
 
     if (typeof product.name !== 'string' || !product.name.trim()) {
       throw new Error(`Invalid response: ${label}[${index}] has no name`);

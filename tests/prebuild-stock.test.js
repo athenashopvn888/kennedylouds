@@ -61,6 +61,23 @@ test('accepts KLC01 and writes both validated snapshots', async (t) => {
   assert.equal(JSON.parse(fs.readFileSync(fixture.itemsPath, 'utf8'))[0].sku, 'K-2');
 });
 
+test('accepts an intentional grouped SKU when product slugs are distinct', async (t) => {
+  const fixture = makeFixture();
+  t.after(() => fs.rmSync(fixture.directory, { recursive: true, force: true }));
+  const payload = productPayload();
+  payload.items.push({ ...payload.items[0], name: 'SECOND KENNEDY ITEM', slug: 'second-kennedy-item' });
+
+  const result = await runPrebuild({
+    appsScriptUrl: 'https://example.test/menu',
+    fetchImpl: jsonResponse(payload),
+    flowersPath: fixture.flowersPath,
+    itemsPath: fixture.itemsPath,
+    logger: quietLogger,
+  });
+
+  assert.equal(result.itemCount, 2);
+});
+
 test('rejects PL601 and preserves both existing snapshots', async (t) => {
   const fixture = makeFixture();
   t.after(() => fs.rmSync(fixture.directory, { recursive: true, force: true }));
@@ -101,7 +118,7 @@ test('rejects duplicate SKU identity and preserves both existing snapshots', asy
   const fixture = makeFixture();
   t.after(() => fs.rmSync(fixture.directory, { recursive: true, force: true }));
   const payload = productPayload();
-  payload.flowers.push({ ...payload.flowers[0], name: 'DUPLICATE', slug: 'duplicate' });
+  payload.flowers.push({ ...payload.flowers[0], name: 'DUPLICATE' });
 
   await assert.rejects(
     runPrebuild({
@@ -111,7 +128,7 @@ test('rejects duplicate SKU identity and preserves both existing snapshots', asy
       itemsPath: fixture.itemsPath,
       logger: quietLogger,
     }),
-    /duplicate flowers SKU K-1/,
+    /duplicate flowers identity K-1\|KENNEDY-FLOWER/,
   );
   assertUnchanged(fixture);
 });
