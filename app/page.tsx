@@ -63,7 +63,7 @@ const EXPLORE_CATEGORIES = [
   { name: "Concentrates", slug: "items/concentrates", banner: "/banners/KennedyLoud_Concentrates.webp" },
   { name: "Pre-Rolls", slug: "items/prerolls", banner: "/banners/KennedyLoud_Pre_Rolls.webp" },
   { name: "Accessories", slug: "items/add-ons", banner: "/banners/KennedyLoud_Accessories.webp" },
-  { name: "Cigarettes", slug: "items/cigarettes", banner: "/banners/KennedyLoud_Cigarettes.webp" },
+  { name: "Cigarettes", slug: "items/cigarettes", banner: "/banners/native-cigarette-offer-20260822.webp" },
   { name: "Magic Stuff", slug: "items/magic", banner: "/banners/KennedyLoud_Magic_Stuff.webp" },
 ];
 
