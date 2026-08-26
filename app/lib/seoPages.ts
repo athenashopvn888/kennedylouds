@@ -11,6 +11,7 @@ const NATIVE_HERO_PRODUCTS = [
 export interface SeoPageData {
   slug: string;
   title: string;
+  absoluteTitle?: boolean;
   metaDescription: string;
   h1: string;
   icon: string;
@@ -18,8 +19,17 @@ export interface SeoPageData {
   heroPreview?: {
     eyebrow: string;
     intro: string;
-    products: typeof NATIVE_HERO_PRODUCTS;
-    disclosure: typeof NATIVE_HERO_DISCLOSURE;
+    products: readonly { name: string; image: string; sourceSlug?: string }[];
+    disclosure: string;
+    theme?: "cigarettes" | "nicotine";
+    menuHref?: string;
+    primaryLabel?: string;
+    secondaryLabel?: string;
+    secondaryHref?: string;
+    identityStrip?: string;
+    featuredHeading?: string;
+    featuredIntro?: string;
+    warning?: string;
   };
   banner?: string;
   sections: { heading: string; body: string }[];
@@ -265,6 +275,48 @@ export const SEO_PAGES: SeoPageData[] = [
         q: "Where are the Resource pages?",
         a: "Use /resources for Kennedy Loud guides covering visits, flower tiers, 24-hour shopping, vapes, cigarettes, and specialty categories.",
       },
+    ],
+  },
+  {
+    slug: "nicotine-vapes-brampton",
+    title: "Nicotine Vapes in Brampton | Kennedy Loud Cannabis",
+    absoluteTitle: true,
+    metaDescription: "Adults 19+: review six nicotine vape product pages from Kennedy Loud Cannabis in Brampton, then check /items/vapes for the current category. Nicotine is addictive.",
+    h1: "Nicotine Vapes at Kennedy Loud Cannabis in Brampton",
+    icon: "NV",
+    heroTagline: "Adults 19+ · Nicotine is addictive.",
+    heroPreview: {
+      eyebrow: "KENNEDY LOUD CANNABIS • KENNEDY ROAD / BRAMPTON • ADULTS 19+",
+      intro: "Searching for nicotine vapes near me around Kennedy Road in Brampton? This adult-only Kennedy Loud Cannabis guide features six live-checked VAPE PENS product pages. Compare their supported names and formats, then use /items/vapes for the current nicotine category. Product details can change. Nicotine is addictive.",
+      products: [
+        { name: "Flavour Beast e-liquid salt", image: "https://pub-eb3e1fe18a43477eabc885cfb791d97c.r2.dev/products/1093-Flavour-Beast-e-liquid-salt.webp", sourceSlug: "flavour-beast-e-liquid-salt" },
+        { name: "GEEK PROMAX – 5% | 30K PUFFS", image: "https://pub-eb3e1fe18a43477eabc885cfb791d97c.r2.dev/products/GEEK-PROMAX.jpg", sourceSlug: "geek-promax-5-30k-puffs" },
+        { name: "GEEK UNIVERSE 25k PUFFS", image: "https://pub-eb3e1fe18a43477eabc885cfb791d97c.r2.dev/products/geek_universe_pulse_x_25k.webp", sourceSlug: "geek-universe-25k-puffs" },
+        { name: "Level X Boost G2 device kit", image: "https://pub-eb3e1fe18a43477eabc885cfb791d97c.r2.dev/products/1085-Level-X-Boost-G2-device-kit.webp", sourceSlug: "level-x-boost-g2-device-kit" },
+        { name: "NEXA PIX | 30K PUFFS | MANY FLAVORS", image: "https://pub-eb3e1fe18a43477eabc885cfb791d97c.r2.dev/products/nexa_showcase_600x600.webp", sourceSlug: "nexa-pix-30k-puffs-many-flavors" },
+        { name: "OVNS 10000 – 5% | 10K PUFFS", image: "https://pub-eb3e1fe18a43477eabc885cfb791d97c.r2.dev/products/1081OVNS10000.jpg", sourceSlug: "ovns-10000-5-10k-puffs" },
+      ],
+      disclosure: "Featured cards are live-checked starting points, not guarantees of current stock, price or availability.",
+      theme: "nicotine",
+      menuHref: "/items/vapes",
+      primaryLabel: "Browse Nicotine Vapes",
+      secondaryLabel: "Compare the Six Featured Items",
+      secondaryHref: "#featured-vapes",
+      identityStrip: "Kennedy Loud Cannabis | Kennedy Road / Brampton | Adults 19+ | Nicotine is addictive.",
+      featuredHeading: "Six Live-Checked Kennedy Loud Vape Cards",
+      featuredIntro: "This shortlist contains six live-checked VAPE PENS product pages from Flavour Beast, Geek, Level X, NEXA and OVNS. Use each card for its supported display name, then rely on /items/vapes for the current Kennedy Loud Cannabis category listing.",
+      warning: "Adults 19+. Nicotine is addictive.",
+    },
+    sections: [
+      { heading: "Read Each Product Format Carefully", body: "The featured set includes an e-liquid salt listing and a Level X Boost G2 device kit. Keep those descriptions attached only to their respective products, and do not relabel another featured item by assumption." },
+      { heading: "Puff Counts Identify Listings", body: "Several featured names include puff counts. Use those numbers to distinguish the listings, not as guarantees of duration, performance or superiority." },
+      { heading: "Keep Nicotine and Cannabis Vape Routes Separate", body: "This adult-only Kennedy Loud Cannabis guide uses VAPE PENS products under /items/vapes. THC and cannabis vape products under /items/vape-disposables are excluded." },
+      { heading: "Review the Current Brampton Category", body: "Before choosing, open /items/vapes and the individual product page for current supported details. This guide does not claim prices, stock or guaranteed availability." },
+    ],
+    faqs: [
+      { q: "Where should I check Kennedy Loud Cannabis’s current nicotine selection?", a: "Use /items/vapes. The six featured cards are live-checked starting points while the current category listing controls selection information." },
+      { q: "Does every featured item use the same format?", a: "No. The featured set includes an e-liquid salt listing and a Level X Boost G2 device kit. Read every current product page for its supported format and details." },
+      { q: "Does this page include cannabis vapes?", a: "No. It covers nicotine products from the VAPE PENS category for adults 19+. THC and cannabis vape products under /items/vape-disposables are excluded." },
     ],
   },
 ];
