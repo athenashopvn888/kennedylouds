@@ -25,6 +25,7 @@ export default function ContactPage() {
       {/* ── Hero ── */}
       <section className={styles.hero} style={{ paddingTop: "92px" }}>
         <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 20px" }}>
+          <h1 className={styles.heroTitle}>Contact Kennedy Loud Cannabis in Brampton</h1>
           <img src="/banners/KennedyLoud_Contact_Us.webp" alt="Contact Us" style={{ width: "100%", height: "auto", display: "block", borderRadius: "var(--radius-lg)" }} />
         </div>
       </section>
@@ -129,4 +130,3 @@ export default function ContactPage() {
     </main>
   );
 }
-
