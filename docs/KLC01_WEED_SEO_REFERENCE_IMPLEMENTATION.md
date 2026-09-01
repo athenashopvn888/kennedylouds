@@ -11,7 +11,7 @@ State: feature-branch implementation complete; production not authorized or touc
 ## Approval and consultation
 
 - Tri approved the exact GPT-authored KLC01 public-content package on 2026-09-01.
-- The implementation gate was reviewed in the Trung Nguyen paid GPT SEO session.
+- The implementation gate was reviewed in the Tri-approved GPT SEO strategy thread.
 - GPT verdict: `GO — safe to implement the approved package with these boundaries`.
 - The accessible KLC product snapshot remains stale at 2026-06-28. Find Your Weed is static and contains no stock, price, availability, promotion, popularity or product claims.
 

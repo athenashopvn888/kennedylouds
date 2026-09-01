@@ -15,9 +15,10 @@ export type WeedDiscoveryGroup = {
 type FindYourWeedProps = {
   groups: WeedDiscoveryGroup[];
   guide?: WeedDiscoveryItem;
+  storeName: string;
 };
 
-export function FindYourWeed({ groups, guide }: FindYourWeedProps) {
+export function FindYourWeed({ groups, guide, storeName }: FindYourWeedProps) {
   return (
     <section id="find-your-weed" className={styles.discovery} aria-labelledby="find-your-weed-heading">
       <h2 id="find-your-weed-heading">Find Your Weed</h2>
@@ -25,7 +26,7 @@ export function FindYourWeed({ groups, guide }: FindYourWeedProps) {
         Not everyone shops for cannabis the same way. Some people know the exact format they want;
         others want to start with flower and narrow things down from there.
       </p>
-      <p>Use these shortcuts to explore Kennedy Loud Cannabis by category.</p>
+      <p>Use these shortcuts to explore {storeName} by category.</p>
 
       {groups.map((group) => (
         <div key={group.heading} className={styles.group}>
@@ -49,7 +50,7 @@ export function FindYourWeed({ groups, guide }: FindYourWeedProps) {
       ) : null}
 
       <p className={styles.disclaimer}>
-        These links help you navigate the Kennedy Loud Cannabis website by category. They do not
+        These links help you navigate the {storeName} website by category. They do not
         indicate current stock, price, promotion or product availability. Check the current menu
         for specific product details.
       </p>

@@ -191,6 +191,7 @@ export function GBPLandingPage() {
       </section>
 
       <FindYourWeed
+        storeName="Kennedy Loud Cannabis"
         groups={discoveryGroups}
         guide={{
           label: "Read the Flower Tier Guide",
