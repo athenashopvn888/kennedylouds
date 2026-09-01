@@ -8,8 +8,28 @@ type ResourceViewProps = {
   article: ResourceArticle;
 };
 
+const WEED_OWNER_PATH = "/weed-dispensary-brampton/";
+
+const weedOwnerAnchors: Record<string, string> = {
+  "/resources": "Kennedy Loud Cannabis in Brampton",
+  "/resources/hillcrest-ave-visit-guide": "Kennedy Loud Cannabis",
+  "/resources/kennedy-road-menu-map": "Brampton weed dispensary",
+  "/resources/flower-tier-guide": "weed dispensary in Brampton",
+  "/resources/24-hour-brampton-dispensary-guide": "Kennedy Loud Cannabis",
+  "/resources/vapes-concentrates-guide": "Kennedy Loud Cannabis in Brampton",
+  "/resources/native-smokes-brampton-guide": "Kennedy Loud Cannabis",
+};
+
 export default function ResourceView({ article }: ResourceViewProps) {
   const isHub = article.path === RESOURCE_HUB.path;
+  const weedOwnerAnchor = weedOwnerAnchors[article.path];
+  const quickLinks = weedOwnerAnchor
+    ? article.quickLinks.some((link) => link.href === WEED_OWNER_PATH)
+      ? article.quickLinks.map((link) =>
+          link.href === WEED_OWNER_PATH ? { ...link, label: weedOwnerAnchor } : link,
+        )
+      : [{ label: weedOwnerAnchor, href: WEED_OWNER_PATH }, ...article.quickLinks]
+    : article.quickLinks;
 
   return (
     <main className={styles.main}>
@@ -36,6 +56,11 @@ export default function ResourceView({ article }: ResourceViewProps) {
                 </article>
               ))}
             </div>
+            {weedOwnerAnchor ? (
+              <Link href={WEED_OWNER_PATH} className={styles.ownerLink}>
+                {weedOwnerAnchor}
+              </Link>
+            ) : null}
           </section>
           <section className={styles.gridWrap} aria-label="Kennedy Loud resource guides">
             <div className={styles.grid}>
@@ -63,7 +88,7 @@ export default function ResourceView({ article }: ResourceViewProps) {
             </div>
             <aside className={styles.sideBox}>
               <h2>Useful links</h2>
-              {article.quickLinks.map((link) => (
+              {quickLinks.map((link) => (
                 <Link key={link.href} href={link.href}>
                   {link.label}
                 </Link>

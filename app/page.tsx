@@ -6,6 +6,7 @@ import styles from "./page.module.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import FlowerCard from "./components/FlowerCard";
+import { WeedOwnerBridge } from "./components/weed-seo/WeedOwnerBridge";
 import { allFlowers } from "./lib/products";
 import Papa from "papaparse";
 
@@ -302,6 +303,8 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      <WeedOwnerBridge />
 
       {/* -- FEATURED PRODUCTS -- */}
       <section className={styles.featuredSection}>

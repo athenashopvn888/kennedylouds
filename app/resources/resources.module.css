@@ -72,6 +72,22 @@
   padding: 38px 0 0;
 }
 
+.ownerLink {
+  display: inline-flex;
+  margin-top: 18px;
+  padding: 11px 16px;
+  border-radius: 999px;
+  background: #127c49;
+  color: #ffffff;
+  font-weight: 900;
+  text-decoration: none;
+}
+
+.ownerLink:hover,
+.ownerLink:focus-visible {
+  background: #0d5d38;
+}
+
 .introGrid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
