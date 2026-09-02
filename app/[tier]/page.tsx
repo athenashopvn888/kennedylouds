@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
+import Link from "next/link";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import FlowerCard from "../components/FlowerCard";
@@ -8,7 +9,7 @@ import {
   getTierFromSlug,
   TIER_CONFIG,
 } from "../lib/products";
-import { TIER_SEO } from "../lib/tierSeoContent";
+import { TIER_COMPARE, TIER_SEO } from "../lib/tierSeoContent";
 import styles from "./tier.module.css";
 
 /* -- Generate all tier pages at build -- */
@@ -29,14 +30,20 @@ export async function generateMetadata({
   const seo = TIER_SEO[tierInfo.key];
 
   return {
-    title: seo?.seoTitle || `${tierInfo.config.name} Cannabis Flower — ${flowers.length} Strains`,
-    description: seo?.seoIntro || `Browse the ${tierInfo.config.name.toLowerCase()} flower tier at Kennedy Loud Cannabis.`,
+    title: seo ? { absolute: seo.seoTitle } : `${tierInfo.config.name} Cannabis Flower — ${flowers.length} Strains`,
+    description: seo?.metaDescription || `Browse the ${tierInfo.config.name.toLowerCase()} flower tier at Kennedy Loud Cannabis.`,
     alternates: {
       canonical: `https://kennedyloudcannabis.com/${tierSlug}`,
     },
     openGraph: {
-      title: `${tierInfo.config.name} Flower | Kennedy Loud Cannabis`,
-      description: `Browse the ${tierInfo.config.name.toLowerCase()} flower tier and posted menu details before visiting Kennedy Loud Cannabis.`,
+      title: seo?.socialTitle || `${tierInfo.config.name} Flower | Kennedy Loud Cannabis`,
+      description: seo?.socialDescription || `Browse the ${tierInfo.config.name.toLowerCase()} flower tier at Kennedy Loud Cannabis.`,
+      url: `https://kennedyloudcannabis.com/${tierSlug}`,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: seo?.socialTitle || `${tierInfo.config.name} Flower | Kennedy Loud Cannabis`,
+      description: seo?.socialDescription || `Browse the ${tierInfo.config.name.toLowerCase()} flower tier at Kennedy Loud Cannabis.`,
     },
   };
 }
@@ -67,7 +74,7 @@ export default async function TierPage({
       <section className={styles.bannerSection}>
         <img
           src={config.banner}
-          alt={`${config.name} Cannabis Flower — ${config.tagline}`}
+          alt={seo?.imageAlt || `${config.name} cannabis flower tier at Kennedy Loud Cannabis`}
           className={styles.bannerImg}
         />
       </section>
@@ -82,7 +89,7 @@ export default async function TierPage({
             <div className={styles.heroTitleRow}>
               <span className={styles.heroIcon}>{config.icon}</span>
               <h1 className={styles.heroTitle}>
-                <span style={{ color: config.color }}>{config.name}</span>
+                <span style={{ color: config.color }}>{seo?.h1 || config.name}</span>
               </h1>
             </div>
             <p className={styles.heroTagline}>{config.tagline}</p>
@@ -153,11 +160,7 @@ export default async function TierPage({
             </>
           )}
 
-          <h2 className={styles.sectionTitle}>
-            All{" "}
-            <span style={{ color: config.color }}>{config.name}</span>{" "}
-            Strains
-          </h2>
+          <h2 className={styles.sectionTitle}>{seo?.strainHeading || `Explore the ${config.name} Flower Tier`}</h2>
           <div className={styles.grid}>
             {regularFlowers.map((f) => (
               <FlowerCard
@@ -174,7 +177,6 @@ export default async function TierPage({
       {seo && (
         <section className={styles.seoSection}>
           <div className={styles.container}>
-            <h2 className={styles.seoMainTitle}>{seo.seoTitle}</h2>
             <p className={styles.seoIntro}>{seo.seoIntro}</p>
 
             {seo.sections.map((s, i) => (
@@ -196,6 +198,29 @@ export default async function TierPage({
                 ))}
               </div>
             )}
+
+            <section className={styles.compareSection} aria-labelledby="compare-tier-heading">
+              <h2 id="compare-tier-heading" className={styles.seoMainTitle}>{TIER_COMPARE.heading}</h2>
+              <p className={styles.compareBody}>{TIER_COMPARE.body}</p>
+              <nav className={styles.tierLinks} aria-label="Kennedy Loud flower tiers">
+                {Object.values(TIER_CONFIG).map((tier) => (
+                  <Link
+                    key={tier.slug}
+                    href={`/${tier.slug}`}
+                    className={styles.tierLink}
+                    aria-current={tier.slug === tierSlug ? "page" : undefined}
+                  >
+                    {tier.name}{" "}Weed &amp; Flower
+                  </Link>
+                ))}
+              </nav>
+              <p className={styles.ownerLinkSentence}>
+                {TIER_COMPARE.ownerSentence}{" "}
+                <Link href={TIER_COMPARE.ownerHref} className={styles.ownerLink}>
+                  {TIER_COMPARE.ownerAnchor}
+                </Link>
+              </p>
+            </section>
           </div>
         </section>
       )}
