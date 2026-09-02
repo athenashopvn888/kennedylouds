@@ -132,40 +132,43 @@ export const RESOURCE_PAGES: ResourceArticle[] = [
     ],
   },
   {
-    path: "/resources/flower-tier-guide",
-    slug: ["flower-tier-guide"],
-    title: "Kennedy Loud Flower Tier Guide",
+    path: "/resources/weed-flower-tier-guide",
+    slug: ["weed-flower-tier-guide"],
+    title: "Kennedy Loud Weed & Flower Tier Guide",
     metaDescription:
-      "Compare Kennedy Loud Cannabis flower tiers in Brampton, including Exotic, Premium, AAA+, AA, and Budget menu categories.",
-    eyebrow: "Flower tiers",
+      "Compare Kennedy Loud Cannabis flower tiers in Brampton, including Exotic Weed, Premium Weed, AAA+ Weed, AA Weed, and Budget Weed.",
+    eyebrow: "Weed flower tiers",
     summary:
-      "A plain-English guide to the Kennedy Loud flower shelf for shoppers comparing tier, price range, and menu style.",
+      "A clear guide to Kennedy Loud Cannabis Flower collections for shoppers comparing five established Weed tiers.",
     sections: [
       {
-        heading: "Exotic And Premium",
+        heading: "Exotic Weed And Premium Weed",
         body:
-          "Exotic and Premium are the higher-tier shelf signals on the KLC menu. These are the categories to start with when a shopper wants higher-tier flower browsing.",
+          "Exotic Weed and Premium Weed offer two distinct Kennedy Loud Cannabis Flower collections to explore. Browse either collection, then compare the product information presented with individual items.",
       },
       {
-        heading: "AAA+ And AA",
+        heading: "AAA+ Weed And AA Weed",
         body:
-          "AAA+ and AA sit in the practical middle of the menu. They help regular shoppers compare quality and spend without turning the visit into homework.",
+          "AAA+ Weed and AA Weed provide two more Cannabis Flower collections within the Kennedy Loud selection. Explore both when you want to compare different parts of the flower menu.",
       },
       {
-        heading: "Budget Flower",
+        heading: "Budget Weed Flower",
         body:
-          "Budget is the value category for shoppers looking for the lowest-price flower path at Kennedy Loud. The page points shoppers to current listings instead of promising a fixed strain or batch.",
+          "Budget Weed is another established Kennedy Loud Cannabis Flower collection. Use the product information shown while browsing to learn more about individual items.",
       },
       {
-        heading: "Why Tiers Make KLC Easier",
+        heading: "Compare Five Kennedy Loud Weed Tiers",
         body:
-          "A tiered flower menu lets shoppers pick the shelf first, then compare listings inside that shelf without mixing every category into one list.",
+          "Kennedy Loud organizes Cannabis Flower into Exotic Weed, Premium Weed, AAA+ Weed, AA Weed and Budget Weed. Start with the collection that interests you, or compare more than one.",
       },
     ],
     quickLinks: [
-      { label: "Exotic flower", href: "/exotic" },
-      { label: "AAA+ flower", href: "/aaa" },
-      { label: "Budget flower", href: "/budget" },
+      { label: "Exotic Weed", href: "/exotic-weed" },
+      { label: "Premium Weed", href: "/premium-weed" },
+      { label: "AAA+ Weed", href: "/aaa-weed" },
+      { label: "AA Weed", href: "/aa-weed" },
+      { label: "Budget Weed", href: "/budget-weed" },
+      { label: "Kennedy Loud Weed in Brampton", href: "/weed-dispensary-brampton/" },
     ],
   },
   {
