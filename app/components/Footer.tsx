@@ -46,11 +46,11 @@ export default function Footer() {
             <h3 className={styles.colTitle}>Quick Links</h3>
             <nav className={styles.links}>
               <Link href="/">Home</Link>
-              <Link href="/exotic">Exotic Flower</Link>
-              <Link href="/premium">Premium Flower</Link>
-              <Link href="/aaa">AAA+ Flower</Link>
-              <Link href="/aa">AA Flower</Link>
-              <Link href="/budget">Budget Flower</Link>
+              <Link href="/exotic-weed">Exotic Weed</Link>
+              <Link href="/premium-weed">Premium Weed</Link>
+              <Link href="/aaa-weed">AAA+ Weed</Link>
+              <Link href="/aa-weed">AA Weed</Link>
+              <Link href="/budget-weed">Budget Weed</Link>
               <Link href="/items/edibles">Edibles</Link>
               <Link href="/items/cigarettes">Cigarettes</Link>
               <Link href="/items/vapes">Nic Vape</Link>
@@ -59,7 +59,7 @@ export default function Footer() {
               <Link href="/items/magic">Magic Stuff</Link>
               <Link href="/resources">Resources</Link>
               <Link href="/resources/hillcrest-ave-visit-guide">Hillcrest Visit Guide</Link>
-              <Link href="/resources/flower-tier-guide">Flower Tier Guide</Link>
+              <Link href="/resources/weed-flower-tier-guide">Weed Flower Tier Guide</Link>
               <Link href="/resources/native-smokes-brampton-guide">Native Smokes Guide</Link>
               <Link href="/faq">FAQ</Link>
               <Link href="/delivery">DELIVERY MENU</Link>

@@ -16,7 +16,6 @@ import styles from "./tier.module.css";
 export function generateStaticParams() {
   return Object.values(TIER_CONFIG).map((t) => ({ tier: t.slug }));
 }
-
 /* -- Dynamic SEO metadata -- */
 export async function generateMetadata({
   params,
@@ -210,7 +209,7 @@ export default async function TierPage({
                     className={styles.tierLink}
                     aria-current={tier.slug === tierSlug ? "page" : undefined}
                   >
-                    {tier.name}{" "}Weed &amp; Flower
+                    {tier.name} &amp; Flower
                   </Link>
                 ))}
               </nav>
