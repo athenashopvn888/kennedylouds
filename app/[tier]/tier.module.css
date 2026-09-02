@@ -227,6 +227,51 @@
   margin: 0;
 }
 
+.compareSection {
+  margin-top: 40px;
+  padding: 28px;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  background: var(--bg-primary);
+}
+
+.compareBody,
+.ownerLinkSentence {
+  max-width: 900px;
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.tierLinks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.tierLink,
+.ownerLink {
+  color: var(--green-dark);
+  font-weight: 800;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+.tierLink {
+  padding: 9px 13px;
+  border: 1px solid var(--border-subtle);
+  border-radius: 999px;
+  background: var(--bg-secondary);
+  text-decoration: none;
+}
+
+.tierLink[aria-current="page"] {
+  border-color: var(--green-dark);
+}
+
 /* ── FAQ Accordion ── */
 .faqSection {
   margin-top: 32px;
@@ -310,5 +355,14 @@
   .grid {
     grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
     gap: 12px;
+  }
+
+  .compareSection {
+    padding: 22px 18px;
+  }
+
+  .tierLinks {
+    display: grid;
+    grid-template-columns: 1fr;
   }
 }
