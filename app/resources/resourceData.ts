@@ -12,6 +12,7 @@ export type ResourceArticle = {
   path: string;
   slug: string[];
   title: string;
+  seoTitle?: string;
   metaDescription: string;
   eyebrow: string;
   summary: string;
@@ -280,6 +281,53 @@ export const RESOURCE_PAGES: ResourceArticle[] = [
       { label: "Cigarettes", href: "/items/cigarettes" },
       { label: "Accessories", href: "/items/add-ons" },
       { label: "Brampton visit page", href: "/weed-dispensary-brampton/" },
+    ],
+  },
+  {
+    path: "/resources/cannabis-dispensary-vs-weed-dispensary",
+    slug: ["cannabis-dispensary-vs-weed-dispensary"],
+    title: "Weed Dispensary vs. Cannabis Dispensary: Two Searches, Similar Intent",
+    seoTitle: "Weed vs Cannabis Dispensary | Kennedy Loud Brampton",
+    metaDescription:
+      "Weed dispensary or cannabis dispensary? Learn why people use both phrases when searching for a dispensary near them in Brampton.",
+    eyebrow: "Dispensary search terminology",
+    summary:
+      "Customers do not always use formal industry terminology when searching locally. Some people naturally search for a cannabis dispensary. Others search for a weed dispensary. And someone trying to find a nearby location quickly may simply type “dispensary near me.”",
+    sections: [
+      {
+        heading: "Why Weed Dispensary and Cannabis Dispensary Overlap",
+        body:
+          "Cannabis is the more formal terminology. Weed is common conversational terminology. Adding the word dispensary makes the local-business intent much clearer. That creates related searches including weed dispensary near me, cannabis dispensary near me, dispensary near me, cannabis store near me, weed near me and cannabis near me. These remain separate search queries, but they can communicate very similar intent.",
+      },
+      {
+        heading: "What Matters After the Search?",
+        body:
+          "After someone identifies a nearby cannabis business, practical store information becomes more important than the exact words originally typed. Customers may want to confirm store identity, address, location, current hours, directions and website information. Kennedy Loud Cannabis is located at 49 Hillcrest Ave, Unit 104 in Brampton. Its existing Brampton dispensary page remains the primary local resource for visit intent.",
+      },
+      {
+        heading: "One Business, Several Ways to Search",
+        body:
+          "A strong local website does not need to force every keyword into every paragraph. Instead, it should clearly establish that Kennedy Loud Cannabis is a Brampton cannabis dispensary while naturally connecting cannabis, weed, dispensary and cannabis-store terminology.",
+      },
+      {
+        heading: "Why do people say weed dispensary instead of cannabis dispensary?",
+        body: "Weed is common conversational language, while cannabis is the more formal term.",
+      },
+      {
+        heading: "Does Google treat these as exactly the same keyword?",
+        body: "No. They are distinct queries, but they can express closely related search intent.",
+      },
+      {
+        heading: "What does “dispensary near me” communicate?",
+        body: "It tells the search engine that the user is looking for a nearby dispensary and that location matters.",
+      },
+      {
+        heading: "Where is Kennedy Loud Cannabis?",
+        body: "Kennedy Loud Cannabis is at 49 Hillcrest Ave, Unit 104 in Brampton.",
+      },
+    ],
+    quickLinks: [
+      { label: "Cannabis Dispensary Near Me in Brampton", href: "/info/dispensary-near-me-brampton" },
     ],
   },
   {
