@@ -17,7 +17,7 @@ export async function generateMetadata({
   if (!page) return {};
 
   return {
-    title: { absolute: page.title },
+    title: { absolute: page.seoTitle ?? page.title },
     description: page.metaDescription,
     alternates: { canonical: `${RESOURCE_SITE}${page.path}` },
   };
