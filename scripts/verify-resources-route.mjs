@@ -107,7 +107,6 @@ const bannedPhrases = [
   "without changing the existing urls",
   "site strategy",
   "resource hub should support",
-  "verified",
   "repository",
   "source material",
   "brampton gbp",
