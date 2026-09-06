@@ -54,12 +54,23 @@ export default function ResourceView({ article }: ResourceViewProps) {
         <article className={styles.article}>
           <div className={styles.articleGrid}>
             <div className={styles.articleBody}>
-              {article.sections.map((section) => (
+              {article.blocks ? article.blocks.map((block, index) => {
+                if (block.type === "h2") return <h2 key={`${block.type}-${index}`}>{block.text}</h2>;
+                if (block.type === "h3") return <h3 key={`${block.type}-${index}`}>{block.text}</h3>;
+                if (block.type === "list") return <ul key={`${block.type}-${index}`}>{block.items.map((item) => <li key={item}>{item}</li>)}</ul>;
+                return <p key={`${block.type}-${index}`}>{block.text}</p>;
+              }) : article.sections.map((section) => (
                 <section key={section.heading}>
                   <h2>{section.heading}</h2>
                   <p>{section.body}</p>
                 </section>
               ))}
+              {article.faqs?.length ? (
+                <section className={styles.faqs}>
+                  <h2>Frequently Asked Questions</h2>
+                  {article.faqs.map((faq) => <div key={faq.question}><h3>{faq.question}</h3><p>{faq.answer}</p></div>)}
+                </section>
+              ) : null}
             </div>
             <aside className={styles.sideBox}>
               <h2>Useful links</h2>

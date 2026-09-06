@@ -116,3 +116,28 @@ export const TIER_SEO: Record<string, TierSeoData> = {
     ],
   },
 };
+
+
+const PINKY_KLC01_TIER_ADDITIONS = {
+  "EXOTIC": {
+    "heading": "What “Exotic Weed” Means on the Kennedy Loud Menu",
+    "body": "Exotic is broad cannabis culture and retail language. It can point toward unusual genetics, distinctive aroma, rarity, strong bag appeal or high-end positioning. It is not a regulated government grade and it does not guarantee one THC range. At Kennedy Loud Cannabis, Exotic Weed is a protected flower owner. Use the Exotic collection to narrow the browse, then read the actual product information inside the current listing. A product can look exotic because of: cultivar; aroma; trichomes; bud structure; colour; presentation. Those clues still need context."
+  },
+  "PREMIUM": {
+    "heading": "Premium Weed Is Positioning, Not One Formula",
+    "body": "Premium usually means a product or collection is positioned above a standard/value starting point. In cannabis, that positioning may reflect a mix of: producer; genetics; aroma; trim; cure; freshness; presentation. There is no universal rule saying Premium Weed must have one exact THC percentage, one exact bud size or one exact grow method. At Kennedy Loud, Premium Weed remains the protected owner for the current Premium collection. Use the resource guides for the quality language and the current Premium page for the actual products."
+  },
+  "AAA+": {
+    "heading": "What AAA+ Weed Means as a Kennedy Loud Tier",
+    "body": "AAA and AAA+ are familiar Canadian cannabis retail shorthand. They are not one regulated national grading system. The plus sign generally suggests positioning above a basic AAA label, but there is no universal formula requiring one potency, aroma or visual score. At Kennedy Loud, AAA+ Weed is the established owner. Use the tier to narrow the flower menu, then compare the actual product information."
+  },
+  "AA": {
+    "heading": "AA Weed as a Browsing Category",
+    "body": "AA is familiar cannabis grade shorthand. It is not a government laboratory grade. At Kennedy Loud, AA Weed is a protected menu owner. The label helps narrow the browse. It does not promise: one THC range; one aroma; one bud size; one cultivation method. Use the current AA Weed page for current products and the Resource Centre for the broader grade language."
+  },
+  "BUDGET": {
+    "heading": "Budget Weed Means Value Positioning",
+    "body": "Budget is a value-oriented browsing term. It should not be used as shorthand for: unsafe; automatically weak; automatically stale; automatically low quality. Kennedy Loud's Budget Weed page is the protected owner for adults who want to begin with value. The current products inside it still have their own legal labels, cultivars, producers and current menu details. Price positioning and quality overlap imperfectly. Use the current listing for today's price. Use the educational guides for the quality language."
+  }
+};
+for (const [key, section] of Object.entries(PINKY_KLC01_TIER_ADDITIONS)) TIER_SEO[key].sections.push(section);
