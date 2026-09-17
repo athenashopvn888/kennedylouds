@@ -70,11 +70,10 @@ export const metadata: Metadata = {
 };
 
 /* ── JSON-LD Structured Data ── */
-const jsonLd = {
+const storeJsonLd = {
   "@context": "https://schema.org",
-  "@type": "Store",
-  additionalType: "https://schema.org/Store",
-  "@id": "https://kennedyloudcannabis.com",
+  "@type": "CannabisStore",
+  "@id": "https://kennedyloudcannabis.com/#store",
   name: "Kennedy Loud Cannabis",
   description: "Cannabis dispensary at 49 Hillcrest Ave, Unit 104 in Brampton, ON. Shop exotic, premium, AAA+, AA, and budget flower tiers plus edibles, prerolls, and vapes. Open 24 Hours.",
   url: "https://kennedyloudcannabis.com",
@@ -102,10 +101,16 @@ const jsonLd = {
       closes: "23:59",
     },
   ],
-  areaServed: {
-    "@type": "City",
-    name: "Brampton",
-  },
+  areaServed: ["Brampton", "Kennedy Road", "Hillcrest", "Downtown Brampton"],
+};
+
+const websiteJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": "https://kennedyloudcannabis.com/#website",
+  name: "Kennedy Loud Cannabis",
+  url: "https://kennedyloudcannabis.com",
+  publisher: { "@id": "https://kennedyloudcannabis.com/#store" },
 };
 
 export default function RootLayout({
@@ -124,7 +129,7 @@ export default function RootLayout({
         />
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify([storeJsonLd, websiteJsonLd]) }}
         />
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-0JBPDPJ0VX"></script>
         <script
