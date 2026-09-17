@@ -41,6 +41,104 @@
   box-shadow: 0 0 0 1px rgba(157,255,32,0.3), 0 16px 64px rgba(0,0,0,0.8), 0 0 80px rgba(157,255,32,0.12);
 }
 
+.localVisitStrip {
+  position: relative;
+  z-index: 2;
+  padding: 110px 20px 8px;
+}
+
+.localVisitInner {
+  width: min(100%, 1180px);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 16px;
+  align-items: center;
+  padding: 18px 20px;
+  border-radius: 18px;
+  background: #0b1208;
+  border: 1px solid rgba(157, 255, 32, 0.28);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.28);
+}
+
+.localVisitEyebrow {
+  display: inline-flex;
+  margin-bottom: 6px;
+  color: #9DFF20;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.localVisitAddress {
+  margin: 0 0 6px;
+  color: #ffffff;
+  font-size: clamp(16px, 2vw, 20px);
+  font-weight: 800;
+}
+
+.localVisitMeta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 16px;
+  margin: 0;
+  color: #d7e7c8;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.localVisitMeta a {
+  color: #9DFF20;
+}
+
+.localVisitActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.localVisitPrimary,
+.localVisitSecondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 42px;
+  padding: 10px 16px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.localVisitPrimary {
+  background: #9DFF20;
+  color: #07111f;
+}
+
+.localVisitSecondary {
+  background: transparent;
+  color: #ffffff;
+  border: 1px solid rgba(157, 255, 32, 0.4);
+}
+
+@media (max-width: 760px) {
+  .localVisitStrip {
+    padding: 106px 14px 8px;
+  }
+
+  .localVisitInner {
+    grid-template-columns: 1fr;
+  }
+
+  .localVisitPrimary,
+  .localVisitSecondary {
+    flex: 1;
+  }
+}
+
 /* ── HERO SECTION ── */
 .hero {
   position: relative;
@@ -138,6 +236,18 @@
   letter-spacing: -0.02em;
   color: #111111;
   filter: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.brandH1Local {
+  display: block;
+  font-size: clamp(16px, 2.4vw, 26px);
+  font-weight: 800;
+  letter-spacing: 0;
+  color: #3f6b12;
 }
 
 @keyframes chromeShift {
@@ -777,7 +887,7 @@
 
 .storeGrid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 20px;
   margin-bottom: 40px;
 }
@@ -824,7 +934,7 @@
 }
 
 .storeLink {
-  color: #9DFF20;
+  color: #3f6b12;
   font-weight: 700;
   text-decoration: none;
   font-size: 14px;
@@ -867,7 +977,7 @@
   .bentoExotic { grid-column: span 2; grid-row: span 1; }
   .bentoPremium { grid-row: span 1; }
   .categoriesGrid { grid-template-columns: repeat(2, 1fr); }
-  .storeGrid { grid-template-columns: 1fr; gap: 14px; }
+  .storeGrid { grid-template-columns: repeat(2, 1fr); gap: 14px; }
   .reviewsGrid { grid-template-columns: 1fr; }
   .seoPanel { padding: 28px 20px; }
 }
@@ -881,7 +991,7 @@
 .hiringCallout {
   position: relative;
   z-index: 2;
-  padding: 110px 20px 18px;
+  padding: 18px 20px;
   background: #030712;
 }
 
@@ -950,7 +1060,7 @@
 
 @media (max-width: 760px) {
   .hiringCallout {
-    padding: 106px 14px 16px;
+    padding: 16px 14px;
   }
 
   .hiringCalloutInner {

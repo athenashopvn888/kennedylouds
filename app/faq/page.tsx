@@ -4,7 +4,7 @@ import Footer from "../components/Footer";
 import styles from "./faq.module.css";
 
 export const metadata: Metadata = {
-  title: "FAQ - Kennedy Loud Cannabis | Brampton Dispensary Questions",
+  title: { absolute: "FAQ | Kennedy Loud Cannabis Brampton Dispensary" },
   description:
     "Frequently asked questions about Kennedy Loud Cannabis in Brampton. Hours, location, menu categories, pricing notes, delivery updates, and visit basics.",
   alternates: {
@@ -16,7 +16,7 @@ const FAQ_CATEGORIES = [
   {
     title: "Location & Hours",
     faqs: [
-      { q: "Where is Kennedy Loud Cannabis located?", a: "Kennedy Loud Cannabis is located at 49 Hillcrest Ave, Unit 104, Brampton, ON L6W 1Y7." },
+      { q: "Where is Kennedy Loud Cannabis located?", a: "Kennedy Loud Cannabis is located at 49 Hillcrest Ave Unit 104, Brampton, ON L6W 1Y7." },
       { q: "What are your hours?", a: "The store lists Open 24 Hours. Bring valid 19+ government ID when visiting." },
       { q: "Is there parking nearby?", a: "For parking or transit details, use the current map listing or contact the store before visiting." },
       { q: "What nearby areas are useful for this location?", a: "This Brampton location is useful for shoppers around Hillcrest Ave, Kennedy Road, Queen Street, Main Street, Downtown Brampton, and Bramalea." },
@@ -91,7 +91,7 @@ export default function FAQPage() {
         <div className={styles.content}>
           <h1 className={styles.pageTitle}>Frequently Asked Questions</h1>
           <p className={styles.pageSubtitle}>
-            Everything you need to know about Kennedy Loud Cannabis at 49 Hillcrest Ave, Unit 104 in Brampton.
+            Everything you need to know about Kennedy Loud Cannabis at 49 Hillcrest Ave Unit 104 in Brampton.
           </p>
 
           {FAQ_CATEGORIES.map((cat) => (
@@ -109,7 +109,7 @@ export default function FAQPage() {
           <div className={styles.ctaSection}>
             <h2 className={styles.ctaTitle}>Still have questions?</h2>
             <p className={styles.ctaText}>
-              Call Kennedy Loud Cannabis at <a href="tel:+12892061181">+1 (289) 206-1181</a> or visit 49 Hillcrest Ave, Unit 104 in Brampton.
+              Call Kennedy Loud Cannabis at <a href="tel:+12892061181">+1 (289) 206-1181</a> or visit 49 Hillcrest Ave Unit 104 in Brampton.
             </p>
           </div>
         </div>

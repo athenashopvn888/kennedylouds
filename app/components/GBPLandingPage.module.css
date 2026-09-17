@@ -1,8 +1,13 @@
 /* Premium styled Google Business Profile Local Landing Page */
-.container {
+.page {
+  min-height: 100vh;
+}
+
+.container,
+.main {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 40px 20px;
+  padding: 120px 20px 40px;
   font-family: var(--font-body);
   color: var(--text-primary);
 }
@@ -15,6 +20,64 @@
   margin-bottom: 40px;
   border: 1px solid var(--border-subtle, rgba(255,255,255,0.1));
   box-shadow: var(--shadow-card, 0 10px 30px rgba(0,0,0,0.15));
+}
+
+.eyebrow {
+  margin: 0 0 12px;
+  color: #9DFF20;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.heroHours,
+.heroPhone {
+  margin: 8px 0 0;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.heroPhone a,
+.mapFallback a,
+.guideLink {
+  color: inherit;
+}
+
+.heroAddress {
+  margin: 8px 0 18px;
+  color: var(--green-light, #5EE89F);
+  font-weight: 700;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+}
+
+.primaryAction,
+.secondaryAction {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 46px;
+  padding: 12px 22px;
+  border-radius: 999px;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.primaryAction {
+  background: linear-gradient(135deg, #1C7F4C, #2DB872);
+  color: #ffffff;
+}
+
+.secondaryAction {
+  background: #ffffff;
+  color: var(--text-primary);
+  border: 2px solid var(--green-mid, #2DB872);
 }
 
 .h1 {
@@ -51,7 +114,8 @@
   padding-left: 15px;
 }
 
-.introText {
+.introText,
+.infoText {
   font-size: 1.05rem;
   line-height: 1.8;
   color: var(--text-secondary, #4B5563);
@@ -199,6 +263,44 @@
   font-size: 0.9rem;
   color: var(--text-secondary);
   border: 1px solid var(--border-subtle, rgba(0,0,0,0.05));
+}
+
+.hero .areaTag {
+  background: rgba(157, 255, 32, 0.12);
+  color: #d9ffb0;
+  border-color: rgba(157, 255, 32, 0.28);
+}
+
+.hero .areaList {
+  justify-content: center;
+  margin-top: 18px;
+}
+
+.mapFallback {
+  margin: 0;
+  padding: 10px 14px;
+  text-align: center;
+  font-size: 0.9rem;
+  font-weight: 700;
+  background: var(--bg-secondary, #f8faf9);
+}
+
+.guideList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.guideLink {
+  display: inline-flex;
+  padding: 10px 14px;
+  border-radius: 999px;
+  background: rgba(45, 184, 114, 0.1);
+  color: var(--green-deep, #0B2D1B);
+  font-weight: 800;
+  text-decoration: none;
+  border: 1px solid rgba(45, 184, 114, 0.22);
 }
 
 .infoBlock {
