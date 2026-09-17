@@ -32,6 +32,8 @@ test("canonical NAP is consistent on homepage, landing, footer and schema", () =
   assert.match(homeClient, /NAP\.address/);
   assert.match(homeClient, /NAP\.phone/);
   assert.match(homeClient, /NAP\.website/);
+  assert.match(homeClient, /name: "THC Vape", slug: "items\/vape-disposables"/);
+  assert.match(homeClient, /name: "Nic Vape", slug: "items\/vapes"/);
   assert.match(footer, /https:\/\/kennedyloudcannabis\.com\//);
   assert.match(footer, /\+1 \(289\) 206-1181/);
   assert.match(footer, /Open 24 Hours/);

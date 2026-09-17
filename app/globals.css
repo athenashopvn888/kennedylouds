@@ -29,6 +29,7 @@
   text-decoration: none;
 }
 
+body > .deliveryAnnouncement ~ nav,
 body > .deliveryAnnouncement ~ * nav {
   top: var(--delivery-announcement-height) !important;
 }

@@ -60,8 +60,8 @@ const BENTO_TIERS = [
 
 /* -- Explore Categories Config (New Banners) -- */
 const EXPLORE_CATEGORIES = [
-  { name: "THC Vape", slug: "items/vapes", banner: "/banners/KennedyLoud_THC_Vape.webp" },
-  { name: "Nic Vape", slug: "items/vape-disposables", banner: "/banners/KennedyLoud_Nic_Vape.webp" },
+  { name: "THC Vape", slug: "items/vape-disposables", banner: "/banners/KennedyLoud_THC_Vape.webp" },
+  { name: "Nic Vape", slug: "items/vapes", banner: "/banners/KennedyLoud_Nic_Vape.webp" },
   { name: "Concentrates", slug: "items/concentrates", banner: "/banners/KennedyLoud_Concentrates.webp" },
   { name: "Pre-Rolls", slug: "items/prerolls", banner: "/banners/KennedyLoud_Pre_Rolls.webp" },
   { name: "Accessories", slug: "items/add-ons", banner: "/banners/KennedyLoud_Accessories.webp" },
