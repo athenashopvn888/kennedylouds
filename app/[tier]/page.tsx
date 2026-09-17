@@ -10,6 +10,8 @@ import {
   TIER_CONFIG,
 } from "../lib/products";
 import { TIER_COMPARE, TIER_SEO } from "../lib/tierSeoContent";
+import { buildTierCollectionJsonLd } from "../lib/tierStructuredData";
+import seoContent from "../lib/seoContent.generated.json";
 import styles from "./tier.module.css";
 
 /* -- Generate all tier pages at build -- */
@@ -60,12 +62,23 @@ export default async function TierPage({
   const flowers = getFlowersByTier(tierInfo.key);
   const { config } = tierInfo;
   const seo = TIER_SEO[tierInfo.key];
+  const flowerCopy = seoContent.flowerTiers;
+  const tierLinks = Object.values(TIER_CONFIG);
 
   const saleFlowers = flowers.filter((f) => f.isSale);
   const regularFlowers = flowers.filter((f) => !f.isSale);
   const hotFlowers = flowers.filter((f) => f.isHot);
+  const displayFlowers = [...saleFlowers, ...regularFlowers];
+  const tierJsonLd = buildTierCollectionJsonLd({
+    canonicalPath: `/${tierSlug}`,
+    name: seo?.h1 || config.name,
+    description: seo?.metaDescription || `${config.name} cannabis flower at Kennedy Loud Cannabis in Brampton.`,
+    flowers: displayFlowers,
+  });
 
   return (
+    <>
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(tierJsonLd) }} />
     <main className={styles.main}>
       <Navbar />
 
@@ -185,6 +198,15 @@ export default async function TierPage({
               </div>
             ))}
 
+            <div className={styles.seoBlock}>
+              <h3 className={styles.seoHeading}>{config.name} at Kennedy Loud Cannabis</h3>
+              {flowerCopy.paragraphs.map((paragraph) => <p key={paragraph} className={styles.seoBody}>{paragraph}</p>)}
+              <p className={styles.seoBody}>{flowerCopy.links.map((label, index) => {
+                const destination = tierLinks[index]?.slug || tierSlug;
+                return <span key={label}>{index ? " · " : ""}<Link href={`/${destination}`}>{label}</Link></span>;
+              })}</p>
+            </div>
+
             {/* FAQ Accordion */}
             {seo.faqs.length > 0 && (
               <div className={styles.faqSection}>
@@ -226,5 +248,6 @@ export default async function TierPage({
 
       <Footer />
     </main>
+    </>
   );
 }
