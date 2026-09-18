@@ -140,7 +140,9 @@ export default function VisitPage() {
             <p className={styles.infoText}>
               Kennedy Loud lists {NAP.hours}. That is the hours fact used on this visit guide. A late-night or
               early-morning “dispensary near me” or “dispensary Brampton open” search can still point here because
-              the shop is listed 24 hours, seven days a week.
+              the shop is listed 24 hours, seven days a week. For the dedicated 24 hour dispensary Brampton
+              questions, use the{" "}
+              <Link href="/24-hour-dispensary-brampton">open-now FAQ</Link>.
             </p>
             <p className={styles.infoText}>
               “Open now” describes the listed store hours, not a guarantee that one named flower, vape, or cigarette

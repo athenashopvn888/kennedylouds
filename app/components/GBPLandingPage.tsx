@@ -156,7 +156,8 @@ export function GBPLandingPage() {
             </p>
             <p className={styles.infoText}>
               Coming from Kennedy Road, Queen Street, Main Street, or Downtown Brampton? Keep Unit 104 on Hillcrest Ave as the final pin, then review the current menu. For entrance, directory, and corridor directions, use the{" "}
-              <Link href="/visit">How to find Kennedy Loud at Unit 104</Link> walk-in guide.
+              <Link href="/visit">How to find Kennedy Loud at Unit 104</Link> walk-in guide. For listed hours and late-night open-now questions, use the{" "}
+              <Link href="/24-hour-dispensary-brampton">24-hour Brampton FAQ</Link>.
             </p>
             <div className={styles.btnRow}>
               <Link href={gbpLocation.menuUrl} className={`${styles.btn} ${styles.btnPrimary}`}>
@@ -164,6 +165,9 @@ export function GBPLandingPage() {
               </Link>
               <Link href="/visit" className={`${styles.btn} ${styles.btnSecondary}`}>
                 How to find Unit 104
+              </Link>
+              <Link href="/24-hour-dispensary-brampton" className={`${styles.btn} ${styles.btnSecondary}`}>
+                Open now FAQ
               </Link>
               <Link href="#faq" className={`${styles.btn} ${styles.btnSecondary}`}>
                 Read Visit FAQs
