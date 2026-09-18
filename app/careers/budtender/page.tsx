@@ -32,8 +32,8 @@ const applicantFaqs = [
     a: "Please apply online only. If we think you may be a good fit, we will contact you after the application is reviewed.",
   },
   {
-    q: "Can this same form setup work for other stores later?",
-    a: "Yes. Each response is tagged with StoreKey, StoreName, and Role so future stores can use the same shared response sheet without mixing applications together.",
+    q: "How will Kennedy Loud contact me?",
+    a: "If we think you may be a good fit, Kennedy Loud Cannabis will contact you after the application is reviewed. Please apply online only.",
   },
 ];
 

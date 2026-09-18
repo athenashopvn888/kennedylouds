@@ -6,48 +6,47 @@ import AgeGate from "./components/AgeGate";
 export const metadata: Metadata = {
   metadataBase: new URL("https://kennedyloudcannabis.com"),
   title: {
-    default: "Kennedy Road Brampton Dispensary | Kennedy Loud Cannabis",
+    default: "Kennedy Loud Cannabis | 24 Hour Weed Dispensary Brampton",
     template: "%s | Kennedy Loud Cannabis",
   },
   description:
-    "Kennedy Loud Cannabis is a Brampton dispensary near Kennedy Rd and Hillcrest Ave with flower, pre-rolls, vapes, edibles, concentrates, accessories, and adult 19+ info. Open 24 Hours.",
+    "Kennedy Loud Cannabis is a 24-hour weed dispensary at 49 Hillcrest Ave Unit 104, Brampton, near Kennedy Rd. Flower, vapes, edibles. Call +1 (289) 206-1181. Adults 19+.",
   keywords: [
+    "weed dispensary Brampton",
     "cannabis dispensary Brampton",
     "weed store Brampton",
-    "exotic flower Brampton",
-    "premium cannabis",
+    "24 hour dispensary Brampton",
+    "Hillcrest Ave dispensary",
+    "Kennedy Road Brampton weed",
     "Kennedy Loud Cannabis",
     "cheap weed Brampton",
     "dispensary near me",
-    "THC flower",
-    "indica sativa hybrid",
     "edibles Brampton",
     "vapes",
     "pre-rolls",
     "native cigarettes Brampton",
-    "weed store Brampton",
   ],
   openGraph: {
     type: "website",
     locale: "en_CA",
     url: "https://kennedyloudcannabis.com",
     siteName: "Kennedy Loud Cannabis",
-    title: "Kennedy Road Brampton Dispensary | Kennedy Loud Cannabis",
+    title: "Kennedy Loud Cannabis | 24 Hour Weed Dispensary Brampton",
     description:
-      "Kennedy Loud Cannabis is a Brampton dispensary near Kennedy Rd and Hillcrest Ave with flower, pre-rolls, vapes, edibles, concentrates, accessories, and adult 19+ info. Open 24 Hours.",
+      "Kennedy Loud Cannabis is a 24-hour weed dispensary at 49 Hillcrest Ave Unit 104, Brampton, near Kennedy Rd. Flower, vapes, edibles. Call +1 (289) 206-1181. Adults 19+.",
     images: [
       {
         url: "https://kennedyloudcannabis.com/wp-content/uploads/2026/04/46Oi5.jpg",
         width: 1200,
         height: 630,
-        alt: "Kennedy Loud Cannabis — Premium Cannabis Dispensary Brampton",
+        alt: "Kennedy Loud Cannabis — 24 Hour Weed Dispensary in Brampton",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Kennedy Road Brampton Dispensary | Kennedy Loud Cannabis",
-    description: "Kennedy Loud Cannabis is a Brampton dispensary near Kennedy Rd and Hillcrest Ave with flower, pre-rolls, vapes, edibles, concentrates, accessories, and adult 19+ info. Open 24 Hours.",
+    title: "Kennedy Loud Cannabis | 24 Hour Weed Dispensary Brampton",
+    description: "24-hour weed dispensary at 49 Hillcrest Ave Unit 104, Brampton, near Kennedy Rd. Call +1 (289) 206-1181. Adults 19+.",
     images: ["https://kennedyloudcannabis.com/wp-content/uploads/2026/04/46Oi5.jpg"],
   },
   robots: {
@@ -75,14 +74,14 @@ const storeJsonLd = {
   "@type": "CannabisStore",
   "@id": "https://kennedyloudcannabis.com/#store",
   name: "Kennedy Loud Cannabis",
-  description: "Cannabis dispensary at 49 Hillcrest Ave, Unit 104 in Brampton, ON. Shop exotic, premium, AAA+, AA, and budget flower tiers plus edibles, prerolls, and vapes. Open 24 Hours.",
-  url: "https://kennedyloudcannabis.com",
+  description: "Cannabis dispensary at 49 Hillcrest Ave Unit 104 in Brampton, ON. Shop exotic, premium, AAA+, AA, and budget flower tiers plus edibles, prerolls, and vapes. Open 24 Hours.",
+  url: "https://kennedyloudcannabis.com/",
   telephone: "+12892061181",
   image: "https://kennedyloudcannabis.com/wp-content/uploads/2026/04/7Clmh.jpg",
   priceRange: "$3 - $12/g",
   address: {
     "@type": "PostalAddress",
-    streetAddress: "49 Hillcrest Ave, Unit 104",
+    streetAddress: "49 Hillcrest Ave Unit 104",
     addressLocality: "Brampton",
     addressRegion: "ON",
     postalCode: "L6W 1Y7",
@@ -101,7 +100,7 @@ const storeJsonLd = {
       closes: "23:59",
     },
   ],
-  areaServed: ["Brampton", "Kennedy Road", "Hillcrest", "Downtown Brampton"],
+  areaServed: ["Brampton", "Hillcrest Ave", "Kennedy Road", "Downtown Brampton", "Queen Street"],
 };
 
 const websiteJsonLd = {

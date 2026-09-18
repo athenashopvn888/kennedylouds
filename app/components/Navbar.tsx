@@ -22,6 +22,7 @@ const ALL_LINKS: { href: string; label: string; featured?: boolean }[] = [
   { href: "/delivery", label: "DELIVERY MENU" },
   { href: "/careers/budtender", label: "Join Team", featured: true },
   { href: "/resources", label: "Resources" },
+  { href: "/weed-dispensary-brampton/", label: "Brampton Visit" },
   { href: "/faq", label: "FAQ" },
 ];
 
@@ -63,7 +64,7 @@ export default function Navbar() {
           </Link>
           <span className={styles.open}>
             <span className={styles.dot}></span>
-            Open Now
+            Open 24 Hours
           </span>
         </div>
       </div>

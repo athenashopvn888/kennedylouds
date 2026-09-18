@@ -1,4 +1,4 @@
-const NATIVE_HERO_DISCLOSURE = "Brand preview only. Selection varies by store; check the current cigarette menu before visiting.";
+const NATIVE_HERO_DISCLOSURE = "Brand preview only. Selection can rotate; check the current cigarette menu before visiting.";
 const NATIVE_HERO_PRODUCTS = [
   { name: "BB Lights", image: "/products/1001-BB-LIGHTS-CARTONS.webp" },
   { name: "BB Full", image: "/products/1003-BB-FULL-CARTON.webp" },
@@ -39,10 +39,11 @@ export interface SeoPageData {
 export const SEO_PAGES: SeoPageData[] = [
   {
     slug: "brampton-weed-dispensary",
-    title: "Brampton Weed Dispensary | Kennedy Loud Cannabis | 24 Hours",
+    title: "Brampton Weed Dispensary Guide | Hillcrest Ave | Kennedy Loud",
+    absoluteTitle: true,
     metaDescription:
-      "Kennedy Loud Cannabis is a 24-hour Brampton weed dispensary at 49 Hillcrest Ave, Unit 104 with flower tiers, edibles, vapes, concentrates, cigarettes, accessories, and more.",
-    h1: "Brampton Weed Dispensary",
+      "Kennedy Loud Cannabis is a 24-hour Brampton weed dispensary at 49 Hillcrest Ave Unit 104 with flower tiers, edibles, vapes, concentrates, cigarettes, and accessories.",
+    h1: "24 Hour Brampton Weed Dispensary",
     icon: "KLC",
     heroTagline: "Hillcrest Ave cannabis shop with loud flower tiers and 24-hour access.",
     banner: "/banners/KennedyLoud_Homepage_Hero.webp",
@@ -50,7 +51,7 @@ export const SEO_PAGES: SeoPageData[] = [
       {
         heading: "Kennedy Loud On Hillcrest Ave",
         body:
-          "Kennedy Loud Cannabis is located at 49 Hillcrest Ave, Unit 104 in Brampton. The site is built around quick customer visit steps: flower tiers, edibles, pre-rolls, THC Vape, Nic Vape, concentrates, cigarettes, accessories, Magic Stuff, and the Brampton visit page.",
+          "Kennedy Loud Cannabis is located at 49 Hillcrest Ave Unit 104 in Brampton. The site is built around quick customer visit steps: flower tiers, edibles, pre-rolls, THC Vape, Nic Vape, concentrates, cigarettes, accessories, Magic Stuff, and the Brampton visit page.",
       },
       {
         heading: "A Menu Built Around Loud Choices",
@@ -71,7 +72,7 @@ export const SEO_PAGES: SeoPageData[] = [
     faqs: [
       {
         q: "Where is Kennedy Loud Cannabis located?",
-        a: "Kennedy Loud Cannabis is at 49 Hillcrest Ave, Unit 104, Brampton, ON L6W 1Y7.",
+        a: "Kennedy Loud Cannabis is at 49 Hillcrest Ave Unit 104, Brampton, ON L6W 1Y7.",
       },
       {
         q: "What are the hours for Kennedy Loud Cannabis?",
@@ -91,7 +92,7 @@ export const SEO_PAGES: SeoPageData[] = [
     slug: "cheap-weed-brampton",
     title: "Cheap Weed Brampton | Kennedy Loud Cannabis Budget Flower",
     metaDescription:
-      "Looking for cheap weed in Brampton? Kennedy Loud Cannabis has Budget, AA, AAA+, Premium, and Exotic flower paths at 49 Hillcrest Ave, Unit 104. Open 24 Hours.",
+      "Looking for cheap weed in Brampton? Kennedy Loud Cannabis has Budget, AA, AAA+, Premium, and Exotic flower paths at 49 Hillcrest Ave Unit 104. Open 24 Hours.",
     h1: "Cheap Weed Brampton",
     icon: "$",
     heroTagline: "Budget flower paths and clear tier shopping on Hillcrest Ave.",
@@ -129,7 +130,7 @@ export const SEO_PAGES: SeoPageData[] = [
       },
       {
         q: "Is Kennedy Loud open late for value flower shoppers?",
-        a: "Kennedy Loud lists Open 24 Hours at 49 Hillcrest Ave, Unit 104 in Brampton.",
+        a: "Kennedy Loud lists Open 24 Hours at 49 Hillcrest Ave Unit 104 in Brampton.",
       },
     ],
   },
@@ -142,7 +143,7 @@ export const SEO_PAGES: SeoPageData[] = [
     icon: "19+",
     heroTagline: "Cigarette, tobacco, and nicotine menu categories at the Hillcrest Ave shop.",
     heroPreview: {
-      eyebrow: "Kennedy Loud Cannabis · 49 Hillcrest Ave, Unit 104, Brampton",
+      eyebrow: "Kennedy Loud Cannabis · 49 Hillcrest Ave Unit 104, Brampton",
       intro: "Cigarette and tobacco menu-category guidance for Hillcrest Ave",
       products: NATIVE_HERO_PRODUCTS,
       disclosure: NATIVE_HERO_DISCLOSURE,
@@ -187,18 +188,19 @@ export const SEO_PAGES: SeoPageData[] = [
   },
   {
     slug: "weed-store-near-hillcrest-ave",
-    title: "Weed Store Near Hillcrest Ave | Kennedy Loud Cannabis Brampton",
+    title: "Weed Store Near Hillcrest Ave | 24 Hour Brampton Dispensary",
+    absoluteTitle: true,
     metaDescription:
-      "Kennedy Loud Cannabis is a 24-hour Brampton weed store at 49 Hillcrest Ave, Unit 104, near Kennedy Road, Queen Street, Main Street, and Downtown Brampton.",
+      "Kennedy Loud Cannabis is a 24-hour Brampton weed store at 49 Hillcrest Ave Unit 104, near Kennedy Road, Queen Street, Main Street, and Downtown Brampton.",
     h1: "Weed Store Near Hillcrest Ave",
     icon: "KLC",
-    heroTagline: "A Brampton cannabis stop at 49 Hillcrest Ave, Unit 104.",
+    heroTagline: "A Brampton cannabis stop at 49 Hillcrest Ave Unit 104.",
     banner: "/banners/KennedyLoud_Homepage_Hero.webp",
     sections: [
       {
         heading: "Brampton Stop On Hillcrest Ave",
         body:
-          "Kennedy Loud Cannabis sits at 49 Hillcrest Ave, Unit 104 in Brampton. The site keeps flower, edibles, vapes, concentrates, cigarettes, accessories, and specialty paths easy to scan before visiting.",
+          "Kennedy Loud Cannabis sits at 49 Hillcrest Ave Unit 104 in Brampton. The site keeps flower, edibles, vapes, concentrates, cigarettes, accessories, and specialty paths easy to scan before visiting.",
       },
       {
         heading: "Use The Menu Before The Drive",
@@ -219,11 +221,11 @@ export const SEO_PAGES: SeoPageData[] = [
     faqs: [
       {
         q: "Where is Kennedy Loud Cannabis?",
-        a: "Kennedy Loud Cannabis is at 49 Hillcrest Ave, Unit 104, Brampton, ON L6W 1Y7.",
+        a: "Kennedy Loud Cannabis is at 49 Hillcrest Ave Unit 104, Brampton, ON L6W 1Y7.",
       },
       {
         q: "Is Kennedy Loud Cannabis on Hillcrest Ave?",
-        a: "Yes. Kennedy Loud Cannabis is listed at 49 Hillcrest Ave, Unit 104 in Brampton.",
+        a: "Yes. Kennedy Loud Cannabis is listed at 49 Hillcrest Ave Unit 104 in Brampton.",
       },
       {
         q: "What should I check before visiting Hillcrest Ave?",
@@ -233,9 +235,10 @@ export const SEO_PAGES: SeoPageData[] = [
   },
   {
     slug: "dispensary-near-me-brampton",
-    title: "Cannabis Dispensary Near Me Brampton | Kennedy Loud Cannabis",
+    title: "Dispensary Near Me in Brampton | Open 24 Hours | Kennedy Loud",
+    absoluteTitle: true,
     metaDescription:
-      "Find Kennedy Loud Cannabis at 49 Hillcrest Ave, Unit 104 in Brampton. Open 24 Hours with flower tiers, edibles, vapes, concentrates, cigarettes, accessories, and Magic Stuff paths.",
+      "Find Kennedy Loud Cannabis at 49 Hillcrest Ave Unit 104 in Brampton. Open 24 Hours with flower tiers, edibles, vapes, concentrates, cigarettes, and accessories.",
     h1: "Cannabis Dispensary Near Me In Brampton",
     icon: "K",
     heroTagline: "A 24-hour Hillcrest Ave dispensary path for nearby Brampton shoppers.",
@@ -244,7 +247,7 @@ export const SEO_PAGES: SeoPageData[] = [
       {
         heading: "Find The Hillcrest Ave Shop",
         body:
-          "Kennedy Loud Cannabis is located at 49 Hillcrest Ave, Unit 104 in Brampton. Nearby shoppers can use the menu to pick a flower tier or format category before visiting.",
+          "Kennedy Loud Cannabis is located at 49 Hillcrest Ave Unit 104 in Brampton. Nearby shoppers can use the menu to pick a flower tier or format category before visiting.",
       },
       {
         heading: "Start With A Matching Category",
@@ -265,7 +268,7 @@ export const SEO_PAGES: SeoPageData[] = [
     faqs: [
       {
         q: "What is the address?",
-        a: "49 Hillcrest Ave, Unit 104, Brampton, ON L6W 1Y7.",
+        a: "49 Hillcrest Ave Unit 104, Brampton, ON L6W 1Y7.",
       },
       {
         q: "Is Kennedy Loud Cannabis walk-in friendly?",

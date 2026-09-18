@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import { GeneratedGuidePage } from "../../../components/GeneratedGuidePage";
 
 export const metadata: Metadata = {
-  title: "Züm and Kennedy Road Transit | Kennedy Loud Cannabis",
-  description: "Plan a current transit trip along the Kennedy corridor to Kennedy Loud Cannabis at 49 Hillcrest Ave Unit 104.",
+  title: { absolute: "Kennedy Road Transit to Brampton Weed Dispensary | Open 24 Hours" },
+  description: "Plan a Kennedy Road / Züm trip to Kennedy Loud Cannabis at 49 Hillcrest Ave Unit 104 in Brampton. Open 24 Hours. Adults 19+.",
   alternates: { canonical: "/resources/local-guides/zum-kennedy-dispensary" },
 };
 

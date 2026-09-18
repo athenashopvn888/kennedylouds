@@ -174,7 +174,7 @@ export const CATEGORY_CONFIG: Record<string, CategoryInfo> = {
     name: "Nic Vape", slug: "vapes", color: "#8b5cf6", icon: "💨",
     seoTitle: "Nic Vape Brampton | Kennedy Loud Cannabis",
     seoIntro: "Browse the current Nic Vape category at Kennedy Loud Cannabis in Brampton for listed product names, formats, package details, and prices.",
-    seoDescription: "Use the Nic Vape category to compare the nicotine vape products currently listed before visiting Kennedy Loud Cannabis at 49 Hillcrest Ave, Unit 104.",
+    seoDescription: "Use the Nic Vape category to compare the nicotine vape products currently listed before visiting Kennedy Loud Cannabis at 49 Hillcrest Ave Unit 104.",
     faqs: [
       { q: "What is listed on the Nic Vape page?", a: "Use this page to compare the nicotine vape product names, package details, and prices currently listed." },
       { q: "Where should shoppers check device details?", a: "Review each item listing and product package for the current format and device details." },
@@ -185,7 +185,7 @@ export const CATEGORY_CONFIG: Record<string, CategoryInfo> = {
     name: "THC Vape", slug: "vape-disposables", color: "#a78bfa", icon: "💨",
     seoTitle: "THC Vape Disposables Brampton | Kennedy Loud Cannabis",
     seoIntro: "Browse the current THC Vape category at Kennedy Loud Cannabis in Brampton for listed product names, formats, package details, and prices.",
-    seoDescription: "Use the THC Vape category to compare the cannabis vape products currently listed before visiting Kennedy Loud Cannabis at 49 Hillcrest Ave, Unit 104.",
+    seoDescription: "Use the THC Vape category to compare the cannabis vape products currently listed before visiting Kennedy Loud Cannabis at 49 Hillcrest Ave Unit 104.",
     faqs: [
       { q: "What is listed on the THC Vape page?", a: "Use this page to compare the THC vape product names, package details, and prices currently listed." },
       { q: "Where should shoppers check product details?", a: "Review each item listing and product package for the current format and device details." },
@@ -206,7 +206,7 @@ export const CATEGORY_CONFIG: Record<string, CategoryInfo> = {
     banner: "/banners/KennedyLoud_Pre_Rolls.webp", name: "Pre-Rolls", slug: "prerolls", color: "#22c55e", icon: "🚬",
     seoTitle: "Pre-Rolls Brampton | Kennedy Loud Cannabis",
     seoIntro: "Browse pre-roll category information at Kennedy Loud Cannabis in Brampton.",
-    seoDescription: "Kennedy Loud Cannabis includes pre-roll category information for Brampton shoppers. Review the category, confirm current menu details, and visit 49 Hillcrest Ave, Unit 104 during posted store hours.",
+    seoDescription: "Kennedy Loud Cannabis includes pre-roll category information for Brampton shoppers. Review the category, confirm current menu details, and visit 49 Hillcrest Ave Unit 104 during posted store hours.",
     faqs: [
       { q: "What pre-roll information can shoppers review?", a: "Visitors can review pre-roll category information and then confirm current menu details before visiting Kennedy Loud Cannabis." },
       { q: "Does this page guarantee current pre-roll menu details?", a: "No. Category details can change, so customers should confirm the current menu before visiting." },
@@ -217,7 +217,7 @@ export const CATEGORY_CONFIG: Record<string, CategoryInfo> = {
     name: "Accessories", slug: "add-ons", color: "#34d399", icon: "➕",
     seoTitle: "Cannabis Accessories Brampton | Kennedy Loud Cannabis",
     seoIntro: "Review cannabis accessory category information at Kennedy Loud Cannabis in Brampton.",
-    seoDescription: "Kennedy Loud Cannabis includes accessory category information for Brampton shoppers. Check the current menu or contact the store before visiting 49 Hillcrest Ave, Unit 104 for a specific accessory.",
+    seoDescription: "Kennedy Loud Cannabis includes accessory category information for Brampton shoppers. Check the current menu or contact the store before visiting 49 Hillcrest Ave Unit 104 for a specific accessory.",
     faqs: [
       { q: "What accessory information can shoppers review?", a: "Visitors can review accessory category information and confirm current details before visiting Kennedy Loud Cannabis." },
     ],
@@ -225,12 +225,12 @@ export const CATEGORY_CONFIG: Record<string, CategoryInfo> = {
   "MAGIC & OTHERS": {
     banner: "/banners/KennedyLoud_Magic_Stuff.webp",
     name: "Magic Stuff", slug: "magic", color: "#64748b", icon: "*",
-    seoTitle: "Magic Stuff - Specialty Items",
-    seoIntro: "Browse current menu for available specialty products. Menu details may vary by store.",
-    seoDescription: "Specialty items are listed when they are carried on the menu. Product menu details may vary by store and by day. Check current category details before visiting.",
+    seoTitle: "Magic Stuff - Specialty Items | Kennedy Loud Cannabis",
+    seoIntro: "Browse current specialty listings at Kennedy Loud Cannabis in Brampton. Menu details can rotate.",
+    seoDescription: "Specialty items are listed when they are carried on the Kennedy Loud menu. Product details can rotate. Check current category details before visiting 49 Hillcrest Ave Unit 104.",
     faqs: [
-      { q: "What specialty items are available?", a: "Selection varies by store and by day. Check the current menu for available specialty products." },
-      { q: "Does menu details vary by location?", a: "Yes. Specialty item menu details may vary by store, so please check the current menu for this location." },
+      { q: "What specialty items are available?", a: "Selection can rotate. Check the current Kennedy Loud menu for specialty products before visiting." },
+      { q: "Do specialty listings stay the same every day?", a: "No. Specialty item details can change, so please check the current menu for this Brampton location." },
     ],
   },
   CIGARETTES: {
@@ -238,7 +238,7 @@ export const CATEGORY_CONFIG: Record<string, CategoryInfo> = {
     name: "Cigarettes", slug: "cigarettes", color: "#78716c", icon: "🏷️",
     seoTitle: "Native Cigarettes Brampton - Brands And Prices at Kennedy Loud Cannabis",
     seoIntro: "Shop native cigarettes in Brampton at Kennedy Loud Cannabis with listed brands like Canadian, Canadian Goose, Canadian Classics, Putters, Rolled Gold, Nexus, Time, Backwoods, Grabba, and nicotine pouches.",
-    seoDescription: "Kennedy Loud Cannabis lists native cigarette packs at $25 for many brands, plus 10 x Premium Mix Cigarettes at $3, nicotine pouches from Velo, Pablo, and Killa at $20, Grabba at $5, Grabba Shaker at $19, and Backwoods options from $20-$25. Visit 49 Hillcrest Ave, Unit 104 in Brampton and check the cigarette category for current details.",
+    seoDescription: "Kennedy Loud Cannabis lists native cigarette packs at $25 for many brands, plus 10 x Premium Mix Cigarettes at $3, nicotine pouches from Velo, Pablo, and Killa at $20, Grabba at $5, Grabba Shaker at $19, and Backwoods options from $20-$25. Visit 49 Hillcrest Ave Unit 104 in Brampton and check the cigarette category for current details.",
     faqs: [
       { q: "Do you sell native cigarettes at Kennedy Loud Cannabis?", a: "Yes. The cigarette menu includes brands such as Canadian Lights, Canadian Full, Canadian Menthol, Canadian Goose, Canadian Classics, Putters, Rolled Gold, Nexus, and Time." },
       { q: "How much are cigarettes at Kennedy Loud Cannabis?", a: "Many native cigarette packs are listed at $25. The menu also lists 10 x Premium Mix Cigarettes at $3, nicotine pouches at $20, Grabba at $5, Grabba Shaker at $19, and Backwoods options from $20-$25." },

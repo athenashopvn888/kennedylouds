@@ -310,7 +310,7 @@ export const RESOURCE_PAGES: ResourceArticle[] = [
       {
         heading: "What Matters After the Search?",
         body:
-          "After someone identifies a nearby cannabis business, practical store information becomes more important than the exact words originally typed. Customers may want to confirm store identity, address, location, current hours, directions and website information. Kennedy Loud Cannabis is located at 49 Hillcrest Ave, Unit 104 in Brampton. Its existing Brampton dispensary page remains the primary local resource for visit intent.",
+          "After someone identifies a nearby cannabis business, practical store information becomes more important than the exact words originally typed. Customers may want to confirm store identity, address, location, current hours, directions and website information. Kennedy Loud Cannabis is located at 49 Hillcrest Ave Unit 104 in Brampton. Its existing Brampton dispensary page remains the primary local resource for visit intent.",
       },
       {
         heading: "One Business, Several Ways to Search",
@@ -331,7 +331,7 @@ export const RESOURCE_PAGES: ResourceArticle[] = [
       },
       {
         heading: "Where is Kennedy Loud Cannabis?",
-        body: "Kennedy Loud Cannabis is at 49 Hillcrest Ave, Unit 104 in Brampton.",
+        body: "Kennedy Loud Cannabis is at 49 Hillcrest Ave Unit 104 in Brampton.",
       },
     ],
     quickLinks: [
@@ -516,7 +516,7 @@ const PINKY_KLC01_OVERRIDES: Record<string, Partial<ResourceArticle>> = {
       },
       {
         "type": "p",
-        "text": "Kennedy Loud Cannabis is at 49 Hillcrest Ave, Unit 104 in Brampton."
+        "text": "Kennedy Loud Cannabis is at 49 Hillcrest Ave Unit 104 in Brampton."
       },
       {
         "type": "p",
@@ -580,7 +580,7 @@ const PINKY_KLC01_OVERRIDES: Record<string, Partial<ResourceArticle>> = {
       },
       {
         "type": "p",
-        "text": "Kennedy Loud Cannabis is at 49 Hillcrest Ave, Unit 104 in Brampton. Adults 19+ can make the visit easier by checking the current store information, choosing one menu lane and knowing a few basic words before heading out."
+        "text": "Kennedy Loud Cannabis is at 49 Hillcrest Ave Unit 104 in Brampton. Adults 19+ can make the visit easier by checking the current store information, choosing one menu lane and knowing a few basic words before heading out."
       },
       {
         "type": "p",

@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import { GeneratedGuidePage } from "../../../components/GeneratedGuidePage";
 
 export const metadata: Metadata = {
-  title: "Main Street Brampton to Kennedy Loud | Visit Guide",
-  description: "Plan a trip from Main Street and Garden Square to Kennedy Loud Cannabis at 49 Hillcrest Ave Unit 104.",
+  title: { absolute: "Main Street to Brampton Weed Dispensary | Hillcrest Ave" },
+  description: "Plan a trip from Main Street and Garden Square to Kennedy Loud Cannabis at 49 Hillcrest Ave Unit 104. Open 24 Hours. Adults 19+.",
   alternates: { canonical: "/resources/local-guides/main-street-brampton-to-kennedy-loud" },
 };
 

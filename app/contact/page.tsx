@@ -4,16 +4,16 @@ import Footer from "../components/Footer";
 import styles from "./contact.module.css";
 
 export const metadata: Metadata = {
-  title: "Contact Us - Kennedy Loud Cannabis | 49 Hillcrest Ave Unit 104, Brampton",
+  title: { absolute: "Contact Kennedy Loud Cannabis | 49 Hillcrest Ave Unit 104, Brampton" },
   description:
-    "Visit Kennedy Loud Cannabis at 49 Hillcrest Ave Unit 104, Brampton, ON L6W 1Y7. Open 24 Hours a day, 7 days a week. Walk-ins welcome.",
+    "Visit Kennedy Loud Cannabis at 49 Hillcrest Ave Unit 104, Brampton, ON L6W 1Y7. Open 24 Hours. Call +1 (289) 206-1181. Walk-ins welcome. Adults 19+.",
   alternates: {
     canonical: "https://kennedyloudcannabis.com/contact",
   },
   openGraph: {
-    title: "Contact Kennedy Loud Cannabis — Brampton Dispensary",
+    title: "Contact Kennedy Loud Cannabis | Brampton Dispensary",
     description:
-      "49 Hillcrest Ave Unit 104, Brampton. Open 24 Hours a day, 7 days a week. Check current menu categories before visiting.",
+      "49 Hillcrest Ave Unit 104, Brampton. Open 24 Hours. Call +1 (289) 206-1181. Check current menu categories before visiting.",
   },
 };
 
@@ -39,11 +39,15 @@ export default function ContactPage() {
               <div className={styles.infoIcon}>📍</div>
               <h2 className={styles.infoTitle}>Location</h2>
               <p className={styles.infoText}>
-                49 Hillcrest Ave, Unit 104
+                49 Hillcrest Ave Unit 104
                 <br />
                 Brampton, ON L6W 1Y7
                 <br />
-                <span className={styles.infoMuted}>Hillcrest Ave, Brampton</span>
+                <a href="tel:+12892061181" className={styles.infoMuted}>+1 (289) 206-1181</a>
+                <br />
+                <a href="https://www.google.com/maps/search/?api=1&query=49%20Hillcrest%20Ave%20Unit%20104%2C%20Brampton%2C%20ON%20L6W%201Y7" target="_blank" rel="noreferrer">
+                  Open in Google Maps
+                </a>
               </p>
             </div>
 
@@ -83,7 +87,7 @@ export default function ContactPage() {
               </div>
               <div className={styles.openBadge}>
                 <span className={styles.openDot}></span>
-                Open 24/7 — Never Closed
+                Open 24 Hours
               </div>
             </div>
 
@@ -121,6 +125,13 @@ export default function ContactPage() {
 
           {/* Map */}
           <div className={styles.mapSection}>
+            <iframe
+              title="Map of Kennedy Loud Cannabis at 49 Hillcrest Ave Unit 104, Brampton"
+              src="https://maps.google.com/maps?q=49%20Hillcrest%20Ave%20Unit%20104%2C%20Brampton%2C%20ON%20L6W%201Y7&z=16&output=embed"
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              style={{ width: "100%", minHeight: 320, border: 0, display: "block", borderRadius: 16 }}
+            />
           </div>
         </div>
       </section>

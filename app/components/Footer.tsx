@@ -9,7 +9,7 @@ export default function Footer() {
           <div className={styles.col}>
             <div className={styles.brand}>KENNEDY LOUD CANNABIS</div>
             <p className={styles.desc}>
-              Your local cannabis dispensary at 49 Hillcrest Ave, Unit 104,
+              Your local cannabis dispensary at 49 Hillcrest Ave Unit 104,
               Brampton. Visit Kennedy Loud Cannabis for premium flower,
               edibles, vapes, cigarettes, accessories, and more. Open 24 Hours.
             </p>
@@ -24,7 +24,7 @@ export default function Footer() {
             <h3 className={styles.colTitle}>Contact Info</h3>
             <div className={styles.infoBlock}>
               <span className={styles.infoLabel}>Address:</span>
-              <span>49 Hillcrest Ave, Unit 104</span>
+              <span>49 Hillcrest Ave Unit 104</span>
               <span>Brampton, ON L6W 1Y7</span>
               <span>Canada</span>
             </div>
@@ -33,6 +33,14 @@ export default function Footer() {
               <span>
                 <a href="tel:+12892061181" style={{ color: "inherit" }}>
                   +1 (289) 206-1181
+                </a>
+              </span>
+            </div>
+            <div className={styles.infoBlock}>
+              <span className={styles.infoLabel}>Website:</span>
+              <span>
+                <a href="https://kennedyloudcannabis.com/" style={{ color: "inherit" }}>
+                  https://kennedyloudcannabis.com/
                 </a>
               </span>
             </div>

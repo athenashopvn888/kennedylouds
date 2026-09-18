@@ -63,6 +63,22 @@ export default async function ItemsCategoryPage({
   const categoryLinkHrefs = [`/items/${catSlug}`, "/weed-dispensary-brampton-kennedy", "/exotic-weed", "/premium-weed"];
   const categoryJsonLd = buildCategoryCollectionJsonLd({ canonicalPath: `/items/${catSlug}`, name: config.seoTitle || config.name, description: seoCopy?.paragraphs.join(" ") || config.seoDescription || config.seoIntro, items });
 
+  function hrefForSeoLink(label: string, index: number): string {
+    const text = label.toLowerCase();
+    if (text.includes("edible menu")) return "/items/edibles";
+    if (text.includes("thc vape")) return "/items/vape-disposables";
+    if (text.includes("nic vape")) return "/items/vapes";
+    if (text.includes("concentrates menu") || text.includes("concentrates")) return "/items/concentrates";
+    if (text.includes("live menu")) return "/";
+    if (text.includes("visit page") || text.includes("hours") || text.includes("contact")) return "/weed-dispensary-brampton/";
+    if (text.includes("flower tiers")) return "/resources/weed-flower-tier-guide";
+    if (text.includes("exotic")) return "/exotic-weed";
+    if (text.includes("premium")) return "/premium-weed";
+    if (text.includes("aaa")) return "/aaa-weed";
+    if (text.includes("budget")) return "/budget-weed";
+    return categoryLinkHrefs[index] || "/weed-dispensary-brampton/";
+  }
+
   return (
     <>
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(categoryJsonLd) }} />
@@ -122,7 +138,7 @@ export default async function ItemsCategoryPage({
           {seoCopy?.links.length ? (
             <p className={styles.seoBody}>
               {seoCopy.links.map((label, index) => (
-                <span key={label}>{index ? " · " : ""}<Link href={categoryLinkHrefs[index] || "/weed-dispensary-brampton-kennedy"}>{label}</Link></span>
+                <span key={label}>{index ? " · " : ""}<Link href={hrefForSeoLink(label, index)}>{label}</Link></span>
               ))}
             </p>
           ) : null}
@@ -144,7 +160,7 @@ export default async function ItemsCategoryPage({
           <div className={styles.visitCta}>
             <h3 className={styles.visitTitle}>Visit Kennedy Loud Cannabis</h3>
             <p className={styles.visitText}>
-              49 Hillcrest Ave, Unit 104, Brampton, ON L6W 1Y7 · Open 24 Hours
+              49 Hillcrest Ave Unit 104, Brampton, ON L6W 1Y7 · Open 24 Hours
             </p>
           </div>
         </div>

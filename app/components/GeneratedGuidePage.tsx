@@ -9,8 +9,8 @@ export function GeneratedGuidePage({ guideKey, eyebrow, h1 }: { guideKey: keyof 
     eyebrow={eyebrow}
     h1={h1}
     addressLine="Destination: 49 Hillcrest Ave Unit 104, Brampton, ON L6W 1Y7"
-    storeHref="/weed-dispensary-brampton-kennedy"
-    storeLabel="Kennedy Road Store Details"
+    storeHref="/weed-dispensary-brampton/"
+    storeLabel="Brampton visit details"
     intro={guide.paragraphs}
     mapAddress={guide.mapAddress}
     faq={guide.faq}
