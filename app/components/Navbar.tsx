@@ -20,6 +20,7 @@ const ALL_LINKS: { href: string; label: string; featured?: boolean }[] = [
   { href: "/items/cigarettes", label: "Cigarettes" },
   { href: "/items/add-ons", label: "Accessories" },
   { href: "/delivery", label: "DELIVERY MENU" },
+  { href: "/cannabis-delivery-hillcrest-brampton", label: "Hillcrest Delivery" },
   { href: "/careers/budtender", label: "Join Team", featured: true },
   { href: "/resources", label: "Resources" },
   { href: "/visit", label: "Find Unit 104" },

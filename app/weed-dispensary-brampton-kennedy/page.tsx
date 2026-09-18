@@ -34,6 +34,7 @@ export default function Page() {
         { href: "/24-hour-dispensary-brampton", label: "24-hour / open-now FAQ" },
         { href: "/cannabis-store-brampton", label: "Central Brampton cannabis store" },
         { href: "/weed-dispensary-brampton/", label: "Hillcrest / Kennedy weed dispensary" },
+        { href: "/cannabis-delivery-hillcrest-brampton", label: "Hillcrest / Kennedy delivery" },
         { href: "/exotic-weed", label: "Exotic Weed" },
         { href: "/premium-weed", label: "Premium Weed" },
         { href: "/aaa-weed", label: "AAA+ Weed" },

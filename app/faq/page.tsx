@@ -48,8 +48,8 @@ const FAQ_CATEGORIES = [
     title: "Shopping & Delivery",
     faqs: [
       { q: "Do I need an appointment?", a: "No appointment is listed as required. Bring valid 19+ government ID when visiting." },
-      { q: "Can I order online?", a: "Currently, Kennedy Loud Cannabis is an in-store shopping experience. You can browse menu and category information online before visiting." },
-      { q: "Do you offer delivery?", a: "Delivery information is being prepared. Visit the delivery page for updates." },
+      { q: "Can I order online?", a: "You can browse the walk-in menu online, then visit Unit 104, or start a LIVE ORDER on the delivery catalog. The dispatcher confirms availability and delivery details before an order is accepted." },
+      { q: "Do you offer delivery?", a: "Yes. Kennedy Loud Cannabis offers Hillcrest / Kennedy cannabis delivery from 49 Hillcrest Ave Unit 104. Delivery hours are confirmed by the dispatcher and are not listed as 24/7. The walk-in counter remains Open 24 Hours." },
       { q: "What payment methods do you accept?", a: "The site lists cash and debit. Contact the store before visiting if payment details are important for your trip." },
       { q: "Can staff help me choose?", a: "Staff can help adult 19+ shoppers compare menu categories, product styles, and budget ranges during posted store hours." },
     ],
@@ -100,7 +100,9 @@ export default function FAQPage() {
             the{" "}
             <Link href="/cannabis-store-brampton">central Brampton cannabis store</Link>. For the Hillcrest /
             Kennedy weed hub, see the{" "}
-            <Link href="/weed-dispensary-brampton/">central Brampton weed dispensary</Link>. Flower collections:{" "}
+            <Link href="/weed-dispensary-brampton/">central Brampton weed dispensary</Link>. For dispatcher delivery
+            from Unit 104, see{" "}
+            <Link href="/cannabis-delivery-hillcrest-brampton">Hillcrest / Kennedy cannabis delivery</Link>. Flower collections:{" "}
             <Link href="/exotic-weed">Exotic</Link>,{" "}
             <Link href="/premium-weed">Premium</Link>,{" "}
             <Link href="/aaa-weed">AAA+</Link>,{" "}

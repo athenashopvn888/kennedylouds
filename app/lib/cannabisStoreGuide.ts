@@ -44,6 +44,7 @@ export const CANNABIS_STORE_INTERNAL_LINKS = [
   { href: "/aaa-weed", label: "AAA+ Weed" },
   { href: "/aa-weed", label: "AA Weed" },
   { href: "/budget-weed", label: "Budget Weed" },
+  { href: "/cannabis-delivery-hillcrest-brampton", label: "Hillcrest / Kennedy delivery" },
   { href: "/faq", label: "Store FAQ" },
   { href: "/contact", label: "Contact and hours" },
 ] as const;

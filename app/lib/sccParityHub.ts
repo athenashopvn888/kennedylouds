@@ -12,6 +12,7 @@ export const VISIT_HUB_LINKS = [
   { href: "/24-hour-dispensary-brampton", label: "24-hour / open-now FAQ" },
   { href: "/cannabis-store-brampton", label: "Central Brampton cannabis store" },
   { href: "/weed-dispensary-brampton/", label: "Hillcrest / Kennedy weed dispensary" },
+  { href: "/cannabis-delivery-hillcrest-brampton", label: "Hillcrest / Kennedy delivery" },
 ] as const;
 
 export const PARITY_HUB_LINKS = [...VISIT_HUB_LINKS, ...TIER_HUB_LINKS] as const;
