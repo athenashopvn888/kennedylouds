@@ -344,3 +344,84 @@
   color: var(--text-secondary);
   line-height: 1.6;
 }
+
+.tableWrap {
+  overflow-x: auto;
+  margin-top: 16px;
+}
+
+.hoursTable,
+.faqTable {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.98rem;
+}
+
+.hoursCaption {
+  caption-side: top;
+  text-align: left;
+  font-weight: 800;
+  color: var(--green-deep, #0B2D1B);
+  margin-bottom: 10px;
+}
+
+.hoursTable th,
+.hoursTable td,
+.faqTable th,
+.faqTable td {
+  border: 1px solid var(--border-subtle, rgba(0, 0, 0, 0.08));
+  padding: 12px 14px;
+  text-align: left;
+  vertical-align: top;
+}
+
+.hoursTable thead th,
+.faqTable thead th {
+  background: var(--bg-secondary, #f8faf9);
+  color: var(--green-deep, #0B2D1B);
+  font-size: 0.82rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.faqTable th[scope="row"] {
+  width: 34%;
+  font-weight: 700;
+  color: var(--green-deep, #0B2D1B);
+}
+
+.hoursTable td {
+  font-weight: 700;
+}
+
+@media (max-width: 700px) {
+  .faqTable thead {
+    display: none;
+  }
+
+  .faqTable,
+  .faqTable tbody,
+  .faqTable tr,
+  .faqTable th,
+  .faqTable td {
+    display: block;
+    width: 100%;
+  }
+
+  .faqTable tr {
+    margin-bottom: 14px;
+    border: 1px solid var(--border-subtle, rgba(0, 0, 0, 0.08));
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  .faqTable th[scope="row"],
+  .faqTable td {
+    border: 0;
+    width: auto;
+  }
+
+  .faqTable th[scope="row"] {
+    background: var(--bg-secondary, #f8faf9);
+  }
+}

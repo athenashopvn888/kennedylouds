@@ -69,6 +69,7 @@ export const gbpLocation = {
   sectionTitle: "Brampton Weed Dispensary Near Hillcrest Ave and Kennedy Road",
   localGuides: [
     { href: "/visit", label: "How to find Unit 104" },
+    { href: "/24-hour-dispensary-brampton", label: "24-hour / open-now FAQ" },
     { href: "/resources/hillcrest-ave-visit-guide", label: "Hillcrest Ave visit guide" },
     { href: "/resources/local-guides/queen-street-to-hillcrest-brampton", label: "Queen Street to Hillcrest" },
     { href: "/resources/local-guides/main-street-brampton-to-kennedy-loud", label: "Main Street to Unit 104" },

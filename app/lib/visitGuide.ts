@@ -37,6 +37,7 @@ export const VISIT_FAQS = [
 export const VISIT_INTERNAL_LINKS = [
   { href: "/", label: "Homepage NAP and menu" },
   { href: "/weed-dispensary-brampton/", label: "Brampton dispensary landing" },
+  { href: "/24-hour-dispensary-brampton", label: "24-hour / open-now FAQ" },
   { href: "/info/native-cigarettes-brampton", label: "Native Cigarettes Brampton" },
   { href: "/resources/local-guides/queen-street-to-hillcrest-brampton", label: "Queen Street to Hillcrest" },
   { href: "/resources/local-guides/zum-kennedy-dispensary", label: "Kennedy Road transit" },
