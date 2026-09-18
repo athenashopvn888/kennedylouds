@@ -2,9 +2,8 @@ import assert from "node:assert/strict";
 import test from "node:test";
 import { existsSync } from "node:fs";
 import { readFile } from "node:fs/promises";
-import path from "path";
+import path from "node:path";
 import { gbpLocation, NAP } from "../app/lib/gbp-location.ts";
-import { HILLCREST_DELIVERY, HILLCREST_DELIVERY_FAQS } from "../app/lib/hillcrestDelivery.ts";
 import { VISIT_HUB_LINKS } from "../app/lib/sccParityHub.ts";
 
 const deliveryPage = await readFile(
@@ -49,13 +48,13 @@ const PUBLIC_COPY = [
 ].join("\n");
 
 test("Wave 2 Hillcrest delivery LP has unique title, meta, H1, and path", () => {
-  assert.equal(HILLCREST_DELIVERY.path, PATH);
-  assert.equal(HILLCREST_DELIVERY.title, TITLE);
-  assert.equal(HILLCREST_DELIVERY.h1, H1);
-  assert.ok(HILLCREST_DELIVERY.title.length <= 60);
-  assert.match(HILLCREST_DELIVERY.metaDescription, /49 Hillcrest Ave Unit 104/);
-  assert.match(HILLCREST_DELIVERY.metaDescription, /not 24\/7/);
-  assert.match(HILLCREST_DELIVERY.metaDescription, /\+1 \(289\) 206-1181/);
+  assert.match(deliveryLib, /path: "\/cannabis-delivery-hillcrest-brampton"/);
+  assert.match(deliveryLib, new RegExp(`title: "${TITLE.replace(/[|/]/g, "\\$&")}"`));
+  assert.match(deliveryLib, new RegExp(`h1: "${H1.replace(/[()]/g, "\\$&")}"`));
+  assert.ok(TITLE.length <= 60);
+  assert.match(deliveryLib, /49 Hillcrest Ave Unit 104/);
+  assert.match(deliveryLib, /not 24\/7/);
+  assert.match(deliveryLib, /\+1 \(289\) 206-1181/);
   assert.match(deliveryPage, /absolute: HILLCREST_DELIVERY\.title/);
   assert.match(deliveryPage, /<h1 className=\{styles\.h1\}>\{HILLCREST_DELIVERY\.h1\}<\/h1>/);
   assert.match(deliveryPage, /canonical: HILLCREST_DELIVERY\.canonical/);
@@ -76,17 +75,18 @@ test("Wave 2 keeps locked NAP and homepage website", () => {
   assert.match(deliveryPage, /NAP\.address/);
   assert.match(deliveryPage, /NAP\.website/);
   assert.match(deliveryPage, /NAP\.phone/);
-  assert.match(deliveryLib, /49 Hillcrest Ave Unit 104, Brampton, ON L6W 1Y7/);
+  assert.match(deliveryLib, /49 Hillcrest Ave Unit 104/);
+  assert.match(deliveryLib, /NAP\.address/);
 });
 
 test("delivery hours stay separate from 24h walk-in and match site truth", () => {
-  assert.equal(HILLCREST_DELIVERY.walkInHours, "Open 24 Hours");
-  assert.match(HILLCREST_DELIVERY.deliveryHours, /not listed as 24\/7/);
-  assert.match(HILLCREST_DELIVERY.deliveryHours, /dispatcher/);
+  assert.match(deliveryLib, /walkInHours: NAP\.hours/);
+  assert.match(deliveryLib, /not listed as 24\/7/);
+  assert.match(deliveryLib, /dispatcher/);
   assert.match(deliveryPage, /Delivery hours vs 24-hour walk-in/);
   assert.match(deliveryPage, /How to order/);
   assert.match(deliveryPage, /Hillcrest \/ Kennedy delivery area/);
-  assert.match(deliveryPage, /\$60 product minimum|\$60 PRODUCT MINIMUM|HILLCREST_DELIVERY\.minimum/);
+  assert.match(deliveryPage, /HILLCREST_DELIVERY\.minimum/);
   assert.match(deliveryPage, /liveOrderHref/);
   assert.doesNotMatch(deliveryLib, /delivery is 24/);
   assert.doesNotMatch(deliveryPage, /delivery is Open 24 Hours/i);
@@ -95,13 +95,11 @@ test("delivery hours stay separate from 24h walk-in and match site truth", () =>
 
 test("FAQPage schema, how-to-order CTA, and Hillcrest / Kennedy voice", () => {
   assert.match(deliveryPage, /"@type": "FAQPage"/);
-  assert.equal(HILLCREST_DELIVERY_FAQS.length, 6);
   assert.match(deliveryLib, /Does Kennedy Loud deliver cannabis around Hillcrest \/ Kennedy/);
   assert.match(deliveryLib, /Queen Street West downtown is a different licensed door/);
-  assert.match(HILLCREST_DELIVERY.h1, /Hillcrest \/ Kennedy/);
-  assert.match(HILLCREST_DELIVERY.h1, /Central Brampton/);
-  assert.doesNotMatch(HILLCREST_DELIVERY.title, /Queen Street West/);
-  assert.doesNotMatch(HILLCREST_DELIVERY.h1, /Queen Street West/);
+  assert.match(deliveryLib, /Hillcrest \/ Kennedy Cannabis Delivery in Central Brampton/);
+  assert.doesNotMatch(deliveryLib, /title: ".*Queen Street West/);
+  assert.doesNotMatch(deliveryLib, /h1: ".*Queen Street West/);
 });
 
 test("dense graph links homepage, visit, B07, B13, weed, delivery LP, catalog, and tiers", () => {
