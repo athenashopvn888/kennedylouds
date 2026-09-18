@@ -60,6 +60,7 @@ export const RESOURCE_HUB: ResourceArticle = {
   ],
   quickLinks: [
     { label: "Find Unit 104", href: "/visit" },
+    { label: "Cannabis store Brampton", href: "/cannabis-store-brampton" },
     { label: "Brampton visit page", href: "/weed-dispensary-brampton/" },
     { label: "Flower tiers", href: "/#menu" },
     { label: "Contact", href: "/contact" },
@@ -215,6 +216,8 @@ export const RESOURCE_PAGES: ResourceArticle[] = [
     ],
     quickLinks: [
       { label: "Menu", href: "/#menu" },
+      { label: "Find Unit 104", href: "/visit" },
+      { label: "Cannabis store Brampton", href: "/cannabis-store-brampton" },
       { label: "Pre-rolls", href: "/items/prerolls" },
       { label: "Contact", href: "/contact" },
     ],

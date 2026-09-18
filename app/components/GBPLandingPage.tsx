@@ -156,7 +156,8 @@ export function GBPLandingPage() {
             </p>
             <p className={styles.infoText}>
               Coming from Kennedy Road, Queen Street, Main Street, or Downtown Brampton? Keep Unit 104 on Hillcrest Ave as the final pin, then review the current menu. For entrance, directory, and corridor directions, use the{" "}
-              <Link href="/visit">How to find Kennedy Loud at Unit 104</Link> walk-in guide.
+              <Link href="/visit">How to find Kennedy Loud at Unit 104</Link> walk-in guide. For the city-level Kennedy / Queen / Main corridor note, use the{" "}
+              <Link href="/cannabis-store-brampton">central Brampton cannabis store guide</Link>.
             </p>
             <div className={styles.btnRow}>
               <Link href={gbpLocation.menuUrl} className={`${styles.btn} ${styles.btnPrimary}`}>

@@ -23,6 +23,7 @@ const ALL_LINKS: { href: string; label: string; featured?: boolean }[] = [
   { href: "/careers/budtender", label: "Join Team", featured: true },
   { href: "/resources", label: "Resources" },
   { href: "/visit", label: "Find Unit 104" },
+  { href: "/cannabis-store-brampton", label: "Cannabis Store Brampton" },
   { href: "/weed-dispensary-brampton/", label: "Brampton Visit" },
   { href: "/faq", label: "FAQ" },
 ];
