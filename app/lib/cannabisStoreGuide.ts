@@ -38,7 +38,7 @@ export const CANNABIS_STORE_INTERNAL_LINKS = [
   { href: "/", label: "Homepage NAP and menu" },
   { href: "/weed-dispensary-brampton/", label: "Brampton dispensary landing" },
   { href: "/visit", label: "How to find Unit 104" },
-  { href: "/resources/24-hour-brampton-dispensary-guide", label: "24-hour Brampton dispensary FAQ" },
+  { href: "/24-hour-dispensary-brampton", label: "24-hour / open-now FAQ" },
   { href: "/faq", label: "Store FAQ" },
   { href: "/contact", label: "Contact and hours" },
 ] as const;

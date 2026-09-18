@@ -36,6 +36,7 @@ test("B13 cannabis store guide has unique title, meta, and H1 for central Brampt
     "Kennedy Loud Cannabis | 24 Hour Weed Dispensary Brampton",
     gbpLocation.seoTitle,
     VISIT_TITLE,
+    "24-Hour Dispensary Brampton FAQ | Open Now",
     "Kennedy Road Weed Dispensary | Open 24 Hours | Brampton",
     ...SEO_PAGES.map((page) => page.title),
   ];
@@ -72,7 +73,7 @@ test("B13 cannabis store guide includes required H2s, FAQ schema, and live inter
   assert.match(storeGuide, /href: "\/"/);
   assert.match(storeGuide, /href: "\/weed-dispensary-brampton\/"/);
   assert.match(storeGuide, /href: "\/visit"/);
-  assert.match(storeGuide, /href: "\/resources\/24-hour-brampton-dispensary-guide"/);
+  assert.match(storeGuide, /href: "\/24-hour-dispensary-brampton"/);
 });
 
 test("homepage, visit guide, and Brampton landing link to the B13 cannabis store page", () => {
@@ -82,8 +83,9 @@ test("homepage, visit guide, and Brampton landing link to the B13 cannabis store
   assert.match(footer, /href="\/cannabis-store-brampton"/);
   assert.match(sitemap, /\$\{BASE\}\/cannabis-store-brampton/);
   assert.match(visitGuide, /href: "\/cannabis-store-brampton"/);
-  assert.equal(gbpLocation.localGuides[1]?.href, "/cannabis-store-brampton");
   assert.equal(gbpLocation.localGuides[0]?.href, "/visit");
+  assert.equal(gbpLocation.localGuides[1]?.href, "/24-hour-dispensary-brampton");
+  assert.equal(gbpLocation.localGuides[2]?.href, "/cannabis-store-brampton");
   assert.match(landing, /GBPLandingPage/);
   assert.match(homepage, /absolute: TITLE/);
 });

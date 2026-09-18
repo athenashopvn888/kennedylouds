@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import styles from "./faq.module.css";
@@ -17,7 +18,7 @@ const FAQ_CATEGORIES = [
     title: "Location & Hours",
     faqs: [
       { q: "Where is Kennedy Loud Cannabis located?", a: "Kennedy Loud Cannabis is located at 49 Hillcrest Ave Unit 104, Brampton, ON L6W 1Y7." },
-      { q: "What are your hours?", a: "The store lists Open 24 Hours. Bring valid 19+ government ID when visiting." },
+      { q: "What are your hours?", a: "The store lists Open 24 Hours. Bring valid 19+ government ID when visiting. For 24 hour dispensary Brampton and open-now questions, use the dedicated 24-hour FAQ." },
       { q: "Is there parking nearby?", a: "For parking or transit details, use the current map listing or contact the store before visiting." },
       { q: "What nearby areas are useful for this location?", a: "This Brampton location is useful for shoppers around Hillcrest Ave, Kennedy Road, Queen Street, Main Street, Downtown Brampton, and Bramalea." },
       { q: "What's the simplest way to get to Kennedy Loud Cannabis?", a: "Confirm your route with the current map listing before visiting, especially if you are coming from outside Brampton." },
@@ -92,6 +93,8 @@ export default function FAQPage() {
           <h1 className={styles.pageTitle}>Frequently Asked Questions</h1>
           <p className={styles.pageSubtitle}>
             Everything you need to know about Kennedy Loud Cannabis at 49 Hillcrest Ave Unit 104 in Brampton.
+            For listed hours and late-night arrival, see the{" "}
+            <Link href="/24-hour-dispensary-brampton">24-hour / open-now Brampton FAQ</Link>.
           </p>
 
           {FAQ_CATEGORIES.map((cat) => (

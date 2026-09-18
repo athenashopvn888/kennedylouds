@@ -77,6 +77,12 @@ const RESOURCE_LINKS = [
     body: "Central Brampton walk-in pin, Unit 104 entrance notes, and Open 24 Hours hours.",
   },
   {
+    href: "/24-hour-dispensary-brampton",
+    label: "Open now FAQ",
+    title: "24-hour dispensary Brampton FAQ",
+    body: "Open 24 Hours hours truth, when open now applies, and Unit 104 late arrival.",
+  },
+  {
     href: "/cannabis-store-brampton",
     label: "Cannabis store Brampton",
     title: "Central Brampton cannabis store (Kennedy / Queen / Main)",
@@ -382,6 +388,7 @@ export default function HomePageClient() {
             <p className={styles.seoPanelText}>
               Shoppers around Hillcrest Ave, Kennedy Road, Downtown Brampton, Queen Street, Main Street, and Bramalea can use the{" "}
               <Link href="/visit">Unit 104 walk-in guide</Link>, the{" "}
+              <Link href="/24-hour-dispensary-brampton">24-hour / open-now FAQ</Link>, the{" "}
               <Link href="/cannabis-store-brampton">central Brampton cannabis store guide</Link>, and other resource pages for visit planning and category shortcuts.
             </p>
           </div>
