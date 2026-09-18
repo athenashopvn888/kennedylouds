@@ -144,7 +144,9 @@ export default function VisitPage() {
               early-morning “dispensary near me” or “dispensary Brampton open” search can still point here because
               the shop is listed 24 hours, seven days a week. For the dedicated 24 hour dispensary Brampton
               questions, use the{" "}
-              <Link href="/24-hour-dispensary-brampton">open-now FAQ</Link>.
+              <Link href="/24-hour-dispensary-brampton">open-now FAQ</Link>. Open 24 Hours describes the Unit 104
+              walk-in. Cannabis delivery from Hillcrest is a separate channel — see{" "}
+              <Link href="/cannabis-delivery-hillcrest-brampton">Hillcrest / Kennedy cannabis delivery</Link>.
             </p>
             <p className={styles.infoText}>
               “Open now” describes the listed store hours, not a guarantee that one named flower, vape, or cigarette

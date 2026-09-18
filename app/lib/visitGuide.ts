@@ -44,6 +44,7 @@ export const VISIT_INTERNAL_LINKS = [
   { href: "/aaa-weed", label: "AAA+ Weed" },
   { href: "/aa-weed", label: "AA Weed" },
   { href: "/budget-weed", label: "Budget Weed" },
+  { href: "/cannabis-delivery-hillcrest-brampton", label: "Hillcrest / Kennedy delivery" },
   { href: "/info/native-cigarettes-brampton", label: "Native Cigarettes Brampton" },
   { href: "/resources/local-guides/queen-street-to-hillcrest-brampton", label: "Queen Street to Hillcrest" },
   { href: "/resources/local-guides/zum-kennedy-dispensary", label: "Kennedy Road transit" },

@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
@@ -107,10 +108,11 @@ export default function DeliveryContent() {
     <Navbar />
     <section className={styles.hero}>
       <Image src="/banners/KennedyLoud_Delivery.webp" alt="Kennedy Loud Cannabis delivery menu" width={1200} height={500} priority sizes="100vw" />
-      <div><p>Kennedy Loud Cannabis</p><h1>Delivery Menu</h1><span>Browse the shared product catalog. The store confirms current availability and delivery details before an order is accepted.</span></div>
+      <div><p>Kennedy Loud Cannabis</p><h1>Delivery Menu</h1><span>Browse the shared product catalog for Hillcrest Ave / Kennedy Road delivery from 49 Hillcrest Ave Unit 104. The dispatcher confirms current availability and delivery details before an order is accepted — delivery is not listed as 24/7. The Unit 104 walk-in remains Open 24 Hours.</span></div>
     </section>
     <section className={styles.deliveryDetails} aria-label="Kennedy Loud Cannabis delivery details">
       <strong>$60 PRODUCT MINIMUM</strong>
+      <Link href="/cannabis-delivery-hillcrest-brampton">Hillcrest / Kennedy delivery guide</Link>
     </section>
     <section className={styles.loyalty} aria-labelledby="loyalty-title">
       <div><p>SAVE ON A LATER ORDER</p><h2 id="loyalty-title">Member Loyalty Savings</h2></div>
@@ -124,7 +126,7 @@ export default function DeliveryContent() {
       <aside><strong>Important conditions</strong><p>Complimentary items apply only to regular-price Craft or Exotic ounces—not BC Premium. Loyalty prices are firm and cannot be reduced with points. Loyalty-price orders do not include extra complimentary items. The dispatcher confirms current eligibility and any included item before checkout.</p></aside>
     </section>
     <section className={styles.howToOrder} aria-labelledby="how-to-order-title">
-      <div><p>HOW TO ORDER</p><h2 id="how-to-order-title">Order with the Kennedy Loud Cannabis dispatcher</h2><span>LIVE ORDER connects you with the Kennedy Loud Cannabis dispatcher.</span></div>
+      <div><p>HOW TO ORDER</p><h2 id="how-to-order-title">Order with the Kennedy Loud Cannabis dispatcher</h2><span>LIVE ORDER connects you with the Kennedy Loud Cannabis dispatcher. For Hillcrest / Kennedy area and hours notes, see the <Link href="/cannabis-delivery-hillcrest-brampton">cannabis delivery guide</Link>.</span></div>
       <ol>
         <li><strong>Browse the delivery menu</strong><span>Note the product names and weights you want.</span></li>
         <li><strong>Select LIVE ORDER</strong><span>Open Web Chat at the bottom-right and send your choices.</span></li>
@@ -150,7 +152,7 @@ export default function DeliveryContent() {
       <form onSubmit={handleEmailSubmit}><input type="email" value={email} onChange={(event) => setEmail(event.target.value)} placeholder="your@email.com" required disabled={emailStatus === "loading"} /><button type="submit" disabled={emailStatus === "loading"}>{emailStatus === "loading" ? "Sending..." : "Notify Me"}</button></form>
       {emailStatus === "success" && <p role="status">You&apos;re on the delivery update list.</p>}
     </section>
-    <div className={styles.ctaSection}><p>Visit us in-store at <strong>49 Hillcrest Ave Unit 104, Brampton</strong> — open <strong>24 hours</strong>. Call <strong>(289) 206-1181</strong>.</p></div>
+    <div className={styles.ctaSection}><p>Visit us in-store at <strong>49 Hillcrest Ave Unit 104, Brampton</strong> — open <strong>24 hours</strong>. Call <strong>(289) 206-1181</strong>. Neighbourhood delivery: <Link href="/cannabis-delivery-hillcrest-brampton">Hillcrest / Kennedy cannabis delivery</Link>.</p></div>
     {selected && <div className={styles.backdrop} onMouseDown={(event) => { if (event.target === event.currentTarget) setSelected(null); }}><section className={styles.drawer} role="dialog" aria-modal="true" aria-labelledby="product-title"><header><strong>Product details</strong><button type="button" onClick={() => setSelected(null)} aria-label="Close product details">×</button></header><div className={styles.drawerContent}>{selected.images.map((src, index) => <div className={styles.drawerImage} key={src}><Image src={src} alt={`${selected.name}${index ? ` alternate ${index + 1}` : ""}`} fill sizes="(max-width: 720px) 100vw, 420px" unoptimized /></div>)}<h2 id="product-title">{selected.name}</h2><p>{selected.description || "Ask the store for current product details."}</p>{selected.effects.length > 0 && <div className={styles.effects}>{selected.effects.map((effect) => <span key={effect}>{effect}</span>)}</div>}<ProductPricing product={selected} /></div></section></div>}
     <KLCWebChat />
     <Footer />

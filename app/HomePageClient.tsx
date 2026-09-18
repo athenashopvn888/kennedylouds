@@ -95,6 +95,12 @@ const RESOURCE_LINKS = [
     body: "Address, Open 24 Hours hours, phone, and Unit 104 visit notes — not a Queen Street West downtown door.",
   },
   {
+    href: "/cannabis-delivery-hillcrest-brampton",
+    label: "Hillcrest delivery",
+    title: "Hillcrest / Kennedy cannabis delivery",
+    body: "Dispatcher-confirmed delivery from Unit 104. Separate from the 24-hour walk-in clock.",
+  },
+  {
     href: "/resources/weed-flower-tier-guide",
     label: "Weed flower tiers",
     title: "Compare Kennedy Loud Weed flower tiers",
@@ -261,6 +267,9 @@ export default function HomePageClient() {
             <Link href="/weed-dispensary-brampton/" className={styles.localVisitSecondary}>
               Hillcrest / Kennedy weed
             </Link>
+            <Link href="/cannabis-delivery-hillcrest-brampton" className={styles.localVisitSecondary}>
+              Hillcrest delivery
+            </Link>
           </div>
         </div>
       </section>
@@ -396,8 +405,10 @@ export default function HomePageClient() {
               Shoppers around Hillcrest Ave, Kennedy Road, and central Brampton can use the{" "}
               <Link href="/visit">Unit 104 walk-in guide</Link>, the{" "}
               <Link href="/24-hour-dispensary-brampton">24-hour / open-now FAQ</Link>, the{" "}
-              <Link href="/cannabis-store-brampton">central Brampton cannabis store guide</Link>, and the{" "}
-              <Link href="/weed-dispensary-brampton/">Hillcrest / Kennedy weed dispensary</Link>. Flower is grouped
+              <Link href="/cannabis-store-brampton">central Brampton cannabis store guide</Link>, the{" "}
+              <Link href="/weed-dispensary-brampton/">Hillcrest / Kennedy weed dispensary</Link>, and the{" "}
+              <Link href="/cannabis-delivery-hillcrest-brampton">Hillcrest / Kennedy cannabis delivery</Link> page.
+              Flower is grouped
               into{" "}
               <Link href="/exotic-weed">Exotic</Link>,{" "}
               <Link href="/premium-weed">Premium</Link>,{" "}

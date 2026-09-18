@@ -150,7 +150,10 @@ export default function OpenNowFaqPage() {
             <p className={styles.infoText}>
               “Open now” applies because the listed hours are {NAP.hours}. A cannabis store near me open now search
               in central Brampton can still finish at Unit 104 at 2 a.m. or 2 p.m. The shop is a walk-in. No
-              appointment is required.
+              appointment is required. Open 24 Hours describes the door, not cannabis delivery. Delivery hours are
+              confirmed by the dispatcher on the{" "}
+              <Link href="/cannabis-delivery-hillcrest-brampton">Hillcrest / Kennedy delivery</Link> page and are
+              not listed as 24/7.
             </p>
             <p className={styles.infoText}>
               Open now describes the door, not the shelf. Confirm current menu details on the{" "}
@@ -218,6 +221,9 @@ export default function OpenNowFaqPage() {
               </Link>
               <Link href="/weed-dispensary-brampton/" className={`${styles.btn} ${styles.btnSecondary}`}>
                 Hillcrest / Kennedy weed
+              </Link>
+              <Link href="/cannabis-delivery-hillcrest-brampton" className={`${styles.btn} ${styles.btnSecondary}`}>
+                Hillcrest delivery
               </Link>
             </div>
             <div className={styles.napGrid}>

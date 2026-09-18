@@ -396,6 +396,22 @@
   font-weight: 700;
 }
 
+.steps {
+  margin: 16px 0 0;
+  padding-left: 1.25rem;
+  color: var(--text-secondary, #4B5563);
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+.steps li {
+  margin-bottom: 10px;
+}
+
+.steps strong {
+  color: var(--green-deep, #0B2D1B);
+}
+
 @media (max-width: 700px) {
   .hoursTable caption,
   .faqTable caption {

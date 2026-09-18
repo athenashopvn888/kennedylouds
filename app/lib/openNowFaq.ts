@@ -48,4 +48,5 @@ export const OPEN_NOW_INTERNAL_LINKS = [
   { href: "/aaa-weed", label: "AAA+ Weed" },
   { href: "/aa-weed", label: "AA Weed" },
   { href: "/budget-weed", label: "Budget Weed" },
+  { href: "/cannabis-delivery-hillcrest-brampton", label: "Hillcrest / Kennedy delivery" },
 ] as const;

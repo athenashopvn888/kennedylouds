@@ -43,6 +43,10 @@ const LOCAL_FAQS = [
     q: `Which flower tiers can I browse before visiting Hillcrest?`,
     a: "Exotic Weed, Premium Weed, AAA+ Weed, AA Weed, and Budget Weed. Start on this Hillcrest / Kennedy hub, then open one collection.",
   },
+  {
+    q: `Does ${gbpLocation.storeName} deliver cannabis around Hillcrest / Kennedy?`,
+    a: "Yes. Delivery from 49 Hillcrest Ave Unit 104 is confirmed by the dispatcher and is not listed as 24/7. The Unit 104 walk-in remains Open 24 Hours. Use the Hillcrest / Kennedy cannabis delivery page to order.",
+  },
 ];
 
 export function GBPLandingPage() {
@@ -182,7 +186,8 @@ export function GBPLandingPage() {
               Coming from Kennedy Road, Queen Street, Main Street, or Downtown Brampton? Keep Unit 104 on Hillcrest Ave as the final pin, then review the current menu. For entrance, directory, and corridor directions, use the{" "}
               <Link href="/visit">How to find Kennedy Loud at Unit 104</Link> walk-in guide. For listed hours and late-night open-now questions, use the{" "}
               <Link href="/24-hour-dispensary-brampton">24-hour Brampton FAQ</Link>. For the city-level Kennedy / Queen / Main corridor note, use the{" "}
-              <Link href="/cannabis-store-brampton">central Brampton cannabis store guide</Link>.
+              <Link href="/cannabis-store-brampton">central Brampton cannabis store guide</Link>. For dispatcher delivery from this same Hillcrest / Kennedy pin, use{" "}
+              <Link href="/cannabis-delivery-hillcrest-brampton">Hillcrest cannabis delivery</Link>.
             </p>
             <div className={styles.btnRow}>
               <Link href={gbpLocation.menuUrl} className={`${styles.btn} ${styles.btnPrimary}`}>
@@ -196,6 +201,9 @@ export function GBPLandingPage() {
               </Link>
               <Link href="/cannabis-store-brampton" className={`${styles.btn} ${styles.btnSecondary}`}>
                 Cannabis store Brampton
+              </Link>
+              <Link href="/cannabis-delivery-hillcrest-brampton" className={`${styles.btn} ${styles.btnSecondary}`}>
+                Hillcrest delivery
               </Link>
               <Link href="#faq" className={`${styles.btn} ${styles.btnSecondary}`}>
                 Read Visit FAQs
