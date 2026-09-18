@@ -1,5 +1,23 @@
 [
   {
+    "sku": "105",
+    "name": "SPACE COOKIES (SHREDS)",
+    "slug": "space-cookies-shreds",
+    "tier": "BUDGET",
+    "type": "indica",
+    "isHot": false,
+    "isSale": false,
+    "thc": "24%",
+    "price3g": null,
+    "price5g": null,
+    "price14g": null,
+    "price28g": {
+      "regular": 40,
+      "sale": null
+    },
+    "image": "https://pub-eb3e1fe18a43477eabc885cfb791d97c.r2.dev/products/105_SPACE_COOKIES_(SHREDS).webp"
+  },
+  {
     "sku": "106",
     "name": "GRANDADDY PURPLE (SHREDS)",
     "slug": "grandaddy-purple-shreds",
@@ -107,7 +125,10 @@
     "isHot": false,
     "isSale": false,
     "thc": "26%",
-    "price3g": null,
+    "price3g": {
+      "regular": 10,
+      "sale": null
+    },
     "price5g": null,
     "price14g": null,
     "price28g": {
@@ -256,7 +277,10 @@
       "regular": 20,
       "sale": null
     },
-    "price14g": null,
+    "price14g": {
+      "regular": 40,
+      "sale": null
+    },
     "price28g": null,
     "image": "https://pub-eb3e1fe18a43477eabc885cfb791d97c.r2.dev/products/99146-271-DANTE-INFERNO.webp"
   },
@@ -340,6 +364,27 @@
     },
     "price28g": null,
     "image": "https://pub-eb3e1fe18a43477eabc885cfb791d97c.r2.dev/products/291-DIAMOND-KUSH.webp"
+  },
+  {
+    "sku": "310",
+    "name": "MASTER KUSH (AAA+)",
+    "slug": "master-kush-aaa",
+    "tier": "AAA+",
+    "type": "indica",
+    "isHot": false,
+    "isSale": false,
+    "thc": "30%",
+    "price3g": {
+      "regular": 20,
+      "sale": null
+    },
+    "price5g": {
+      "regular": 30,
+      "sale": null
+    },
+    "price14g": null,
+    "price28g": null,
+    "image": "https://pub-eb3e1fe18a43477eabc885cfb791d97c.r2.dev/products/99349_310_MASTER_KUSH.webp"
   },
   {
     "sku": "371",
@@ -1065,7 +1110,7 @@
     "isSale": false,
     "thc": "36%",
     "price3g": {
-      "regular": 45,
+      "regular": 40,
       "sale": null
     },
     "price5g": {
