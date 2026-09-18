@@ -68,6 +68,7 @@ export const gbpLocation = {
     "Use a live Brampton Transit or trip-planner app for current connections, then keep Unit 104 as the final pin",
   sectionTitle: "Brampton Weed Dispensary Near Hillcrest Ave and Kennedy Road",
   localGuides: [
+    { href: "/visit", label: "How to find Unit 104" },
     { href: "/resources/hillcrest-ave-visit-guide", label: "Hillcrest Ave visit guide" },
     { href: "/resources/local-guides/queen-street-to-hillcrest-brampton", label: "Queen Street to Hillcrest" },
     { href: "/resources/local-guides/main-street-brampton-to-kennedy-loud", label: "Main Street to Unit 104" },

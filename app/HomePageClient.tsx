@@ -71,16 +71,16 @@ const EXPLORE_CATEGORIES = [
 
 const RESOURCE_LINKS = [
   {
+    href: "/visit",
+    label: "Find Unit 104",
+    title: "How to find Kennedy Loud at 49 Hillcrest Ave",
+    body: "Central Brampton walk-in pin, Unit 104 entrance notes, and Open 24 Hours hours.",
+  },
+  {
     href: "/weed-dispensary-brampton/",
     label: "Brampton visit",
     title: "Weed dispensary in Brampton",
     body: "Address, Open 24 Hours hours, phone, and Hillcrest / Kennedy Road visit notes.",
-  },
-  {
-    href: "/resources/hillcrest-ave-visit-guide",
-    label: "Hillcrest visit",
-    title: "Hillcrest Ave pull-up guide",
-    body: "Menu-first notes for late-night, early-morning, and regular Brampton visits.",
   },
   {
     href: "/resources/weed-flower-tier-guide",
@@ -233,6 +233,9 @@ export default function HomePageClient() {
             >
               Directions
             </a>
+            <Link href="/visit" className={styles.localVisitSecondary}>
+              Find Unit 104
+            </Link>
             <Link href="/weed-dispensary-brampton/" className={styles.localVisitSecondary}>
               Visit details
             </Link>
@@ -368,7 +371,8 @@ export default function HomePageClient() {
               The store lists Open 24 Hours. Use the current category pages to compare posted product details before visiting, especially if you are looking for a specific flower tier or format.
             </p>
             <p className={styles.seoPanelText}>
-              Shoppers around Hillcrest Ave, Kennedy Road, Downtown Brampton, Queen Street, Main Street, and Bramalea can use the resource pages for visit planning and category shortcuts.
+              Shoppers around Hillcrest Ave, Kennedy Road, Downtown Brampton, Queen Street, Main Street, and Bramalea can use the{" "}
+              <Link href="/visit">Unit 104 walk-in guide</Link> and other resource pages for visit planning and category shortcuts.
             </p>
           </div>
         </div>
