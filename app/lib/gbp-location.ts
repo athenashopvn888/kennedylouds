@@ -53,15 +53,15 @@ export const gbpLocation = {
   latitude: "43.6940006",
   longitude: "-79.7477885",
   hours: [NAP.hours],
-  seoTitle: "Weed Dispensary Brampton | Open 24 Hours | Kennedy Loud",
+  seoTitle: "Hillcrest / Kennedy Weed Dispensary | Open 24 Hours",
   metaDescription:
-    "Walk-in Brampton weed dispensary at 49 Hillcrest Ave Unit 104, near Kennedy Rd. Open 24 hours. Flower from $3/g. Call +1 (289) 206-1181. Adults 19+.",
-  h1: "24 Hour Weed Dispensary in Brampton",
-  localLandmarks: ["Kennedy Road", "Hillcrest Ave", "Downtown Brampton", "Queen Street"],
+    "Walk-in Hillcrest / Kennedy weed dispensary at 49 Hillcrest Ave Unit 104, central Brampton. Open 24 hours. Call +1 (289) 206-1181. Adults 19+.",
+  h1: "Hillcrest / Kennedy Weed Dispensary in Central Brampton",
+  localLandmarks: ["Hillcrest Ave", "Kennedy Road", "Unit 104", "Central Brampton"],
   introVariant:
-    "Kennedy Loud Cannabis is a walk-in weed dispensary at 49 Hillcrest Ave Unit 104 in Brampton, on the Kennedy Road corridor. Open 24 hours for adults 19+. Confirm current menu details before you travel.",
+    "Kennedy Loud Cannabis is the walk-in weed dispensary at 49 Hillcrest Ave Unit 104 in central Brampton, on the Hillcrest Ave / Kennedy Road side — not a Queen Street West downtown door. Open 24 hours for adults 19+. Confirm current menu details before you travel.",
   neighborhoodDescription:
-    "Kennedy Loud Cannabis sits at 49 Hillcrest Ave Unit 104, a short local hop from Kennedy Road, with useful routes from Queen Street, Main Street, Downtown Brampton, and Bramalea.",
+    "Kennedy Loud Cannabis sits at 49 Hillcrest Ave Unit 104, a short local hop from Kennedy Road. Queen Street and Main Street are useful starting corridors into central Brampton; they are not this shop’s door.",
   parkingNote:
     "Check the current map listing, posted signs, or call the store for parking details before visiting",
   transitNote:

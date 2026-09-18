@@ -18,7 +18,7 @@ export const CANNABIS_STORE_FAQS = [
   },
   {
     q: "Is Kennedy Loud the Brampton dispensary on Queen Street West?",
-    a: "No. Kennedy Loud Cannabis is the Hillcrest Ave / Kennedy Road shop. Queen Street West downtown has a different licensed storefront (Blouds). Keep this page for the Unit 104 pin.",
+    a: "No. Kennedy Loud Cannabis is the Hillcrest Ave / Kennedy Road shop at 49 Hillcrest Ave Unit 104. Queen Street West downtown is a different licensed door. Keep this guide for the Unit 104 pin.",
   },
   {
     q: "Which corridors does this Brampton dispensary serve?",
@@ -36,9 +36,14 @@ export const CANNABIS_STORE_FAQS = [
 
 export const CANNABIS_STORE_INTERNAL_LINKS = [
   { href: "/", label: "Homepage NAP and menu" },
-  { href: "/weed-dispensary-brampton/", label: "Brampton dispensary landing" },
+  { href: "/weed-dispensary-brampton/", label: "Hillcrest / Kennedy weed dispensary" },
   { href: "/visit", label: "How to find Unit 104" },
   { href: "/24-hour-dispensary-brampton", label: "24-hour / open-now FAQ" },
+  { href: "/exotic-weed", label: "Exotic Weed" },
+  { href: "/premium-weed", label: "Premium Weed" },
+  { href: "/aaa-weed", label: "AAA+ Weed" },
+  { href: "/aa-weed", label: "AA Weed" },
+  { href: "/budget-weed", label: "Budget Weed" },
   { href: "/faq", label: "Store FAQ" },
   { href: "/contact", label: "Contact and hours" },
 ] as const;

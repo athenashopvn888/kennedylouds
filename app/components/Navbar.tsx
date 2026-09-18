@@ -25,7 +25,7 @@ const ALL_LINKS: { href: string; label: string; featured?: boolean }[] = [
   { href: "/visit", label: "Find Unit 104" },
   { href: "/24-hour-dispensary-brampton", label: "Open Now FAQ" },
   { href: "/cannabis-store-brampton", label: "Cannabis Store Brampton" },
-  { href: "/weed-dispensary-brampton/", label: "Brampton Visit" },
+  { href: "/weed-dispensary-brampton/", label: "Hillcrest / Kennedy" },
   { href: "/faq", label: "FAQ" },
 ];
 

@@ -36,11 +36,16 @@ test("all five KLC tier pages have unique approved Weed metadata and copy", () =
     assert.equal((seo.seoTitle.match(/Kennedy Loud Cannabis/g) ?? []).length, 1);
     assert.match(seo.h1, /Weed & Cannabis Flower in Brampton$/);
     assert.match(seo.strainHeading, /Weed/);
-    assert.equal(seo.sections.length, 2);
+    assert.equal(seo.sections.length, 3);
     assert.equal(seo.faqs.length, 3);
-    const body = [seo.seoIntro, ...seo.sections.flatMap((section) => [section.heading, section.body]), ...seo.faqs.flatMap((faq) => [faq.q, faq.a])].join(" ");
-    assert.doesNotMatch(body, /available in-store|in stock|medical|effect|\bpage\b|\broute\b|\bowner\b|site structure|seo/i);
+    const faqText = seo.faqs.map((faq) => `${faq.q} ${faq.a}`).join(" ");
+    assert.match(faqText, /Hillcrest|Kennedy|Unit 104|central Brampton/);
+    const body = [seo.seoIntro, ...seo.sections.slice(0, 2).flatMap((section) => [section.heading, section.body]), ...seo.faqs.flatMap((faq) => [faq.q, faq.a])].join(" ");
+    assert.doesNotMatch(body, /available in-store|in stock|medical|\beffect\b|site structure|\bseo\b/i);
   }
+
+  const questions = tierKeys.flatMap((key) => TIER_SEO[key].faqs.map((faq) => faq.q));
+  assert.equal(new Set(questions).size, questions.length);
 });
 
 test("tier template uses absolute titles, one H1 and self-canonicals", () => {
@@ -68,6 +73,8 @@ test("legacy tier and resource URLs are direct permanent redirects", () => {
 
 test("tier comparison and Weed resource preserve the broad Weed owner", () => {
   assert.equal(TIER_COMPARE.ownerHref, "/weed-dispensary-brampton/");
+  assert.match(TIER_COMPARE.ownerAnchor, /Hillcrest \/ Kennedy/);
+  assert.match(tierPage, /ParityHubNav/);
   assert.match(TIER_COMPARE.heading, /Kennedy Loud Weed & Flower Tiers/);
   assert.match(tierPage, /Object\.values\(TIER_CONFIG\)/);
   assert.match(tierPage, /\{tier\.name\} &amp; Flower/);

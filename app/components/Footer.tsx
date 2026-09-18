@@ -79,7 +79,7 @@ export default function Footer() {
               <Link href="/info/native-cigarettes-brampton">Native Cigarettes</Link>
               <Link href="/info/weed-store-near-hillcrest-ave">Weed Store Near Hillcrest Ave</Link>
               <Link href="/weed-dispensary-brampton/">
-                Kennedy Loud Cannabis Weed Dispensary in Brampton
+                Hillcrest / Kennedy Weed Dispensary
               </Link>
               <Link href="/contact">Contact Us</Link>
             </nav>

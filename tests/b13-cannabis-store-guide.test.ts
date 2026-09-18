@@ -91,10 +91,11 @@ test("homepage, visit guide, and Brampton landing link to the B13 cannabis store
 });
 
 test("B13 copy distinguishes Queen Street West without inventing reviews or merging NAP", () => {
-  assert.match(storePage, /Blouds/);
+  assert.doesNotMatch(storePage, /Blouds/);
+  assert.doesNotMatch(storeGuide, /Blouds/);
   assert.match(storePage, /Queen Street West/);
-  assert.match(storePage, /different licensed storefront/);
-  assert.doesNotMatch(storePage, /our sister store|corporate parent|fleet store|also located at/i);
+  assert.match(storePage, /different licensed door/);
+  assert.doesNotMatch(storePage, /our sister store|corporate parent|fleet store|also located at|sister store/i);
   assert.doesNotMatch(storePage, /Value Buds|Pink House|Magic Leaf|fully licensed/i);
   assert.doesNotMatch(storePage, /117 Queen/);
   assert.doesNotMatch(storePage, /buzzer code [0-9]|best dispensary in Brampton/i);

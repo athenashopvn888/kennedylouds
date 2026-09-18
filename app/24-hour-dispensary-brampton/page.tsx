@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import { ParityHubNav } from "../components/ParityHubNav";
 import styles from "../components/GBPLandingPage.module.css";
 import { NAP, gbpLocation } from "../lib/gbp-location";
 import { OPEN_NOW_FAQ, OPEN_NOW_FAQS, OPEN_NOW_INTERNAL_LINKS } from "../lib/openNowFaq";
@@ -171,7 +172,7 @@ export default function OpenNowFaqPage() {
               Parking is not a reserved-lot promise on this page. Check the current map listing, posted signs, or
               call before you leave. For entrance, directory, and Kennedy–Queen–Main corridor notes, use the{" "}
               <Link href="/visit">Unit 104 walk-in guide</Link>. For the broader Brampton visit snapshot, use the{" "}
-              <Link href="/weed-dispensary-brampton/">Brampton dispensary landing</Link>.
+              <Link href="/weed-dispensary-brampton/">Hillcrest / Kennedy weed dispensary</Link>.
             </p>
           </section>
 
@@ -216,7 +217,7 @@ export default function OpenNowFaqPage() {
                 How to find Unit 104
               </Link>
               <Link href="/weed-dispensary-brampton/" className={`${styles.btn} ${styles.btnSecondary}`}>
-                Brampton visit page
+                Hillcrest / Kennedy weed
               </Link>
             </div>
             <div className={styles.napGrid}>
@@ -273,6 +274,7 @@ export default function OpenNowFaqPage() {
                 </Link>
               ))}
             </div>
+            <ParityHubNav currentPath="/24-hour-dispensary-brampton" />
           </section>
         </div>
       </main>
