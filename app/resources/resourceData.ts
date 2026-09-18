@@ -61,6 +61,7 @@ export const RESOURCE_HUB: ResourceArticle = {
   quickLinks: [
     { label: "Find Unit 104", href: "/visit" },
     { label: "24-hour / open-now FAQ", href: "/24-hour-dispensary-brampton" },
+    { label: "Cannabis store Brampton", href: "/cannabis-store-brampton" },
     { label: "Brampton visit page", href: "/weed-dispensary-brampton/" },
     { label: "Flower tiers", href: "/#menu" },
     { label: "Contact", href: "/contact" },

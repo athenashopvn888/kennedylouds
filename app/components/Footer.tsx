@@ -68,6 +68,7 @@ export default function Footer() {
               <Link href="/resources">Resources</Link>
               <Link href="/visit">Find Unit 104</Link>
               <Link href="/24-hour-dispensary-brampton">24-Hour / Open Now FAQ</Link>
+              <Link href="/cannabis-store-brampton">Cannabis Store Brampton</Link>
               <Link href="/resources/hillcrest-ave-visit-guide">Hillcrest Visit Guide</Link>
               <Link href="/resources/weed-flower-tier-guide">Weed Flower Tier Guide</Link>
               <Link href="/resources/native-smokes-brampton-guide">Native Smokes Guide</Link>

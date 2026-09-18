@@ -83,6 +83,12 @@ const RESOURCE_LINKS = [
     body: "Open 24 Hours hours truth, when open now applies, and Unit 104 late arrival.",
   },
   {
+    href: "/cannabis-store-brampton",
+    label: "Cannabis store Brampton",
+    title: "Central Brampton cannabis store (Kennedy / Queen / Main)",
+    body: "City-level guide for the Hillcrest / Kennedy Road walk-in — Unit 104, not a downtown Queen Street pin.",
+  },
+  {
     href: "/weed-dispensary-brampton/",
     label: "Brampton visit",
     title: "Weed dispensary in Brampton",
@@ -242,6 +248,9 @@ export default function HomePageClient() {
             <Link href="/visit" className={styles.localVisitSecondary}>
               Find Unit 104
             </Link>
+            <Link href="/cannabis-store-brampton" className={styles.localVisitSecondary}>
+              Cannabis store Brampton
+            </Link>
             <Link href="/weed-dispensary-brampton/" className={styles.localVisitSecondary}>
               Visit details
             </Link>
@@ -379,7 +388,8 @@ export default function HomePageClient() {
             <p className={styles.seoPanelText}>
               Shoppers around Hillcrest Ave, Kennedy Road, Downtown Brampton, Queen Street, Main Street, and Bramalea can use the{" "}
               <Link href="/visit">Unit 104 walk-in guide</Link>, the{" "}
-              <Link href="/24-hour-dispensary-brampton">24-hour / open-now FAQ</Link>, and other resource pages for visit planning and category shortcuts.
+              <Link href="/24-hour-dispensary-brampton">24-hour / open-now FAQ</Link>, the{" "}
+              <Link href="/cannabis-store-brampton">central Brampton cannabis store guide</Link>, and other resource pages for visit planning and category shortcuts.
             </p>
           </div>
         </div>

@@ -42,4 +42,5 @@ export const OPEN_NOW_INTERNAL_LINKS = [
   { href: "/", label: "Homepage NAP and map" },
   { href: "/weed-dispensary-brampton/", label: "Brampton dispensary landing" },
   { href: "/visit", label: "Unit 104 walk-in guide" },
+  { href: "/cannabis-store-brampton", label: "Central Brampton cannabis store" },
 ] as const;
