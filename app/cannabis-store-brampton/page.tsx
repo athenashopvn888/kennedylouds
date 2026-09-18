@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import { ParityHubNav } from "../components/ParityHubNav";
 import styles from "../components/GBPLandingPage.module.css";
 import { NAP, gbpLocation } from "../lib/gbp-location";
 import {
@@ -183,7 +184,7 @@ export default function CannabisStoreBramptonPage() {
               walk-in, use the{" "}
               <Link href="/visit">How to find Kennedy Loud at 49 Hillcrest Ave Unit 104</Link> guide. For the
               broader visit snapshot — menu categories, nearby areas, and the same NAP — use the{" "}
-              <Link href="/weed-dispensary-brampton/">Brampton dispensary landing</Link>.
+              <Link href="/weed-dispensary-brampton/">Hillcrest / Kennedy weed dispensary</Link>.
             </p>
             <div className={styles.guideList}>
               {CANNABIS_STORE_INTERNAL_LINKS.map((link) => (
@@ -192,15 +193,16 @@ export default function CannabisStoreBramptonPage() {
                 </Link>
               ))}
             </div>
+            <ParityHubNav currentPath="/cannabis-store-brampton" showGeoNote />
           </section>
 
           <section className={styles.section}>
             <h2 className={styles.h2}>Hillcrest / Kennedy is not the Queen Street West storefront</h2>
             <p className={styles.infoText}>
               Keep this Brampton dispensary distinct. Kennedy Loud Cannabis is the Hillcrest Ave / Kennedy Road
-              cannabis store at Unit 104. Downtown Queen Street West has a different licensed storefront — Blouds —
-              with its own map pin. This page does not list that shop as Kennedy Loud, and it does not treat other
-              Brampton cannabis brands as locations of this store.
+              cannabis store at Unit 104. Queen Street West downtown is a different licensed door with its own map
+              pin. This guide does not treat that downtown storefront as Kennedy Loud, and it does not list other
+              Brampton cannabis brands as locations of this shop.
             </p>
             <p className={styles.infoText}>
               If your map already says Queen Street West, you are looking at that downtown storefront, not Unit

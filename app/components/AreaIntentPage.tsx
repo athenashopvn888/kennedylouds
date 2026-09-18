@@ -76,7 +76,7 @@ export function AreaIntentPage({
         ) : null}
         {relatedLinks.length ? (
           <section className={styles.section}>
-            <h2 className={styles.h2}>Explore the Current Flower Tiers</h2>
+            <h2 className={styles.h2}>Hillcrest hubs and flower tiers</h2>
             <p>{relatedLinks.map((link, index) => <span key={link.href}>{index ? " · " : ""}<Link href={link.href}>{link.label}</Link></span>)}</p>
           </section>
         ) : null}

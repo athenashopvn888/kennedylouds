@@ -94,7 +94,18 @@ export default function FAQPage() {
           <p className={styles.pageSubtitle}>
             Everything you need to know about Kennedy Loud Cannabis at 49 Hillcrest Ave Unit 104 in Brampton.
             For listed hours and late-night arrival, see the{" "}
-            <Link href="/24-hour-dispensary-brampton">24-hour / open-now Brampton FAQ</Link>.
+            <Link href="/24-hour-dispensary-brampton">24-hour / open-now Brampton FAQ</Link>. For the Unit 104
+            door, see{" "}
+            <Link href="/visit">how to find Kennedy Loud</Link>. For the Kennedy / Queen / Main corridor note, see
+            the{" "}
+            <Link href="/cannabis-store-brampton">central Brampton cannabis store</Link>. For the Hillcrest /
+            Kennedy weed hub, see the{" "}
+            <Link href="/weed-dispensary-brampton/">central Brampton weed dispensary</Link>. Flower collections:{" "}
+            <Link href="/exotic-weed">Exotic</Link>,{" "}
+            <Link href="/premium-weed">Premium</Link>,{" "}
+            <Link href="/aaa-weed">AAA+</Link>,{" "}
+            <Link href="/aa-weed">AA</Link>, and{" "}
+            <Link href="/budget-weed">Budget</Link>.
           </p>
 
           {FAQ_CATEGORIES.map((cat) => (

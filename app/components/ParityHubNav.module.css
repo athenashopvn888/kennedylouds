@@ -1,0 +1,51 @@
+.hub {
+  margin-top: 18px;
+}
+
+.heading {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--green-deep, #0B2D1B);
+  margin: 0 0 10px;
+}
+
+.body {
+  margin: 0 0 14px;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--text-secondary, #4B5563);
+}
+
+.groupLabel {
+  display: block;
+  margin: 0 0 8px;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--green-mid, #2DB872);
+}
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 0 0 16px;
+}
+
+.link {
+  display: inline-flex;
+  padding: 10px 14px;
+  border-radius: 999px;
+  background: rgba(45, 184, 114, 0.1);
+  color: var(--green-deep, #0B2D1B);
+  font-weight: 800;
+  text-decoration: none;
+  border: 1px solid rgba(45, 184, 114, 0.22);
+}
+
+.link[aria-current="page"] {
+  border-color: var(--green-deep, #0B2D1B);
+  background: rgba(45, 184, 114, 0.18);
+}

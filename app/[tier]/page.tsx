@@ -12,6 +12,7 @@ import {
 import { TIER_COMPARE, TIER_SEO } from "../lib/tierSeoContent";
 import { buildTierCollectionJsonLd } from "../lib/tierStructuredData";
 import seoContent from "../lib/seoContent.generated.json";
+import { ParityHubNav } from "../components/ParityHubNav";
 import styles from "./tier.module.css";
 
 /* -- Generate all tier pages at build -- */
@@ -241,6 +242,7 @@ export default async function TierPage({
                   {TIER_COMPARE.ownerAnchor}
                 </Link>
               </p>
+              <ParityHubNav currentPath={`/${tierSlug}`} />
             </section>
           </div>
         </section>

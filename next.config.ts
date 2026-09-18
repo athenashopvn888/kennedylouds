@@ -17,6 +17,7 @@ const nextConfig: NextConfig = {
       { source: "/aaa", destination: "/aaa-weed", permanent: true },
       { source: "/aa", destination: "/aa-weed", permanent: true },
       { source: "/budget", destination: "/budget-weed", permanent: true },
+      { source: "/24-hour-hillcrest-brampton-dispensary", destination: "/24-hour-dispensary-brampton", permanent: true },
       { source: "/resources/flower-tier-guide", destination: "/resources/weed-flower-tier-guide", permanent: true },
       { source: "/blog", destination: "/resources", permanent: true },
       { source: "/blog/:path*", destination: "/resources", permanent: true },

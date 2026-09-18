@@ -40,7 +40,12 @@ export const OPEN_NOW_FAQS = [
 
 export const OPEN_NOW_INTERNAL_LINKS = [
   { href: "/", label: "Homepage NAP and map" },
-  { href: "/weed-dispensary-brampton/", label: "Brampton dispensary landing" },
+  { href: "/weed-dispensary-brampton/", label: "Hillcrest / Kennedy weed dispensary" },
   { href: "/visit", label: "Unit 104 walk-in guide" },
   { href: "/cannabis-store-brampton", label: "Central Brampton cannabis store" },
+  { href: "/exotic-weed", label: "Exotic Weed" },
+  { href: "/premium-weed", label: "Premium Weed" },
+  { href: "/aaa-weed", label: "AAA+ Weed" },
+  { href: "/aa-weed", label: "AA Weed" },
+  { href: "/budget-weed", label: "Budget Weed" },
 ] as const;

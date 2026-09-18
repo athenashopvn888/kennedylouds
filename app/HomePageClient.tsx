@@ -90,9 +90,9 @@ const RESOURCE_LINKS = [
   },
   {
     href: "/weed-dispensary-brampton/",
-    label: "Brampton visit",
-    title: "Weed dispensary in Brampton",
-    body: "Address, Open 24 Hours hours, phone, and Hillcrest / Kennedy Road visit notes.",
+    label: "Hillcrest / Kennedy",
+    title: "Hillcrest / Kennedy weed dispensary",
+    body: "Address, Open 24 Hours hours, phone, and Unit 104 visit notes — not a Queen Street West downtown door.",
   },
   {
     href: "/resources/weed-flower-tier-guide",
@@ -119,6 +119,10 @@ const LOCAL_FAQS = [
   {
     q: "What is the cheapest weed at Kennedy Loud Cannabis?",
     a: "Budget flower is shown from $3/g, with AA and AAA+ tiers listed separately. Confirm current pricing and menu details on the menu before visiting.",
+  },
+  {
+    q: "Is Kennedy Loud the Queen Street West downtown dispensary?",
+    a: `No. Kennedy Loud Cannabis is the Hillcrest Ave / Kennedy Road walk-in at ${NAP.address}. Queen Street West downtown is a different licensed door.`,
   },
 ];
 
@@ -248,11 +252,14 @@ export default function HomePageClient() {
             <Link href="/visit" className={styles.localVisitSecondary}>
               Find Unit 104
             </Link>
+            <Link href="/24-hour-dispensary-brampton" className={styles.localVisitSecondary}>
+              Open now FAQ
+            </Link>
             <Link href="/cannabis-store-brampton" className={styles.localVisitSecondary}>
               Cannabis store Brampton
             </Link>
             <Link href="/weed-dispensary-brampton/" className={styles.localVisitSecondary}>
-              Visit details
+              Hillcrest / Kennedy weed
             </Link>
           </div>
         </div>
@@ -386,10 +393,18 @@ export default function HomePageClient() {
               The store lists Open 24 Hours. Use the current category pages to compare posted product details before visiting, especially if you are looking for a specific flower tier or format.
             </p>
             <p className={styles.seoPanelText}>
-              Shoppers around Hillcrest Ave, Kennedy Road, Downtown Brampton, Queen Street, Main Street, and Bramalea can use the{" "}
+              Shoppers around Hillcrest Ave, Kennedy Road, and central Brampton can use the{" "}
               <Link href="/visit">Unit 104 walk-in guide</Link>, the{" "}
               <Link href="/24-hour-dispensary-brampton">24-hour / open-now FAQ</Link>, the{" "}
-              <Link href="/cannabis-store-brampton">central Brampton cannabis store guide</Link>, and other resource pages for visit planning and category shortcuts.
+              <Link href="/cannabis-store-brampton">central Brampton cannabis store guide</Link>, and the{" "}
+              <Link href="/weed-dispensary-brampton/">Hillcrest / Kennedy weed dispensary</Link>. Flower is grouped
+              into{" "}
+              <Link href="/exotic-weed">Exotic</Link>,{" "}
+              <Link href="/premium-weed">Premium</Link>,{" "}
+              <Link href="/aaa-weed">AAA+</Link>,{" "}
+              <Link href="/aa-weed">AA</Link>, and{" "}
+              <Link href="/budget-weed">Budget</Link>. Queen Street is a starting corridor, not this shop’s downtown
+              door.
             </p>
           </div>
         </div>

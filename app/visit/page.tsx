@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import { ParityHubNav } from "../components/ParityHubNav";
 import styles from "../components/GBPLandingPage.module.css";
 import { NAP, gbpLocation } from "../lib/gbp-location";
 import { VISIT_FAQS, VISIT_GUIDE, VISIT_INTERNAL_LINKS } from "../lib/visitGuide";
@@ -133,6 +134,7 @@ export default function VisitPage() {
                 </Link>
               ))}
             </div>
+            <ParityHubNav currentPath="/visit" />
           </section>
 
           <section className={styles.section}>
@@ -164,7 +166,7 @@ export default function VisitPage() {
               <Link href="/info/native-cigarettes-brampton">Native Cigarettes Brampton</Link> page, then confirm
               current listings. For the broader Brampton visit snapshot — menu categories, nearby areas, and the
               same NAP — use the{" "}
-              <Link href="/weed-dispensary-brampton/">Brampton dispensary landing</Link>.
+              <Link href="/weed-dispensary-brampton/">Hillcrest / Kennedy weed dispensary</Link>.
             </p>
           </section>
 

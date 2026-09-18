@@ -1,8 +1,10 @@
 import Link from "next/link";
 import styles from "./GBPLandingPage.module.css";
 import { categoryLinks, gbpLocation } from "../lib/gbp-location";
+import { TIER_HUB_LINKS } from "../lib/sccParityHub";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
+import { ParityHubNav } from "./ParityHubNav";
 
 const LOCAL_FAQS = [
   {
@@ -32,6 +34,14 @@ const LOCAL_FAQS = [
   {
     q: `Is ${gbpLocation.storeName} near ${gbpLocation.neighborhood}?`,
     a: `Yes. ${gbpLocation.storeName} is at 49 Hillcrest Ave Unit 104, near Kennedy Road, with useful routes from Downtown Brampton, Queen Street, Main Street, and Bramalea.`,
+  },
+  {
+    q: `Is ${gbpLocation.storeName} the Queen Street West downtown dispensary?`,
+    a: `No. ${gbpLocation.storeName} is the Hillcrest Ave / Kennedy Road walk-in at ${gbpLocation.address}. Queen Street West downtown is a different licensed door. Keep this hub for Unit 104.`,
+  },
+  {
+    q: `Which flower tiers can I browse before visiting Hillcrest?`,
+    a: "Exotic Weed, Premium Weed, AAA+ Weed, AA Weed, and Budget Weed. Start on this Hillcrest / Kennedy hub, then open one collection.",
   },
 ];
 
@@ -125,11 +135,25 @@ export function GBPLandingPage() {
           </div>
 
           <section className={styles.section}>
-            <h2 className={styles.h2}>Local Weed Dispensary on Hillcrest Ave</h2>
+            <h2 className={styles.h2}>Local Weed Dispensary on Hillcrest Ave / Kennedy Road</h2>
             <p className={styles.introText}>{gbpLocation.introVariant}</p>
             <p className={styles.infoText}>
               Shoppers around {nearbyAreaList} can use this page to confirm the door, then jump to a menu category before they pull up.
             </p>
+          </section>
+
+          <section className={styles.section}>
+            <h2 className={styles.h2}>Five Flower Tiers at Unit 104</h2>
+            <p className={styles.infoText}>
+              Flower at the Hillcrest / Kennedy counter is grouped into five collections. Open a tier after you confirm the Unit 104 pin — these collections do not replace this weed hub.
+            </p>
+            <div className={styles.productGrid}>
+              {TIER_HUB_LINKS.map((tier) => (
+                <Link key={tier.href} href={tier.href} className={styles.productCard}>
+                  {tier.label}
+                </Link>
+              ))}
+            </div>
           </section>
 
           <section className={styles.section}>
@@ -254,6 +278,7 @@ export function GBPLandingPage() {
                 </Link>
               ))}
             </div>
+            <ParityHubNav currentPath="/weed-dispensary-brampton/" showGeoNote />
           </section>
 
           <section id="faq" className={styles.section}>
