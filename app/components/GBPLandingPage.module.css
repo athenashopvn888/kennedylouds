@@ -363,6 +363,8 @@
   font-weight: 800;
   color: var(--green-deep, #0B2D1B);
   margin-bottom: 10px;
+  width: 100%;
+  max-width: 100%;
 }
 
 .hoursTable th,
@@ -395,6 +397,14 @@
 }
 
 @media (max-width: 700px) {
+  .hoursTable caption,
+  .faqTable caption {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    white-space: normal;
+  }
+
   .faqTable thead {
     display: none;
   }

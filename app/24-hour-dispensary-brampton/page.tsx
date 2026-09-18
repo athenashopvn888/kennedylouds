@@ -102,7 +102,7 @@ export default function OpenNowFaqPage() {
           </header>
 
           <div className={styles.btnRow}>
-            <Link href="/" className={`${styles.btn} ${styles.btnPrimary}`}>
+            <Link href="/#contact" className={`${styles.btn} ${styles.btnPrimary}`}>
               Homepage map
             </Link>
             <Link href="/visit" className={`${styles.btn} ${styles.btnSecondary}`}>
@@ -215,7 +215,7 @@ export default function OpenNowFaqPage() {
               <Link href="/visit" className={`${styles.btn} ${styles.btnSecondary}`}>
                 How to find Unit 104
               </Link>
-              <Link href="/weed-dispensary-brampton/" className={`${styles.btn} ${styles.btnTertiary}`}>
+              <Link href="/weed-dispensary-brampton/" className={`${styles.btn} ${styles.btnSecondary}`}>
                 Brampton visit page
               </Link>
             </div>
