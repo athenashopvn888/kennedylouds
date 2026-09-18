@@ -310,6 +310,17 @@
   margin-bottom: 15px;
 }
 
+.section a {
+  color: var(--green-deep, #0B2D1B);
+  font-weight: 700;
+  text-underline-offset: 0.15em;
+}
+
+.section a:hover,
+.section a:focus-visible {
+  color: var(--green-mid, #2DB872);
+}
+
 .faqList {
   display: flex;
   flex-direction: column;

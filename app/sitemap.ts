@@ -10,6 +10,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const staticPages: MetadataRoute.Sitemap = [
     { url: BASE, lastModified: now, changeFrequency: "daily", priority: 1 },
+    { url: `${BASE}/visit`, lastModified: now, changeFrequency: "weekly", priority: 0.9 },
     { url: `${BASE}/weed-dispensary-brampton/`, lastModified: now, changeFrequency: "weekly", priority: 0.9 },
     { url: `${BASE}/weed-dispensary-brampton-kennedy`, lastModified: now, changeFrequency: "weekly", priority: 0.9 },
     { url: `${BASE}/resources/local-guides/brampton-go-kennedy-loud`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },

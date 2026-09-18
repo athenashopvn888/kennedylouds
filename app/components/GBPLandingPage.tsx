@@ -155,11 +155,15 @@ export function GBPLandingPage() {
               Planning a visit is easier when the local details are in one place: address, Open 24 Hours hours, phone, nearby areas, and category links for adults 19+.
             </p>
             <p className={styles.infoText}>
-              Coming from Kennedy Road, Queen Street, Main Street, or Downtown Brampton? Keep Unit 104 on Hillcrest Ave as the final pin, then review the current menu.
+              Coming from Kennedy Road, Queen Street, Main Street, or Downtown Brampton? Keep Unit 104 on Hillcrest Ave as the final pin, then review the current menu. For entrance, directory, and corridor directions, use the{" "}
+              <Link href="/visit">How to find Kennedy Loud at Unit 104</Link> walk-in guide.
             </p>
             <div className={styles.btnRow}>
               <Link href={gbpLocation.menuUrl} className={`${styles.btn} ${styles.btnPrimary}`}>
                 Start With Menu Categories
+              </Link>
+              <Link href="/visit" className={`${styles.btn} ${styles.btnSecondary}`}>
+                How to find Unit 104
               </Link>
               <Link href="#faq" className={`${styles.btn} ${styles.btnSecondary}`}>
                 Read Visit FAQs
