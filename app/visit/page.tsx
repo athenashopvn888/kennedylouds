@@ -165,9 +165,12 @@ export default function VisitPage() {
             <p className={styles.infoText}>
               Have the Unit 104 address visible on your phone before the last turn. If the trip is for cigarettes
               rather than flower, start with the{" "}
-              <Link href="/info/native-cigarettes-brampton">Native Cigarettes Brampton</Link> page, then confirm
-              current listings. For the broader Brampton visit snapshot — menu categories, nearby areas, and the
-              same NAP — use the{" "}
+              <Link href="/native-cigarettes-hillcrest-brampton">Hillcrest / Kennedy native cigarettes</Link> page
+              (the broader{" "}
+              <Link href="/info/native-cigarettes-brampton">Native Cigarettes Brampton</Link> guide stays live),
+              then confirm current listings. For nicotine vape at the same Kennedy / Hillcrest counter, use{" "}
+              <Link href="/nicotine-vape-kennedy-brampton">Kennedy / Hillcrest nicotine vape</Link>. For the broader
+              Brampton visit snapshot — menu categories, nearby areas, and the same NAP — use the{" "}
               <Link href="/weed-dispensary-brampton/">Hillcrest / Kennedy weed dispensary</Link>.
             </p>
           </section>

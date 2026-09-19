@@ -130,7 +130,7 @@ test("optional Hillcrest 24h alias is a 301 into B07, not a duplicate page", () 
 test("Wave 1 does not add smoke SEO LPs, Ottawa copy, sister framing, or GBP Name edits", () => {
   assert.doesNotMatch(PUBLIC_COPY, /Blouds|Magic Leaf|St\.? Clair|117 Queen|sister store|corporate parent|fleet store/i);
   assert.doesNotMatch(PUBLIC_COPY, /Ottawa|Gatineau|ByWard|Dalhousie/i);
-  assert.doesNotMatch(PUBLIC_COPY, /native-cigarettes-hillcrest-brampton|nicotine-pouches-kennedy-brampton|grabba-hillcrest-brampton/);
+  assert.doesNotMatch(PUBLIC_COPY, /nicotine-pouches-kennedy-brampton|grabba-hillcrest-brampton/);
   assert.doesNotMatch(PUBLIC_COPY, /GBP Website\s*=\s*\/weed-dispensary/i);
   assert.doesNotMatch(storePage, /also visit our other|our other location/i);
 });

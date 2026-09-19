@@ -79,8 +79,8 @@ const RESOURCE_LINKS = [
   {
     href: "/24-hour-dispensary-brampton",
     label: "Open now FAQ",
-    title: "24-hour dispensary Brampton FAQ",
-    body: "Open 24 Hours hours truth, when open now applies, and Unit 104 late arrival.",
+    title: "24-hour Hillcrest / Kennedy dispensary FAQ",
+    body: "Listed Open 24 Hours at Unit 104 only — Hillcrest / Kennedy walk-in, not 24/7 delivery.",
   },
   {
     href: "/cannabis-store-brampton",
@@ -99,6 +99,18 @@ const RESOURCE_LINKS = [
     label: "Hillcrest delivery",
     title: "Hillcrest / Kennedy cannabis delivery",
     body: "Dispatcher-confirmed delivery from Unit 104. Separate from the 24-hour walk-in clock.",
+  },
+  {
+    href: "/native-cigarettes-hillcrest-brampton",
+    label: "Hillcrest native cigarettes",
+    title: "Hillcrest / Kennedy native cigarettes",
+    body: "Adult 19+ cigarette counter at Unit 104. Check the current menu before you travel.",
+  },
+  {
+    href: "/nicotine-vape-kennedy-brampton",
+    label: "Kennedy nicotine vape",
+    title: "Kennedy / Hillcrest nicotine vape",
+    body: "Adult 19+ Nic Vape at the Kennedy Road / Hillcrest walk-in. Nicotine is addictive.",
   },
   {
     href: "/resources/weed-flower-tier-guide",
@@ -270,6 +282,12 @@ export default function HomePageClient() {
             <Link href="/cannabis-delivery-hillcrest-brampton" className={styles.localVisitSecondary}>
               Hillcrest delivery
             </Link>
+            <Link href="/native-cigarettes-hillcrest-brampton" className={styles.localVisitSecondary}>
+              Hillcrest native cigarettes
+            </Link>
+            <Link href="/nicotine-vape-kennedy-brampton" className={styles.localVisitSecondary}>
+              Kennedy nicotine vape
+            </Link>
           </div>
         </div>
       </section>
@@ -407,7 +425,11 @@ export default function HomePageClient() {
               <Link href="/24-hour-dispensary-brampton">24-hour / open-now FAQ</Link>, the{" "}
               <Link href="/cannabis-store-brampton">central Brampton cannabis store guide</Link>, the{" "}
               <Link href="/weed-dispensary-brampton/">Hillcrest / Kennedy weed dispensary</Link>, and the{" "}
-              <Link href="/cannabis-delivery-hillcrest-brampton">Hillcrest / Kennedy cannabis delivery</Link> page.
+              <Link href="/cannabis-delivery-hillcrest-brampton">Hillcrest / Kennedy cannabis delivery</Link> page,
+              the{" "}
+              <Link href="/native-cigarettes-hillcrest-brampton">Hillcrest / Kennedy native cigarettes</Link> page,
+              and the{" "}
+              <Link href="/nicotine-vape-kennedy-brampton">Kennedy / Hillcrest nicotine vape</Link> page.
               Flower is grouped
               into{" "}
               <Link href="/exotic-weed">Exotic</Link>,{" "}
