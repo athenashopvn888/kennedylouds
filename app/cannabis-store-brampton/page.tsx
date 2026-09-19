@@ -186,7 +186,12 @@ export default function CannabisStoreBramptonPage() {
               broader visit snapshot — menu categories, nearby areas, and the same NAP — use the{" "}
               <Link href="/weed-dispensary-brampton/">Hillcrest / Kennedy weed dispensary</Link>. For dispatcher
               delivery from this same Unit 104 pin, use{" "}
-              <Link href="/cannabis-delivery-hillcrest-brampton">Hillcrest / Kennedy cannabis delivery</Link>.
+              <Link href="/cannabis-delivery-hillcrest-brampton">Hillcrest / Kennedy cannabis delivery</Link>. For
+              native cigarettes and nicotine vape at this Hillcrest / Kennedy counter, use{" "}
+              <Link href="/native-cigarettes-hillcrest-brampton">Hillcrest native cigarettes</Link> and{" "}
+              <Link href="/nicotine-vape-kennedy-brampton">Kennedy nicotine vape</Link>. For listed Open 24 Hours
+              hours, use the{" "}
+              <Link href="/24-hour-dispensary-brampton">24-hour Hillcrest / Kennedy FAQ</Link>.
             </p>
             <div className={styles.guideList}>
               {CANNABIS_STORE_INTERNAL_LINKS.map((link) => (

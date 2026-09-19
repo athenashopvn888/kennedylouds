@@ -187,7 +187,10 @@ export function GBPLandingPage() {
               <Link href="/visit">How to find Kennedy Loud at Unit 104</Link> walk-in guide. For listed hours and late-night open-now questions, use the{" "}
               <Link href="/24-hour-dispensary-brampton">24-hour Brampton FAQ</Link>. For the city-level Kennedy / Queen / Main corridor note, use the{" "}
               <Link href="/cannabis-store-brampton">central Brampton cannabis store guide</Link>. For dispatcher delivery from this same Hillcrest / Kennedy pin, use{" "}
-              <Link href="/cannabis-delivery-hillcrest-brampton">Hillcrest cannabis delivery</Link>.
+              <Link href="/cannabis-delivery-hillcrest-brampton">Hillcrest cannabis delivery</Link>. For native
+              cigarettes and nicotine vape at this same Hillcrest / Kennedy counter, use{" "}
+              <Link href="/native-cigarettes-hillcrest-brampton">Hillcrest native cigarettes</Link> and{" "}
+              <Link href="/nicotine-vape-kennedy-brampton">Kennedy nicotine vape</Link>.
             </p>
             <div className={styles.btnRow}>
               <Link href={gbpLocation.menuUrl} className={`${styles.btn} ${styles.btnPrimary}`}>
@@ -204,6 +207,12 @@ export function GBPLandingPage() {
               </Link>
               <Link href="/cannabis-delivery-hillcrest-brampton" className={`${styles.btn} ${styles.btnSecondary}`}>
                 Hillcrest delivery
+              </Link>
+              <Link href="/native-cigarettes-hillcrest-brampton" className={`${styles.btn} ${styles.btnSecondary}`}>
+                Hillcrest native cigarettes
+              </Link>
+              <Link href="/nicotine-vape-kennedy-brampton" className={`${styles.btn} ${styles.btnSecondary}`}>
+                Kennedy nicotine vape
               </Link>
               <Link href="#faq" className={`${styles.btn} ${styles.btnSecondary}`}>
                 Read Visit FAQs

@@ -94,7 +94,7 @@ export default function OpenNowFaqPage() {
               <a href={`tel:${NAP.phoneIntl}`}>{NAP.phone}</a>
             </p>
             <div className={styles.areaList}>
-              {["Open 24 Hours", "Open now", "Unit 104", "Hillcrest Ave", "Brampton"].map((area) => (
+              {["Open 24 Hours", "Open now", "Unit 104", "Hillcrest Ave", "Kennedy Road"].map((area) => (
                 <span key={area} className={styles.areaTag}>
                   {area}
                 </span>
@@ -117,14 +117,16 @@ export default function OpenNowFaqPage() {
           <section className={styles.section}>
             <h2 className={styles.h2}>GBP hours truth</h2>
             <p className={styles.introText}>
-              Kennedy Loud Cannabis lists {NAP.hours}. That is the hours fact on this 24 hour dispensary Brampton
-              FAQ. It matches the current store listing used for the homepage website{" "}
-              <a href={NAP.website}>{NAP.website}</a> — not a city landing URL, and not a renamed Google listing.
+              Kennedy Loud Cannabis lists {NAP.hours} at the Hillcrest / Kennedy walk-in. That is the hours fact on
+              this 24 hour dispensary Brampton FAQ. It matches the current store listing used for the homepage
+              website <a href={NAP.website}>{NAP.website}</a> — not a city landing URL, and not a renamed Google
+              listing. The Hillcrest 24-hour slug {OPEN_NOW_FAQ.hillcrestAlias} stays a 301 into this B07 page.
             </p>
             <p className={styles.infoText}>
-              Monday through Sunday is the same fact: Open 24 Hours. If a search result for a 24 hour dispensary,
-              a 24 hour dispensary near me, or a dispensary Brampton open query shows this shop, the hours on this
-              page are that 24-hour listing.
+              Monday through Sunday is the same listed fact: {NAP.hours}. If a search result for a 24 hour
+              dispensary, a 24 hour Hillcrest / Kennedy dispensary, a 24 hour dispensary near me, or a dispensary
+              Brampton open query shows this shop, the hours on this page are that Unit 104 listing — not a Queen
+              Street West downtown clock, and not a 24/7 delivery claim.
             </p>
             <table className={styles.hoursTable}>
               <caption className={styles.hoursCaption}>Listed hours at {NAP.streetAddress}</caption>
@@ -159,7 +161,10 @@ export default function OpenNowFaqPage() {
               Open now describes the door, not the shelf. Confirm current menu details on the{" "}
               <Link href="/">homepage</Link> before a special-item trip, or call {NAP.phone}. Adults must be 19+
               with valid government-issued photo ID. If the ID is expired, missing, or does not match the visitor,
-              the counter cannot complete the sale.
+              the counter cannot complete the sale. Native cigarettes and nicotine vape sold at this same Unit 104
+              counter are on{" "}
+              <Link href="/native-cigarettes-hillcrest-brampton">Hillcrest / Kennedy native cigarettes</Link> and{" "}
+              <Link href="/nicotine-vape-kennedy-brampton">Kennedy / Hillcrest nicotine vape</Link>.
             </p>
           </section>
 
@@ -175,7 +180,8 @@ export default function OpenNowFaqPage() {
               Parking is not a reserved-lot promise on this page. Check the current map listing, posted signs, or
               call before you leave. For entrance, directory, and Kennedy–Queen–Main corridor notes, use the{" "}
               <Link href="/visit">Unit 104 walk-in guide</Link>. For the broader Brampton visit snapshot, use the{" "}
-              <Link href="/weed-dispensary-brampton/">Hillcrest / Kennedy weed dispensary</Link>.
+              <Link href="/weed-dispensary-brampton/">Hillcrest / Kennedy weed dispensary</Link>. A 24-hour
+              Hillcrest Brampton dispensary search should finish here, not at a downtown Queen Street West pin.
             </p>
           </section>
 
@@ -224,6 +230,12 @@ export default function OpenNowFaqPage() {
               </Link>
               <Link href="/cannabis-delivery-hillcrest-brampton" className={`${styles.btn} ${styles.btnSecondary}`}>
                 Hillcrest delivery
+              </Link>
+              <Link href="/native-cigarettes-hillcrest-brampton" className={`${styles.btn} ${styles.btnSecondary}`}>
+                Hillcrest native cigarettes
+              </Link>
+              <Link href="/nicotine-vape-kennedy-brampton" className={`${styles.btn} ${styles.btnSecondary}`}>
+                Kennedy nicotine vape
               </Link>
             </div>
             <div className={styles.napGrid}>

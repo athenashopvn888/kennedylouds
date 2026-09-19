@@ -102,7 +102,11 @@ export default function FAQPage() {
             Kennedy weed hub, see the{" "}
             <Link href="/weed-dispensary-brampton/">central Brampton weed dispensary</Link>. For dispatcher delivery
             from Unit 104, see{" "}
-            <Link href="/cannabis-delivery-hillcrest-brampton">Hillcrest / Kennedy cannabis delivery</Link>. Flower collections:{" "}
+            <Link href="/cannabis-delivery-hillcrest-brampton">Hillcrest / Kennedy cannabis delivery</Link>. For native
+            cigarettes at Unit 104, see{" "}
+            <Link href="/native-cigarettes-hillcrest-brampton">Hillcrest / Kennedy native cigarettes</Link>. For
+            nicotine vape, see{" "}
+            <Link href="/nicotine-vape-kennedy-brampton">Kennedy / Hillcrest nicotine vape</Link>. Flower collections:{" "}
             <Link href="/exotic-weed">Exotic</Link>,{" "}
             <Link href="/premium-weed">Premium</Link>,{" "}
             <Link href="/aaa-weed">AAA+</Link>,{" "}

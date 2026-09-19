@@ -72,6 +72,8 @@ export const gbpLocation = {
     { href: "/24-hour-dispensary-brampton", label: "24-hour / open-now FAQ" },
     { href: "/cannabis-store-brampton", label: "Central Brampton cannabis store" },
     { href: "/cannabis-delivery-hillcrest-brampton", label: "Hillcrest / Kennedy delivery" },
+    { href: "/native-cigarettes-hillcrest-brampton", label: "Hillcrest native cigarettes" },
+    { href: "/nicotine-vape-kennedy-brampton", label: "Kennedy nicotine vape" },
     { href: "/resources/hillcrest-ave-visit-guide", label: "Hillcrest Ave visit guide" },
     { href: "/resources/local-guides/queen-street-to-hillcrest-brampton", label: "Queen Street to Hillcrest" },
     { href: "/resources/local-guides/main-street-brampton-to-kennedy-loud", label: "Main Street to Unit 104" },

@@ -16,8 +16,8 @@ const footer = await readFile(new URL("../app/components/Footer.tsx", import.met
 const sitemap = await readFile(new URL("../app/sitemap.ts", import.meta.url), "utf8");
 const faqPage = await readFile(new URL("../app/faq/page.tsx", import.meta.url), "utf8");
 
-const TITLE = "24-Hour Dispensary Brampton FAQ | Open Now";
-const H1 = "24-Hour / Open-Now Brampton Dispensary FAQ (Kennedy Loud)";
+const TITLE = "24-Hour Hillcrest Dispensary FAQ | Open Now";
+const H1 = "24-Hour / Open-Now Hillcrest / Kennedy Dispensary FAQ";
 const VISIT_TITLE = "How to Find Kennedy Loud at 49 Hillcrest Ave Unit 104";
 const VISIT_H1 = "How to Find Kennedy Loud at 49 Hillcrest Ave Unit 104 (Central Brampton Walk-In)";
 

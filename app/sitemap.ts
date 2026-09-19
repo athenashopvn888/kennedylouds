@@ -15,6 +15,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/cannabis-store-brampton`, lastModified: now, changeFrequency: "weekly", priority: 0.9 },
     { url: `${BASE}/weed-dispensary-brampton/`, lastModified: now, changeFrequency: "weekly", priority: 0.9 },
     { url: `${BASE}/cannabis-delivery-hillcrest-brampton`, lastModified: now, changeFrequency: "weekly", priority: 0.9 },
+    { url: `${BASE}/native-cigarettes-hillcrest-brampton`, lastModified: now, changeFrequency: "weekly", priority: 0.9 },
+    { url: `${BASE}/nicotine-vape-kennedy-brampton`, lastModified: now, changeFrequency: "weekly", priority: 0.9 },
     { url: `${BASE}/weed-dispensary-brampton-kennedy`, lastModified: now, changeFrequency: "weekly", priority: 0.9 },
     { url: `${BASE}/resources/local-guides/brampton-go-kennedy-loud`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
     { url: `${BASE}/resources/local-guides/zum-kennedy-dispensary`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },

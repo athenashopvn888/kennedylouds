@@ -139,6 +139,18 @@ export default async function SeoLandingPage({
             </div>
           )}
           {heroPreview?.warning && <p className={styles.nicotineWarning}>{heroPreview.warning}</p>}
+          {slug === "native-cigarettes-brampton" ? (
+            <p className={styles.sectionBody}>
+              For the Hillcrest / Kennedy neighbourhood pin, use{" "}
+              <Link href="/native-cigarettes-hillcrest-brampton">Hillcrest native cigarettes</Link>.
+            </p>
+          ) : null}
+          {slug === "nicotine-vapes-brampton" ? (
+            <p className={styles.sectionBody}>
+              For the Kennedy / Hillcrest neighbourhood pin, use{" "}
+              <Link href="/nicotine-vape-kennedy-brampton">Kennedy nicotine vape</Link>.
+            </p>
+          ) : null}
         </div>
       </section>
 
