@@ -35,6 +35,9 @@ const sitemap = await readFile(new URL("../app/sitemap.ts", import.meta.url), "u
 const hubModule = await readFile(new URL("../app/lib/sccParityHub.ts", import.meta.url), "utf8");
 const nextConfig = await readFile(new URL("../next.config.ts", import.meta.url), "utf8");
 const itemsCategory = await readFile(new URL("../app/items/[category]/page.tsx", import.meta.url), "utf8");
+const resourceData = await readFile(new URL("../app/resources/resourceData.ts", import.meta.url), "utf8");
+const kennedy = await readFile(new URL("../app/weed-dispensary-brampton-kennedy/page.tsx", import.meta.url), "utf8");
+const infoPage = await readFile(new URL("../app/info/[seoPage]/page.tsx", import.meta.url), "utf8");
 
 const CIG_PATH = "/native-cigarettes-hillcrest-brampton";
 const CIG_TITLE = "Hillcrest Native Cigarettes | Kennedy Loud";
@@ -174,4 +177,42 @@ test("Wave 3 stays Hillcrest/Kennedy only: no pouches/grabba LPs, sister, Ottawa
   assert.doesNotMatch(openNowLib, /h1: ".*Queen Street West/);
   assert.doesNotMatch(cigPage, /GBP Website\s*=\s*\//i);
   assert.doesNotMatch(vapePage, /also visit our other|our other location/i);
+});
+
+test("Master GO: four Hillcrest pillars, FAQ on each LP, hub cards, Updates stay homepage", () => {
+  const pillars = [
+    "/24-hour-dispensary-brampton",
+    "/cannabis-delivery-hillcrest-brampton",
+    "/native-cigarettes-hillcrest-brampton",
+    "/nicotine-vape-kennedy-brampton",
+  ];
+  for (const href of pillars) {
+    assert.ok(VISIT_HUB_LINKS.some((link) => link.href === href), `hub missing ${href}`);
+    assert.match(homeClient, new RegExp(`href: "${href.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}"`));
+    assert.match(homeClient, new RegExp(`href="${href.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}"`));
+  }
+
+  assert.match(deliveryPage, /"@type": "FAQPage"/);
+  assert.match(openNowPage, /"@type": "FAQPage"/);
+  assert.match(cigPage, /"@type": "FAQPage"/);
+  assert.match(vapePage, /"@type": "FAQPage"/);
+  assert.match(deliveryLib, /HILLCREST_DELIVERY_FAQS/);
+  assert.match(openNowLib, /OPEN_NOW_FAQS/);
+  assert.match(cigLib, /HILLCREST_NATIVE_CIGARETTES_FAQS/);
+  assert.match(vapeLib, /KENNEDY_NICOTINE_VAPE_FAQS/);
+
+  assert.match(deliveryLib, /liveOrderHref: "\/delivery\?liveOrder=1"/);
+  assert.equal(NAP.website, "https://kennedyloudcannabis.com/");
+  assert.equal(gbpLocation.websiteUrl, "https://kennedyloudcannabis.com/");
+  assert.match(openNowPage, /does not replace the homepage as the Google Business Profile website/);
+  assert.doesNotMatch(PUBLIC_COPY, /LEARN_MORE/);
+  assert.doesNotMatch(cigLib, /flowers\.json|items\.json|adcInventory|APPS_SCRIPT_URL/);
+  assert.doesNotMatch(vapeLib, /flowers\.json|items\.json|adcInventory|APPS_SCRIPT_URL/);
+
+  assert.match(resourceData, /href: "\/native-cigarettes-hillcrest-brampton"/);
+  assert.match(resourceData, /href: "\/nicotine-vape-kennedy-brampton"/);
+  assert.match(infoPage, /\/native-cigarettes-hillcrest-brampton/);
+  assert.match(infoPage, /\/nicotine-vape-kennedy-brampton/);
+  assert.match(kennedy, /\/native-cigarettes-hillcrest-brampton/);
+  assert.equal(existsSync(path.resolve(import.meta.dirname, "../app/native-cigarettes-hillcrest-brampton-guide")), false);
 });

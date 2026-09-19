@@ -35,6 +35,8 @@ export default function Page() {
         { href: "/cannabis-store-brampton", label: "Central Brampton cannabis store" },
         { href: "/weed-dispensary-brampton/", label: "Hillcrest / Kennedy weed dispensary" },
         { href: "/cannabis-delivery-hillcrest-brampton", label: "Hillcrest / Kennedy delivery" },
+        { href: "/native-cigarettes-hillcrest-brampton", label: "Hillcrest / Kennedy native cigarettes" },
+        { href: "/nicotine-vape-kennedy-brampton", label: "Kennedy / Hillcrest nicotine vape" },
         { href: "/exotic-weed", label: "Exotic Weed" },
         { href: "/premium-weed", label: "Premium Weed" },
         { href: "/aaa-weed", label: "AAA+ Weed" },

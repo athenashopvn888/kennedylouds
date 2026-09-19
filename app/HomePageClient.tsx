@@ -282,6 +282,12 @@ export default function HomePageClient() {
             <Link href="/cannabis-delivery-hillcrest-brampton" className={styles.localVisitSecondary}>
               Hillcrest delivery
             </Link>
+            <Link href="/native-cigarettes-hillcrest-brampton" className={styles.localVisitSecondary}>
+              Hillcrest native cigarettes
+            </Link>
+            <Link href="/nicotine-vape-kennedy-brampton" className={styles.localVisitSecondary}>
+              Kennedy nicotine vape
+            </Link>
           </div>
         </div>
       </section>
