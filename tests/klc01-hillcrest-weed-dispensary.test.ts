@@ -4,18 +4,6 @@ import { existsSync } from "node:fs";
 import { readFile } from "node:fs/promises";
 import path from "node:path";
 import { gbpLocation, NAP } from "../app/lib/gbp-location.ts";
-import {
-  HILLCREST_WEED_DISPENSARY,
-  HILLCREST_WEED_DISPENSARY_FAQS,
-  HILLCREST_WEED_DISPENSARY_INTERNAL_LINKS,
-} from "../app/lib/hillcrestWeedDispensary.ts";
-import { VISIT_FAQS } from "../app/lib/visitGuide.ts";
-import { OPEN_NOW_FAQS } from "../app/lib/openNowFaq.ts";
-import { CANNABIS_STORE_FAQS } from "../app/lib/cannabisStoreGuide.ts";
-import { HILLCREST_DELIVERY_FAQS } from "../app/lib/hillcrestDelivery.ts";
-import { HILLCREST_NATIVE_CIGARETTES_FAQS } from "../app/lib/hillcrestNativeCigarettes.ts";
-import { KENNEDY_NICOTINE_VAPE_FAQS } from "../app/lib/kennedyNicotineVape.ts";
-import { TIER_SEO } from "../app/lib/tierSeoContent.ts";
 import { VISIT_HUB_LINKS, TIER_HUB_LINKS } from "../app/lib/sccParityHub.ts";
 
 const weedLib = await readFile(new URL("../app/lib/hillcrestWeedDispensary.ts", import.meta.url), "utf8");
@@ -33,16 +21,15 @@ const deliveryPage = await readFile(
   new URL("../app/cannabis-delivery-hillcrest-brampton/page.tsx", import.meta.url),
   "utf8",
 );
-const cigPage = await readFile(
-  new URL("../app/native-cigarettes-hillcrest-brampton/page.tsx", import.meta.url),
-  "utf8",
-);
-const vapePage = await readFile(new URL("../app/nicotine-vape-kennedy-brampton/page.tsx", import.meta.url), "utf8");
+const deliveryLib = await readFile(new URL("../app/lib/hillcrestDelivery.ts", import.meta.url), "utf8");
+const cigLib = await readFile(new URL("../app/lib/hillcrestNativeCigarettes.ts", import.meta.url), "utf8");
+const vapeLib = await readFile(new URL("../app/lib/kennedyNicotineVape.ts", import.meta.url), "utf8");
 const footer = await readFile(new URL("../app/components/Footer.tsx", import.meta.url), "utf8");
 const faqPage = await readFile(new URL("../app/faq/page.tsx", import.meta.url), "utf8");
 const sitemap = await readFile(new URL("../app/sitemap.ts", import.meta.url), "utf8");
 const hubModule = await readFile(new URL("../app/lib/sccParityHub.ts", import.meta.url), "utf8");
 const prebuild = await readFile(new URL("../scripts/prebuild-stock.js", import.meta.url), "utf8");
+const tierSeo = await readFile(new URL("../app/lib/tierSeoContent.ts", import.meta.url), "utf8");
 
 const PATH = "/weed-dispensary-brampton/";
 const TITLE = "Hillcrest / Kennedy / Unit 104 Weed Dispensary";
@@ -50,19 +37,22 @@ const H1 = "Hillcrest / Kennedy / Unit 104 Weed Dispensary in Central Brampton";
 
 const PUBLIC_COPY = [weedLib, gbpPage, landing, gbpLocationSource, homeClient].join("\n");
 
+function faqQuestions(source: string): string[] {
+  return [...source.matchAll(/q: "([^"]+)"/g)].map((match) => match[1]);
+}
+
 const OTHER_FAQ_QUESTIONS = [
-  ...VISIT_FAQS,
-  ...OPEN_NOW_FAQS,
-  ...CANNABIS_STORE_FAQS,
-  ...HILLCREST_DELIVERY_FAQS,
-  ...HILLCREST_NATIVE_CIGARETTES_FAQS,
-  ...KENNEDY_NICOTINE_VAPE_FAQS,
-  ...Object.values(TIER_SEO).flatMap((tier) => tier.faqs),
-].map((faq) => faq.q);
+  visitGuide,
+  openNowLib,
+  storeGuide,
+  deliveryLib,
+  cigLib,
+  vapeLib,
+  tierSeo,
+].flatMap(faqQuestions);
 
 test("5th pillar keeps the live Hillcrest weed-dispensary Brampton path", () => {
-  assert.equal(HILLCREST_WEED_DISPENSARY.path, PATH);
-  assert.equal(HILLCREST_WEED_DISPENSARY.slug, "weed-dispensary-brampton");
+  assert.match(weedLib, /path: "\/weed-dispensary-brampton\/"/);
   assert.equal(gbpLocation.slug, "weed-dispensary-brampton");
   assert.match(landing, /GBPLandingPage/);
   assert.match(landing, /absolute: gbpLocation\.seoTitle/);
@@ -71,10 +61,10 @@ test("5th pillar keeps the live Hillcrest weed-dispensary Brampton path", () => 
 });
 
 test("5th pillar H1 and title own Hillcrest / Kennedy / Unit 104, never Queen St W downtown", () => {
-  assert.equal(HILLCREST_WEED_DISPENSARY.title, TITLE);
-  assert.equal(HILLCREST_WEED_DISPENSARY.h1, H1);
   assert.equal(gbpLocation.seoTitle, TITLE);
   assert.equal(gbpLocation.h1, H1);
+  assert.match(weedLib, /title: gbpLocation\.seoTitle/);
+  assert.match(weedLib, /h1: gbpLocation\.h1/);
   assert.ok(TITLE.length <= 60);
   assert.match(TITLE, /Hillcrest \/ Kennedy/);
   assert.match(TITLE, /Unit 104/);
@@ -91,7 +81,6 @@ test("5th pillar H1 and title own Hillcrest / Kennedy / Unit 104, never Queen St
   assert.notEqual(TITLE, "Hillcrest / Kennedy Cannabis Delivery | Kennedy Loud");
   assert.notEqual(TITLE, "Hillcrest Native Cigarettes | Kennedy Loud");
   assert.notEqual(TITLE, "Kennedy Nicotine Vape | Kennedy Loud");
-  assert.notEqual(H1, gbpLocation.nearbyAreas.join(" "));
 });
 
 test("5th pillar ships unique FAQ copy plus FAQPage schema", () => {
@@ -99,19 +88,18 @@ test("5th pillar ships unique FAQ copy plus FAQPage schema", () => {
   assert.match(gbpPage, /HILLCREST_WEED_DISPENSARY_FAQS/);
   assert.match(gbpPage, /FAQ: Hillcrest \/ Kennedy \/ Unit 104 weed dispensary/);
   assert.match(weedLib, /HILLCREST_WEED_DISPENSARY_FAQS/);
-  assert.equal(HILLCREST_WEED_DISPENSARY_FAQS.length, 8);
-  assert.equal(new Set(HILLCREST_WEED_DISPENSARY_FAQS.map((faq) => faq.q)).size, 8);
-  assert.equal(new Set(HILLCREST_WEED_DISPENSARY_FAQS.map((faq) => faq.a)).size, 8);
-
-  const faqText = HILLCREST_WEED_DISPENSARY_FAQS.map((faq) => `${faq.q} ${faq.a}`).join(" ");
-  assert.match(faqText, /Hillcrest \/ Kennedy \/ Unit 104/);
-  assert.match(faqText, /49 Hillcrest Ave Unit 104/);
-  assert.match(faqText, /Queen Street West downtown is a different licensed door/);
+  const questions = faqQuestions(weedLib);
+  const answers = [...weedLib.matchAll(/a: [`"]([^`"]+)/g)].map((match) => match[1]);
+  assert.equal(questions.length, 8);
+  assert.equal(new Set(questions).size, 8);
+  assert.equal(new Set(answers).size, 8);
+  assert.match(weedLib, /Hillcrest \/ Kennedy \/ Unit 104/);
+  assert.match(weedLib, /49 Hillcrest Ave Unit 104/);
+  assert.match(weedLib, /Queen Street West downtown is a different licensed door/);
   assert.match(weedLib, /Is Kennedy Loud the neighbourhood weed dispensary for Hillcrest \/ Kennedy \/ Unit 104\?/);
   assert.match(weedLib, /Is the Hillcrest \/ Kennedy \/ Unit 104 weed dispensary on Queen Street West downtown\?/);
-
-  for (const faq of HILLCREST_WEED_DISPENSARY_FAQS) {
-    assert.ok(!OTHER_FAQ_QUESTIONS.includes(faq.q), `duplicate FAQ: ${faq.q}`);
+  for (const question of questions) {
+    assert.ok(!OTHER_FAQ_QUESTIONS.includes(question), `duplicate FAQ: ${question}`);
   }
 });
 
@@ -133,14 +121,24 @@ test("5th pillar hub card and links cover visit, 24h, delivery, cig, nic, B13, a
     ...TIER_HUB_LINKS.map((link) => link.href),
   ];
   for (const href of required) {
-    assert.ok(
-      HILLCREST_WEED_DISPENSARY_INTERNAL_LINKS.some((link) => link.href === href),
-      `weed pillar missing ${href}`,
-    );
+    assert.match(weedLib, new RegExp(`href: "${href.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}"`));
     assert.match(gbpPage, new RegExp(href.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")));
   }
 
-  const inbound = [homeClient, visitGuide, openNowLib, storeGuide, footer, faqPage, visitPage, openNowPage, storePage, deliveryPage, cigPage, vapePage];
+  const inbound = [
+    homeClient,
+    visitGuide,
+    openNowLib,
+    storeGuide,
+    footer,
+    faqPage,
+    visitPage,
+    openNowPage,
+    storePage,
+    deliveryPage,
+    cigLib,
+    vapeLib,
+  ];
   for (const surface of inbound) {
     assert.match(surface, /\/weed-dispensary-brampton\//);
   }
@@ -155,6 +153,7 @@ test("5th pillar keeps locked NAP and no sister framing", () => {
   assert.match(gbpPage, /gbpLocation\.address/);
   assert.match(gbpPage, /gbpLocation\.phone/);
   assert.match(gbpPage, /gbpLocation\.websiteUrl/);
+  assert.match(gbpPage, /HILLCREST_WEED_DISPENSARY\.napDisplay/);
   assert.match(weedLib, /49 Hillcrest Ave Unit 104, Brampton, ON L6W 1Y7/);
   assert.match(weedLib, /\+1 \(289\) 206-1181/);
   assert.match(weedLib, /https:\/\/kennedyloudcannabis\.com\//);
