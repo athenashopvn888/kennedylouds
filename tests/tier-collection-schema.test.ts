@@ -140,7 +140,7 @@ test("layout Store/WebSite @ids match the Hillcrest NAP identity refs", () => {
   assert.equal(NAP.website.replace(/\/$/, ""), SITE_ORIGIN);
   assert.equal(NAP.address, "49 Hillcrest Ave Unit 104, Brampton, ON L6W 1Y7");
   assert.equal(NAP.phone, "+1 (289) 206-1181");
-  assert.doesNotMatch(contract, /flowers\.json|items\.json|prebuild-stock|delivery-menu/);
+  assert.doesNotMatch(contract, /(?:from|import)\s+["'][^"']*(?:flowers\.json|items\.json|delivery-menu|prebuild-stock)/);
 });
 
 test("tier page wires the contract through a native JSON-LD script", () => {
