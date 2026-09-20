@@ -1,53 +1,15 @@
 import Link from "next/link";
 import styles from "./GBPLandingPage.module.css";
 import { categoryLinks, gbpLocation } from "../lib/gbp-location";
+import {
+  HILLCREST_WEED_DISPENSARY,
+  HILLCREST_WEED_DISPENSARY_FAQS,
+  HILLCREST_WEED_DISPENSARY_INTERNAL_LINKS,
+} from "../lib/hillcrestWeedDispensary";
 import { TIER_HUB_LINKS } from "../lib/sccParityHub";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import { ParityHubNav } from "./ParityHubNav";
-
-const LOCAL_FAQS = [
-  {
-    q: `Where is ${gbpLocation.storeName} located?`,
-    a: `${gbpLocation.storeName} is at ${gbpLocation.address}.`,
-  },
-  {
-    q: `Is ${gbpLocation.storeName} a weed dispensary in ${gbpLocation.city}?`,
-    a: `Yes. ${gbpLocation.storeName} is a walk-in weed dispensary in ${gbpLocation.city} for adults 19+ with valid government photo ID.`,
-  },
-  {
-    q: `What are the hours at ${gbpLocation.storeName}?`,
-    a: `${gbpLocation.storeName} is Open 24 Hours. Walk in anytime — no appointment needed.`,
-  },
-  {
-    q: `What menu categories does ${gbpLocation.storeName} show?`,
-    a: "The site organizes flower tiers, pre-rolls, edibles, THC vapes, concentrates, Nic Vape, cigarettes, and accessories. Confirm current product details before visiting.",
-  },
-  {
-    q: `How should I plan a visit to ${gbpLocation.storeName}?`,
-    a: "Confirm the Hillcrest Ave address, Open 24 Hours hours, and phone number on this page. Then use the category links to review the current menu before you travel.",
-  },
-  {
-    q: `Do I need to be 19+ to shop at ${gbpLocation.storeName}?`,
-    a: "Yes. You must be at least 19 years of age. Valid government-issued photo ID is required.",
-  },
-  {
-    q: `Is ${gbpLocation.storeName} near ${gbpLocation.neighborhood}?`,
-    a: `Yes. ${gbpLocation.storeName} is at 49 Hillcrest Ave Unit 104, near Kennedy Road, with useful routes from Downtown Brampton, Queen Street, Main Street, and Bramalea.`,
-  },
-  {
-    q: `Is ${gbpLocation.storeName} the Queen Street West downtown dispensary?`,
-    a: `No. ${gbpLocation.storeName} is the Hillcrest Ave / Kennedy Road walk-in at ${gbpLocation.address}. Queen Street West downtown is a different licensed door. Keep this hub for Unit 104.`,
-  },
-  {
-    q: `Which flower tiers can I browse before visiting Hillcrest?`,
-    a: "Exotic Weed, Premium Weed, AAA+ Weed, AA Weed, and Budget Weed. Start on this Hillcrest / Kennedy hub, then open one collection.",
-  },
-  {
-    q: `Does ${gbpLocation.storeName} deliver cannabis around Hillcrest / Kennedy?`,
-    a: "Yes. Delivery from 49 Hillcrest Ave Unit 104 is confirmed by the dispatcher and is not listed as 24/7. The Unit 104 walk-in remains Open 24 Hours. Use the Hillcrest / Kennedy cannabis delivery page to order.",
-  },
-];
 
 export function GBPLandingPage() {
   const nearbyAreaList = gbpLocation.nearbyAreas.slice(0, 5).join(", ");
@@ -88,7 +50,7 @@ export function GBPLandingPage() {
   const faqJsonLd = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    mainEntity: LOCAL_FAQS.map((faq) => ({
+    mainEntity: HILLCREST_WEED_DISPENSARY_FAQS.map((faq) => ({
       "@type": "Question",
       name: faq.q,
       acceptedAnswer: { "@type": "Answer", text: faq.a },
@@ -105,8 +67,8 @@ export function GBPLandingPage() {
       <main className={styles.page}>
         <div className={styles.container}>
           <header className={styles.hero}>
-            <p className={styles.eyebrow}>Kennedy Loud Cannabis · Adults 19+</p>
-            <h1 className={styles.h1}>{gbpLocation.h1}</h1>
+            <p className={styles.eyebrow}>{HILLCREST_WEED_DISPENSARY.eyebrow}</p>
+            <h1 className={styles.h1}>{HILLCREST_WEED_DISPENSARY.h1}</h1>
             <p className={styles.heroTagline}>{gbpLocation.address}</p>
             <p className={styles.heroHours}>{gbpLocation.hours[0]} · Walk-in · No appointment</p>
             <p className={styles.heroPhone}>
@@ -139,10 +101,12 @@ export function GBPLandingPage() {
           </div>
 
           <section className={styles.section}>
-            <h2 className={styles.h2}>Local Weed Dispensary on Hillcrest Ave / Kennedy Road</h2>
+            <h2 className={styles.h2}>Neighbourhood weed dispensary: Hillcrest / Kennedy / Unit 104</h2>
             <p className={styles.introText}>{gbpLocation.introVariant}</p>
             <p className={styles.infoText}>
-              Shoppers around {nearbyAreaList} can use this page to confirm the door, then jump to a menu category before they pull up.
+              This is the Hillcrest Ave / Kennedy Road weed hub at Unit 104 — not a Queen Street West downtown
+              door. Shoppers around {nearbyAreaList} can confirm the pin here, then open visit, 24-hour, delivery,
+              cigarette, nicotine, corridor, or flower-tier pages.
             </p>
           </section>
 
@@ -190,7 +154,11 @@ export function GBPLandingPage() {
               <Link href="/cannabis-delivery-hillcrest-brampton">Hillcrest cannabis delivery</Link>. For native
               cigarettes and nicotine vape at this same Hillcrest / Kennedy counter, use{" "}
               <Link href="/native-cigarettes-hillcrest-brampton">Hillcrest native cigarettes</Link> and{" "}
-              <Link href="/nicotine-vape-kennedy-brampton">Kennedy nicotine vape</Link>.
+              <Link href="/nicotine-vape-kennedy-brampton">Kennedy nicotine vape</Link>. Flower collections stay
+              on{" "}
+              <Link href="/exotic-weed">Exotic</Link>, <Link href="/premium-weed">Premium</Link>,{" "}
+              <Link href="/aaa-weed">AAA+</Link>, <Link href="/aa-weed">AA</Link>, and{" "}
+              <Link href="/budget-weed">Budget</Link> — they do not replace this neighbourhood weed hub.
             </p>
             <div className={styles.btnRow}>
               <Link href={gbpLocation.menuUrl} className={`${styles.btn} ${styles.btnPrimary}`}>
@@ -215,7 +183,7 @@ export function GBPLandingPage() {
                 Kennedy nicotine vape
               </Link>
               <Link href="#faq" className={`${styles.btn} ${styles.btnSecondary}`}>
-                Read Visit FAQs
+                Read weed-dispensary FAQs
               </Link>
             </div>
           </section>
@@ -254,6 +222,9 @@ export function GBPLandingPage() {
                     <span key={line} style={{ fontSize: "0.95rem" }}>{line}</span>
                   ))}
                 </div>
+                <p className={styles.infoBlock} style={{ fontSize: "0.9rem", margin: "10px 0 0" }}>
+                  {HILLCREST_WEED_DISPENSARY.napDisplay}
+                </p>
                 <p className={styles.infoBlock} style={{ fontSize: "0.9rem", fontStyle: "italic", margin: "10px 0 0" }}>
                   {gbpLocation.parkingNote}.
                 </p>
@@ -289,6 +260,13 @@ export function GBPLandingPage() {
               ))}
             </div>
             <div className={styles.guideList}>
+              {HILLCREST_WEED_DISPENSARY_INTERNAL_LINKS.map((link) => (
+                <Link key={link.href} href={link.href} className={styles.guideLink}>
+                  {link.label}
+                </Link>
+              ))}
+            </div>
+            <div className={styles.guideList}>
               {gbpLocation.localGuides.map((guide) => (
                 <Link key={guide.href} href={guide.href} className={styles.guideLink}>
                   {guide.label}
@@ -299,9 +277,9 @@ export function GBPLandingPage() {
           </section>
 
           <section id="faq" className={styles.section}>
-            <h2 className={styles.h2}>Frequently Asked Questions</h2>
+            <h2 className={styles.h2}>FAQ: Hillcrest / Kennedy / Unit 104 weed dispensary</h2>
             <div className={styles.faqList}>
-              {LOCAL_FAQS.map((faq) => (
+              {HILLCREST_WEED_DISPENSARY_FAQS.map((faq) => (
                 <div key={faq.q} className={styles.faqItem}>
                   <h3 className={styles.faqQuestion}>{faq.q}</h3>
                   <p className={styles.faqAnswer}>{faq.a}</p>

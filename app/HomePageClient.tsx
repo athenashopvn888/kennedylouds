@@ -91,8 +91,8 @@ const RESOURCE_LINKS = [
   {
     href: "/weed-dispensary-brampton/",
     label: "Hillcrest / Kennedy",
-    title: "Hillcrest / Kennedy weed dispensary",
-    body: "Address, Open 24 Hours hours, phone, and Unit 104 visit notes — not a Queen Street West downtown door.",
+    title: "Hillcrest / Kennedy / Unit 104 weed dispensary",
+    body: "Neighbourhood weed hub at 49 Hillcrest Ave Unit 104 — Hillcrest / Kennedy only, not Queen Street West downtown.",
   },
   {
     href: "/cannabis-delivery-hillcrest-brampton",
