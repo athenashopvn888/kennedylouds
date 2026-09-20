@@ -53,9 +53,11 @@ test("locked NAP stays Hillcrest Unit 104", () => {
   assert.equal(NAP.hours, "Open 24 Hours");
 });
 
-test("weed LP H1 and title own Hillcrest / Kennedy / central, not Queen St W downtown", () => {
+test("weed LP H1 and title own Hillcrest / Kennedy / Unit 104, not Queen St W downtown", () => {
   assert.match(gbpLocation.seoTitle, /Hillcrest \/ Kennedy/);
+  assert.match(gbpLocation.seoTitle, /Unit 104/);
   assert.match(gbpLocation.h1, /Hillcrest \/ Kennedy/);
+  assert.match(gbpLocation.h1, /Unit 104/);
   assert.match(gbpLocation.h1, /Central Brampton/);
   assert.ok(gbpLocation.seoTitle.length <= 60);
   assert.match(gbpLocation.introVariant, /not a Queen Street West downtown door/);
