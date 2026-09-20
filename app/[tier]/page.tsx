@@ -11,6 +11,7 @@ import {
 } from "../lib/products";
 import { TIER_COMPARE, TIER_SEO } from "../lib/tierSeoContent";
 import { buildTierCollectionJsonLd } from "../lib/tierStructuredData";
+import { SITE_ORIGIN, serializeJsonLd } from "../lib/collectionPageSchema";
 import seoContent from "../lib/seoContent.generated.json";
 import { ParityHubNav } from "../components/ParityHubNav";
 import styles from "./tier.module.css";
@@ -35,12 +36,12 @@ export async function generateMetadata({
     title: seo ? { absolute: seo.seoTitle } : `${tierInfo.config.name} Cannabis Flower — ${flowers.length} Strains`,
     description: seo?.metaDescription || `Browse the ${tierInfo.config.name.toLowerCase()} flower tier at Kennedy Loud Cannabis.`,
     alternates: {
-      canonical: `https://kennedyloudcannabis.com/${tierSlug}`,
+      canonical: `${SITE_ORIGIN}/${tierSlug}`,
     },
     openGraph: {
       title: seo?.socialTitle || `${tierInfo.config.name} Flower | Kennedy Loud Cannabis`,
       description: seo?.socialDescription || `Browse the ${tierInfo.config.name.toLowerCase()} flower tier at Kennedy Loud Cannabis.`,
-      url: `https://kennedyloudcannabis.com/${tierSlug}`,
+      url: `${SITE_ORIGIN}/${tierSlug}`,
     },
     twitter: {
       card: "summary_large_image",
@@ -79,7 +80,7 @@ export default async function TierPage({
 
   return (
     <>
-    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(tierJsonLd) }} />
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeJsonLd(tierJsonLd) }} />
     <main className={styles.main}>
       <Navbar />
 
