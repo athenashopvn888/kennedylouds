@@ -51,7 +51,7 @@
   width: min(100%, 1180px);
   margin: 0 auto;
   display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
+  grid-template-columns: minmax(280px, 0.7fr) minmax(0, 1.3fr);
   gap: 16px;
   align-items: center;
   padding: 18px 20px;
@@ -59,6 +59,10 @@
   background: #0b1208;
   border: 1px solid rgba(157, 255, 32, 0.28);
   box-shadow: 0 12px 32px rgba(0, 0, 0, 0.28);
+}
+
+.localVisitInner > * {
+  min-width: 0;
 }
 
 .localVisitEyebrow {
@@ -95,6 +99,8 @@
 .localVisitActions {
   display: flex;
   flex-wrap: wrap;
+  justify-content: flex-end;
+  min-width: 0;
   gap: 8px;
 }
 
@@ -124,7 +130,7 @@
   border: 1px solid rgba(157, 255, 32, 0.4);
 }
 
-@media (max-width: 760px) {
+@media (max-width: 900px) {
   .localVisitStrip {
     padding: 106px 14px 8px;
   }
@@ -133,9 +139,13 @@
     grid-template-columns: 1fr;
   }
 
+  .localVisitActions {
+    justify-content: flex-start;
+  }
+
   .localVisitPrimary,
   .localVisitSecondary {
-    flex: 1;
+    flex: 1 1 180px;
   }
 }
 
