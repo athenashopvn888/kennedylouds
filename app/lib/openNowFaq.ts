@@ -3,12 +3,14 @@ import { NAP } from "./gbp-location";
 export const OPEN_NOW_FAQ = {
   path: "/24-hour-dispensary-brampton",
   canonical: `${NAP.website.replace(/\/$/, "")}/24-hour-dispensary-brampton`,
-  title: "24-Hour Dispensary Brampton FAQ | Open Now",
-  h1: "24-Hour / Open-Now Brampton Dispensary FAQ (Kennedy Loud)",
+  title: "24-Hour Hillcrest Dispensary FAQ | Open Now",
+  h1: "24-Hour / Open-Now Hillcrest / Kennedy Dispensary FAQ",
   metaDescription:
-    "24 hour dispensary Brampton at 49 Hillcrest Ave Unit 104. Open 24 Hours, open now walk-in. Call +1 (289) 206-1181. Adults 19+.",
-  eyebrow: "Open now · Adults 19+ · Walk-in",
+    "24 hour dispensary Brampton at 49 Hillcrest Ave Unit 104, Hillcrest / Kennedy. Open 24 Hours walk-in. Call +1 (289) 206-1181. Adults 19+.",
+  eyebrow: "Hillcrest / Kennedy · Open 24 Hours · Adults 19+",
   primaryKeyword: "24 hour dispensary brampton",
+  hillcrestAlias: "/24-hour-hillcrest-brampton-dispensary",
+  hours: NAP.hours,
 } as const;
 
 export const OPEN_NOW_FAQS = [
@@ -36,6 +38,18 @@ export const OPEN_NOW_FAQS = [
     q: "Do I need an appointment for a 24 hour dispensary Brampton visit?",
     a: "No appointment is required. Walk in with valid government-issued photo ID. Kennedy Loud serves adults 19 and older.",
   },
+  {
+    q: "Is the 24-hour Hillcrest / Kennedy dispensary on Queen Street West?",
+    a: `No. The listed ${NAP.hours} walk-in is Kennedy Loud Cannabis at ${NAP.address}. Queen Street West downtown is a different licensed door. Keep this FAQ for Unit 104.`,
+  },
+  {
+    q: "Does Open 24 Hours include Hillcrest cannabis delivery?",
+    a: `${NAP.hours} describes the Unit 104 door. Cannabis delivery from Hillcrest / Kennedy is a separate channel. The dispatcher confirms delivery hours before an order is accepted — delivery is not listed as 24/7.`,
+  },
+  {
+    q: "Can I buy native cigarettes or nicotine vape at the 24-hour Hillcrest counter?",
+    a: `The walk-in at ${NAP.address} lists ${NAP.hours}. Native cigarettes and nicotine vape are sold categories at this Hillcrest / Kennedy counter. Open now describes the door, not a guarantee that one named cigarette or vape is on the shelf at that minute.`,
+  },
 ] as const;
 
 export const OPEN_NOW_INTERNAL_LINKS = [
@@ -49,4 +63,6 @@ export const OPEN_NOW_INTERNAL_LINKS = [
   { href: "/aa-weed", label: "AA Weed" },
   { href: "/budget-weed", label: "Budget Weed" },
   { href: "/cannabis-delivery-hillcrest-brampton", label: "Hillcrest / Kennedy delivery" },
+  { href: "/native-cigarettes-hillcrest-brampton", label: "Hillcrest / Kennedy native cigarettes" },
+  { href: "/nicotine-vape-kennedy-brampton", label: "Kennedy / Hillcrest nicotine vape" },
 ] as const;

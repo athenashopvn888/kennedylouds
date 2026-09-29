@@ -53,10 +53,10 @@ export const gbpLocation = {
   latitude: "43.6940006",
   longitude: "-79.7477885",
   hours: [NAP.hours],
-  seoTitle: "Hillcrest / Kennedy Weed Dispensary | Open 24 Hours",
+  seoTitle: "Hillcrest / Kennedy / Unit 104 Weed Dispensary",
   metaDescription:
-    "Walk-in Hillcrest / Kennedy weed dispensary at 49 Hillcrest Ave Unit 104, central Brampton. Open 24 hours. Call +1 (289) 206-1181. Adults 19+.",
-  h1: "Hillcrest / Kennedy Weed Dispensary in Central Brampton",
+    "Hillcrest / Kennedy / Unit 104 weed dispensary at 49 Hillcrest Ave Unit 104, central Brampton. Open 24 hours. Call +1 (289) 206-1181. Adults 19+.",
+  h1: "Hillcrest / Kennedy / Unit 104 Weed Dispensary in Central Brampton",
   localLandmarks: ["Hillcrest Ave", "Kennedy Road", "Unit 104", "Central Brampton"],
   introVariant:
     "Kennedy Loud Cannabis is the walk-in weed dispensary at 49 Hillcrest Ave Unit 104 in central Brampton, on the Hillcrest Ave / Kennedy Road side — not a Queen Street West downtown door. Open 24 hours for adults 19+. Confirm current menu details before you travel.",
@@ -72,6 +72,8 @@ export const gbpLocation = {
     { href: "/24-hour-dispensary-brampton", label: "24-hour / open-now FAQ" },
     { href: "/cannabis-store-brampton", label: "Central Brampton cannabis store" },
     { href: "/cannabis-delivery-hillcrest-brampton", label: "Hillcrest / Kennedy delivery" },
+    { href: "/native-cigarettes-hillcrest-brampton", label: "Hillcrest native cigarettes" },
+    { href: "/nicotine-vape-kennedy-brampton", label: "Kennedy nicotine vape" },
     { href: "/resources/hillcrest-ave-visit-guide", label: "Hillcrest Ave visit guide" },
     { href: "/resources/local-guides/queen-street-to-hillcrest-brampton", label: "Queen Street to Hillcrest" },
     { href: "/resources/local-guides/main-street-brampton-to-kennedy-loud", label: "Main Street to Unit 104" },

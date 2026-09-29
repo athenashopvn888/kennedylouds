@@ -162,6 +162,18 @@ export default async function ItemsCategoryPage({
             <p className={styles.visitText}>
               49 Hillcrest Ave Unit 104, Brampton, ON L6W 1Y7 · Open 24 Hours
             </p>
+            {catSlug === "cigarettes" ? (
+              <p className={styles.visitText}>
+                Neighbourhood guide:{" "}
+                <Link href="/native-cigarettes-hillcrest-brampton">Hillcrest / Kennedy native cigarettes</Link>
+              </p>
+            ) : null}
+            {catSlug === "vapes" ? (
+              <p className={styles.visitText}>
+                Neighbourhood guide:{" "}
+                <Link href="/nicotine-vape-kennedy-brampton">Kennedy / Hillcrest nicotine vape</Link>
+              </p>
+            ) : null}
           </div>
         </div>
       </section>

@@ -53,9 +53,11 @@ test("locked NAP stays Hillcrest Unit 104", () => {
   assert.equal(NAP.hours, "Open 24 Hours");
 });
 
-test("weed LP H1 and title own Hillcrest / Kennedy / central, not Queen St W downtown", () => {
+test("weed LP H1 and title own Hillcrest / Kennedy / Unit 104, not Queen St W downtown", () => {
   assert.match(gbpLocation.seoTitle, /Hillcrest \/ Kennedy/);
+  assert.match(gbpLocation.seoTitle, /Unit 104/);
   assert.match(gbpLocation.h1, /Hillcrest \/ Kennedy/);
+  assert.match(gbpLocation.h1, /Unit 104/);
   assert.match(gbpLocation.h1, /Central Brampton/);
   assert.ok(gbpLocation.seoTitle.length <= 60);
   assert.match(gbpLocation.introVariant, /not a Queen Street West downtown door/);
@@ -130,7 +132,7 @@ test("optional Hillcrest 24h alias is a 301 into B07, not a duplicate page", () 
 test("Wave 1 does not add smoke SEO LPs, Ottawa copy, sister framing, or GBP Name edits", () => {
   assert.doesNotMatch(PUBLIC_COPY, /Blouds|Magic Leaf|St\.? Clair|117 Queen|sister store|corporate parent|fleet store/i);
   assert.doesNotMatch(PUBLIC_COPY, /Ottawa|Gatineau|ByWard|Dalhousie/i);
-  assert.doesNotMatch(PUBLIC_COPY, /native-cigarettes-hillcrest-brampton|nicotine-pouches-kennedy-brampton|grabba-hillcrest-brampton/);
+  assert.doesNotMatch(PUBLIC_COPY, /nicotine-pouches-kennedy-brampton|grabba-hillcrest-brampton/);
   assert.doesNotMatch(PUBLIC_COPY, /GBP Website\s*=\s*\/weed-dispensary/i);
   assert.doesNotMatch(storePage, /also visit our other|our other location/i);
 });

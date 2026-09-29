@@ -63,7 +63,7 @@ test("Wave 2 Hillcrest delivery LP has unique title, meta, H1, and path", () => 
   assert.notEqual(TITLE, gbpLocation.seoTitle);
   assert.notEqual(H1, gbpLocation.h1);
   assert.notEqual(TITLE, "How to Find Kennedy Loud at 49 Hillcrest Ave Unit 104");
-  assert.notEqual(TITLE, "24-Hour Dispensary Brampton FAQ | Open Now");
+  assert.notEqual(TITLE, "24-Hour Hillcrest Dispensary FAQ | Open Now");
   assert.notEqual(TITLE, "Cannabis Store Brampton | Kennedy / Queen / Main");
 });
 
@@ -135,7 +135,7 @@ test("dense graph links homepage, visit, B07, B13, weed, delivery LP, catalog, a
 test("Wave 2 does not add smoke LPs, sister framing, Ottawa copy, or GBP edits", () => {
   assert.doesNotMatch(PUBLIC_COPY, /Blouds|Magic Leaf|St\.? Clair|117 Queen|sister store|corporate parent|fleet store/i);
   assert.doesNotMatch(PUBLIC_COPY, /Ottawa|Gatineau|ByWard|Dalhousie/i);
-  assert.doesNotMatch(PUBLIC_COPY, /native-cigarettes-hillcrest-brampton|nicotine-pouches-kennedy-brampton|grabba-hillcrest-brampton/);
+  assert.doesNotMatch(PUBLIC_COPY, /nicotine-pouches-kennedy-brampton|grabba-hillcrest-brampton/);
   assert.doesNotMatch(deliveryPage, /GBP Website\s*=\s*\//i);
   assert.doesNotMatch(deliveryPage, /also visit our other|our other location/i);
   assert.doesNotMatch(faqPage, /Delivery information is being prepared/);

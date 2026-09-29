@@ -113,6 +113,8 @@ export default function DeliveryContent() {
     <section className={styles.deliveryDetails} aria-label="Kennedy Loud Cannabis delivery details">
       <strong>$60 PRODUCT MINIMUM</strong>
       <Link href="/cannabis-delivery-hillcrest-brampton">Hillcrest / Kennedy delivery guide</Link>
+      <Link href="/native-cigarettes-hillcrest-brampton">Hillcrest native cigarettes</Link>
+      <Link href="/nicotine-vape-kennedy-brampton">Kennedy nicotine vape</Link>
     </section>
     <section className={styles.loyalty} aria-labelledby="loyalty-title">
       <div><p>SAVE ON A LATER ORDER</p><h2 id="loyalty-title">Member Loyalty Savings</h2></div>

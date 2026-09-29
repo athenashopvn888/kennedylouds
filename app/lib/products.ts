@@ -36,6 +36,7 @@ export interface ItemProduct {
 /* ── Data imports (static fallback) ── */
 import flowersJson from "./flowers.json";
 import itemsJson from "./items.json";
+import { TV_STORE } from "./tvStock";
 
 export const allFlowers: FlowerProduct[] = flowersJson as FlowerProduct[];
 export const allItems: ItemProduct[] = itemsJson as ItemProduct[];
@@ -66,8 +67,7 @@ export async function fetchLiveProducts(): Promise<{
   }
 
   try {
-    // Temporary override: use PL60 stock while the KLC01 POS email feed is glitching.
-    const res = await fetch(`${APPS_SCRIPT_URL}?store=PL601`, {
+    const res = await fetch(`${APPS_SCRIPT_URL}?store=${TV_STORE}`, {
       next: { revalidate: 300 }, // Cache for 5 min during build
     });
     if (!res.ok) throw new Error(`HTTP ${res.status}`);

@@ -45,6 +45,8 @@ export const CANNABIS_STORE_INTERNAL_LINKS = [
   { href: "/aa-weed", label: "AA Weed" },
   { href: "/budget-weed", label: "Budget Weed" },
   { href: "/cannabis-delivery-hillcrest-brampton", label: "Hillcrest / Kennedy delivery" },
+  { href: "/native-cigarettes-hillcrest-brampton", label: "Hillcrest / Kennedy native cigarettes" },
+  { href: "/nicotine-vape-kennedy-brampton", label: "Kennedy / Hillcrest nicotine vape" },
   { href: "/faq", label: "Store FAQ" },
   { href: "/contact", label: "Contact and hours" },
 ] as const;

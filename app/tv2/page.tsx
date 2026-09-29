@@ -1,6 +1,16 @@
 "use client";
 import { useState, useEffect, useCallback, useRef } from "react";
 import styles from "./tv2.module.css";
+import { CIGARETTE_FLASH_MESSAGE, isCigaretteFlashWindow } from "../tv/flashMessages";
+import HiringRibbon from "../components/HiringRibbon";
+import TvStoreHeader from "../components/TvStoreHeader";
+import { tvHiring } from "../lib/tvHiring";
+import { formatBoardTime, readStockUpdatedAt } from "../lib/tvStockTime";
+import {
+  getTv2DaytimePromo,
+  isCigaretteOfferVisible,
+  isTv2Daytime,
+} from "./tv2Promos";
 
 /* -- TYPES -- */
 interface Item {
@@ -18,16 +28,14 @@ const CARD_CONFIG = [
   { id:"MAGIC",           title:"🍄 MAGIC & OTHERS",     accent:"#9333ea", filter:(it:Item)=>it.category==="MAGIC & OTHERS", preset:"🍫 START SMALL · WAIT 45 MIN · THEN MORE" },
 ];
 
-function isDaytime() { const h = new Date().getHours(); return h >= 10 && h < 17; }
-
 /* -- HELPERS -- */
 const fmtPrice = (v?:string) => { const s=String(v||"").trim(); if(!s)return""; return /^\$/.test(s)?s:"$"+s; };
 const fmtTHC = (v?:string) => { const s=String(v||"").trim(); if(!s)return""; if(/^\d+(\.\d+)?%?$/.test(s)){const n=parseFloat(s);return(n<=1?Math.round(n*100):Math.round(n))+"%";}return s; };
 const fmtMG = (v?:string) => { const s=String(v||"").trim(); if(!s)return""; if(/^\d+(\.\d+)?$/.test(s))return s+"mg"; return s; };
 
 /* -- ITEM CARD -- */
-function ItemCard({ title, accent, items, hiIdx, preset }: {
-  title:string; accent:string; items:Item[]; hiIdx:number; preset:string;
+function ItemCard({ title, accent, items, hiIdx, preset, offerOverlay = false }: {
+  title:string; accent:string; items:Item[]; hiIdx:number; preset:string; offerOverlay?:boolean;
 }) {
   const MAX = 10;
   const hiW = Math.min(hiIdx % Math.max(1, items.length), items.length - 1);
@@ -128,6 +136,14 @@ function ItemCard({ title, accent, items, hiIdx, preset }: {
           </div>
         </div>
       </div>
+      {offerOverlay && (
+        <div className={styles.timedPromoOverlay} aria-label="Mix and Match 2 Pack $5 Cigarette Offer">
+          <img
+            src="/banners/2pack5cig.webp"
+            alt="Mix and Match 2 Pack $5 Cigarette Offer"
+          />
+        </div>
+      )}
     </div>
   );
 }
@@ -144,10 +160,18 @@ const TICKER_SLIDES = [
 function VerticalTicker() {
   const [activeIdx, setActiveIdx] = useState(0);
   const [exitIdx, setExitIdx] = useState(-1);
+  const [showCigaretteFlash, setShowCigaretteFlash] = useState(() => isCigaretteFlashWindow());
+  const slides = showCigaretteFlash ? [CIGARETTE_FLASH_MESSAGE, ...TICKER_SLIDES] : TICKER_SLIDES;
+
+  useEffect(() => {
+    const update = () => setShowCigaretteFlash(isCigaretteFlashWindow());
+    const iv = setInterval(update, 60_000);
+    return () => clearInterval(iv);
+  }, []);
   useEffect(() => {
     const iv = setInterval(() => {
       setExitIdx(activeIdx);
-      setActiveIdx(prev => (prev + 1) % TICKER_SLIDES.length);
+      setActiveIdx(prev => (prev + 1) % slides.length);
     }, 3000);
     return () => clearInterval(iv);
   // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -156,7 +180,7 @@ function VerticalTicker() {
   return (
     <div className={styles.ticker}>
       <div className={styles.tickerInner}>
-        {TICKER_SLIDES.map((text, i) => (
+        {slides.map((text, i) => (
           <div key={i} className={`${styles.tickerSlide} ${i===activeIdx?styles.tickerActive:""} ${i===exitIdx?styles.tickerExit:""}`}>
             {text}
           </div>
@@ -183,12 +207,27 @@ export default function TV2Page() {
   const [items, setItems] = useState<Item[]>([]);
   const [highlights, setHighlights] = useState<Record<string,number>>({});
   const [lastUpdate, setLastUpdate] = useState("");
-  const [daytime, setDaytime] = useState(false);
+  const [stockUpdated, setStockUpdated] = useState<string | null>(null);
+  const [daytime, setDaytime] = useState(() => isTv2Daytime());
+  const [cigaretteOfferVisible, setCigaretteOfferVisible] = useState(false);
   const wrapRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    setDaytime(isDaytime());
-    const iv = setInterval(() => setDaytime(isDaytime()), 60_000);
+    const syncDaytime = () => setDaytime(isTv2Daytime());
+    syncDaytime();
+    const iv = setInterval(syncDaytime, 60_000);
+    return () => clearInterval(iv);
+  }, []);
+
+  useEffect(() => {
+    const startedAt = performance.now();
+    const updateOffer = () => {
+      setCigaretteOfferVisible(
+        isCigaretteOfferVisible(isTv2Daytime(), performance.now() - startedAt),
+      );
+    };
+    updateOffer();
+    const iv = setInterval(updateOffer, 250);
     return () => clearInterval(iv);
   }, []);
 
@@ -197,10 +236,11 @@ export default function TV2Page() {
       const res = await fetch("/api/tv-data?type=items");
       const data: Item[] = res.ok ? await res.json() : [];
       setItems(data);
+      setStockUpdated(readStockUpdatedAt(res, data));
       const hi: Record<string,number> = {};
       CARD_CONFIG.forEach(c => { hi[c.id] = 0; });
       setHighlights(hi);
-      setLastUpdate(new Date().toLocaleTimeString());
+      setLastUpdate(formatBoardTime(new Date()) || "");
     } catch (err) { console.warn("[TV2] Load failed:", err); }
   }, []);
 
@@ -238,24 +278,42 @@ export default function TV2Page() {
   return (
     <div className={styles.tvPage} style={bgUrl ? { backgroundImage: `url(${bgUrl})`, backgroundSize: "cover" } : undefined}>
       <div className={styles.wrap} ref={wrapRef}>
-        
+        <TvStoreHeader eyebrow="Secondary Menu Board" stockUpdated={stockUpdated} />
+
         {/* GRID */}
         <div className={styles.stage}>
+          <HiringRibbon hiring={tvHiring} />
           <div className={styles.grid}>
             {CARD_CONFIG.map(card => {
               const filtered = items.filter(card.filter);
+              const promo = getTv2DaytimePromo(card.id, daytime);
 
-              if (card.id === "CIGARETTES" && daytime) {
+              if (promo) {
                 return (
-                  <div key={card.id} className={styles.card} style={{"--accent":card.accent} as React.CSSProperties}>
+                  <div
+                    key={card.id}
+                    className={styles.card}
+                    data-promo-card={card.id}
+                    style={{"--accent":card.accent} as React.CSSProperties}
+                  >
                     <div className={styles.cardHeader}>PROMO</div>
                     <div className={styles.promoMain}>
                       <div className={styles.promoViewport}>
                         <img
                           className={`${styles.promoImg} ${styles.promoActive}`}
-                          src="/banners/cig-poster-1.png"
-                          alt="Cigarettes Promo"
+                          src={promo.src}
+                          alt={promo.alt}
                           referrerPolicy="no-referrer"
+                          onError={(event) => {
+                            const target = event.currentTarget;
+                            if (
+                              promo.fallbackSrc &&
+                              target.dataset.fallbackApplied !== "true"
+                            ) {
+                              target.dataset.fallbackApplied = "true";
+                              target.src = promo.fallbackSrc;
+                            }
+                          }}
                         />
                       </div>
                     </div>
@@ -265,14 +323,15 @@ export default function TV2Page() {
 
               return (
                 <ItemCard key={card.id} title={card.title} accent={card.accent}
-                  items={filtered} hiIdx={highlights[card.id]||0} preset={card.preset} />
+                  items={filtered} hiIdx={highlights[card.id]||0} preset={card.preset}
+                  offerOverlay={card.id === "CIGARETTES" && cigaretteOfferVisible} />
               );
             })}
           </div>
         </div>
         
       </div>
-      <div className={styles.lastUpdated}>Updated: {lastUpdate}</div>
+      {lastUpdate ? <div className={styles.lastUpdated}>Refreshed {lastUpdate}</div> : null}
     </div>
   );
 }

@@ -61,6 +61,9 @@ export const RESOURCE_HUB: ResourceArticle = {
   quickLinks: [
     { label: "Find Unit 104", href: "/visit" },
     { label: "24-hour / open-now FAQ", href: "/24-hour-dispensary-brampton" },
+    { label: "Hillcrest / Kennedy delivery", href: "/cannabis-delivery-hillcrest-brampton" },
+    { label: "Hillcrest native cigarettes", href: "/native-cigarettes-hillcrest-brampton" },
+    { label: "Kennedy nicotine vape", href: "/nicotine-vape-kennedy-brampton" },
     { label: "Cannabis store Brampton", href: "/cannabis-store-brampton" },
     { label: "Brampton visit page", href: "/weed-dispensary-brampton/" },
     { label: "Flower tiers", href: "/#menu" },
@@ -102,6 +105,10 @@ export const RESOURCE_PAGES: ResourceArticle[] = [
     ],
     quickLinks: [
       { label: "Find Unit 104", href: "/visit" },
+      { label: "24-hour / open-now FAQ", href: "/24-hour-dispensary-brampton" },
+      { label: "Hillcrest / Kennedy delivery", href: "/cannabis-delivery-hillcrest-brampton" },
+      { label: "Hillcrest native cigarettes", href: "/native-cigarettes-hillcrest-brampton" },
+      { label: "Kennedy nicotine vape", href: "/nicotine-vape-kennedy-brampton" },
       { label: "Brampton visit page", href: "/weed-dispensary-brampton/" },
       { label: "Menu", href: "/#menu" },
       { label: "FAQ", href: "/faq" },
@@ -253,6 +260,7 @@ export const RESOURCE_PAGES: ResourceArticle[] = [
       },
     ],
     quickLinks: [
+      { label: "Kennedy / Hillcrest nicotine vape", href: "/nicotine-vape-kennedy-brampton" },
       { label: "THC Vape", href: "/items/vape-disposables" },
       { label: "Nic Vape", href: "/items/vapes" },
       { label: "Concentrates", href: "/items/concentrates" },
@@ -954,6 +962,22 @@ const PINKY_KLC01_OVERRIDES: Record<string, Partial<ResourceArticle>> = {
       }
     ],
     "quickLinks": [
+      {
+        "label": "24-hour / open-now FAQ",
+        "href": "/24-hour-dispensary-brampton"
+      },
+      {
+        "label": "Hillcrest / Kennedy delivery",
+        "href": "/cannabis-delivery-hillcrest-brampton"
+      },
+      {
+        "label": "Hillcrest native cigarettes",
+        "href": "/native-cigarettes-hillcrest-brampton"
+      },
+      {
+        "label": "Kennedy nicotine vape",
+        "href": "/nicotine-vape-kennedy-brampton"
+      },
       {
         "label": "Kennedy Loud Cannabis in Brampton",
         "href": "/weed-dispensary-brampton"
@@ -1993,7 +2017,16 @@ const PINKY_KLC01_OVERRIDES: Record<string, Partial<ResourceArticle>> = {
         "answer": "A neutral related-link card to current store information is acceptable; current commerce belongs outside the educational CTA."
       }
     ],
-    "quickLinks": []
+    "quickLinks": [
+      {
+        "label": "Hillcrest / Kennedy native cigarettes",
+        "href": "/native-cigarettes-hillcrest-brampton"
+      },
+      {
+        "label": "Brampton visit page",
+        "href": "/weed-dispensary-brampton/"
+      }
+    ]
   }
 };
 const PINKY_KLC01_ADDITIONS: ResourceArticle[] = [

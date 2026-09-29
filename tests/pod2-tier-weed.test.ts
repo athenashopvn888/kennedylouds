@@ -51,7 +51,8 @@ test("all five KLC tier pages have unique approved Weed metadata and copy", () =
 test("tier template uses absolute titles, one H1 and self-canonicals", () => {
   assert.match(tierPage, /title: seo \? \{ absolute: seo\.seoTitle \}/);
   assert.equal((tierPage.match(/<h1\b/g) ?? []).length, 1);
-  assert.match(tierPage, /canonical: `https:\/\/kennedyloudcannabis\.com\/\$\{tierSlug\}`/);
+  assert.match(tierPage, /canonical: `\$\{SITE_ORIGIN\}\/\$\{tierSlug\}`/);
+  assert.match(tierPage, /from "\.\.\/lib\/collectionPageSchema"/);
   assert.match(tierPage, /seo\?\.strainHeading/);
 });
 

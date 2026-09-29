@@ -13,6 +13,8 @@ export const VISIT_HUB_LINKS = [
   { href: "/cannabis-store-brampton", label: "Central Brampton cannabis store" },
   { href: "/weed-dispensary-brampton/", label: "Hillcrest / Kennedy weed dispensary" },
   { href: "/cannabis-delivery-hillcrest-brampton", label: "Hillcrest / Kennedy delivery" },
+  { href: "/native-cigarettes-hillcrest-brampton", label: "Hillcrest native cigarettes" },
+  { href: "/nicotine-vape-kennedy-brampton", label: "Kennedy nicotine vape" },
 ] as const;
 
 export const PARITY_HUB_LINKS = [...VISIT_HUB_LINKS, ...TIER_HUB_LINKS] as const;
