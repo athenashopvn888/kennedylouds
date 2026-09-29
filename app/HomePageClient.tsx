@@ -1,4 +1,8 @@
 "use client";
+import { HOME_TITLE } from "./lib/homeDelivery";
+import CohortDeliveryActions from "./components/CohortDeliveryActions";
+import HomeDeliverySection from "./components/HomeDeliverySection";
+import HomepageTopNotices from "./components/HomepageTopNotices";
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
@@ -242,9 +246,11 @@ export default function HomePageClient() {
 
   return (
     <main className={styles.main}>
+      <Navbar />
+      <HomepageTopNotices />
       <FleetAnnouncementBanner />
       {/* NAVBAR */}
-      <Navbar />
+
 
       <section className={styles.localVisitStrip} aria-label="Kennedy Loud Cannabis visit details">
         <div className={styles.localVisitInner}>
@@ -310,10 +316,8 @@ export default function HomePageClient() {
 
         <div className={styles.heroContent}>
           <div className={styles.brandBlock}>
-            <h1 className={styles.brandTitle}>
-              Kennedy Loud Cannabis
-              <span className={styles.brandH1Local}>24 Hour Weed Dispensary in Brampton</span>
-            </h1>
+            <h1 className={styles.brandTitle}>{HOME_TITLE}</h1>
+            <CohortDeliveryActions variant="hero" />
             <p className={styles.brandSub}>{NAP.address}</p>
             <div className={styles.brandBadge}>Open 24 Hours</div>
           </div>
@@ -343,6 +347,8 @@ export default function HomePageClient() {
           </div>
         </div>
       </section>
+
+      <HomeDeliverySection />
 
       {/* -- EXPLORE CATEGORIES -- */}
       <section className={styles.categoriesSection} id="menu">
