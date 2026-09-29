@@ -25,7 +25,7 @@ async function main() {
 
   try {
     const url = `${APPS_SCRIPT_URL}?store=${STORE_CODE}`;
-    const res = await fetch(url, { signal: AbortSignal.timeout(30000) });
+    const res = await fetch(url, { signal: AbortSignal.timeout(120000) });
 
     if (!res.ok) {
       throw new Error(`HTTP ${res.status}: ${res.statusText}`);

@@ -100,12 +100,12 @@ test("live success post-processes stock and reports live headers", async () => {
   });
 
   assert.equal(calls.length, 1);
-  assert.equal(calls[0].url, `${DEFAULT_APPS_SCRIPT_URL}?store=KLC01`);
+  assert.equal(calls[0].url, `${DEFAULT_APPS_SCRIPT_URL}?store=PL601`);
   assert.equal(calls[0].opts.next.revalidate, 300);
   assert.equal(calls[0].opts.signal.aborted, false);
   assert.equal(flowerRes.headers["x-tv-data-source"], "live");
   assert.equal(flowerRes.headers["x-tv-data-as-of"], "2026-09-26");
-  assert.equal(flowerRes.headers["x-tv-data-store"], "KLC01");
+  assert.equal(flowerRes.headers["x-tv-data-store"], "PL601");
   assert.equal(flowerRes.headers["x-tv-data-flower-count"], "57");
   assert.equal(flowerRes.headers["x-tv-data-item-count"], "56");
   assert.equal(flowerRes.headers["Cache-Control"], "no-store");
@@ -150,7 +150,7 @@ test("fetch failure returns the static snapshot", async () => {
 
   assert.equal(result.headers["x-tv-data-source"], "static-fallback");
   assert.equal(result.headers["x-tv-data-as-of"], "");
-  assert.equal(result.headers["x-tv-data-store"], "KLC01");
+  assert.equal(result.headers["x-tv-data-store"], "PL601");
   assert.equal(result.headers["x-tv-data-flower-count"], String(staticFlowers.length));
   assert.equal(result.headers["x-tv-data-item-count"], String(staticItems.length));
   assert.equal(result.headers["Cache-Control"], "no-store");
@@ -239,19 +239,23 @@ test("partial, empty, or invalid live stock falls back to the static snapshot", 
   assert.equal(accepted.body.length, exactHalf);
 });
 
-test("prebuild uses the shared post-processor and KLC01", () => {
+test("prebuild uses the shared post-processor and PL601", () => {
+  const tvStock = readFileSync(new URL("../app/lib/tvStock.js", import.meta.url), "utf8");
+  assert.match(tvStock, /const TV_STORE = "PL601"/);
+  assert.doesNotMatch(tvStock, /const TV_STORE = "KLC01"/);
+
   const prebuild = readFileSync(new URL("../scripts/prebuild-stock.js", import.meta.url), "utf8");
   assert.match(prebuild, /require\(['"]\.\.\/app\/lib\/tvStock\.js['"]\)/);
   assert.match(prebuild, /postprocessFlowers\(data\.flowers\)/);
   assert.match(prebuild, /postprocessItems\(data\.items\)/);
   assert.match(prebuild, /const STORE_CODE = TV_STORE/);
+  assert.match(prebuild, /AbortSignal\.timeout\(120000\)/);
+  assert.doesNotMatch(prebuild, /AbortSignal\.timeout\(30000\)/);
   assert.doesNotMatch(prebuild, /function cleanName/);
-  assert.doesNotMatch(prebuild, /PL601/);
   assert.doesNotMatch(prebuild, /Temporary override/);
 
   const products = readFileSync(new URL("../app/lib/products.ts", import.meta.url), "utf8");
   assert.match(products, /store=\$\{TV_STORE\}/);
-  assert.doesNotMatch(products, /PL601/);
   assert.doesNotMatch(products, /Temporary override/);
 
   const flowers = [flower("COOKIE AAA+ SALE!"), flower("PLAIN", { isSale: true })];

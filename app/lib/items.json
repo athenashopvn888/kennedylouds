@@ -120,6 +120,18 @@
     "promoImage": "CIG_2_FOR_5"
   },
   {
+    "sku": "1026",
+    "name": "BELMONT KING (PACK ONLY) *NEW PRICE*",
+    "slug": "belmont-king-pack-only-new-price",
+    "category": "CIGARETTES",
+    "type": "",
+    "thc": "",
+    "mg": "",
+    "price": "$10",
+    "image": "https://pub-eb3e1fe18a43477eabc885cfb791d97c.r2.dev/products/belmont_king_size_600x600.webp",
+    "promoImage": null
+  },
+  {
     "sku": "1014",
     "name": "CANADIAN CLASSICS ORIGINAL",
     "slug": "canadian-classics-original",
@@ -288,18 +300,6 @@
     "promoImage": null
   },
   {
-    "sku": "966",
-    "name": "GOOBER THC CHOCOLATE 1000MG",
-    "slug": "goober-thc-chocolate-1000mg",
-    "category": "EDIBLES",
-    "type": "",
-    "thc": "",
-    "mg": "1000MG",
-    "price": "$30",
-    "image": "https://pub-eb3e1fe18a43477eabc885cfb791d97c.r2.dev/products/966-GOOBER-THC-CHOCOLOATE-1000MG.webp",
-    "promoImage": null
-  },
-  {
     "sku": "965",
     "name": "GOOBER THC GUMMIES 1000MG",
     "slug": "goober-thc-gummies-1000mg",
@@ -345,18 +345,6 @@
     "mg": "",
     "price": "$20",
     "image": "https://pub-eb3e1fe18a43477eabc885cfb791d97c.r2.dev/products/668_669_670_671_GRABBA_SHAKER.webp",
-    "promoImage": null
-  },
-  {
-    "sku": "859, 860, 861",
-    "name": "GRAND CANNABIS- STAR HASH , AFGHAN, DARK VADER",
-    "slug": "grand-cannabis-star-hash-afghan-dark-vader",
-    "category": "CONCENTRATES",
-    "type": "",
-    "thc": "",
-    "mg": "",
-    "price": "$40",
-    "image": "https://pub-eb3e1fe18a43477eabc885cfb791d97c.r2.dev/products/GrandCannabis.png",
     "promoImage": null
   },
   {

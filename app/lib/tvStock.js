@@ -1,5 +1,7 @@
 /**
- * Shared KLC01 stock post-processing and TV menu loading.
+ * Shared walk-in stock post-processing and TV menu loading.
+ *
+ * Kennedy Loud walk-in ONHAND is Apps Script store PL601.
  *
  * prebuild-stock.js (CommonJS) and app/api/tv-data/route.ts both use this
  * module so sale flags, flower names, and mangled item prices stay in sync.
@@ -12,7 +14,7 @@
 const DEFAULT_APPS_SCRIPT_URL =
   "https://script.google.com/macros/s/AKfycbx09_sDal1eMVF1r-hUck4e7oq_XBHEWhGvA79JuhZNQ6P4CdhCas0xE3FfexWQ3hq4/exec";
 
-const TV_STORE = "KLC01";
+const TV_STORE = "PL601";
 const TV_STOCK_CACHE_MS = 300 * 1000;
 const TV_STOCK_FETCH_TIMEOUT_MS = 25000;
 const PARTIAL_STOCK_RATIO = 0.5;
