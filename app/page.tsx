@@ -1,7 +1,6 @@
 import { HOME_TITLE } from "./lib/homeDelivery";
 import type { Metadata } from "next";
 import HomePageClient from "./HomePageClient";
-import FleetAnnouncementBanner from "./components/FleetAnnouncementBanner";
 
 const TITLE = "Kennedy Loud Cannabis | 24 Hour Weed Dispensary Brampton";
 const DESCRIPTION =
@@ -26,10 +25,5 @@ export const metadata: Metadata = {
 };
 
 export default function HomePage() {
-  return (
-    <>
-      <FleetAnnouncementBanner holidayOnly />
-      <HomePageClient />
-    </>
-  );
+  return <HomePageClient />;
 }
