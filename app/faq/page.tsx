@@ -3,6 +3,8 @@ import Link from "next/link";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import styles from "./faq.module.css";
+import { TIER_CONFIG } from "../lib/products";
+import { BOGO_BUY_2_GET_1, BOGO_BUY_3_GET_3, formatAsLowAsAfterPromos, formatBoardDealLine, formatDollars, formatPayEquals, formatPerGram } from "../lib/flowerDeals";
 
 export const metadata: Metadata = {
   title: { absolute: "FAQ | Kennedy Loud Cannabis Brampton Dispensary" },
@@ -12,6 +14,10 @@ export const metadata: Metadata = {
     canonical: "https://kennedyloudcannabis.com/faq",
   },
 };
+function boardTierSentence(key:"AAA+"|"PREMIUM"|"EXOTIC"):string{const tier=TIER_CONFIG[key],deal3=tier.deal3g,deal6=tier.deal6g;if(!deal3||!deal6)return"";return `${tier.name} lists at ${formatDollars(tier.unitPrice)}/g. ${formatBoardDealLine(deal3)} (${formatPerGram(deal3.price,deal3.grams)}). ${formatBoardDealLine(deal6)} (${formatPerGram(deal6.price,deal6.grams)}). ${formatAsLowAsAfterPromos(deal6.price,deal6.grams)}.`}
+const BOARD_DEAL_ANSWER=["Exotic, Premium, and AAA+ use the in-store board deals. AA does not include these deals. Budget keeps a separate $10 / 3g Special.",boardTierSentence("AAA+"),boardTierSentence("PREMIUM"),boardTierSentence("EXOTIC"),"Board notation is 2g=3g and 3g=6g."].join(" ");
+const aaaDeals=TIER_CONFIG["AAA+"];
+const BOARD_DEAL_HOW=[`${BOGO_BUY_2_GET_1} means you pay for 2g and receive 3g.`,aaaDeals.deal3g?`On AAA+ that is ${formatPayEquals(aaaDeals.deal3g.price,aaaDeals.deal3g.grams)}.`:"",`${BOGO_BUY_3_GET_3} means you pay for 3g and receive 6g.`,aaaDeals.deal6g?`On AAA+ that is ${formatPayEquals(aaaDeals.deal6g.price,aaaDeals.deal6g.grams)}.`:"","Premium and Exotic use the same FREE lines with their own paid totals. The 6g total is on Exotic, Premium, and AAA+ only. AA has neither board deal."].filter(Boolean).join(" ");
 
 const FAQ_CATEGORIES = [
   {
@@ -36,10 +42,11 @@ const FAQ_CATEGORIES = [
     ],
   },
   {
-    title: "Pricing & Bundle Notes",
+    title: "Pricing & Flower Deals",
     faqs: [
       { q: "What is the cheapest weed you sell?", a: "Budget-oriented flower options are listed in the menu when available. Check current pricing and menu details before visiting." },
-      { q: "What bundle pricing do you show?", a: "Flower bundle pricing is shown by tier where listed. The Exotic, Premium, and AAA+ tiers show 3g and 6g bundle pricing in the current tier setup." },
+      { q: "What flower deals match the in-store board?", a: BOARD_DEAL_ANSWER },
+      { q: "How do Buy 2g Get 1g FREE and Buy 3g Get 3g FREE work?", a: BOARD_DEAL_HOW },
       { q: "Do you have ounce deals?", a: "Ounce and bundle details can change as stock rotates. Check the current menu for the latest pricing information." },
       { q: "How does tier pricing work?", a: "Flower is organized into tier pages so shoppers can compare posted per-gram pricing and bundle information before visiting." },
     ],
