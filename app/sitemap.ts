@@ -15,6 +15,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/24-hour-dispensary-brampton`, lastModified: now, changeFrequency: "weekly", priority: 0.9 },
     { url: `${BASE}/cannabis-store-brampton`, lastModified: now, changeFrequency: "weekly", priority: 0.9 },
     { url: `${BASE}/weed-dispensary-brampton`, lastModified: now, changeFrequency: "weekly", priority: 0.9 },
+    { url: `${BASE}/guides`, lastModified: now, changeFrequency: "weekly", priority: 0.8 },
     { url: `${BASE}/cannabis-delivery-hillcrest-brampton`, lastModified: now, changeFrequency: "weekly", priority: 0.9 },
     { url: `${BASE}/native-cigarettes-hillcrest-brampton`, lastModified: now, changeFrequency: "weekly", priority: 0.9 },
     { url: `${BASE}/nicotine-vape-kennedy-brampton`, lastModified: now, changeFrequency: "weekly", priority: 0.9 },

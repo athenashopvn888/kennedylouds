@@ -11,6 +11,7 @@ const rows:Seed[]=[
 const title=(name:string,lane:GuideLane)=>`${name}${lane==="native_cig"?" Native Cigarettes":lane==="nic_vape"?" Nicotine Vape":lane==="thc_vape"?" THC Vape":""} at Kennedy Loud Cannabis | Kennedy`;
 export const GUIDE_REGISTRY:GuideEntry[]=rows.map(([slug,lane,name,path,product])=>({slug,lane,name,title:title(name,lane),preferredCategoryPath:path,preferredProductSlug:product,stockSource:lane==="strain"?"flowers.json":"items.json",relatedSlugs:rows.filter((r)=>r[1]===lane&&r[0]!==slug).slice(0,lane==="strain"?4:3).map((r)=>r[0])}));
 export const getGuide=(slug:string)=>GUIDE_REGISTRY.find((g)=>g.slug===slug);
+export const getGuidesByLane=(lane:GuideLane)=>GUIDE_REGISTRY.filter((guide)=>guide.lane===lane);
 export function resolveGuideProduct(g:GuideEntry):FlowerProduct|ItemProduct|undefined{const products=g.lane==="strain"?allFlowers:allItems;return products.find((p)=>p.slug===g.preferredProductSlug)}
 export const getTierGuideLinks=(path:string,limit=6)=>GUIDE_REGISTRY.filter((g)=>g.lane==="strain"&&g.preferredCategoryPath===path).slice(0,limit);
 export function getCategoryGuideGroups(path:string){if(path==="/items/cigarettes")return[{label:"Native Cigarettes guides",guides:GUIDE_REGISTRY.filter((g)=>g.lane==="native_cig")}];if(path==="/items/vapes")return[{label:"Nicotine Vape guides",guides:GUIDE_REGISTRY.filter((g)=>g.lane==="nic_vape"&&g.preferredCategoryPath===path)}];if(path==="/items/vape-disposables")return[{label:"THC Vape guides",guides:GUIDE_REGISTRY.filter((g)=>g.lane==="thc_vape")}];return[]}

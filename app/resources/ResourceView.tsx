@@ -47,6 +47,12 @@ export default function ResourceView({ article }: ResourceViewProps) {
                   <b>Read guide</b>
                 </Link>
               ))}
+              <Link href="/guides" className={styles.card}>
+                <span>Name guides</span>
+                <h2>Strain, Native Cigarette &amp; Vape Name Guides</h2>
+                <p>Browse Kennedy Loud name guides by shelf: strains, Native Cigarettes, Nicotine Vape, and THC Vape.</p>
+                <b>Browse name guides</b>
+              </Link>
             </div>
           </section>
         </>
