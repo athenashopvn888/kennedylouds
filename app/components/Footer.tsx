@@ -66,6 +66,7 @@ export default function Footer() {
               <Link href="/items/vape-disposables">THC Vape</Link>
               <Link href="/items/magic">Magic Stuff</Link>
               <Link href="/resources">Resources</Link>
+              <Link href="/guides">Guides</Link>
               <Link href="/visit">Find Unit 104</Link>
               <Link href="/24-hour-dispensary-brampton">24-Hour / Open Now FAQ</Link>
               <Link href="/cannabis-store-brampton">Cannabis Store Brampton</Link>
