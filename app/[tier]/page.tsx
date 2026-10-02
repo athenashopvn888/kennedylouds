@@ -16,6 +16,7 @@ import seoContent from "../lib/seoContent.generated.json";
 import { ParityHubNav } from "../components/ParityHubNav";
 import styles from "./tier.module.css";
 import { formatAsLowAsAfterPromos, formatPerGram, isBogoDeal, type BoardDeal } from "../lib/flowerDeals";
+import { getTierGuideLinks } from "../lib/guideRegistry";
 
 /* -- Generate all tier pages at build -- */
 export function generateStaticParams() {
@@ -67,6 +68,7 @@ export default async function TierPage({
   const seo = TIER_SEO[tierInfo.key];
   const flowerCopy = seoContent.flowerTiers;
   const tierLinks = Object.values(TIER_CONFIG);
+  const guideLinks = getTierGuideLinks(`/${tierSlug}`);
 
   const saleFlowers = flowers.filter((f) => f.isSale);
   const regularFlowers = flowers.filter((f) => !f.isSale);
@@ -136,6 +138,8 @@ export default async function TierPage({
           </div>
         </div>
       </section>
+
+      {guideLinks.length > 0 && <section className="guideStrip" aria-label="Flower name guides"><h2>Flower name guides</h2><div className="guideLinks">{guideLinks.map((guide)=><Link key={guide.slug} href={`/guides/${guide.slug}`}>{guide.name}</Link>)}</div></section>}
 
       {/* ── Product grid ── */}
       <section className={styles.products}>

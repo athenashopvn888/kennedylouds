@@ -14,6 +14,7 @@ import {
 import styles from "./items.module.css";
 import { buildCategoryCollectionJsonLd } from "../../lib/categoryStructuredData";
 import seoContent from "../../lib/seoContent.generated.json";
+import { getCategoryGuideGroups } from "../../lib/guideRegistry";
 
 /* ── Generate all category pages ── */
 export function generateStaticParams() {
@@ -62,6 +63,7 @@ export default async function ItemsCategoryPage({
   const seoCopy = seoContent.categories[seoKey as keyof typeof seoContent.categories];
   const categoryLinkHrefs = [`/items/${catSlug}`, "/weed-dispensary-brampton-kennedy", "/exotic-weed", "/premium-weed"];
   const categoryJsonLd = buildCategoryCollectionJsonLd({ canonicalPath: `/items/${catSlug}`, name: config.seoTitle || config.name, description: seoCopy?.paragraphs.join(" ") || config.seoDescription || config.seoIntro, items });
+  const guideGroups = getCategoryGuideGroups(`/items/${catSlug}`);
 
   function hrefForSeoLink(label: string, index: number): string {
     const text = label.toLowerCase();
@@ -108,6 +110,8 @@ export default async function ItemsCategoryPage({
           </div>
         )}
       </section>
+
+      {guideGroups.map((group)=><section className="guideStrip" key={group.label} aria-label={group.label}><h2>{group.label}</h2><div className="guideLinks">{group.guides.map((guide)=><Link key={guide.slug} href={`/guides/${guide.slug}`}>{guide.name}</Link>)}</div></section>)}
 
       {/* Product Grid */}
       <section className={styles.products}>
