@@ -11,9 +11,9 @@ import FleetAnnouncementBanner from "./components/FleetAnnouncementBanner";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import FlowerCard from "./components/FlowerCard";
-import { allFlowers } from "./lib/products";
 import { NAP } from "./lib/gbp-location";
 import Papa from "papaparse";
+import { useLiveFlowers } from "./lib/useLiveMenu";
 
 /* -- Bento Mosaic Config -- */
 const BENTO_TIERS = [
@@ -160,6 +160,7 @@ interface ReviewStats {
 }
 
 export default function HomePageClient() {
+    const __liveFlowers = useLiveFlowers();
   const [featuredStrains, setFeaturedStrains] = useState<any[]>([]);
   const [reviews, setReviews] = useState<Review[]>([]);
   const [reviewsStats, setReviewsStats] = useState<ReviewStats | null>(null);
@@ -222,7 +223,7 @@ export default function HomePageClient() {
 
   /* -- 2. Build Featured Strains -- */
   useEffect(() => {
-    const pool = [...allFlowers].filter((f) => f.image);
+    const pool = [...__liveFlowers].filter((f) => f.image);
     // Shuffle pool securely
     for (let i = pool.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
@@ -242,7 +243,7 @@ export default function HomePageClient() {
     }
 
     setFeaturedStrains(picked);
-  }, []);
+  }, [__liveFlowers]);
 
   return (
     <main className={styles.main}>
