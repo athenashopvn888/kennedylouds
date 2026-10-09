@@ -74,6 +74,7 @@ export default function Footer() {
               <Link href="/resources/weed-flower-tier-guide">Weed Flower Tier Guide</Link>
               <Link href="/resources/native-smokes-brampton-guide">Native Smokes Guide</Link>
               <Link href="/faq">FAQ</Link>
+              <Link href="/hours">Store Hours</Link>
               <Link href="/delivery">DELIVERY MENU</Link>
               <Link href="/cannabis-delivery-hillcrest-brampton">Hillcrest / Kennedy Delivery</Link>
               <Link href="/native-cigarettes-hillcrest-brampton">Hillcrest Native Cigarettes</Link>
