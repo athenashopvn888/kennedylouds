@@ -74,6 +74,7 @@ export const gbpLocation = {
     { href: "/cannabis-delivery-hillcrest-brampton", label: "Hillcrest / Kennedy delivery" },
     { href: "/native-cigarettes-hillcrest-brampton", label: "Hillcrest native cigarettes" },
     { href: "/nicotine-vape-kennedy-brampton", label: "Kennedy nicotine vape" },
+    { href: "/vape-shop-brampton-kennedy", label: "Current Kennedy vape listings" },
     { href: "/resources/hillcrest-ave-visit-guide", label: "Hillcrest Ave visit guide" },
     { href: "/resources/local-guides/queen-street-to-hillcrest-brampton", label: "Queen Street to Hillcrest" },
     { href: "/resources/local-guides/main-street-brampton-to-kennedy-loud", label: "Main Street to Unit 104" },
