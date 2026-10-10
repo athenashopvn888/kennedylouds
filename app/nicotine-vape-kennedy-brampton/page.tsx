@@ -5,6 +5,7 @@ import Footer from "../components/Footer";
 import { ParityHubNav } from "../components/ParityHubNav";
 import styles from "../components/GBPLandingPage.module.css";
 import { NAP, gbpLocation } from "../lib/gbp-location";
+import VapeActionPanel from "../components/VapeActionPanel";
 import {
   KENNEDY_NICOTINE_VAPE,
   KENNEDY_NICOTINE_VAPE_FAQS,
@@ -112,6 +113,8 @@ export default function KennedyNicotineVapePage() {
               ))}
             </div>
           </header>
+
+          <VapeActionPanel compact />
 
           <div className={styles.btnRow}>
             <Link href={KENNEDY_NICOTINE_VAPE.menuHref} className={`${styles.btn} ${styles.btnPrimary}`}>

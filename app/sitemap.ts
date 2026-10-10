@@ -32,6 +32,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${BASE}/cannabis-delivery-hillcrest-brampton`, lastModified: now, changeFrequency: "weekly", priority: 0.9 },
     { url: `${BASE}/native-cigarettes-hillcrest-brampton`, lastModified: now, changeFrequency: "weekly", priority: 0.9 },
     { url: `${BASE}/nicotine-vape-kennedy-brampton`, lastModified: now, changeFrequency: "weekly", priority: 0.9 },
+    { url: `${BASE}/vape-shop-brampton-kennedy`, lastModified: now, changeFrequency: "daily", priority: 0.8 },
     { url: `${BASE}/weed-dispensary-brampton-kennedy`, lastModified: now, changeFrequency: "weekly", priority: 0.9 },
     { url: `${BASE}/resources/local-guides/brampton-go-kennedy-loud`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
     { url: `${BASE}/resources/local-guides/zum-kennedy-dispensary`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },

@@ -16,6 +16,7 @@ import styles from "./items.module.css";
 import { buildCategoryCollectionJsonLd } from "../../lib/categoryStructuredData";
 import seoContent from "../../lib/seoContent.generated.json";
 import { getCategoryGuideGroups } from "../../lib/guideRegistry";
+import VapeActionPanel from "../../components/VapeActionPanel";
 
 export const revalidate = 0;
 
@@ -114,6 +115,8 @@ export default async function ItemsCategoryPage({
           </div>
         )}
       </section>
+
+      {(catSlug === "vapes" || catSlug === "vape-disposables") && <VapeActionPanel compact />}
 
       {guideGroups.map((group)=><section className="guideStrip" key={group.label} aria-label={group.label}><h2>{group.label}</h2><div className="guideLinks">{group.guides.map((guide)=><Link key={guide.slug} href={`/guides/${guide.slug}`}>{guide.name}</Link>)}</div></section>)}
 
