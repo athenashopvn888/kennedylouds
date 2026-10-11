@@ -1,6 +1,7 @@
 import { HOME_DOC_TITLE } from "./lib/homeDelivery";
 import type { Metadata } from "next";
 import HomePageClient from "./HomePageClient";
+import { getLiveMenu } from "./lib/liveMenu";
 
 const TITLE = "Kennedy Loud Cannabis | 24 Hour Weed Dispensary Brampton";
 const DESCRIPTION =
@@ -24,6 +25,9 @@ export const metadata: Metadata = {
   },
 };
 
-export default function HomePage() {
-  return <HomePageClient />;
+export const dynamic = "force-dynamic";
+
+export default async function HomePage() {
+  const { flowers } = await getLiveMenu();
+  return <HomePageClient initialFlowers={flowers} />;
 }
