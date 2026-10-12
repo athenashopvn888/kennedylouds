@@ -255,8 +255,8 @@ export default function HomePageClient({ initialFlowers }: { initialFlowers: Par
   return (
     <main className={styles.main}>
       <Navbar />
-      <HomepageTopNotices />
       <FleetAnnouncementBanner />
+      <HomepageTopNotices />
       {/* NAVBAR */}
 
 
