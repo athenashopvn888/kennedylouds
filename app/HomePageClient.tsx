@@ -16,6 +16,8 @@ import { NAP } from "./lib/gbp-location";
 import Papa from "papaparse";
 import { useLiveFlowers } from "./lib/useLiveMenu";
 import { storeTierRange, tierRangeText } from "./lib/tierPriceRanges";
+import NearMeFaq from "./components/NearMeFaq";
+import nearMeFaq from "./lib/nearMeFaq.json";
 
 /* -- Bento Mosaic Config -- */
 const BENTO_TIERS = [
@@ -618,6 +620,7 @@ export default function HomePageClient({ initialFlowers }: { initialFlowers: Par
       </section>
 
       {/* -- FOOTER -- */}
+      <NearMeFaq id="local-near-me" q={nearMeFaq.home.q} a={nearMeFaq.home.a} />
       <Footer />
     </main>
   );
