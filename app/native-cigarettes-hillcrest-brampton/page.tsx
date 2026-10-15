@@ -1,3 +1,4 @@
+import CigaretteSeasonalNotice from "../components/CigaretteSeasonalNotice";
 import type { Metadata } from "next";
 import Link from "next/link";
 import Navbar from "../components/Navbar";
@@ -92,6 +93,7 @@ export default function HillcrestNativeCigarettesPage() {
         }}
       />
       <Navbar />
+      <CigaretteSeasonalNotice sticky />
       <main className={styles.page}>
         <div className={styles.container}>
           <header className={styles.hero}>
