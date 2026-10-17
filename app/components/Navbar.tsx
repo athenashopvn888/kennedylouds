@@ -5,6 +5,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import styles from "./Navbar.module.css";
+import GoogleReviewButton from "./GoogleReviewButton";
 import FlowerBogoStrip from "./FlowerBogoStrip";
 
 const ALL_LINKS: { href: string; label: string; featured?: boolean }[] = [
@@ -66,6 +67,7 @@ export default function Navbar() {
           </span>
         </Link>
         <div className={styles.topBarRight}>
+          <GoogleReviewButton />
           <Link href="/delivery" className={styles.gamesBtn}>
             DELIVERY MENU
           </Link>
