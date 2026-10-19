@@ -1,3 +1,4 @@
+import FullNameNap from "./components/FullNameNap";
 import PinnedNavClearance from "./components/PinnedNavClearance";
 import type { Metadata } from "next";
 import Link from "next/link";
@@ -73,7 +74,10 @@ const storeJsonLd = {
   "@context": "https://schema.org",
   "@type": "CannabisStore",
   "@id": "https://kennedyloudcannabis.com/#store",
-  name: "Kennedy Loud Cannabis",
+  name: "Kennedy Loud Cannabis Dispensary Weed Delivery",
+  alternateName: "Kennedy Loud Cannabis",
+  hasMap: "https://www.google.com/maps/place/?q=place_id:ChIJk4EH_lwVK4gR-Ag6p82yvFQ",
+  sameAs: ["https://www.google.com/maps/place/?q=place_id:ChIJk4EH_lwVK4gR-Ag6p82yvFQ"],
   description: "Cannabis dispensary at 49 Hillcrest Ave Unit 104 in Brampton, ON. Shop exotic, premium, AAA+, AA, and budget flower tiers plus edibles, prerolls, and vapes. Open 24 Hours.",
   url: "https://kennedyloudcannabis.com/",
   telephone: "+12892061181",
@@ -147,6 +151,7 @@ export default function RootLayout({
           NEW DELIVERY MENU IS HERE — CLICK TO EXPLORE
         </Link>
         {children}
+        <FullNameNap />
         <PinnedNavClearance />
       </body>
     </html>
