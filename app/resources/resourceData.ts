@@ -26,6 +26,8 @@ export type ResourceArticle = {
   quickLinks: ResourceLink[];
   blocks?: ResourceBlock[];
   faqs?: ResourceFaq[];
+  lastChecked?: string;
+  dateModified?: string;
 };
 
 export const RESOURCE_BANNER = "/banners/KennedyLoud_Welcome_Banner.webp";
@@ -385,6 +387,163 @@ export const RESOURCE_PAGES: ResourceArticle[] = [
       { label: "Magic Stuff", href: "/items/magic" },
       { label: "FAQ", href: "/faq" },
       { label: "Contact", href: "/contact" },
+    ],
+  },
+  {
+    path: "/resources/smoking-at-home-fire-safety",
+    slug: ["smoking-at-home-fire-safety"],
+    title: "Smoking at home without starting a fire",
+    metaDescription:
+      "Smoking is the number one cause of fatal home fires in Ontario. A seven-step home routine and smoke-alarm checklist for adults 19+ using flower or pre-rolls.",
+    eyebrow: "Fire safety",
+    summary:
+      "Fire safety isn't the first thing most people think about when they bring home flower or a pre-roll. It's worth a few minutes, though. Ontario's Office of the Fire Marshal says smoking is the number one cause of fatal home fires in Ontario, and Brampton Fire and Emergency Services repeats the same basic advice in its own safety campaigns.",
+    lastChecked: "September 30, 2026",
+    dateModified: "2026-09-30",
+    sections: [],
+    blocks: [
+      {
+        type: "p",
+        text: "Fire safety isn't the first thing most people think about when they bring home flower or a pre-roll. It's worth a few minutes, though. Ontario's Office of the Fire Marshal says **smoking is the number one cause of fatal home fires in Ontario**, and Brampton Fire and Emergency Services repeats the same basic advice in its own safety campaigns.",
+      },
+      {
+        type: "p",
+        text: "This guide pulls that official advice into a routine you can follow at home. Everything here is for adults 19+.",
+      },
+      {
+        type: "p",
+        text: '**A note on sources.** The Fire Marshal and Brampton Fire write about "smoking materials" in general, and most of their examples are cigarettes and butts. Neither mentions cannabis by name. A lit joint, a bowl of flower, hot ash and a lighter carry the same kind of fire risk, so we\'ve applied their advice to flower and pre-rolls. Where we\'re doing that translating, we say so.',
+      },
+      {
+        type: "p",
+        text: "This article is about preventing fires. It doesn't cover where you're allowed to smoke; your building, your lease and provincial law all have their own rules on that.",
+      },
+      { type: "h2", text: "Part 1: A seven-step routine for flower and pre-rolls" },
+      { type: "h3", text: "1. Pick your spot before you light anything" },
+      {
+        type: "p",
+        text: 'The Fire Marshal encourages smokers to **smoke outside, including outside the garage**. Brampton Fire\'s list of tips for smokers\' materials also opens with **"Smoke outside."** If you do smoke indoors, pick a spot away from anything that burns easily, and never in the bedroom (see step 3).',
+      },
+      { type: "h3", text: "2. Only smoke when you're alert" },
+      {
+        type: "p",
+        text: "Both the Fire Marshal and Brampton Fire say not to smoke when you're drowsy. The Fire Marshal also points out that **alcohol is a factor in many smoking-related fires**. If you're about to nod off, put it away for another time.",
+      },
+      { type: "h3", text: "3. Never smoke in bed" },
+      {
+        type: "p",
+        text: "This rule appears on both the provincial and the Brampton lists, word for word: **never smoke in bed.** The Fire Marshal notes that most fatal fires happen at night, when people are asleep.",
+      },
+      { type: "h3", text: "4. Use a real ashtray" },
+      {
+        type: "p",
+        text: "The Fire Marshal recommends **large, deep ashtrays that can't be knocked over**. Brampton Fire says **deep, sturdy ashtrays**. For flower and pre-rolls, that means a heavy, deep dish for the ash from a bowl or the end of a joint. A saucer, an empty can or the edge of a table doesn't count.",
+      },
+      { type: "h3", text: "5. Put it out properly" },
+      {
+        type: "p",
+        text: "This is the question in our title: how do you put out a joint safely? The official answer is written for cigarette butts, and we'd treat the end of a joint or pre-roll exactly the same way:",
+      },
+      {
+        type: "list",
+        items: [
+          "**Make sure it's out before you throw it away.** Brampton Fire says to put butts and ashes **in water or sand** before disposal.",
+          '**Never flick it.** Brampton Fire\'s wording is "Never flick a lit butt."',
+          "**Keep it out of plant pots.** The Fire Marshal warns that potting mixes may contain **peat moss, shredded wood and bark that can easily ignite**. Brampton Fire gives the same warning.",
+          "**Outdoors, keep it away from anything that burns.** Brampton Fire says never to toss butts **into grass, planters, mulch or forested areas**, and to avoid smoking near dry vegetation in hot or windy weather.",
+        ],
+      },
+      {
+        type: "p",
+        text: "A small jar or tin with some water or sand in it, kept beside the ashtray, makes this step easy to do every time.",
+      },
+      { type: "h3", text: "6. Nothing goes over the balcony" },
+      {
+        type: "p",
+        text: "If you live in an apartment or condo, Brampton Fire's high-rise safety page is direct: **don't throw cigarette butts, or anything else, from your balcony.** The high-rise page also asks residents to **keep balconies free of flammable and combustible materials and debris**, which matters if the balcony is where you smoke.",
+      },
+      { type: "h3", text: "7. Clean up after yourself" },
+      { type: "p", text: "When you're done:" },
+      {
+        type: "list",
+        items: [
+          "**Empty the ashtray into a metal container, not the garbage can, and keep that container outside.** Both the Fire Marshal and Brampton Fire give this instruction.",
+          "**Check the furniture.** If anyone has been smoking in your home, the Fire Marshal says to **check behind chair and sofa cushions for cigarette butts before going to bed**. A dropped pre-roll end can end up in the same place.",
+        ],
+      },
+      { type: "h2", text: "Part 2: The smoke-alarm checklist" },
+      {
+        type: "p",
+        text: 'A routine lowers the chance of a fire. A working smoke alarm is what gives you time to get out if one starts anyway. This checklist follows the Fire Marshal\'s "Fire safety at home" page, with Brampton Fire\'s additions where they have them.',
+      },
+      { type: "p", text: "**It's the law**" },
+      {
+        type: "list",
+        items: [
+          "There's a **working smoke alarm on every storey** of the home **and outside all sleeping areas**. The Fire Marshal says this is required by law for every home in Ontario.",
+          "If you rent and don't have the required alarms, **contact your landlord right away**. The Fire Marshal says landlords are responsible for their rental properties complying.",
+          "Nobody has taken out a battery or disabled an alarm. The Fire Marshal says it's against the law for tenants to remove batteries or tamper with an alarm, and breaking the Fire Code's smoke alarm rules can lead to a ticket or a fine.",
+        ],
+      },
+      { type: "p", text: "**Placement**" },
+      {
+        type: "list",
+        items: [
+          "Alarms are on the ceiling, or high on a wall if the ceiling isn't possible, because smoke rises.",
+          "They aren't too close to bathrooms, windows, ceiling fans, or heating and cooking appliances.",
+          "You've thought about adding one **inside the bedroom**, as Brampton Fire suggests.",
+        ],
+      },
+      { type: "p", text: "**The right alarm**" },
+      {
+        type: "list",
+        items: [
+          "You know which type you have. The Fire Marshal explains that **photo-electric alarms may be quicker at detecting slow, smouldering fires**, while ionization alarms may respond slightly faster to flaming fires, and suggests having both types.",
+          "Your alarms have a **pause button**, which the Fire Marshal highly recommends, so you can silence a false alarm without cutting the power.",
+          "Electrically connected alarms have a battery backup.",
+        ],
+      },
+      { type: "p", text: "**Maintenance**" },
+      {
+        type: "list",
+        items: [
+          "**Test every alarm once a month** with its test button.",
+          "**Put in a new battery at least once a year**, when the manufacturer says to, or whenever the low-battery warning sounds.",
+          "**Vacuum alarms once a year** to clear the dust. For hard-wired alarms, turn the power off first and vacuum the outside vents only.",
+          "**Replace alarms every 10 years.** Brampton Fire says to replace any alarm that's 10 years old or older.",
+        ],
+      },
+      { type: "p", text: "**Nuisance alarms**" },
+      {
+        type: "list",
+        items: [
+          "If steam or cooking sets off an alarm, **don't remove the battery**. The Fire Marshal suggests moving the alarm a short distance, using a model with a pause button, or putting a photo-electric alarm near the kitchen.",
+          "In an apartment building, if you set off the building's fire alarm by accident, Brampton Fire asks you to **call 911 and tell them what happened**, and says you won't be in trouble for it.",
+        ],
+      },
+      { type: "h2", text: "Part 3: Know your way out" },
+      {
+        type: "p",
+        text: "The Fire Marshal's page also sets out a home fire escape plan. The core of it:",
+      },
+      { type: "p", text: "1. Draw a floor plan of each level, showing every door, window and stairway." },
+      { type: "p", text: "2. Plan **two ways out of every room** where you can." },
+      { type: "p", text: "3. Choose a **meeting place outside**, a safe distance from the home." },
+      { type: "p", text: "4. **Call the fire department once you're outside**, not from inside." },
+      { type: "p", text: "5. **Practise it.** The Fire Marshal suggests a fire drill twice a year." },
+      { type: "h2", text: "Questions?" },
+      {
+        type: "p",
+        text: "If you want to talk through any of this, ask at the counter at Kennedy Loud Cannabis. Before you come in, our [visit page](/visit) and our [first-visit guide](/resources/hillcrest-ave-visit-guide) cover what to bring and what to expect. We serve adults 19 and over, and you'll need government-issued photo ID.",
+      },
+      {
+        type: "p",
+        text: '**Sources:** Office of the Fire Marshal, "Fire safety at home" (ontario.ca); Brampton Fire and Emergency Services, seasonal fire safety pages and "High-Rise Building Safety" (brampton.ca).',
+      },
+    ],
+    quickLinks: [
+      { label: "Visit page", href: "/visit" },
+      { label: "First-visit guide", href: "/resources/hillcrest-ave-visit-guide" },
     ],
   },
 ];

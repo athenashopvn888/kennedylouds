@@ -8,6 +8,29 @@ type ResourceViewProps = {
   article: ResourceArticle;
 };
 
+function RichText({ text }: { text: string }) {
+  if (!text.includes("**") && !text.includes("](")) return <>{text}</>;
+  const parts = text.split(/(\*\*[^*]+\*\*|\[[^\]]+\]\([^)]+\))/g).filter((part) => part.length > 0);
+  return (
+    <>
+      {parts.map((part, index) => {
+        if (part.startsWith("**") && part.endsWith("**")) {
+          return <strong key={index}>{part.slice(2, -2)}</strong>;
+        }
+        const link = /^\[([^\]]+)\]\((\/[^)]*)\)$/.exec(part);
+        if (link && link[2].startsWith("/") && !link[2].startsWith("//")) {
+          return (
+            <Link key={index} href={link[2]}>
+              {link[1]}
+            </Link>
+          );
+        }
+        return <span key={index}>{part}</span>;
+      })}
+    </>
+  );
+}
+
 export default function ResourceView({ article }: ResourceViewProps) {
   const isHub = article.path === RESOURCE_HUB.path;
 
@@ -21,7 +44,7 @@ export default function ResourceView({ article }: ResourceViewProps) {
         <div className={styles.heroText}>
           <span className={styles.eyebrow}>{article.eyebrow}</span>
           <h1>{article.title}</h1>
-          <p>{article.summary}</p>
+          {article.lastChecked ? <p className={styles.lastChecked}>Last checked: {article.lastChecked}</p> : <p>{article.summary}</p>}
         </div>
       </section>
 
@@ -61,10 +84,10 @@ export default function ResourceView({ article }: ResourceViewProps) {
           <div className={styles.articleGrid}>
             <div className={styles.articleBody}>
               {article.blocks ? article.blocks.map((block, index) => {
-                if (block.type === "h2") return <h2 key={`${block.type}-${index}`}>{block.text}</h2>;
-                if (block.type === "h3") return <h3 key={`${block.type}-${index}`}>{block.text}</h3>;
-                if (block.type === "list") return <ul key={`${block.type}-${index}`}>{block.items.map((item) => <li key={item}>{item}</li>)}</ul>;
-                return <p key={`${block.type}-${index}`}>{block.text}</p>;
+                if (block.type === "h2") return <h2 key={`${block.type}-${index}`}><RichText text={block.text} /></h2>;
+                if (block.type === "h3") return <h3 key={`${block.type}-${index}`}><RichText text={block.text} /></h3>;
+                if (block.type === "list") return <ul key={`${block.type}-${index}`}>{block.items.map((item) => <li key={item}><RichText text={item} /></li>)}</ul>;
+                return <p key={`${block.type}-${index}`}><RichText text={block.text} /></p>;
               }) : article.sections.map((section) => (
                 <section key={section.heading}>
                   <h2>{section.heading}</h2>
