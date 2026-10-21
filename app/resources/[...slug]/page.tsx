@@ -20,6 +20,21 @@ export async function generateMetadata({
     title: { absolute: page.seoTitle ?? page.title },
     description: page.metaDescription,
     alternates: { canonical: `${RESOURCE_SITE}${page.path}` },
+    ...(page.lastChecked
+      ? {
+          robots: {
+            index: true,
+            follow: true,
+            googleBot: {
+              index: true,
+              follow: true,
+              "max-image-preview": "large",
+              "max-snippet": -1,
+              "max-video-preview": -1,
+            },
+          },
+        }
+      : {}),
   };
 }
 
@@ -40,6 +55,7 @@ export default async function ResourceArticlePage({
       headline: page.title,
       description: page.metaDescription,
       mainEntityOfPage: canonical,
+      ...(page.dateModified ? { dateModified: page.dateModified } : {}),
       author: { "@type": "Organization", name: "Kennedy Loud Cannabis" },
       publisher: { "@type": "Organization", name: "Kennedy Loud Cannabis" },
     },
