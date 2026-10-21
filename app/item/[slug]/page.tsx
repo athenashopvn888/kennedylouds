@@ -7,6 +7,8 @@ import Footer from "../../components/Footer";
 import { CATEGORY_CONFIG, type ItemProduct } from "../../lib/products";
 import { getItemData } from "../../lib/itemData";
 import { getItemPriceDisplay } from "../../lib/itemPricing";
+import { isKeptTobaccoProduct } from "../../lib/cigaretteGate";
+import { SHOW_CIGARETTES } from "../../lib/siteConfig";
 import Magnifier from "../../components/Magnifier";
 import styles from "../../flower/[slug]/flower.module.css";
 
@@ -38,9 +40,10 @@ export async function generateMetadata({
   if (!item) return {};
 
   const itemData = getItemData(item.category, item.name);
+  const keptTobacco = !SHOW_CIGARETTES && isKeptTobaccoProduct(item);
 
   return {
-    title: `${item.name} | ${item.category} | Kennedy Loud Cannabis Brampton`,
+    title: `${item.name} | ${keptTobacco ? "Accessories" : item.category} | Kennedy Loud Cannabis Brampton`,
     description: itemData.metaDescription,
     alternates: {
       canonical: `https://kennedyloudcannabis.com/item/${slug}`,
@@ -63,7 +66,11 @@ function cleanSku(value: string) {
 }
 
 function getJsonLd(item: ItemProduct) {
+  const keptTobacco = !SHOW_CIGARETTES && isKeptTobaccoProduct(item);
   const itemData = getItemData(item.category, item.name);
+  const description = keptTobacco
+    ? `${item.name} appears in the accessories category at Kennedy Loud Cannabis. Review the current menu and package details before visiting.`
+    : itemData.description;
   const priceNum = item.price ? parseFloat(item.price.replace('$', '')) : 0;
 
   const offers: any = {
@@ -88,7 +95,7 @@ function getJsonLd(item: ItemProduct) {
     "@type": "Product",
     name: item.name,
     image: item.image ? [item.image.startsWith('http') ? item.image : `https://kennedyloudcannabis.com${item.image.startsWith('/') ? '' : '/'}${item.image}`] : undefined,
-    description: itemData.description,
+    description,
     brand: { "@type": "Brand", name: "Kennedy Loud Cannabis" },
     sku: cleanSku(item.sku || item.slug),
     offers,
@@ -97,7 +104,9 @@ function getJsonLd(item: ItemProduct) {
 
 /* -- Breadcrumb JSON-LD -- */
 function getBreadcrumbJsonLd(item: ItemProduct) {
-  const catSlug = item.category.toLowerCase().replace(' ', '-');
+  const keptTobacco = !SHOW_CIGARETTES && isKeptTobaccoProduct(item);
+  const catSlug = keptTobacco ? "add-ons" : item.category.toLowerCase().replace(" ", "-");
+  const catName = keptTobacco ? "Accessories" : item.category;
   return {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -111,7 +120,7 @@ function getBreadcrumbJsonLd(item: ItemProduct) {
       {
         "@type": "ListItem",
         "position": 2,
-        "name": item.category,
+        "name": catName,
         "item": `https://kennedyloudcannabis.com/items/${catSlug}`
       },
       {
@@ -141,6 +150,12 @@ export default async function ItemPage({
   
   const itemData = getItemData(item.category, item.name);
   const itemPrice = getItemPriceDisplay(item.price, item.sku);
+  const keptTobacco = !SHOW_CIGARETTES && isKeptTobaccoProduct(item);
+  const categoryLabel = keptTobacco ? "Accessories" : item.category;
+  const categoryHref = keptTobacco ? "/items/add-ons" : `/items/${catInfo?.slug || item.category.toLowerCase().replace(" ", "-")}`;
+  const description = keptTobacco
+    ? `${item.name} appears in the accessories category at Kennedy Loud Cannabis. Review the current menu and package details before visiting.`
+    : itemData.description;
 
   return (
     <>
@@ -161,7 +176,7 @@ export default async function ItemPage({
           <nav className={styles.breadcrumb}>
             <Link href="/">Home</Link>
             <span>/</span>
-            <Link href={`/items/${catInfo?.slug || item.category.toLowerCase().replace(' ', '-')}`}>{item.category}</Link>
+            <Link href={categoryHref}>{categoryLabel}</Link>
             <span>/</span>
             <span className={styles.breadcrumbCurrent}>{item.name}</span>
           </nav>
@@ -186,7 +201,7 @@ export default async function ItemPage({
             {/* -- Details -- */}
             <div className={styles.details}>
               <div className={styles.tierBadge} style={{ color: catColor, borderColor: `${catColor}33`, background: `${catColor}10` }}>
-                {catIcon} {item.category}
+                {catIcon} {categoryLabel}
               </div>
 
               <h1 className={styles.strainName}>{item.name}</h1>
@@ -259,7 +274,7 @@ export default async function ItemPage({
               {/* -- Description (SEO) -- */}
               <div className={styles.descSection}>
                 <h2 className={styles.descTitle}>About {item.name}</h2>
-                <p className={styles.descText}>{itemData.description}</p>
+                <p className={styles.descText}>{description}</p>
               </div>
 
               {/* -- Item details -- */}

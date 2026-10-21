@@ -19,6 +19,8 @@ import { buildCategoryCollectionJsonLd } from "../../lib/categoryStructuredData"
 import seoContent from "../../lib/seoContent.generated.json";
 import { getCategoryGuideGroups } from "../../lib/guideRegistry";
 import VapeActionPanel from "../../components/VapeActionPanel";
+import { isHiddenCigaretteProduct, isKeptTobaccoProduct, isVapeProduct } from "../../lib/cigaretteGate";
+import { SHOW_CIGARETTES } from "../../lib/siteConfig";
 
 export const revalidate = 0;
 
@@ -65,6 +67,17 @@ export default async function ItemsCategoryPage({
     const uniqueAccessories = accessories.filter(a => !existingIds.has(a.sku));
     items = [...items, ...uniqueAccessories];
   }
+  if (!SHOW_CIGARETTES && catInfo.key === "ADD ONS") {
+    const kept = getItemsByCategory("CIGARETTES", resolvedItems).filter((item) => isKeptTobaccoProduct(item));
+    const existingIds = new Set(items.map((item) => item.sku));
+    items = [...kept.filter((item) => !existingIds.has(item.sku)), ...items];
+  }
+  if (!SHOW_CIGARETTES && catInfo.key === "VAPE PENS") {
+    const movedVapes = getItemsByCategory("CIGARETTES", resolvedItems).filter((item) => isVapeProduct(item));
+    const existingIds = new Set(items.map((item) => item.sku));
+    items = [...items, ...movedVapes.filter((item) => !existingIds.has(item.sku))];
+  }
+  items = items.filter((item) => !isHiddenCigaretteProduct(item));
   const { config } = catInfo;
   const seoKey = config.name.toLowerCase().includes("thc") ? "vape-disposables" : config.name.toLowerCase().includes("nic") ? "vapes" : catSlug;
   const seoCopy = seoContent.categories[seoKey as keyof typeof seoContent.categories];
@@ -93,7 +106,7 @@ export default async function ItemsCategoryPage({
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(categoryJsonLd) }} />
     <main className={styles.main}>
       <Navbar />
-      {catSlug === "cigarettes" && <CigaretteSeasonalNotice sticky />}
+      {SHOW_CIGARETTES && catSlug === "cigarettes" && <CigaretteSeasonalNotice sticky />}
 
       {/* Hero Banner */}
       <section style={{ width: "100%", overflow: "hidden", marginTop: "92px", marginBottom: "24px" }}>
@@ -121,7 +134,7 @@ export default async function ItemsCategoryPage({
       </section>
 
       {(catSlug === "vapes" || catSlug === "vape-disposables") && <CategoryCoreBanners kind="vapes" />}
-      {catSlug === "cigarettes" && <CategoryCoreBanners kind="cigarettes" />}
+      {SHOW_CIGARETTES && catSlug === "cigarettes" && <CategoryCoreBanners kind="cigarettes" />}
 
       {(catSlug === "vapes" || catSlug === "vape-disposables") && <VapeActionPanel compact />}
 
@@ -180,7 +193,7 @@ export default async function ItemsCategoryPage({
             <p className={styles.visitText}>
               49 Hillcrest Ave Unit 104, Brampton, ON L6W 1Y7 · Open 24 Hours
             </p>
-            {catSlug === "cigarettes" ? (
+            {SHOW_CIGARETTES && catSlug === "cigarettes" ? (
               <p className={styles.visitText}>
                 Neighbourhood guide:{" "}
                 <Link href="/native-cigarettes-hillcrest-brampton">Hillcrest / Kennedy native cigarettes</Link>

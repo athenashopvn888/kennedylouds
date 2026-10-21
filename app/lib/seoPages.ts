@@ -1,3 +1,6 @@
+import { scrubCigaretteValue } from "./cigaretteGate";
+import { SHOW_CIGARETTES } from "./siteConfig";
+
 const NATIVE_HERO_DISCLOSURE = "Brand preview only. Selection can rotate; check the current cigarette menu before visiting.";
 const NATIVE_HERO_PRODUCTS = [
   { name: "BB Lights", image: "/products/1001-BB-LIGHTS-CARTONS.webp" },
@@ -325,7 +328,9 @@ export const SEO_PAGES: SeoPageData[] = [
 ];
 
 export function getSeoPageBySlug(slug: string): SeoPageData | undefined {
-  return SEO_PAGES.find((p) => p.slug === slug);
+  const page = SEO_PAGES.find((p) => p.slug === slug);
+  if (!page || SHOW_CIGARETTES) return page;
+  return scrubCigaretteValue(page);
 }
 
 const LEGACY_SEO_REDIRECTS: Record<string, string> = {

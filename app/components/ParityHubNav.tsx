@@ -5,6 +5,7 @@ import {
   VISIT_HUB_LINKS,
   normalizeHubPath,
 } from "../lib/sccParityHub";
+import { gateLinks } from "../lib/cigaretteGate";
 import styles from "./ParityHubNav.module.css";
 
 type ParityHubNavProps = {
@@ -36,7 +37,7 @@ export function ParityHubNav({
       )}
       <span className={styles.groupLabel}>Visit hubs</span>
       <div className={styles.list}>
-        {VISIT_HUB_LINKS.map((link) => (
+        {gateLinks(VISIT_HUB_LINKS).map((link) => (
           <Link
             key={link.href}
             href={link.href}

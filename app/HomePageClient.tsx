@@ -18,6 +18,8 @@ import { useLiveFlowers } from "./lib/useLiveMenu";
 import { storeTierRange, tierRangeText } from "./lib/tierPriceRanges";
 import NearMeFaq from "./components/NearMeFaq";
 import nearMeFaq from "./lib/nearMeFaq.json";
+import { isHiddenReviewComment } from "./lib/cigaretteGate";
+import { SHOW_CIGARETTES } from "./lib/siteConfig";
 
 /* -- Bento Mosaic Config -- */
 const BENTO_TIERS = [
@@ -83,7 +85,11 @@ const EXPLORE_CATEGORIES = [
   { name: "Magic Stuff", slug: "items/magic", banner: "/banners/KennedyLoud_Magic_Stuff.webp" },
 ];
 
-const RESOURCE_LINKS = [
+const VISIBLE_EXPLORE_CATEGORIES = SHOW_CIGARETTES
+  ? EXPLORE_CATEGORIES
+  : EXPLORE_CATEGORIES.filter((cat) => cat.slug !== "items/cigarettes");
+
+const RESOURCE_LINK_DEFS = [
   {
     href: "/visit",
     label: "Find Unit 104",
@@ -134,6 +140,10 @@ const RESOURCE_LINKS = [
   },
 ];
 
+const RESOURCE_LINKS = SHOW_CIGARETTES
+  ? RESOURCE_LINK_DEFS
+  : RESOURCE_LINK_DEFS.filter((resource) => resource.href !== "/native-cigarettes-hillcrest-brampton");
+
 /* -- Local FAQs for Hillcrest Ave -- */
 const LOCAL_FAQS = [
   {
@@ -142,7 +152,9 @@ const LOCAL_FAQS = [
   },
   {
     q: "What cannabis products do you carry?",
-    a: "The site organizes menu categories for flower tiers, edibles, pre-rolls, vapes, concentrates, accessories, cigarettes, and specialty items. Confirm current product details before visiting.",
+    a: SHOW_CIGARETTES
+      ? "The site organizes menu categories for flower tiers, edibles, pre-rolls, vapes, concentrates, accessories, cigarettes, and specialty items. Confirm current product details before visiting."
+      : "The site organizes menu categories for flower tiers, edibles, pre-rolls, vapes, concentrates, accessories, and specialty items. Confirm current product details before visiting.",
   },
   {
     q: "Where is Kennedy Loud Cannabis located?",
@@ -216,6 +228,7 @@ export default function HomePageClient({ initialFlowers }: { initialFlowers: Par
           if (!comment || comment.length < 10) return;
           const name = rn || "Customer";
           const dateStr = row.CreateTime || "";
+          if (isHiddenReviewComment(comment)) return;
           reviewsPool.push({ name, comment, date: dateStr });
         });
 
@@ -300,9 +313,11 @@ export default function HomePageClient({ initialFlowers }: { initialFlowers: Par
             <Link href="/cannabis-delivery-hillcrest-brampton" className={styles.localVisitSecondary}>
               Hillcrest delivery
             </Link>
-            <Link href="/native-cigarettes-hillcrest-brampton" className={styles.localVisitSecondary}>
-              Hillcrest native cigarettes
-            </Link>
+            {SHOW_CIGARETTES ? (
+              <Link href="/native-cigarettes-hillcrest-brampton" className={styles.localVisitSecondary}>
+                Hillcrest native cigarettes
+              </Link>
+            ) : null}
             <Link href="/nicotine-vape-kennedy-brampton" className={styles.localVisitSecondary}>
               Kennedy nicotine vape
             </Link>
@@ -369,12 +384,14 @@ export default function HomePageClient({ initialFlowers }: { initialFlowers: Par
           <div className={styles.sectionHeader}>
             <h2 className={styles.sectionTitle}>Explore Categories</h2>
             <p className={styles.sectionSubtitle}>
-              From custom disposable vapes and concentrates to accessories and cigarettes.
+              {SHOW_CIGARETTES
+                ? "From custom disposable vapes and concentrates to accessories and cigarettes."
+                : "From custom disposable vapes and concentrates to accessories."}
             </p>
           </div>
 
           <div className={styles.categoriesGrid}>
-            {EXPLORE_CATEGORIES.map((cat) => (
+            {VISIBLE_EXPLORE_CATEGORIES.map((cat) => (
               <Link
                 key={cat.slug}
                 href={`/${cat.slug}`}
@@ -433,7 +450,7 @@ export default function HomePageClient({ initialFlowers }: { initialFlowers: Par
           <div className={styles.seoPanel}>
             <h2 className={styles.seoPanelTitle}>Kennedy Loud Cannabis In Brampton - Open 24 Hours</h2>
             <p className={styles.seoPanelText}>
-              <strong>Kennedy Loud Cannabis</strong> is listed at {NAP.address}. The site is organized around flower tiers, edibles, pre-rolls, vapes, concentrates, cigarettes, accessories, and specialty categories.
+              <strong>Kennedy Loud Cannabis</strong> is listed at {NAP.address}. The site is organized around flower tiers, edibles, pre-rolls, vapes, concentrates,{SHOW_CIGARETTES ? " cigarettes," : ""} accessories, and specialty categories.
             </p>
             <p className={styles.seoPanelText}>
               The store lists Open 24 Hours. Use the current category pages to compare posted product details before visiting, especially if you are looking for a specific flower tier or format.
@@ -444,9 +461,13 @@ export default function HomePageClient({ initialFlowers }: { initialFlowers: Par
               <Link href="/24-hour-dispensary-brampton">24-hour / open-now FAQ</Link>, the{" "}
               <Link href="/cannabis-store-brampton">central Brampton cannabis store guide</Link>, the{" "}
               <Link href="/weed-dispensary-brampton/">Hillcrest / Kennedy weed dispensary</Link>, and the{" "}
-              <Link href="/cannabis-delivery-hillcrest-brampton">Hillcrest / Kennedy cannabis delivery</Link> page,
-              the{" "}
-              <Link href="/native-cigarettes-hillcrest-brampton">Hillcrest / Kennedy native cigarettes</Link> page,
+              <Link href="/cannabis-delivery-hillcrest-brampton">Hillcrest / Kennedy cannabis delivery</Link> page
+              {SHOW_CIGARETTES ? (
+                <>
+                  , the{" "}
+                  <Link href="/native-cigarettes-hillcrest-brampton">Hillcrest / Kennedy native cigarettes</Link> page,
+                </>
+              ) : null}{" "}
               and the{" "}
               <Link href="/nicotine-vape-kennedy-brampton">Kennedy / Hillcrest nicotine vape</Link> page.
               Flower is grouped
@@ -470,7 +491,7 @@ export default function HomePageClient({ initialFlowers }: { initialFlowers: Par
             <h2>Local guides tuned for the Hillcrest Ave shop.</h2>
             <p>
               Built for shoppers who want the useful page fast: visit planning, flower tier logic,
-              native smokes, vapes, concentrates, and the Brampton visit page.
+              {SHOW_CIGARETTES ? "native smokes, " : ""}vapes, concentrates, and the Brampton visit page.
             </p>
             <Link href="/resources" className={styles.resourceMainLink}>Open Resource Hub</Link>
           </div>

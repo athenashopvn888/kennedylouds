@@ -11,6 +11,7 @@ import styles from "./delivery.module.css";
 import { deliveryTierRanges, tierRangeText } from "../lib/tierPriceRanges";
 import NearMeFaq from "../components/NearMeFaq";
 import nearMeFaq from "../lib/nearMeFaq.json";
+import { SHOW_CIGARETTES } from "../lib/siteConfig";
 
 type Tier = "SHREDS" | "Budget" | "BC Premium" | "CRAFTS" | "Exotics";
 type PriceOption = { key: string; label: string; price: number };
@@ -118,7 +119,7 @@ export default function DeliveryContent() {
     <section className={styles.deliveryDetails} aria-label="Kennedy Loud Cannabis delivery details">
       <strong>$60 PRODUCT MINIMUM</strong>
       <Link href="/cannabis-delivery-hillcrest-brampton">Hillcrest / Kennedy delivery guide</Link>
-      <Link href="/native-cigarettes-hillcrest-brampton">Hillcrest native cigarettes</Link>
+      {SHOW_CIGARETTES ? <Link href="/native-cigarettes-hillcrest-brampton">Hillcrest native cigarettes</Link> : null}
       <Link href="/nicotine-vape-kennedy-brampton">Kennedy nicotine vape</Link>
     </section>
     <p className="price-rule-notice delivery-price-rule"><strong>DELIVERY PRICES ONLY.</strong> Delivery orders are charged these prices, not in-store prices. <Link href="/faq#delivery-price-rule">See the FAQ</Link></p>

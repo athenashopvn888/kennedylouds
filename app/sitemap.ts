@@ -5,6 +5,8 @@ import {TIER_CONFIG, CATEGORY_CONFIG} from "./lib/products";
 import { SEO_PAGES } from "./lib/seoPages";
 import { RESOURCE_PATHS } from "./resources/resourceData";
 import { GUIDE_REGISTRY } from "./lib/guideRegistry";
+import { SHOW_CIGARETTES } from "./lib/siteConfig";
+import { isHiddenCigarettePath, isHiddenCigaretteProduct, isHiddenGuideSlug } from "./lib/cigaretteGate";
 
 // Products come from the same loader as /api/tv-data on every request.
 export const dynamic = "force-dynamic";
@@ -30,7 +32,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${BASE}/weed-dispensary-brampton`, lastModified: now, changeFrequency: "weekly", priority: 0.9 },
     { url: `${BASE}/guides`, lastModified: now, changeFrequency: "weekly", priority: 0.8 },
     { url: `${BASE}/cannabis-delivery-hillcrest-brampton`, lastModified: now, changeFrequency: "weekly", priority: 0.9 },
-    { url: `${BASE}/native-cigarettes-hillcrest-brampton`, lastModified: now, changeFrequency: "weekly", priority: 0.9 },
+    ...(SHOW_CIGARETTES ? [{ url: `${BASE}/native-cigarettes-hillcrest-brampton`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.9 }] : []),
     { url: `${BASE}/nicotine-vape-kennedy-brampton`, lastModified: now, changeFrequency: "weekly", priority: 0.9 },
     { url: `${BASE}/vape-shop-brampton-kennedy`, lastModified: now, changeFrequency: "daily", priority: 0.8 },
     { url: `${BASE}/weed-dispensary-brampton-kennedy`, lastModified: now, changeFrequency: "weekly", priority: 0.9 },
@@ -54,7 +56,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   }));
 
   /* Item category pages */
-  const itemPages: MetadataRoute.Sitemap = Object.values(CATEGORY_CONFIG).map((c) => ({
+  const itemPages: MetadataRoute.Sitemap = Object.values(CATEGORY_CONFIG)
+    .filter((c) => SHOW_CIGARETTES || c.slug !== "cigarettes")
+    .map((c) => ({
     url: `${BASE}/items/${c.slug}`,
     lastModified: now,
     changeFrequency: "daily" as const,
@@ -70,7 +74,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   }));
 
     /* Item detail pages */
-  const itemDetailPages: MetadataRoute.Sitemap = __menu.items.map((i) => ({
+  const itemDetailPages: MetadataRoute.Sitemap = __menu.items
+    .filter((i) => !isHiddenCigaretteProduct(i))
+    .map((i) => ({
     url: `${BASE}/item/${i.slug}`,
     lastModified: now,
     changeFrequency: "weekly" as const,
@@ -78,14 +84,16 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   }));
 
   /* SEO landing pages */
-  const seoPages: MetadataRoute.Sitemap = SEO_PAGES.map((p) => ({
+  const seoPages: MetadataRoute.Sitemap = SEO_PAGES
+    .filter((p) => !isHiddenCigarettePath(`/info/${p.slug}`))
+    .map((p) => ({
     url: `${BASE}/info/${p.slug}`,
     lastModified: now,
     changeFrequency: "monthly" as const,
     priority: 0.8,
   }));
 
-  const resourcePages: MetadataRoute.Sitemap = RESOURCE_PATHS.map((resourcePath) => ({
+  const resourcePages: MetadataRoute.Sitemap = RESOURCE_PATHS.filter((resourcePath) => !isHiddenCigarettePath(resourcePath)).map((resourcePath) => ({
     url: `${BASE}${resourcePath}`,
     lastModified: now,
     changeFrequency: resourcePath === "/resources" ? "weekly" as const : "monthly" as const,
@@ -93,6 +101,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   }));
 
 
-  const guidePages: MetadataRoute.Sitemap = [...GUIDE_REGISTRY, ...DELIVERY_GUIDE_REGISTRY].map((guide) => ({ url: `${BASE}/guides/${guide.slug}`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.7 }));
+  const guidePages: MetadataRoute.Sitemap = [...GUIDE_REGISTRY, ...DELIVERY_GUIDE_REGISTRY].filter((guide) => !isHiddenGuideSlug(guide.slug)).map((guide) => ({ url: `${BASE}/guides/${guide.slug}`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.7 }));
   return [...staticPages, ...tierPages, ...itemPages, ...flowerPages, ...itemDetailPages, ...resourcePages, ...seoPages, ...guidePages];
 }

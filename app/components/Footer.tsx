@@ -1,5 +1,6 @@
 import Link from "next/link";
 import styles from "./Footer.module.css";
+import { SHOW_CIGARETTES } from "../lib/siteConfig";
 
 export default function Footer() {
   return (
@@ -11,7 +12,7 @@ export default function Footer() {
             <p className={styles.desc}>
               Your local cannabis dispensary at 49 Hillcrest Ave Unit 104,
               Brampton. Visit Kennedy Loud Cannabis for premium flower,
-              edibles, vapes, cigarettes, accessories, and more. Open 24 Hours.
+              edibles, vapes,{SHOW_CIGARETTES ? " cigarettes," : ""} accessories, and more. Open 24 Hours.
             </p>
             <div className={styles.buttons}>
               <Link href="/#menu" className={styles.btnPrimary}>
@@ -60,7 +61,7 @@ export default function Footer() {
               <Link href="/aa-weed">AA Weed</Link>
               <Link href="/budget-weed">Budget Weed</Link>
               <Link href="/items/edibles">Edibles</Link>
-              <Link href="/items/cigarettes">Cigarettes</Link>
+              {SHOW_CIGARETTES ? <Link href="/items/cigarettes">Cigarettes</Link> : null}
               <Link href="/items/vapes">Nic Vape</Link>
               <Link href="/info/nicotine-vapes-brampton">Nicotine Vapes Brampton</Link>
               <Link href="/items/vape-disposables">THC Vape</Link>
@@ -72,16 +73,16 @@ export default function Footer() {
               <Link href="/cannabis-store-brampton">Cannabis Store Brampton</Link>
               <Link href="/resources/hillcrest-ave-visit-guide">Hillcrest Visit Guide</Link>
               <Link href="/resources/weed-flower-tier-guide">Weed Flower Tier Guide</Link>
-              <Link href="/resources/native-smokes-brampton-guide">Native Smokes Guide</Link>
+              {SHOW_CIGARETTES ? <Link href="/resources/native-smokes-brampton-guide">Native Smokes Guide</Link> : null}
               <Link href="/faq">FAQ</Link>
               <Link href="/hours">Store Hours</Link>
               <Link href="/delivery">DELIVERY MENU</Link>
               <Link href="/cannabis-delivery-hillcrest-brampton">Hillcrest / Kennedy Delivery</Link>
-              <Link href="/native-cigarettes-hillcrest-brampton">Hillcrest Native Cigarettes</Link>
+              {SHOW_CIGARETTES ? <Link href="/native-cigarettes-hillcrest-brampton">Hillcrest Native Cigarettes</Link> : null}
               <Link href="/nicotine-vape-kennedy-brampton">Kennedy Nicotine Vape</Link>
               <Link href="/info/brampton-weed-dispensary">Brampton Dispensary</Link>
               <Link href="/info/cheap-weed-brampton">Cheap Weed Brampton</Link>
-              <Link href="/info/native-cigarettes-brampton">Native Cigarettes</Link>
+              {SHOW_CIGARETTES ? <Link href="/info/native-cigarettes-brampton">Native Cigarettes</Link> : null}
               <Link href="/info/weed-store-near-hillcrest-ave">Weed Store Near Hillcrest Ave</Link>
               <Link href="/weed-dispensary-brampton/">
                 Hillcrest / Kennedy Weed Dispensary

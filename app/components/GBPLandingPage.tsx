@@ -10,6 +10,8 @@ import { TIER_HUB_LINKS } from "../lib/sccParityHub";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import { ParityHubNav } from "./ParityHubNav";
+import { gateLinks, visibleFaqs } from "../lib/cigaretteGate";
+import { SHOW_CIGARETTES } from "../lib/siteConfig";
 
 export function GBPLandingPage() {
   const nearbyAreaList = gbpLocation.nearbyAreas.slice(0, 5).join(", ");
@@ -50,7 +52,7 @@ export function GBPLandingPage() {
   const faqJsonLd = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    mainEntity: HILLCREST_WEED_DISPENSARY_FAQS.map((faq) => ({
+    mainEntity: visibleFaqs(HILLCREST_WEED_DISPENSARY_FAQS).map((faq) => ({
       "@type": "Question",
       name: faq.q,
       acceptedAnswer: { "@type": "Answer", text: faq.a },
@@ -130,7 +132,7 @@ export function GBPLandingPage() {
               Adults 19+ can review the main Kennedy Loud menu categories before visiting Brampton. Confirm current product details before making a special trip.
             </p>
             <div className={styles.productGrid}>
-              {gbpLocation.products.map((product) => {
+              {gbpLocation.products.filter((product) => SHOW_CIGARETTES || product !== "Cigarettes").map((product) => {
                 const href = categoryLinks[product] || "/";
                 return (
                   <Link key={product} href={href} className={styles.productCard}>
@@ -151,9 +153,15 @@ export function GBPLandingPage() {
               <Link href="/visit">How to find Kennedy Loud at Unit 104</Link> walk-in guide. For listed hours and late-night open-now questions, use the{" "}
               <Link href="/24-hour-dispensary-brampton">24-hour Brampton FAQ</Link>. For the city-level Kennedy / Queen / Main corridor note, use the{" "}
               <Link href="/cannabis-store-brampton">central Brampton cannabis store guide</Link>. For dispatcher delivery from this same Hillcrest / Kennedy pin, use{" "}
-              <Link href="/cannabis-delivery-hillcrest-brampton">Hillcrest cannabis delivery</Link>. For native
-              cigarettes and nicotine vape at this same Hillcrest / Kennedy counter, use{" "}
-              <Link href="/native-cigarettes-hillcrest-brampton">Hillcrest native cigarettes</Link> and{" "}
+              <Link href="/cannabis-delivery-hillcrest-brampton">Hillcrest cannabis delivery</Link>.
+              {SHOW_CIGARETTES ? (
+                <>
+                  {" "}For native cigarettes and nicotine vape at this same Hillcrest / Kennedy counter, use{" "}
+                  <Link href="/native-cigarettes-hillcrest-brampton">Hillcrest native cigarettes</Link> and{" "}
+                </>
+              ) : (
+                <> For nicotine vape at this same Hillcrest / Kennedy counter, use{" "} </>
+              )}
               <Link href="/nicotine-vape-kennedy-brampton">Kennedy nicotine vape</Link>. Flower collections stay
               on{" "}
               <Link href="/exotic-weed">Exotic</Link>, <Link href="/premium-weed">Premium</Link>,{" "}
@@ -176,9 +184,11 @@ export function GBPLandingPage() {
               <Link href="/cannabis-delivery-hillcrest-brampton" className={`${styles.btn} ${styles.btnSecondary}`}>
                 Hillcrest delivery
               </Link>
-              <Link href="/native-cigarettes-hillcrest-brampton" className={`${styles.btn} ${styles.btnSecondary}`}>
-                Hillcrest native cigarettes
-              </Link>
+              {SHOW_CIGARETTES ? (
+                <Link href="/native-cigarettes-hillcrest-brampton" className={`${styles.btn} ${styles.btnSecondary}`}>
+                  Hillcrest native cigarettes
+                </Link>
+              ) : null}
               <Link href="/nicotine-vape-kennedy-brampton" className={`${styles.btn} ${styles.btnSecondary}`}>
                 Kennedy nicotine vape
               </Link>
@@ -260,14 +270,14 @@ export function GBPLandingPage() {
               ))}
             </div>
             <div className={styles.guideList}>
-              {HILLCREST_WEED_DISPENSARY_INTERNAL_LINKS.map((link) => (
+              {gateLinks(HILLCREST_WEED_DISPENSARY_INTERNAL_LINKS).map((link) => (
                 <Link key={link.href} href={link.href} className={styles.guideLink}>
                   {link.label}
                 </Link>
               ))}
             </div>
             <div className={styles.guideList}>
-              {gbpLocation.localGuides.map((guide) => (
+              {gateLinks(gbpLocation.localGuides).map((guide) => (
                 <Link key={guide.href} href={guide.href} className={styles.guideLink}>
                   {guide.label}
                 </Link>
@@ -279,7 +289,7 @@ export function GBPLandingPage() {
           <section id="faq" className={styles.section}>
             <h2 className={styles.h2}>FAQ: Hillcrest / Kennedy / Unit 104 weed dispensary</h2>
             <div className={styles.faqList}>
-              {HILLCREST_WEED_DISPENSARY_FAQS.map((faq) => (
+              {visibleFaqs(HILLCREST_WEED_DISPENSARY_FAQS).map((faq) => (
                 <div key={faq.q} className={styles.faqItem}>
                   <h3 className={styles.faqQuestion}>{faq.q}</h3>
                   <p className={styles.faqAnswer}>{faq.a}</p>

@@ -3,6 +3,8 @@ import Link from "next/link";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import { getGuidesByLane, type GuideLane } from "../lib/guideRegistry";
+import { isKeptTobaccoSlug } from "../lib/cigaretteGate";
+import { SHOW_CIGARETTES } from "../lib/siteConfig";
 import styles from "./guides.module.css";
 
 const SITE = "https://kennedyloudcannabis.com";
@@ -10,8 +12,9 @@ const CANONICAL = `${SITE}/guides`;
 
 export const metadata: Metadata = {
   title: { absolute: "Guides | Kennedy Loud Cannabis" },
-  description:
-    "Browse Kennedy Loud Cannabis name guides for strains, Native Cigarettes, Nicotine Vape, and THC Vape, with links to today's menu categories.",
+  description: SHOW_CIGARETTES
+    ? "Browse Kennedy Loud Cannabis name guides for strains, Native Cigarettes, Nicotine Vape, and THC Vape, with links to today's menu categories."
+    : "Browse Kennedy Loud Cannabis name guides for strains, Backwoods, Nicotine Vape, and THC Vape, with links to today's menu categories.",
   alternates: { canonical: CANONICAL },
   robots: { index: true, follow: true },
 };
@@ -88,8 +91,9 @@ export default function GuidesPage() {
             <h1>Guides | Kennedy Loud Cannabis</h1>
             <p>
               Start with the name you recognize, confirm its shelf, and continue to today&apos;s menu. These guides keep
-              Strains, Native Cigarettes, Nicotine Vape, and THC Vape in separate lanes so similar names and formats do
-              not blur together.
+              {SHOW_CIGARETTES
+                ? "Strains, Native Cigarettes, Nicotine Vape, and THC Vape in separate lanes so similar names and formats do not blur together."
+                : "Strains, Backwoods, Nicotine Vape, and THC Vape in separate lanes so similar names and formats do not blur together."}
             </p>
             <div className={styles.actions}>
               <Link className={styles.primary} href="/#menu">Open the live menu</Link>
@@ -109,22 +113,29 @@ export default function GuidesPage() {
 
         <div className={`${styles.shell} ${styles.lanes}`}>
           {lanes.map((lane) => {
-            const guides = getGuidesByLane(lane.lane);
+            const guides = getGuidesByLane(lane.lane).filter((guide) => SHOW_CIGARETTES || lane.lane !== "native_cig" || isKeptTobaccoSlug(guide.slug));
+            if (!guides.length) return null;
+            const title = !SHOW_CIGARETTES && lane.lane === "native_cig" ? "Backwoods" : lane.title;
+            const description = !SHOW_CIGARETTES && lane.lane === "native_cig"
+              ? "Backwoods name guides stay on their own shelf, separate from nicotine vapes and THC vapes."
+              : lane.description;
+            const categoryPath = !SHOW_CIGARETTES && lane.lane === "native_cig" ? "/items/add-ons" : lane.categoryPath;
+            const categoryLabel = !SHOW_CIGARETTES && lane.lane === "native_cig" ? "View today's accessories board" : lane.categoryLabel;
             return (
               <section key={lane.lane} className={styles.lane} aria-labelledby={`${lane.lane}-heading`}>
                 <div className={styles.laneHeader}>
                   <div>
                     <span>{guides.length} name guides</span>
-                    <h2 id={`${lane.lane}-heading`}>{lane.title}</h2>
-                    <p>{lane.description}</p>
+                    <h2 id={`${lane.lane}-heading`}>{title}</h2>
+                    <p>{description}</p>
                   </div>
-                  <Link href={lane.categoryPath}>{lane.categoryLabel}</Link>
+                  <Link href={categoryPath}>{categoryLabel}</Link>
                 </div>
                 <div className={styles.guideGrid}>
                   {guides.map((guide) => (
                     <Link key={guide.slug} href={`/guides/${guide.slug}`} className={styles.guideCard}>
                       <strong>{guide.name}</strong>
-                      <span>Read {lane.title} guide</span>
+                      <span>Read {title} guide</span>
                     </Link>
                   ))}
                 </div>

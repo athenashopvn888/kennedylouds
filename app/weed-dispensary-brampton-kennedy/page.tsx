@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { AreaIntentPage } from "../components/AreaIntentPage";
 import { NAP } from "../lib/gbp-location";
+import { gateLinks } from "../lib/cigaretteGate";
+import { SHOW_CIGARETTES } from "../lib/siteConfig";
 
 export const metadata: Metadata = {
   title: { absolute: "Kennedy Road Weed Dispensary | Open 24 Hours | Brampton" },
@@ -24,12 +26,14 @@ export default function Page() {
       storeLabel="Brampton visit details"
       intro={[
         "Kennedy Loud Cannabis is the walk-in Brampton dispensary at 49 Hillcrest Ave Unit 104. The counter sits on the Hillcrest Ave / Kennedy Road side of central Brampton — not a Queen Street West downtown door.",
-        "The store is Open 24 Hours. Adults 19+ can compare five posted flower tiers from Budget through Exotic, plus separate pages for vapes, edibles, concentrates, pre-rolls, cigarettes, and accessories.",
+        SHOW_CIGARETTES
+          ? "The store is Open 24 Hours. Adults 19+ can compare five posted flower tiers from Budget through Exotic, plus separate pages for vapes, edibles, concentrates, pre-rolls, cigarettes, and accessories."
+          : "The store is Open 24 Hours. Adults 19+ can compare five posted flower tiers from Budget through Exotic, plus separate pages for vapes, edibles, concentrates, pre-rolls, and accessories.",
         `Use the current category pages before travelling. Call ${NAP.phone} if one listed item is the reason for your visit, because product availability and posted prices can change.`,
       ]}
       mapAddress={NAP.address}
       faq={`Kennedy Loud Cannabis is at ${NAP.address}. Open 24 Hours. Adults 19+ with valid government photo ID.`}
-      relatedLinks={[
+      relatedLinks={gateLinks([
         { href: "/visit", label: "Find Unit 104" },
         { href: "/24-hour-dispensary-brampton", label: "24-hour / open-now FAQ" },
         { href: "/cannabis-store-brampton", label: "Central Brampton cannabis store" },
@@ -42,7 +46,7 @@ export default function Page() {
         { href: "/aaa-weed", label: "AAA+ Weed" },
         { href: "/aa-weed", label: "AA Weed" },
         { href: "/budget-weed", label: "Budget Weed" },
-      ]}
+      ])}
     />
   );
 }
