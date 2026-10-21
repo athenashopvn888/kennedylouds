@@ -15,7 +15,7 @@ import {
   isTv2Daytime,
   type Tv2DaytimePromo,
 } from "./tv2Promos";
-import { isHiddenCigaretteProduct, isKeptTobaccoProduct } from "../lib/cigaretteGate";
+import { isHiddenCigaretteProduct, isKeptTobaccoProduct, isNicotinePouchProduct } from "../lib/cigaretteGate";
 import { SHOW_CIGARETTES } from "../lib/siteConfig";
 
 /* -- TYPES -- */
@@ -317,6 +317,7 @@ export default function TV2Page() {
           <div className={styles.grid}>
             {CARD_CONFIG.map(card => {
               const filtered = items.filter((it) => {
+                if (!SHOW_CIGARETTES && card.id === "VAPES" && it.category === "CIGARETTES" && isNicotinePouchProduct(it)) return true;
                 if (card.id === "CIGARETTES" && !SHOW_CIGARETTES) return isKeptTobaccoProduct(it);
                 if (!SHOW_CIGARETTES && isHiddenCigaretteProduct(it)) return false;
                 return card.filter(it);

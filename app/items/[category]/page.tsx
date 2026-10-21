@@ -19,7 +19,7 @@ import { buildCategoryCollectionJsonLd } from "../../lib/categoryStructuredData"
 import seoContent from "../../lib/seoContent.generated.json";
 import { getCategoryGuideGroups } from "../../lib/guideRegistry";
 import VapeActionPanel from "../../components/VapeActionPanel";
-import { isHiddenCigaretteProduct, isKeptTobaccoProduct, isVapeProduct } from "../../lib/cigaretteGate";
+import { isHiddenCigaretteProduct, isKeptTobaccoProduct, isNicotinePouchProduct, isVapeProduct } from "../../lib/cigaretteGate";
 import { SHOW_CIGARETTES } from "../../lib/siteConfig";
 
 export const revalidate = 0;
@@ -73,9 +73,9 @@ export default async function ItemsCategoryPage({
     items = [...kept.filter((item) => !existingIds.has(item.sku)), ...items];
   }
   if (!SHOW_CIGARETTES && catInfo.key === "VAPE PENS") {
-    const movedVapes = getItemsByCategory("CIGARETTES", resolvedItems).filter((item) => isVapeProduct(item));
+    const movedFromCigarettes = getItemsByCategory("CIGARETTES", resolvedItems).filter((item) => isVapeProduct(item) || isNicotinePouchProduct(item));
     const existingIds = new Set(items.map((item) => item.sku));
-    items = [...items, ...movedVapes.filter((item) => !existingIds.has(item.sku))];
+    items = [...items, ...movedFromCigarettes.filter((item) => !existingIds.has(item.sku))];
   }
   items = items.filter((item) => !isHiddenCigaretteProduct(item));
   const { config } = catInfo;

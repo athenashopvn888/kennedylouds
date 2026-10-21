@@ -62,11 +62,9 @@ const LEGACY_HIDDEN_ITEM_SLUGS = [
   "nexus-full",
   "nexus-lights",
   "time-full",
-  "nicotine-pouches-velo-pablo-killa",
   "grabba",
   "grabba-shaker-redrose-red-herring",
   "10-x-premium-mix-cigarettes",
-  "zyn-nicotine-pouches",
   "bb-full-carton",
   "bb-lights-carton",
   "belmont-king-size-pack-only",
@@ -92,20 +90,26 @@ export function isKeptTobaccoProduct(item: NamedProduct): boolean {
   return KEPT_TOBACCO.test(name) || KEPT_TOBACCO.test(slug);
 }
 
+/** Nicotine pouches (Zyn, Velo, Pablo, Killa) are not cigarettes and stay listed. */
+export function isNicotinePouchProduct(item: NamedProduct): boolean {
+  const name = `${item.name || ""} ${item.slug || ""}`;
+  return /nicotine[\s-]*pouches?|\bzyn\b|\bvelo\b|\bpablo\b|\bkilla\b/i.test(name);
+}
+
 /** Vapes sometimes land in the cigarette feed. They stay on the vape shelf. */
 export function isVapeProduct(item: NamedProduct): boolean {
   const name = `${item.name || ""} ${item.slug || ""}`;
-  if (/grabba|cigarette|pouch|\bzyn\b|backwood|cigarillo/i.test(name)) return false;
+  if (isNicotinePouchProduct(item)) return false;
+  if (/grabba|cigarette|backwood|cigarillo/i.test(name)) return false;
   return /zpod|\bvape\b|ovns|disposable|\bpuff|e-?liquid|flavour beast|level x/i.test(name);
 }
 
 export function shouldHideCigaretteProduct(item: NamedProduct): boolean {
-  if (isKeptTobaccoProduct(item) || isVapeProduct(item)) return false;
+  if (isNicotinePouchProduct(item) || isKeptTobaccoProduct(item) || isVapeProduct(item)) return false;
   const slug = item.slug || "";
   const name = item.name || "";
   if (LEGACY_HIDDEN_ITEM_SLUGS.includes(slug)) return true;
   if (/grabba/i.test(name) || /grabba/i.test(slug)) return true;
-  if (/nicotine pouch|\bzyn\b/i.test(name)) return true;
   if ((item.category || "").toUpperCase() === "CIGARETTES") return true;
   return false;
 }

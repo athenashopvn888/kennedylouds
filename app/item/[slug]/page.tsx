@@ -7,7 +7,7 @@ import Footer from "../../components/Footer";
 import { CATEGORY_CONFIG, type ItemProduct } from "../../lib/products";
 import { getItemData } from "../../lib/itemData";
 import { getItemPriceDisplay } from "../../lib/itemPricing";
-import { isKeptTobaccoProduct } from "../../lib/cigaretteGate";
+import { isKeptTobaccoProduct, isNicotinePouchProduct } from "../../lib/cigaretteGate";
 import { SHOW_CIGARETTES } from "../../lib/siteConfig";
 import Magnifier from "../../components/Magnifier";
 import styles from "../../flower/[slug]/flower.module.css";
@@ -41,9 +41,10 @@ export async function generateMetadata({
 
   const itemData = getItemData(item.category, item.name);
   const keptTobacco = !SHOW_CIGARETTES && isKeptTobaccoProduct(item);
+  const pouchShelf = !SHOW_CIGARETTES && isNicotinePouchProduct(item) && item.category.toUpperCase() === "CIGARETTES";
 
   return {
-    title: `${item.name} | ${keptTobacco ? "Accessories" : item.category} | Kennedy Loud Cannabis Brampton`,
+    title: `${item.name} | ${keptTobacco ? "Accessories" : pouchShelf ? "Nic Vape" : item.category} | Kennedy Loud Cannabis Brampton`,
     description: itemData.metaDescription,
     alternates: {
       canonical: `https://kennedyloudcannabis.com/item/${slug}`,
@@ -67,10 +68,13 @@ function cleanSku(value: string) {
 
 function getJsonLd(item: ItemProduct) {
   const keptTobacco = !SHOW_CIGARETTES && isKeptTobaccoProduct(item);
+  const pouchShelf = !SHOW_CIGARETTES && isNicotinePouchProduct(item) && item.category.toUpperCase() === "CIGARETTES";
   const itemData = getItemData(item.category, item.name);
   const description = keptTobacco
     ? `${item.name} appears in the accessories category at Kennedy Loud Cannabis. Review the current menu and package details before visiting.`
-    : itemData.description;
+    : pouchShelf
+      ? `${item.name} appears in the nic vape category at Kennedy Loud Cannabis. Review the current menu and package details before visiting.`
+      : itemData.description;
   const priceNum = item.price ? parseFloat(item.price.replace('$', '')) : 0;
 
   const offers: any = {
@@ -105,8 +109,9 @@ function getJsonLd(item: ItemProduct) {
 /* -- Breadcrumb JSON-LD -- */
 function getBreadcrumbJsonLd(item: ItemProduct) {
   const keptTobacco = !SHOW_CIGARETTES && isKeptTobaccoProduct(item);
-  const catSlug = keptTobacco ? "add-ons" : item.category.toLowerCase().replace(" ", "-");
-  const catName = keptTobacco ? "Accessories" : item.category;
+  const pouchShelf = !SHOW_CIGARETTES && isNicotinePouchProduct(item) && item.category.toUpperCase() === "CIGARETTES";
+  const catSlug = keptTobacco ? "add-ons" : pouchShelf ? "vapes" : item.category.toLowerCase().replace(" ", "-");
+  const catName = keptTobacco ? "Accessories" : pouchShelf ? "Nic Vape" : item.category;
   return {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -151,11 +156,14 @@ export default async function ItemPage({
   const itemData = getItemData(item.category, item.name);
   const itemPrice = getItemPriceDisplay(item.price, item.sku);
   const keptTobacco = !SHOW_CIGARETTES && isKeptTobaccoProduct(item);
-  const categoryLabel = keptTobacco ? "Accessories" : item.category;
-  const categoryHref = keptTobacco ? "/items/add-ons" : `/items/${catInfo?.slug || item.category.toLowerCase().replace(" ", "-")}`;
+  const pouchShelf = !SHOW_CIGARETTES && isNicotinePouchProduct(item) && item.category.toUpperCase() === "CIGARETTES";
+  const categoryLabel = keptTobacco ? "Accessories" : pouchShelf ? "Nic Vape" : item.category;
+  const categoryHref = keptTobacco ? "/items/add-ons" : pouchShelf ? "/items/vapes" : `/items/${catInfo?.slug || item.category.toLowerCase().replace(" ", "-")}`;
   const description = keptTobacco
     ? `${item.name} appears in the accessories category at Kennedy Loud Cannabis. Review the current menu and package details before visiting.`
-    : itemData.description;
+    : pouchShelf
+      ? `${item.name} appears in the nic vape category at Kennedy Loud Cannabis. Review the current menu and package details before visiting.`
+      : itemData.description;
 
   return (
     <>
