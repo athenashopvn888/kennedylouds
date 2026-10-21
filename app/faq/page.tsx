@@ -5,6 +5,8 @@ import Footer from "../components/Footer";
 import styles from "./faq.module.css";
 import { TIER_CONFIG } from "../lib/products";
 import { BOGO_BUY_2_GET_1, BOGO_BUY_3_GET_3, formatAsLowAsAfterPromos, formatBoardDealLine, formatDollars, formatPayEquals, formatPerGram } from "../lib/flowerDeals";
+import { visibleFaqs } from "../lib/cigaretteGate";
+import { SHOW_CIGARETTES } from "../lib/siteConfig";
 
 export const metadata: Metadata = {
   title: { absolute: "FAQ | Kennedy Loud Cannabis Brampton Dispensary" },
@@ -39,7 +41,7 @@ const FAQ_CATEGORIES = [
   {
     title: "Products & Menu",
     faqs: [
-      { q: "What products are on the site?", a: "The site includes category information for flower tiers, edibles, vape pens, disposable vapes, concentrates, pre-rolls, native cigarettes, accessories, and specialty items. Current menu details can change." },
+      { q: "What products are on the site?", a: SHOW_CIGARETTES ? "The site includes category information for flower tiers, edibles, vape pens, disposable vapes, concentrates, pre-rolls, native cigarettes, accessories, and specialty items. Current menu details can change." : "The site includes category information for flower tiers, edibles, vape pens, disposable vapes, concentrates, pre-rolls, accessories, and specialty items. Current menu details can change." },
       { q: "Do you have a menu online?", a: "Yes. You can browse menu and category information online before visiting. Confirm current details before making a special trip." },
       { q: "What are your flower tiers?", a: "The flower menu is organized into tiers such as Exotic, Premium, AAA+, AA, and Budget so shoppers can compare posted product levels more easily." },
       { q: "Do you sell edibles?", a: "The site includes an edibles category. Check current category details before visiting for a specific edible product." },
@@ -70,10 +72,11 @@ const FAQ_CATEGORIES = [
 ];
 
 export default function FAQPage() {
+  const visibleCategories = FAQ_CATEGORIES.map((cat) => ({ ...cat, faqs: visibleFaqs(cat.faqs) }));
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    mainEntity: FAQ_CATEGORIES.flatMap((cat) =>
+    mainEntity: visibleCategories.flatMap((cat) =>
       cat.faqs.map((faq) => ({
         "@type": "Question",
         name: faq.q,
@@ -115,10 +118,14 @@ export default function FAQPage() {
             Kennedy weed hub, see the{" "}
             <Link href="/weed-dispensary-brampton/">central Brampton weed dispensary</Link>. For dispatcher delivery
             from Unit 104, see{" "}
-            <Link href="/cannabis-delivery-hillcrest-brampton">Hillcrest / Kennedy cannabis delivery</Link>. For native
-            cigarettes at Unit 104, see{" "}
-            <Link href="/native-cigarettes-hillcrest-brampton">Hillcrest / Kennedy native cigarettes</Link>. For
-            nicotine vape, see{" "}
+            <Link href="/cannabis-delivery-hillcrest-brampton">Hillcrest / Kennedy cannabis delivery</Link>.
+            {SHOW_CIGARETTES ? (
+              <>
+                {" "}For native cigarettes at Unit 104, see{" "}
+                <Link href="/native-cigarettes-hillcrest-brampton">Hillcrest / Kennedy native cigarettes</Link>.
+              </>
+            ) : null}{" "}
+            For nicotine vape, see{" "}
             <Link href="/nicotine-vape-kennedy-brampton">Kennedy / Hillcrest nicotine vape</Link>. Flower collections:{" "}
             <Link href="/exotic-weed">Exotic</Link>,{" "}
             <Link href="/premium-weed">Premium</Link>,{" "}
@@ -127,7 +134,7 @@ export default function FAQPage() {
             <Link href="/budget-weed">Budget</Link>.
           </p>
 
-          {FAQ_CATEGORIES.map((cat) => (
+          {visibleCategories.map((cat) => (
             <div key={cat.title} className={styles.category}>
               <h2 className={styles.categoryTitle}>{cat.title}</h2>
               {cat.faqs.map((faq) => (

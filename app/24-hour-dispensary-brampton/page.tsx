@@ -6,6 +6,8 @@ import { ParityHubNav } from "../components/ParityHubNav";
 import styles from "../components/GBPLandingPage.module.css";
 import { NAP, gbpLocation } from "../lib/gbp-location";
 import { OPEN_NOW_FAQ, OPEN_NOW_FAQS, OPEN_NOW_INTERNAL_LINKS } from "../lib/openNowFaq";
+import { gateLinks, visibleFaqs } from "../lib/cigaretteGate";
+import { SHOW_CIGARETTES } from "../lib/siteConfig";
 
 export const metadata: Metadata = {
   title: { absolute: OPEN_NOW_FAQ.title },
@@ -34,7 +36,7 @@ export default function OpenNowFaqPage() {
   const faqJsonLd = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    mainEntity: OPEN_NOW_FAQS.map((faq) => ({
+    mainEntity: visibleFaqs(OPEN_NOW_FAQS).map((faq) => ({
       "@type": "Question",
       name: faq.q,
       acceptedAnswer: { "@type": "Answer", text: faq.a },
@@ -161,9 +163,15 @@ export default function OpenNowFaqPage() {
               Open now describes the door, not the shelf. Confirm current menu details on the{" "}
               <Link href="/">homepage</Link> before a special-item trip, or call {NAP.phone}. Adults must be 19+
               with valid government-issued photo ID. If the ID is expired, missing, or does not match the visitor,
-              the counter cannot complete the sale. Native cigarettes and nicotine vape sold at this same Unit 104
-              counter are on{" "}
-              <Link href="/native-cigarettes-hillcrest-brampton">Hillcrest / Kennedy native cigarettes</Link> and{" "}
+              the counter cannot complete the sale.
+              {SHOW_CIGARETTES ? (
+                <>
+                  {" "}Native cigarettes and nicotine vape sold at this same Unit 104 counter are on{" "}
+                  <Link href="/native-cigarettes-hillcrest-brampton">Hillcrest / Kennedy native cigarettes</Link> and{" "}
+                </>
+              ) : (
+                <> Nicotine vape sold at this same Unit 104 counter is on{" "} </>
+              )}
               <Link href="/nicotine-vape-kennedy-brampton">Kennedy / Hillcrest nicotine vape</Link>.
             </p>
           </section>
@@ -201,7 +209,7 @@ export default function OpenNowFaqPage() {
                   </tr>
                 </thead>
                 <tbody>
-                  {OPEN_NOW_FAQS.map((faq) => (
+                  {visibleFaqs(OPEN_NOW_FAQS).map((faq) => (
                     <tr key={faq.q}>
                       <th scope="row">{faq.q}</th>
                       <td>{faq.a}</td>
@@ -231,9 +239,11 @@ export default function OpenNowFaqPage() {
               <Link href="/cannabis-delivery-hillcrest-brampton" className={`${styles.btn} ${styles.btnSecondary}`}>
                 Hillcrest delivery
               </Link>
-              <Link href="/native-cigarettes-hillcrest-brampton" className={`${styles.btn} ${styles.btnSecondary}`}>
-                Hillcrest native cigarettes
-              </Link>
+              {SHOW_CIGARETTES ? (
+                <Link href="/native-cigarettes-hillcrest-brampton" className={`${styles.btn} ${styles.btnSecondary}`}>
+                  Hillcrest native cigarettes
+                </Link>
+              ) : null}
               <Link href="/nicotine-vape-kennedy-brampton" className={`${styles.btn} ${styles.btnSecondary}`}>
                 Kennedy nicotine vape
               </Link>
@@ -286,7 +296,7 @@ export default function OpenNowFaqPage() {
               </div>
             </div>
             <div className={styles.guideList}>
-              {OPEN_NOW_INTERNAL_LINKS.map((link) => (
+              {gateLinks(OPEN_NOW_INTERNAL_LINKS).map((link) => (
                 <Link key={link.href} href={link.href} className={styles.guideLink}>
                   {link.label}
                 </Link>

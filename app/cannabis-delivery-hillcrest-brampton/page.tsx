@@ -10,6 +10,7 @@ import {
   HILLCREST_DELIVERY_FAQS,
   HILLCREST_DELIVERY_INTERNAL_LINKS,
 } from "../lib/hillcrestDelivery";
+import { gateLinks } from "../lib/cigaretteGate";
 
 export const metadata: Metadata = {
   title: { absolute: HILLCREST_DELIVERY.title },
@@ -291,7 +292,7 @@ export default function HillcrestDeliveryPage() {
               </div>
             </div>
             <div className={styles.guideList}>
-              {HILLCREST_DELIVERY_INTERNAL_LINKS.map((link) => (
+              {gateLinks(HILLCREST_DELIVERY_INTERNAL_LINKS).map((link) => (
                 <Link key={link.href} href={link.href} className={styles.guideLink}>
                   {link.label}
                 </Link>

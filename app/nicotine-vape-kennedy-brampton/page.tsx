@@ -11,6 +11,8 @@ import {
   KENNEDY_NICOTINE_VAPE_FAQS,
   KENNEDY_NICOTINE_VAPE_INTERNAL_LINKS,
 } from "../lib/kennedyNicotineVape";
+import { gateLinks } from "../lib/cigaretteGate";
+import { SHOW_CIGARETTES } from "../lib/siteConfig";
 
 export const metadata: Metadata = {
   title: { absolute: KENNEDY_NICOTINE_VAPE.title },
@@ -183,9 +185,11 @@ export default function KennedyNicotineVapePage() {
               <Link href={KENNEDY_NICOTINE_VAPE.menuHref} className={`${styles.btn} ${styles.btnPrimary}`}>
                 Browse Nic Vape
               </Link>
-              <Link href="/native-cigarettes-hillcrest-brampton" className={`${styles.btn} ${styles.btnSecondary}`}>
-                Hillcrest native cigarettes
-              </Link>
+              {SHOW_CIGARETTES ? (
+                <Link href="/native-cigarettes-hillcrest-brampton" className={`${styles.btn} ${styles.btnSecondary}`}>
+                  Hillcrest native cigarettes
+                </Link>
+              ) : null}
               <Link href="/" className={`${styles.btn} ${styles.btnSecondary}`}>
                 Homepage walk-in menu
               </Link>
@@ -250,7 +254,7 @@ export default function KennedyNicotineVapePage() {
               </div>
             </div>
             <div className={styles.guideList}>
-              {KENNEDY_NICOTINE_VAPE_INTERNAL_LINKS.map((link) => (
+              {gateLinks(KENNEDY_NICOTINE_VAPE_INTERNAL_LINKS).map((link) => (
                 <Link key={link.href} href={link.href} className={styles.guideLink}>
                   {link.label}
                 </Link>

@@ -1,4 +1,6 @@
 import type { NextConfig } from "next";
+import { cigaretteTemporaryRedirects } from "./app/lib/cigaretteGate";
+import { SHOW_CIGARETTES } from "./app/lib/siteConfig";
 
 const nextConfig: NextConfig = {
   images: {
@@ -27,8 +29,11 @@ const nextConfig: NextConfig = {
       { source: "/concentrates", destination: "/items/concentrates", permanent: true },
       { source: "/prerolls", destination: "/items/prerolls", permanent: true },
       { source: "/add-ons", destination: "/items/add-ons", permanent: true },
-      { source: "/cigarettes", destination: "/items/cigarettes", permanent: true },
+      ...(SHOW_CIGARETTES
+        ? [{ source: "/cigarettes", destination: "/items/cigarettes", permanent: true as const }]
+        : []),
       { source: "/magic", destination: "/items/magic", permanent: true },
+      ...cigaretteTemporaryRedirects(),
     ];
   },
 };

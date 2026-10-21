@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     "edibles Brampton",
     "vapes",
     "pre-rolls",
-    "native cigarettes Brampton",
+    ...(process.env.NEXT_PUBLIC_SHOW_CIGARETTES === "true" ? ["native cigarettes Brampton"] : []),
   ],
   openGraph: {
     type: "website",

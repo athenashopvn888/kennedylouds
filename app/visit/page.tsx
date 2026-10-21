@@ -6,6 +6,8 @@ import { ParityHubNav } from "../components/ParityHubNav";
 import styles from "../components/GBPLandingPage.module.css";
 import { NAP, gbpLocation } from "../lib/gbp-location";
 import { VISIT_FAQS, VISIT_GUIDE, VISIT_INTERNAL_LINKS } from "../lib/visitGuide";
+import { gateLinks, scrubCigaretteCopy } from "../lib/cigaretteGate";
+import { SHOW_CIGARETTES } from "../lib/siteConfig";
 
 export const metadata: Metadata = {
   title: { absolute: VISIT_GUIDE.title },
@@ -35,6 +37,10 @@ export default function VisitPage() {
     "@context": "https://schema.org",
     "@type": "FAQPage",
     mainEntity: VISIT_FAQS.map((faq) => ({
+      ...faq,
+      q: SHOW_CIGARETTES ? faq.q : scrubCigaretteCopy(faq.q),
+      a: SHOW_CIGARETTES ? faq.a : scrubCigaretteCopy(faq.a),
+    })).map((faq) => ({
       "@type": "Question",
       name: faq.q,
       acceptedAnswer: { "@type": "Answer", text: faq.a },
@@ -128,7 +134,7 @@ export default function VisitPage() {
               store near me search becomes a walk-in instead of a wrong-pin loop.
             </p>
             <div className={styles.guideList}>
-              {VISIT_INTERNAL_LINKS.map((link) => (
+              {gateLinks(VISIT_INTERNAL_LINKS).map((link) => (
                 <Link key={link.href} href={link.href} className={styles.guideLink}>
                   {link.label}
                 </Link>
@@ -149,8 +155,10 @@ export default function VisitPage() {
               <Link href="/cannabis-delivery-hillcrest-brampton">Hillcrest / Kennedy cannabis delivery</Link>.
             </p>
             <p className={styles.infoText}>
-              “Open now” describes the listed store hours, not a guarantee that one named flower, vape, or cigarette
-              is on the shelf at that minute. Check the{" "}
+              {SHOW_CIGARETTES
+                ? "“Open now” describes the listed store hours, not a guarantee that one named flower, vape, or cigarette is on the shelf at that minute."
+                : "“Open now” describes the listed store hours, not a guarantee that one named flower or vape is on the shelf at that minute."}{" "}
+              Check the{" "}
               <Link href="/">homepage menu</Link> before a special-item trip, or call {NAP.phone}. Walk-in is the
               shopping model — no appointment is required.
             </p>
@@ -163,12 +171,17 @@ export default function VisitPage() {
               is expired, missing, or does not match the visitor, the counter cannot complete the sale.
             </p>
             <p className={styles.infoText}>
-              Have the Unit 104 address visible on your phone before the last turn. If the trip is for cigarettes
-              rather than flower, start with the{" "}
-              <Link href="/native-cigarettes-hillcrest-brampton">Hillcrest / Kennedy native cigarettes</Link> page
-              (the broader{" "}
-              <Link href="/info/native-cigarettes-brampton">Native Cigarettes Brampton</Link> guide stays live),
-              then confirm current listings. For nicotine vape at the same Kennedy / Hillcrest counter, use{" "}
+              Have the Unit 104 address visible on your phone before the last turn.
+              {SHOW_CIGARETTES ? (
+                <>
+                  {" "}If the trip is for cigarettes rather than flower, start with the{" "}
+                  <Link href="/native-cigarettes-hillcrest-brampton">Hillcrest / Kennedy native cigarettes</Link> page
+                  (the broader{" "}
+                  <Link href="/info/native-cigarettes-brampton">Native Cigarettes Brampton</Link> guide stays live),
+                  then confirm current listings.
+                </>
+              ) : null}{" "}
+              For nicotine vape at the same Kennedy / Hillcrest counter, use{" "}
               <Link href="/nicotine-vape-kennedy-brampton">Kennedy / Hillcrest nicotine vape</Link>. For the broader
               Brampton visit snapshot — menu categories, nearby areas, and the same NAP — use the{" "}
               <Link href="/weed-dispensary-brampton/">Hillcrest / Kennedy weed dispensary</Link>.
