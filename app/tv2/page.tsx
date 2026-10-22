@@ -17,6 +17,9 @@ import {
 } from "./tv2Promos";
 import { isHiddenCigaretteProduct, isKeptTobaccoProduct, isNicotinePouchProduct } from "../lib/cigaretteGate";
 import { SHOW_CIGARETTES } from "../lib/siteConfig";
+import FleetTvTakeover from "../components/fleet/FleetTvTakeover";
+import { useFleetTvManifest } from "../components/fleet/useFleetTvManifest";
+import { pickTv2Sheet } from "../lib/fleet/tv";
 
 /* -- TYPES -- */
 interface Item {
@@ -238,6 +241,8 @@ export default function TV2Page() {
   const [stockUpdated, setStockUpdated] = useState<string | null>(null);
   const [daytime, setDaytime] = useState(() => isTv2Daytime());
   const [promoElapsedMs, setPromoElapsedMs] = useState(0);
+  const [sheetBroken, setSheetBroken] = useState<Record<string, { promo?: boolean; off?: boolean }>>({});
+  const fleetTv = useFleetTvManifest();
   const wrapRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -323,6 +328,33 @@ export default function TV2Page() {
                 return card.filter(it);
               }).filter((it) => SHOW_CIGARETTES || card.id !== "CIGARETTES" ? !(daytime && isNicotineItem(it)) : true);
               const title = card.id === "CIGARETTES" && !SHOW_CIGARETTES ? "BACKWOODS" : card.title;
+              const broken = sheetBroken[card.id] || {};
+              const sheet = pickTv2Sheet(fleetTv.cards[card.id], {
+                categoryOff: card.id === "CIGARETTES" && !SHOW_CIGARETTES,
+                noItems: filtered.length === 0,
+                promoBroken: Boolean(broken.promo),
+                offBroken: Boolean(broken.off),
+              });
+              if (sheet) {
+                const markBroken = () => setSheetBroken((prev) => ({ ...prev, [card.id]: { ...prev[card.id], [sheet.kind]: true } }));
+                return (
+                  <div key={card.id} className={styles.card} data-fleet-tv-card={card.id} data-fleet-tv-kind={sheet.kind} style={{"--accent":card.accent} as React.CSSProperties}>
+                    <div className={styles.cardHeader}>{sheet.kind === "promo" ? "PROMO" : title}</div>
+                    <div className={styles.promoMain}>
+                      <div className={styles.promoViewport}>
+                        <img
+                          className={`${styles.promoImg} ${styles.promoActive}`}
+                          src={sheet.image}
+                          alt={sheet.alt}
+                          referrerPolicy="no-referrer"
+                          ref={(node) => { if (node?.complete && node.naturalWidth === 0) markBroken(); }}
+                          onError={markBroken}
+                        />
+                      </div>
+                    </div>
+                  </div>
+                );
+              }
               const promo = SHOW_CIGARETTES || card.id !== "CIGARETTES" ? getTv2DaytimePromo(card.id, daytime, promoElapsedMs) : undefined;
 
               if (promo && card.id === "CIGARETTES") {
@@ -382,6 +414,7 @@ export default function TV2Page() {
         
       </div>
       {lastUpdate ? <div className={styles.lastUpdated}>Refreshed {lastUpdate}</div> : null}
+      <FleetTvTakeover promos={fleetTv.fullscreenPromos} />
     </div>
   );
 }

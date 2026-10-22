@@ -3,6 +3,8 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import styles from "./contact.module.css";
 
+export const dynamic = "force-dynamic";
+
 export const metadata: Metadata = {
   title: { absolute: "Contact Kennedy Loud Cannabis | 49 Hillcrest Ave Unit 104, Brampton" },
   description:
