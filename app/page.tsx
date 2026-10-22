@@ -1,6 +1,8 @@
 import { HOME_DOC_TITLE } from "./lib/homeDelivery";
 import type { Metadata } from "next";
 import HomePageClient from "./HomePageClient";
+import { CODED_BANNERS } from "./lib/fleet/config";
+import { getFleetContent } from "./lib/fleetContent";
 import { getLiveMenu } from "./lib/liveMenu";
 
 const TITLE = "Kennedy Loud Cannabis | 24 Hour Weed Dispensary Brampton";
@@ -28,6 +30,7 @@ export const metadata: Metadata = {
 export const dynamic = "force-dynamic";
 
 export default async function HomePage() {
-  const { flowers } = await getLiveMenu();
-  return <HomePageClient initialFlowers={flowers} />;
+  const [{ flowers }, fleet] = await Promise.all([getLiveMenu(), getFleetContent()]);
+  const contentBanners = fleet.active && fleet.banners.some((banner, index) => banner !== CODED_BANNERS[index]) ? fleet.banners : undefined;
+  return <HomePageClient initialFlowers={flowers} contentBanners={contentBanners} />;
 }

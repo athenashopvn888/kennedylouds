@@ -1,10 +1,17 @@
+import CigaretteStateProvider from "./components/CigaretteStateProvider";
+import FleetContentProvider from "./components/FleetContentProvider";
 import FullNameNap from "./components/FullNameNap";
 import PinnedNavClearance from "./components/PinnedNavClearance";
+import { CIG_WORDING_FALLBACK } from "./lib/cigDecision";
+import { getFleetContent } from "./lib/fleetContent";
+import { SHOW_CIGARETTES } from "./lib/siteConfig";
 import type { Metadata } from "next";
 import Link from "next/link";
 import "./globals.css";
 
-export const metadata: Metadata = {
+export const revalidate = 60;
+
+const ROOT_METADATA: Metadata = {
   metadataBase: new URL("https://kennedyloudcannabis.com"),
   title: {
     default: "Kennedy Loud Cannabis | 24 Hour Weed Dispensary Brampton",
@@ -69,6 +76,19 @@ export const metadata: Metadata = {
   },
 };
 
+export async function generateMetadata(): Promise<Metadata> {
+  const fleet = await getFleetContent();
+  if (!fleet.active) return ROOT_METADATA;
+  const description = fleet.pages.Home?.metaDescription || "";
+  if (!description || description === ROOT_METADATA.description) return ROOT_METADATA;
+  return {
+    ...ROOT_METADATA,
+    description,
+    openGraph: { ...ROOT_METADATA.openGraph, description },
+    twitter: { ...ROOT_METADATA.twitter, description },
+  };
+}
+
 /* ── JSON-LD Structured Data ── */
 const storeJsonLd = {
   "@context": "https://schema.org",
@@ -116,14 +136,40 @@ const websiteJsonLd = {
   publisher: { "@id": "https://kennedyloudcannabis.com/#store" },
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const fleet = await getFleetContent();
+  const cigarettes = { web: SHOW_CIGARETTES, tv: SHOW_CIGARETTES, wording: CIG_WORDING_FALLBACK };
+  const storeJson = fleet.active
+    ? {
+        ...storeJsonLd,
+        name: fleet.nap.schemaName,
+        alternateName: fleet.nap.name,
+        telephone: fleet.nap.phoneTel,
+        url: fleet.nap.website.endsWith("/") ? fleet.nap.website : `${fleet.nap.website}/`,
+        hasMap: fleet.nap.mapsSearchUrl,
+        sameAs: [fleet.nap.mapsSearchUrl],
+        address: {
+          ...storeJsonLd.address,
+          streetAddress: fleet.nap.street,
+          addressLocality: fleet.nap.city,
+          addressRegion: fleet.nap.province,
+          postalCode: fleet.nap.postalCode,
+        },
+        geo: {
+          ...storeJsonLd.geo,
+          latitude: Number(fleet.nap.lat),
+          longitude: Number(fleet.nap.lng),
+        },
+      }
+    : storeJsonLd;
   return (
     <html lang="en">
       <head>
+        <meta name="fleet-content-version" content={fleet.version} />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
           rel="preconnect"
@@ -132,7 +178,7 @@ export default function RootLayout({
         />
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify([storeJsonLd, websiteJsonLd]) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify([storeJson, websiteJsonLd]) }}
         />
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-0JBPDPJ0VX"></script>
         <script
@@ -150,9 +196,13 @@ export default function RootLayout({
         <Link className="deliveryAnnouncement" href="/delivery">
           NEW DELIVERY MENU IS HERE — CLICK TO EXPLORE
         </Link>
-        {children}
-        <FullNameNap />
-        <PinnedNavClearance />
+        <FleetContentProvider value={{ active: fleet.active, version: fleet.version, nap: fleet.nap }}>
+          <CigaretteStateProvider value={cigarettes}>
+            {children}
+            <FullNameNap />
+            <PinnedNavClearance />
+          </CigaretteStateProvider>
+        </FleetContentProvider>
       </body>
     </html>
   );

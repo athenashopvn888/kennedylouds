@@ -7,6 +7,8 @@ import { RESOURCE_PATHS } from "./resources/resourceData";
 import { GUIDE_REGISTRY } from "./lib/guideRegistry";
 import { SHOW_CIGARETTES } from "./lib/siteConfig";
 import { isHiddenCigarettePath, isHiddenCigaretteProduct, isHiddenGuideSlug } from "./lib/cigaretteGate";
+import { codedArticleLinks } from "./articles/codedLinks";
+import { loadFleetArticles } from "./lib/fleet/articles";
 
 // Products come from the same loader as /api/tv-data on every request.
 export const dynamic = "force-dynamic";
@@ -102,5 +104,22 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
 
   const guidePages: MetadataRoute.Sitemap = [...GUIDE_REGISTRY, ...DELIVERY_GUIDE_REGISTRY].filter((guide) => !isHiddenGuideSlug(guide.slug)).map((guide) => ({ url: `${BASE}/guides/${guide.slug}`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.7 }));
-  return [...staticPages, ...tierPages, ...itemPages, ...flowerPages, ...itemDetailPages, ...resourcePages, ...seoPages, ...guidePages];
+
+  let fleetArticlePages: MetadataRoute.Sitemap = [];
+  try {
+    const loaded = await loadFleetArticles();
+    if (loaded.ok) {
+      const codedSlugs = new Set(codedArticleLinks().map((link) => link.slug));
+      fleetArticlePages = loaded.articles.filter((article) => !codedSlugs.has(article.slug)).map((article) => ({
+        url: `${BASE}/articles/${article.slug}`,
+        lastModified: article.publishedAt,
+        changeFrequency: "weekly" as const,
+        priority: 0.6,
+      }));
+    }
+  } catch {
+    fleetArticlePages = [];
+  }
+
+  return [...staticPages, ...tierPages, ...itemPages, ...flowerPages, ...itemDetailPages, ...resourcePages, ...seoPages, ...guidePages, ...fleetArticlePages];
 }
