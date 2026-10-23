@@ -141,6 +141,55 @@ export function cigarettePublicHeaders(state: { web: boolean; tv: boolean; wordi
   };
 }
 
+/**
+ * Website decision: webOn only. A missing feed stays off.
+ * An explicit env hard-off still hides the website.
+ * TV uses decideCigaretteSurface, which fails open when the feed is missing.
+ */
+export function decideWebCigaretteSurface(input: {
+  cig: unknown;
+  items?: ShelfItem[] | null;
+  envRaw?: string;
+  errored?: boolean;
+}): CigaretteSurfaceDecision & { wording: CigaretteWording } {
+  const items = Array.isArray(input.items) ? input.items : [];
+  if (cigaretteEnvHardOff(input.envRaw)) {
+    return decideCigaretteSurface({ cig: input.cig, items, surface: "web", envRaw: input.envRaw, errored: input.errored });
+  }
+  const wording = resolveCigWording(
+    input.cig && typeof input.cig === "object" && !Array.isArray(input.cig)
+      ? (input.cig as { wording?: unknown }).wording
+      : undefined,
+  );
+  if (input.errored || !input.cig || typeof input.cig !== "object" || Array.isArray(input.cig)) {
+    return { show: false, reason: input.errored ? "error" : "missing", wording };
+  }
+  if (!resolveSurfaceFlag(input.cig, "web")) return { show: false, reason: "off", wording };
+  if (!items.some((item) => isRealCigaretteItem(item))) return { show: false, reason: "no-items", wording };
+  return { show: true, reason: "on", wording };
+}
+
+export function assembleCigaretteSnapshot(input: {
+  cig: unknown;
+  items?: ShelfItem[] | null;
+  live?: boolean;
+  errored?: boolean;
+  envRaw?: string;
+}): {
+  web: CigaretteSurfaceDecision & { wording: CigaretteWording };
+  tv: CigaretteSurfaceDecision & { wording: CigaretteWording };
+  guides: CigaretteSurfaceDecision;
+  wording: CigaretteWording;
+  live: boolean;
+} {
+  const items = Array.isArray(input.items) ? input.items : [];
+  const errored = Boolean(input.errored);
+  const web = decideWebCigaretteSurface({ cig: input.cig, items, errored, envRaw: input.envRaw });
+  const tv = decideCigaretteSurface({ cig: input.cig, items, surface: "tv", errored, envRaw: input.envRaw });
+  const guides = decideCigaretteGuide({ cig: input.cig, items, errored, envRaw: input.envRaw });
+  return { web, tv, guides, wording: tv.wording, live: Boolean(input.live) };
+}
+
 export function readCigaretteTvHeader(headers: { get(name: string): string | null }): { show: boolean; wording: CigaretteWording } {
   const show = headers.get("x-tv-data-cig-tv") === "1";
   const raw = headers.get("x-tv-data-cig-wording");
