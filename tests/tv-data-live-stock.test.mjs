@@ -6,6 +6,7 @@ import { beforeEach, test } from "node:test";
 const require = createRequire(import.meta.url);
 const {
   DEFAULT_APPS_SCRIPT_URL,
+  getCigaretteDataset,
   getTvData,
   postprocessFlowers,
   postprocessItems,
@@ -237,6 +238,58 @@ test("partial, empty, or invalid live stock falls back to the static snapshot", 
   });
   assert.equal(accepted.headers["x-tv-data-source"], "live");
   assert.equal(accepted.body.length, exactHalf);
+});
+
+test("cigarette dataset reads the feed cig block on its own minute", async () => {
+  const flowers = list(staticFlowers.length, (index) => flower(`F${index}`));
+  const items = list(staticItems.length, (index) => item(`I${index}`));
+  const cig = { on: true, webOn: false, tvOn: true };
+  const { fetchImpl, calls } = mockFetch({
+    flowers,
+    items,
+    stockDate: "2026-10-23T08:00:00.000Z",
+    cig,
+  });
+  const first = await getCigaretteDataset({
+    staticFlowers,
+    staticItems,
+    fetchImpl,
+    now: 5_000,
+  });
+  assert.equal(calls.length, 1);
+  assert.equal(calls[0].opts.next.revalidate, 60);
+  assert.equal(first.source, "live");
+  assert.equal(first.cig.tvOn, true);
+  assert.equal(first.cig.webOn, false);
+  assert.equal(first.items.length, staticItems.length);
+
+  const cached = await getCigaretteDataset({
+    staticFlowers,
+    staticItems,
+    fetchImpl,
+    now: 5_000 + 30_000,
+  });
+  assert.equal(calls.length, 1);
+  assert.equal(cached.cig, first.cig);
+
+  await getCigaretteDataset({
+    staticFlowers,
+    staticItems,
+    fetchImpl,
+    now: 5_000 + 61_000,
+  });
+  assert.equal(calls.length, 2);
+
+  resetTvStockCache();
+  const failed = await getCigaretteDataset({
+    staticFlowers,
+    staticItems,
+    fetchImpl: mockFetch(null, { throwError: new Error("network down") }).fetchImpl,
+    now: 9_000,
+  });
+  assert.equal(failed.source, "static-fallback");
+  assert.equal(failed.cig, null);
+  assert.equal(failed.items, staticItems);
 });
 
 test("prebuild uses the shared post-processor and KLC01", () => {

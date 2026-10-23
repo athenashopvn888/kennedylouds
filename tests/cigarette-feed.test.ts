@@ -2,8 +2,10 @@ import assert from "node:assert/strict";
 import test from "node:test";
 import {
   CIG_WORDING_FALLBACK,
+  assembleCigaretteSnapshot,
   decideCigaretteGuide,
   decideCigaretteSurface,
+  decideWebCigaretteSurface,
   reconcileSurfaceItems,
   resolveCigWording,
   resolveSurfaceFlag,
@@ -83,9 +85,45 @@ test("guide pages follow the master switch and a feed error stays open", () => {
 });
 
 test("each surface hides real cigarettes itself and always keeps wraps and pouches", () => {
-  const menu = [vape, carton, grabba, backwoods, pouch];
+  const wrap = { category: "CIGARETTES", name: "HEMP WRAP", slug: "hemp-wrap" };
+  const cigarillo = { category: "CIGARETTES", name: "SWISHER CIGARILLO", slug: "swisher-cigarillo" };
+  const paper = { category: "CIGARETTES", name: "RAW PAPER KING SIZE", slug: "raw-paper" };
+  const zyn = { category: "CIGARETTES", name: "ZYN NICOTINE POUCHES", slug: "zyn" };
+  const velo = { category: "CIGARETTES", name: "VELO POUCH", slug: "velo-pouch" };
+  const menu = [vape, carton, grabba, backwoods, pouch, wrap, cigarillo, paper, zyn, velo];
   const hidden = reconcileSurfaceItems(menu, menu, false);
-  assert.deepEqual(hidden.map((item) => item.slug), [vape.slug, backwoods.slug, pouch.slug]);
+  assert.deepEqual(hidden.map((item) => item.slug), [vape.slug, backwoods.slug, pouch.slug, wrap.slug, cigarillo.slug, paper.slug, zyn.slug, velo.slug]);
   const shown = reconcileSurfaceItems([vape, backwoods], [carton, backwoods], true);
   assert.deepEqual(shown.map((item) => item.slug), [vape.slug, backwoods.slug, carton.slug]);
+});
+
+test("TV follows tvOn and the website stays off when only tvOn is true", () => {
+  const items = [carton, backwoods, pouch];
+  const openTv = assembleCigaretteSnapshot({
+    cig: cig({ on: true, webOn: false, tvOn: true }),
+    items,
+    live: true,
+  });
+  assert.equal(openTv.tv.show, true);
+  assert.equal(openTv.tv.reason, "on");
+  assert.equal(openTv.web.show, false);
+  assert.equal(openTv.web.reason, "off");
+  assert.equal(decideWebCigaretteSurface({ cig: cig({ webOn: false, tvOn: true }), items }).show, false);
+
+  const missing = assembleCigaretteSnapshot({ cig: null, items, live: false, errored: true });
+  assert.equal(missing.tv.show, true);
+  assert.equal(missing.tv.reason, "error");
+  assert.equal(missing.web.show, false);
+  assert.equal(missing.web.reason, "error");
+
+  const hardOff = assembleCigaretteSnapshot({
+    cig: cig({ on: true, webOn: true, tvOn: true }),
+    items,
+    live: true,
+    envRaw: "false",
+  });
+  assert.equal(hardOff.web.show, false);
+  assert.equal(hardOff.web.reason, "env");
+  assert.equal(hardOff.tv.show, false);
+  assert.equal(hardOff.tv.reason, "env");
 });

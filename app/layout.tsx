@@ -2,9 +2,8 @@ import CigaretteStateProvider from "./components/CigaretteStateProvider";
 import FleetContentProvider from "./components/FleetContentProvider";
 import FullNameNap from "./components/FullNameNap";
 import PinnedNavClearance from "./components/PinnedNavClearance";
-import { CIG_WORDING_FALLBACK } from "./lib/cigDecision";
+import { getCigaretteSnapshot, toPublicCigaretteState } from "./lib/cigaretteFeed";
 import { getFleetContent } from "./lib/fleetContent";
-import { SHOW_CIGARETTES } from "./lib/siteConfig";
 import type { Metadata } from "next";
 import Link from "next/link";
 import "./globals.css";
@@ -141,8 +140,8 @@ export default async function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const fleet = await getFleetContent();
-  const cigarettes = { web: SHOW_CIGARETTES, tv: SHOW_CIGARETTES, wording: CIG_WORDING_FALLBACK };
+  const [fleet, cigaretteSnapshot] = await Promise.all([getFleetContent(), getCigaretteSnapshot()]);
+  const cigarettes = toPublicCigaretteState(cigaretteSnapshot);
   const storeJson = fleet.active
     ? {
         ...storeJsonLd,
