@@ -6,6 +6,7 @@ import HomeTitleBlock from "../HomeTitleBlock";
 import { useEffect, useRef, useState } from "react";
 import { useCigaretteState } from "../CigaretteStateProvider";
 import { FLEET_AREA, FLEET_COLORS, FLEET_ORIGIN, FLEET_STORE_NAME } from "../../lib/fleet/config";
+import { SHOW_CIGARETTES } from "../../lib/siteConfig";
 import type { ResolvedBanner } from "../../lib/fleet/types";
 
 const STORE_NAME = FLEET_STORE_NAME;
@@ -61,7 +62,7 @@ function BannerFigure({ banner }: { banner: ResolvedBanner }) {
 
 export default function FleetAnnouncementBanner({ title, banners }: { title?: string; banners?: ResolvedBanner[] } = {}) {
   const cigarettes = useCigaretteState();
-  const showCigarettes = cigarettes.web;
+  const showCigarettes = SHOW_CIGARETTES ? cigarettes.web : false;
   const announcementRef = useRef<HTMLElement>(null);
   const [navClearance, setNavClearance] = useState<number | null>(null);
   const [showHalloweenNotice, setShowHalloweenNotice] = useState(false);
