@@ -1,6 +1,7 @@
 import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
 import test from "node:test";
+import { decideCigaretteSurface } from "../app/lib/cigDecision.ts";
 import { CIGARETTE_CARD_OFF_TITLE, tv2CardItems, tv2CardTitle, tv2CategoryOff } from "../app/lib/tvCigaretteBoard.ts";
 
 const cigCard = {
@@ -52,6 +53,29 @@ test("a true TV flag shows the cigarette card items and a false flag hides them"
   assert.ok(daytime.includes(backwoods.slug));
   assert.ok(daytime.includes(wrap.slug));
   assert.equal(daytime.includes(carton.slug), false);
+});
+
+test("a feed error hides the cigarette card items and a successful tvOn shows them", () => {
+  const errored = decideCigaretteSurface({ cig: { tvOn: true }, items, surface: "tv", errored: true });
+  assert.equal(errored.show, false);
+  const hidden = tv2CardItems(items, cigCard, errored.show, false).map((item) => item.slug);
+  assert.equal(hidden.includes(carton.slug), false);
+  assert.equal(hidden.includes(grabba.slug), false);
+  assert.ok(hidden.includes(backwoods.slug));
+  assert.ok(hidden.includes(cigarillo.slug));
+  assert.ok(hidden.includes(paper.slug));
+  assert.ok(hidden.includes(wrap.slug));
+  const vapes = tv2CardItems(items, vapeCard, errored.show, false).map((item) => item.slug);
+  assert.ok(vapes.includes(pouch.slug));
+  assert.ok(vapes.includes(zyn.slug));
+  assert.equal(vapes.includes(carton.slug), false);
+
+  const shown = decideCigaretteSurface({ cig: { tvOn: true }, items, surface: "tv" });
+  assert.equal(shown.show, true);
+  assert.ok(tv2CardItems(items, cigCard, shown.show, false).some((item) => item.slug === carton.slug));
+  const off = decideCigaretteSurface({ cig: { tvOn: false }, items, surface: "tv" });
+  assert.equal(off.show, false);
+  assert.equal(tv2CardItems(items, cigCard, off.show, false).some((item) => item.slug === carton.slug), false);
 });
 
 test("TV pages read the live header and website pages keep the static gate", () => {
