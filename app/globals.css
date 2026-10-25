@@ -48,6 +48,7 @@ body > .deliveryAnnouncement ~ * nav {
 
 :root {
   --delivery-announcement-height: 42px;
+  --mobile-action-bar-height: 0px;
   /* ── LIGHT SILVER / WHITE THEME ── */
   --bg-primary:      #f2f3f2;
   --bg-secondary:    #e8eae8;
@@ -158,6 +159,22 @@ body {
   overflow-x: hidden;
   min-height: 100vh;
   padding-top: var(--delivery-announcement-height);
+}
+
+@media (max-width: 768px) {
+  :root {
+    --mobile-action-bar-height: calc(68px + env(safe-area-inset-bottom, 0px));
+  }
+
+  body {
+    padding-bottom: var(--mobile-action-bar-height);
+  }
+}
+
+@media print {
+  body {
+    padding-bottom: 0;
+  }
 }
 
 /* ── ATMOSPHERIC BACKGROUND ── */
