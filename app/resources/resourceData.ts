@@ -891,7 +891,7 @@ const PINKY_KLC01_OVERRIDES: Record<string, Partial<ResourceArticle>> = {
       },
       {
         "type": "p",
-        "text": "A [vape shop in Brampton](/vape-shop-brampton-kennedy) stop for nicotine devices is a different menu from those THC vapes."
+        "text": "If the stop is a [vape shop in Brampton](/vape-shop-brampton-kennedy) for nicotine devices, that menu is different from those THC vapes."
       },
       {
         "type": "h3",
