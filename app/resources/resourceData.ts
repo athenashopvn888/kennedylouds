@@ -755,6 +755,10 @@ const PINKY_KLC01_OVERRIDES: Record<string, Partial<ResourceArticle>> = {
       },
       {
         "type": "p",
+        "text": "If you searched for a [weed dispensary on Kennedy Road](/weed-dispensary-brampton-kennedy), that page describes this same Hillcrest Ave counter."
+      },
+      {
+        "type": "p",
         "text": "The goal is not to memorize the whole site."
       },
       {
@@ -796,6 +800,10 @@ const PINKY_KLC01_OVERRIDES: Record<string, Partial<ResourceArticle>> = {
       {
         "type": "p",
         "text": "This guide explains how to use the menu. It should not replace the live local page."
+      },
+      {
+        "type": "p",
+        "text": "A walk-in is separate from [cannabis delivery in Brampton](/cannabis-delivery-hillcrest-brampton). The dispatcher confirms the drop before an order is accepted."
       },
       {
         "type": "h2",
