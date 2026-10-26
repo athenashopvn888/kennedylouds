@@ -116,7 +116,7 @@ export default function FAQPage() {
             the{" "}
             <Link href="/cannabis-store-brampton">central Brampton cannabis store</Link>. For the Hillcrest /
             Kennedy weed hub, see the{" "}
-            <Link href="/weed-dispensary-brampton/">central Brampton weed dispensary</Link>. For dispatcher delivery
+            <Link href="/weed-dispensary-brampton">central Brampton weed dispensary</Link>. For dispatcher delivery
             from Unit 104, see{" "}
             <Link href="/cannabis-delivery-hillcrest-brampton">Hillcrest / Kennedy cannabis delivery</Link>.
             {SHOW_CIGARETTES ? (

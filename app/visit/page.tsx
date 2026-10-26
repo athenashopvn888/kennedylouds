@@ -184,7 +184,7 @@ export default function VisitPage() {
               For nicotine vape at the same Kennedy / Hillcrest counter, use{" "}
               <Link href="/nicotine-vape-kennedy-brampton">Kennedy / Hillcrest nicotine vape</Link>. For the broader
               Brampton visit snapshot — menu categories, nearby areas, and the same NAP — use the{" "}
-              <Link href="/weed-dispensary-brampton/">Hillcrest / Kennedy weed dispensary</Link>.
+              <Link href="/weed-dispensary-brampton">Hillcrest / Kennedy weed dispensary</Link>.
             </p>
           </section>
 

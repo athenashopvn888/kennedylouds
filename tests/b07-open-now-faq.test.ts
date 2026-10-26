@@ -78,10 +78,10 @@ test("B07 includes required H2s, FAQ table, hours schema, and live internal link
   assert.match(openNowLib, /24 hour dispensary open near me/);
   assert.match(openNowLib, /cannabis store near me open now/);
   assert.match(openNowLib, /href: "\/"/);
-  assert.match(openNowLib, /href: "\/weed-dispensary-brampton\/"/);
+  assert.match(openNowLib, /href: "\/weed-dispensary-brampton"/);
   assert.match(openNowLib, /href: "\/visit"/);
   assert.match(openNowPage, /href="\/visit"/);
-  assert.match(openNowPage, /href="\/weed-dispensary-brampton\/"/);
+  assert.match(openNowPage, /href="\/weed-dispensary-brampton"/);
   assert.match(openNowPage, /href="\/#contact"/);
 });
 

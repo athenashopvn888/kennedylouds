@@ -188,7 +188,7 @@ export default function OpenNowFaqPage() {
               Parking is not a reserved-lot promise on this page. Check the current map listing, posted signs, or
               call before you leave. For entrance, directory, and Kennedy–Queen–Main corridor notes, use the{" "}
               <Link href="/visit">Unit 104 walk-in guide</Link>. For the broader Brampton visit snapshot, use the{" "}
-              <Link href="/weed-dispensary-brampton/">Hillcrest / Kennedy weed dispensary</Link>. A 24-hour
+              <Link href="/weed-dispensary-brampton">Hillcrest / Kennedy weed dispensary</Link>. A 24-hour
               Hillcrest Brampton dispensary search should finish here, not at a downtown Queen Street West pin.
             </p>
           </section>
@@ -233,7 +233,7 @@ export default function OpenNowFaqPage() {
               <Link href="/visit" className={`${styles.btn} ${styles.btnSecondary}`}>
                 How to find Unit 104
               </Link>
-              <Link href="/weed-dispensary-brampton/" className={`${styles.btn} ${styles.btnSecondary}`}>
+              <Link href="/weed-dispensary-brampton" className={`${styles.btn} ${styles.btnSecondary}`}>
                 Hillcrest / Kennedy weed
               </Link>
               <Link href="/cannabis-delivery-hillcrest-brampton" className={`${styles.btn} ${styles.btnSecondary}`}>

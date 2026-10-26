@@ -67,7 +67,7 @@ export const RESOURCE_HUB: ResourceArticle = {
     { label: "Hillcrest native cigarettes", href: "/native-cigarettes-hillcrest-brampton" },
     { label: "Kennedy nicotine vape", href: "/nicotine-vape-kennedy-brampton" },
     { label: "Cannabis store Brampton", href: "/cannabis-store-brampton" },
-    { label: "Brampton visit page", href: "/weed-dispensary-brampton/" },
+    { label: "Brampton visit page", href: "/weed-dispensary-brampton" },
     { label: "Flower tiers", href: "/#menu" },
     { label: "Contact", href: "/contact" },
   ],
@@ -111,7 +111,7 @@ export const RESOURCE_PAGES: ResourceArticle[] = [
       { label: "Hillcrest / Kennedy delivery", href: "/cannabis-delivery-hillcrest-brampton" },
       { label: "Hillcrest native cigarettes", href: "/native-cigarettes-hillcrest-brampton" },
       { label: "Kennedy nicotine vape", href: "/nicotine-vape-kennedy-brampton" },
-      { label: "Brampton visit page", href: "/weed-dispensary-brampton/" },
+      { label: "Brampton visit page", href: "/weed-dispensary-brampton" },
       { label: "Menu", href: "/#menu" },
       { label: "FAQ", href: "/faq" },
     ],
@@ -190,7 +190,7 @@ export const RESOURCE_PAGES: ResourceArticle[] = [
       { label: "AAA+ Weed", href: "/aaa-weed" },
       { label: "AA Weed", href: "/aa-weed" },
       { label: "Budget Weed", href: "/budget-weed" },
-      { label: "Kennedy Loud Weed in Brampton", href: "/weed-dispensary-brampton/" },
+      { label: "Kennedy Loud Weed in Brampton", href: "/weed-dispensary-brampton" },
     ],
   },
   {
@@ -302,7 +302,7 @@ export const RESOURCE_PAGES: ResourceArticle[] = [
     quickLinks: [
       { label: "Cigarettes", href: "/items/cigarettes" },
       { label: "Accessories", href: "/items/add-ons" },
-      { label: "Brampton visit page", href: "/weed-dispensary-brampton/" },
+      { label: "Brampton visit page", href: "/weed-dispensary-brampton" },
     ],
   },
   {
@@ -2191,7 +2191,7 @@ const PINKY_KLC01_OVERRIDES: Record<string, Partial<ResourceArticle>> = {
       },
       {
         "label": "Brampton visit page",
-        "href": "/weed-dispensary-brampton/"
+        "href": "/weed-dispensary-brampton"
       }
     ]
   }

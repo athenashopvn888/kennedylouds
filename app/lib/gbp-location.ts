@@ -53,9 +53,9 @@ export const gbpLocation = {
   latitude: "43.6940006",
   longitude: "-79.7477885",
   hours: [NAP.hours],
-  seoTitle: "Hillcrest / Kennedy / Unit 104 Weed Dispensary",
+  seoTitle: "Brampton Cannabis Dispensary – Hillcrest / Kennedy / Unit 104 Weed Dispensary",
   metaDescription:
-    "Hillcrest / Kennedy / Unit 104 weed dispensary at 49 Hillcrest Ave Unit 104, central Brampton. Open 24 hours. Call +1 (289) 206-1181. Adults 19+.",
+    "Brampton cannabis dispensary. Hillcrest / Kennedy / Unit 104 weed dispensary at 49 Hillcrest Ave Unit 104, central Brampton. Open 24 hours. Call +1 (289) 206-1181. Adults 19+.",
   h1: "Hillcrest / Kennedy / Unit 104 Weed Dispensary in Central Brampton",
   localLandmarks: ["Hillcrest Ave", "Kennedy Road", "Unit 104", "Central Brampton"],
   introVariant:

@@ -16,7 +16,7 @@ export const TIER_COMPARE = {
   body: "Kennedy Loud Cannabis organizes Cannabis Flower into Exotic Weed, Premium Weed, AAA+ Weed, AA Weed and Budget Weed at the Hillcrest / Kennedy walk-in. Explore one collection or compare several based on the product information shown while you browse.",
   ownerSentence: "Want the Hillcrest / Kennedy weed hub instead of one flower collection?",
   ownerAnchor: "Hillcrest / Kennedy weed dispensary in central Brampton",
-  ownerHref: "/weed-dispensary-brampton/",
+  ownerHref: "/weed-dispensary-brampton",
 } as const;
 
 export const TIER_SEO: Record<string, TierSeoData> = {

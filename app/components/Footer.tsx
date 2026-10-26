@@ -84,7 +84,7 @@ export default function Footer() {
               <Link href="/info/cheap-weed-brampton">Cheap Weed Brampton</Link>
               {SHOW_CIGARETTES ? <Link href="/info/native-cigarettes-brampton">Native Cigarettes</Link> : null}
               <Link href="/info/weed-store-near-hillcrest-ave">Weed Store Near Hillcrest Ave</Link>
-              <Link href="/weed-dispensary-brampton/">
+              <Link href="/weed-dispensary-brampton">
                 Hillcrest / Kennedy Weed Dispensary
               </Link>
               <Link href="/contact">Contact Us</Link>
