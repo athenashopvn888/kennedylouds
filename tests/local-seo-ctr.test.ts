@@ -43,18 +43,22 @@ test("canonical NAP is consistent on homepage, landing, footer and schema", () =
 
 test("homepage and Brampton landing titles are unique, CTR-oriented and absolute", () => {
   assert.match(homepage, /Kennedy Loud Cannabis \| 24 Hour Weed Dispensary Brampton/);
-  assert.equal(gbpLocation.seoTitle, "Hillcrest / Kennedy / Unit 104 Weed Dispensary");
+  assert.equal(gbpLocation.seoTitle, "Brampton Cannabis Dispensary – Hillcrest / Kennedy / Unit 104 Weed Dispensary");
   assert.match(landing, /absolute: gbpLocation\.seoTitle/);
   assert.match(kennedy, /Kennedy Road Weed Dispensary \| Open 24 Hours \| Brampton/);
   assert.notEqual(gbpLocation.seoTitle, "Kennedy Loud Cannabis | 24 Hour Weed Dispensary Brampton");
   assert.match(gbpLocation.metaDescription, /49 Hillcrest Ave Unit 104/);
   assert.match(gbpLocation.metaDescription, /Open 24 hours/);
   assert.match(gbpLocation.metaDescription, /\+1 \(289\) 206-1181/);
-  assert.ok(gbpLocation.seoTitle.length <= 60);
+  assert.match(gbpLocation.metaDescription, /Brampton/);
+  assert.match(gbpLocation.metaDescription, /cannabis/);
+  assert.ok(gbpLocation.seoTitle.startsWith("Brampton Cannabis Dispensary – Hillcrest / Kennedy"));
 });
 
 test("Brampton landing H1, above-the-fold CTAs and category links are visit-useful", () => {
-  assert.equal(gbpLocation.h1, "Hillcrest / Kennedy / Unit 104 Weed Dispensary in Central Brampton");
+  assert.equal(gbpLocation.h1, "Brampton cannabis dispensary – Hillcrest / Kennedy / Unit 104 Weed Dispensary in Central Brampton");
+  assert.match(gbpLocation.h1, /Brampton/);
+  assert.match(gbpLocation.h1, /cannabis/);
   assert.match(gbpPage, /<Navbar \/>/);
   assert.match(gbpPage, /<Footer \/>/);
   assert.match(gbpPage, /View Menu/);

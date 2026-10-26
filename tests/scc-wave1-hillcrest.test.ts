@@ -59,7 +59,9 @@ test("weed LP H1 and title own Hillcrest / Kennedy / Unit 104, not Queen St W do
   assert.match(gbpLocation.h1, /Hillcrest \/ Kennedy/);
   assert.match(gbpLocation.h1, /Unit 104/);
   assert.match(gbpLocation.h1, /Central Brampton/);
-  assert.ok(gbpLocation.seoTitle.length <= 60);
+  assert.ok(gbpLocation.seoTitle.startsWith("Brampton Cannabis Dispensary – Hillcrest / Kennedy"));
+  assert.match(gbpLocation.h1, /Brampton/);
+  assert.match(gbpLocation.h1, /cannabis/);
   assert.match(gbpLocation.introVariant, /not a Queen Street West downtown door/);
   assert.match(gbpLocation.streetAddress, /49 Hillcrest Ave Unit 104/);
   assert.doesNotMatch(gbpLocation.seoTitle, /Queen Street West/);

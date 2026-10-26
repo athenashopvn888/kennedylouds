@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: gbpLocation.seoTitle,
     description: gbpLocation.metaDescription,
-    url: `https://${gbpLocation.domain}/${gbpLocation.slug}/`,
+    url: `https://${gbpLocation.domain}/${gbpLocation.slug}`,
     siteName: gbpLocation.storeName,
   },
   twitter: {

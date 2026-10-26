@@ -4,7 +4,7 @@ import { NAP, gbpLocation } from "./gbp-location";
 export const HILLCREST_WEED_DISPENSARY = {
   path: "/weed-dispensary-brampton/",
   slug: gbpLocation.slug,
-  canonical: `${NAP.website.replace(/\/$/, "")}/weed-dispensary-brampton/`,
+  canonical: `${NAP.website.replace(/\/$/, "")}/weed-dispensary-brampton`,
   title: gbpLocation.seoTitle,
   h1: gbpLocation.h1,
   metaDescription: gbpLocation.metaDescription,

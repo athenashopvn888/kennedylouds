@@ -462,7 +462,8 @@ export default function HomePageClient({ initialFlowers, contentBanners }: { ini
               <Link href="/visit">Unit 104 walk-in guide</Link>, the{" "}
               <Link href="/24-hour-dispensary-brampton">24-hour / open-now FAQ</Link>, the{" "}
               <Link href="/cannabis-store-brampton">central Brampton cannabis store guide</Link>, the{" "}
-              <Link href="/weed-dispensary-brampton/">Hillcrest / Kennedy weed dispensary</Link>, and the{" "}
+              <Link href="/weed-dispensary-brampton/">Hillcrest / Kennedy weed dispensary</Link>, the{" "}
+              <Link href="/weed-dispensary-brampton">Brampton cannabis dispensary</Link>, and the{" "}
               <Link href="/cannabis-delivery-hillcrest-brampton">Hillcrest / Kennedy cannabis delivery</Link> page
               {SHOW_CIGARETTES ? (
                 <>

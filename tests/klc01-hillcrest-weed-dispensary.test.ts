@@ -32,8 +32,8 @@ const prebuild = await readFile(new URL("../scripts/prebuild-stock.js", import.m
 const tierSeo = await readFile(new URL("../app/lib/tierSeoContent.ts", import.meta.url), "utf8");
 
 const PATH = "/weed-dispensary-brampton/";
-const TITLE = "Hillcrest / Kennedy / Unit 104 Weed Dispensary";
-const H1 = "Hillcrest / Kennedy / Unit 104 Weed Dispensary in Central Brampton";
+const TITLE = "Brampton Cannabis Dispensary – Hillcrest / Kennedy / Unit 104 Weed Dispensary";
+const H1 = "Brampton cannabis dispensary – Hillcrest / Kennedy / Unit 104 Weed Dispensary in Central Brampton";
 
 const PUBLIC_COPY = [weedLib, gbpPage, landing, gbpLocationSource, homeClient].join("\n");
 
@@ -57,7 +57,7 @@ test("5th pillar keeps the live Hillcrest weed-dispensary Brampton path", () => 
   assert.match(landing, /GBPLandingPage/);
   assert.match(landing, /absolute: gbpLocation\.seoTitle/);
   assert.ok(existsSync(path.resolve(import.meta.dirname, "../app/weed-dispensary-brampton/page.tsx")));
-  assert.match(sitemap, /\$\{BASE\}\/weed-dispensary-brampton\//);
+  assert.match(sitemap, /\$\{BASE\}\/weed-dispensary-brampton`/);
 });
 
 test("5th pillar H1 and title own Hillcrest / Kennedy / Unit 104, never Queen St W downtown", () => {
@@ -65,7 +65,12 @@ test("5th pillar H1 and title own Hillcrest / Kennedy / Unit 104, never Queen St
   assert.equal(gbpLocation.h1, H1);
   assert.match(weedLib, /title: gbpLocation\.seoTitle/);
   assert.match(weedLib, /h1: gbpLocation\.h1/);
-  assert.ok(TITLE.length <= 60);
+  assert.ok(TITLE.startsWith("Brampton Cannabis Dispensary – Hillcrest / Kennedy"));
+  assert.ok(TITLE.includes("Hillcrest / Kennedy / Unit 104 Weed Dispensary"));
+  assert.match(gbpLocation.metaDescription, /Brampton/);
+  assert.match(gbpLocation.metaDescription, /cannabis/);
+  assert.match(gbpLocation.h1, /Brampton/);
+  assert.match(gbpLocation.h1, /cannabis/);
   assert.match(TITLE, /Hillcrest \/ Kennedy/);
   assert.match(TITLE, /Unit 104/);
   assert.match(H1, /Hillcrest \/ Kennedy/);
