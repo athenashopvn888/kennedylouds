@@ -61,7 +61,7 @@ test("B01 visit guide includes required H2s, FAQ schema, and live internal links
   assert.match(visitPage, /"@type": "FAQPage"/);
   assert.match(visitGuide, /Is there a dispensary near me in central Brampton\?/);
   assert.match(visitGuide, /href: "\/"/);
-  assert.match(visitGuide, /href: "\/weed-dispensary-brampton\/"/);
+  assert.match(visitGuide, /href: "\/weed-dispensary-brampton"/);
   assert.match(visitGuide, /href: "\/info\/native-cigarettes-brampton"/);
 });
 

@@ -111,7 +111,7 @@ const RESOURCE_LINK_DEFS = [
     body: "City-level guide for the Hillcrest / Kennedy Road walk-in — Unit 104, not a downtown Queen Street pin.",
   },
   {
-    href: "/weed-dispensary-brampton/",
+    href: "/weed-dispensary-brampton",
     label: "Hillcrest / Kennedy",
     title: "Hillcrest / Kennedy / Unit 104 weed dispensary",
     body: "Neighbourhood weed hub at 49 Hillcrest Ave Unit 104 — Hillcrest / Kennedy only, not Queen Street West downtown.",
@@ -309,7 +309,7 @@ export default function HomePageClient({ initialFlowers, contentBanners }: { ini
             <Link href="/cannabis-store-brampton" className={styles.localVisitSecondary}>
               Cannabis store Brampton
             </Link>
-            <Link href="/weed-dispensary-brampton/" className={styles.localVisitSecondary}>
+            <Link href="/weed-dispensary-brampton" className={styles.localVisitSecondary}>
               Hillcrest / Kennedy weed
             </Link>
             <Link href="/cannabis-delivery-hillcrest-brampton" className={styles.localVisitSecondary}>
@@ -462,7 +462,7 @@ export default function HomePageClient({ initialFlowers, contentBanners }: { ini
               <Link href="/visit">Unit 104 walk-in guide</Link>, the{" "}
               <Link href="/24-hour-dispensary-brampton">24-hour / open-now FAQ</Link>, the{" "}
               <Link href="/cannabis-store-brampton">central Brampton cannabis store guide</Link>, the{" "}
-              <Link href="/weed-dispensary-brampton/">Hillcrest / Kennedy weed dispensary</Link>, and the{" "}
+              <Link href="/weed-dispensary-brampton">Hillcrest / Kennedy weed dispensary</Link>, and the{" "}
               <Link href="/cannabis-delivery-hillcrest-brampton">Hillcrest / Kennedy cannabis delivery</Link> page
               {SHOW_CIGARETTES ? (
                 <>

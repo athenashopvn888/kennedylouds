@@ -186,7 +186,7 @@ export default function CannabisStoreBramptonPage() {
               walk-in, use the{" "}
               <Link href="/visit">How to find Kennedy Loud at 49 Hillcrest Ave Unit 104</Link> guide. For the
               broader visit snapshot — menu categories, nearby areas, and the same NAP — use the{" "}
-              <Link href="/weed-dispensary-brampton/">Hillcrest / Kennedy weed dispensary</Link>. For dispatcher
+              <Link href="/weed-dispensary-brampton">Hillcrest / Kennedy weed dispensary</Link>. For dispatcher
               delivery from this same Unit 104 pin, use{" "}
               <Link href="/cannabis-delivery-hillcrest-brampton">Hillcrest / Kennedy cannabis delivery</Link>.
               {SHOW_CIGARETTES ? (

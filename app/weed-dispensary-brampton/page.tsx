@@ -1,17 +1,18 @@
 import { Metadata } from "next";
 import { GBPLandingPage } from "@/app/components/GBPLandingPage";
 import { gbpLocation } from "@/app/lib/gbp-location";
+import { HILLCREST_WEED_DISPENSARY } from "@/app/lib/hillcrestWeedDispensary";
 
 export const metadata: Metadata = {
   title: { absolute: gbpLocation.seoTitle },
   description: gbpLocation.metaDescription,
   alternates: {
-    canonical: `https://${gbpLocation.domain}/${gbpLocation.slug}`,
+    canonical: HILLCREST_WEED_DISPENSARY.canonical,
   },
   openGraph: {
     title: gbpLocation.seoTitle,
     description: gbpLocation.metaDescription,
-    url: `https://${gbpLocation.domain}/${gbpLocation.slug}/`,
+    url: HILLCREST_WEED_DISPENSARY.canonical,
     siteName: gbpLocation.storeName,
   },
   twitter: {

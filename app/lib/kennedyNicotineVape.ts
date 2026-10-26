@@ -45,7 +45,7 @@ export const KENNEDY_NICOTINE_VAPE_INTERNAL_LINKS = [
   { href: "/visit", label: "How to find Unit 104" },
   { href: "/24-hour-dispensary-brampton", label: "24-hour / open-now FAQ" },
   { href: "/cannabis-store-brampton", label: "Central Brampton cannabis store" },
-  { href: "/weed-dispensary-brampton/", label: "Hillcrest / Kennedy weed dispensary" },
+  { href: "/weed-dispensary-brampton", label: "Hillcrest / Kennedy weed dispensary" },
   { href: "/cannabis-delivery-hillcrest-brampton", label: "Hillcrest / Kennedy delivery" },
   { href: "/items/vapes", label: "Current Nic Vape menu" },
   { href: "/info/nicotine-vapes-brampton", label: "Nicotine vapes Brampton guide" },

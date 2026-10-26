@@ -36,7 +36,7 @@ export const VISIT_FAQS = [
 
 export const VISIT_INTERNAL_LINKS = [
   { href: "/", label: "Homepage NAP and menu" },
-  { href: "/weed-dispensary-brampton/", label: "Hillcrest / Kennedy weed dispensary" },
+  { href: "/weed-dispensary-brampton", label: "Hillcrest / Kennedy weed dispensary" },
   { href: "/24-hour-dispensary-brampton", label: "24-hour / open-now FAQ" },
   { href: "/cannabis-store-brampton", label: "Central Brampton cannabis store" },
   { href: "/exotic-weed", label: "Exotic Weed" },

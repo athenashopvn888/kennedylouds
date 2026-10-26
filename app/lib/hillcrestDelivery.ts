@@ -48,7 +48,7 @@ export const HILLCREST_DELIVERY_INTERNAL_LINKS = [
   { href: "/visit", label: "How to find Unit 104" },
   { href: "/24-hour-dispensary-brampton", label: "24-hour / open-now FAQ" },
   { href: "/cannabis-store-brampton", label: "Central Brampton cannabis store" },
-  { href: "/weed-dispensary-brampton/", label: "Hillcrest / Kennedy weed dispensary" },
+  { href: "/weed-dispensary-brampton", label: "Hillcrest / Kennedy weed dispensary" },
   { href: "/delivery", label: "Delivery catalog / LIVE ORDER" },
   { href: "/native-cigarettes-hillcrest-brampton", label: "Hillcrest / Kennedy native cigarettes" },
   { href: "/nicotine-vape-kennedy-brampton", label: "Kennedy / Hillcrest nicotine vape" },

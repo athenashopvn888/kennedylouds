@@ -236,7 +236,7 @@ export default function HillcrestDeliveryPage() {
               <Link href="/exotic-weed">Exotic</Link>, <Link href="/premium-weed">Premium</Link>,{" "}
               <Link href="/aaa-weed">AAA+</Link>, <Link href="/aa-weed">AA</Link>, and{" "}
               <Link href="/budget-weed">Budget</Link>. For the broader Hillcrest / Kennedy weed hub, use the{" "}
-              <Link href="/weed-dispensary-brampton/">central Brampton weed dispensary</Link>. For the Kennedy /
+              <Link href="/weed-dispensary-brampton">central Brampton weed dispensary</Link>. For the Kennedy /
               Queen / Main corridor note, use the{" "}
               <Link href="/cannabis-store-brampton">central Brampton cannabis store guide</Link>.
             </p>

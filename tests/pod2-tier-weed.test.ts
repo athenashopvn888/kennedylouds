@@ -73,7 +73,7 @@ test("legacy tier and resource URLs are direct permanent redirects", () => {
 });
 
 test("tier comparison and Weed resource preserve the broad Weed owner", () => {
-  assert.equal(TIER_COMPARE.ownerHref, "/weed-dispensary-brampton/");
+  assert.equal(TIER_COMPARE.ownerHref, "/weed-dispensary-brampton");
   assert.match(TIER_COMPARE.ownerAnchor, /Hillcrest \/ Kennedy/);
   assert.match(tierPage, /ParityHubNav/);
   assert.match(TIER_COMPARE.heading, /Kennedy Loud Weed & Flower Tiers/);

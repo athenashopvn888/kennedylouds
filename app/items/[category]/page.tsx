@@ -92,13 +92,13 @@ export default async function ItemsCategoryPage({
     if (text.includes("nic vape")) return "/items/vapes";
     if (text.includes("concentrates menu") || text.includes("concentrates")) return "/items/concentrates";
     if (text.includes("live menu")) return "/";
-    if (text.includes("visit page") || text.includes("hours") || text.includes("contact")) return "/weed-dispensary-brampton/";
+    if (text.includes("visit page") || text.includes("hours") || text.includes("contact")) return "/weed-dispensary-brampton";
     if (text.includes("flower tiers")) return "/resources/weed-flower-tier-guide";
     if (text.includes("exotic")) return "/exotic-weed";
     if (text.includes("premium")) return "/premium-weed";
     if (text.includes("aaa")) return "/aaa-weed";
     if (text.includes("budget")) return "/budget-weed";
-    return categoryLinkHrefs[index] || "/weed-dispensary-brampton/";
+    return categoryLinkHrefs[index] || "/weed-dispensary-brampton";
   }
 
   return (

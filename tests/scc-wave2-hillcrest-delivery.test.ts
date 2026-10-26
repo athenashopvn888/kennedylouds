@@ -123,7 +123,7 @@ test("dense graph links homepage, visit, B07, B13, weed, delivery LP, catalog, a
   assert.match(deliveryLib, /href: "\/visit"/);
   assert.match(deliveryLib, /href: "\/24-hour-dispensary-brampton"/);
   assert.match(deliveryLib, /href: "\/cannabis-store-brampton"/);
-  assert.match(deliveryLib, /href: "\/weed-dispensary-brampton\/"/);
+  assert.match(deliveryLib, /href: "\/weed-dispensary-brampton"/);
   assert.match(deliveryLib, /href: "\/delivery"/);
   assert.match(deliveryLib, /href: "\/exotic-weed"/);
   assert.match(deliveryLib, /href: "\/premium-weed"/);

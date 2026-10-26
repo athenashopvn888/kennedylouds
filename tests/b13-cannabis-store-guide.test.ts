@@ -71,7 +71,7 @@ test("B13 cannabis store guide includes required H2s, FAQ schema, and live inter
   assert.match(storePage, /"@type": "FAQPage"/);
   assert.match(storeGuide, /Where is the Kennedy Loud cannabis store in Brampton\?/);
   assert.match(storeGuide, /href: "\/"/);
-  assert.match(storeGuide, /href: "\/weed-dispensary-brampton\/"/);
+  assert.match(storeGuide, /href: "\/weed-dispensary-brampton"/);
   assert.match(storeGuide, /href: "\/visit"/);
   assert.match(storeGuide, /href: "\/24-hour-dispensary-brampton"/);
 });

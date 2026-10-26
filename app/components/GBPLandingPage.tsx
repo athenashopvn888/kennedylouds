@@ -283,7 +283,7 @@ export function GBPLandingPage() {
                 </Link>
               ))}
             </div>
-            <ParityHubNav currentPath="/weed-dispensary-brampton/" showGeoNote />
+            <ParityHubNav currentPath="/weed-dispensary-brampton" showGeoNote />
           </section>
 
           <section id="faq" className={styles.section}>

@@ -14,6 +14,7 @@ const nextConfig: NextConfig = {
   },
   async redirects() {
     return [
+      { source: "/weed-dispensary-brampton/", destination: "/weed-dispensary-brampton", permanent: true },
       { source: "/exotic", destination: "/exotic-weed", permanent: true },
       { source: "/premium", destination: "/premium-weed", permanent: true },
       { source: "/aaa", destination: "/aaa-weed", permanent: true },
