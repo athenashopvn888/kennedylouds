@@ -201,9 +201,15 @@
 }
 
 .articleBody > p { margin: 0 0 16px; }
-.articleBody ul { margin: 0 0 20px; padding-left: 24px; }
+.articleBody ul,
+.articleBody ol { margin: 0 0 20px; padding-left: 24px; }
 .articleBody li { margin: 7px 0; }
 .articleBody a { color: #127c49; font-weight: 700; }
+.tableWrap { overflow-x: auto; margin: 0 0 20px; }
+.articleBody table { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
+.articleBody th,
+.articleBody td { border: 1px solid rgba(16, 20, 17, 0.14); padding: 10px 12px; text-align: left; vertical-align: top; color: #526158; line-height: 1.55; }
+.articleBody th { color: #101411; font-weight: 800; background: #f3f5f0; }
 
 .faqs {
   margin-top: 36px;
