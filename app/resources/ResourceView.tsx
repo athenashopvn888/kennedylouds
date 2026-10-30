@@ -99,6 +99,25 @@ export default function ResourceView({ article }: ResourceViewProps) {
                 if (block.type === "h2") return <h2 key={`${block.type}-${index}`}><RichText text={visibleCopy(block.text, article.path)} /></h2>;
                 if (block.type === "h3") return <h3 key={`${block.type}-${index}`}><RichText text={visibleCopy(block.text, article.path)} /></h3>;
                 if (block.type === "list") return <ul key={`${block.type}-${index}`}>{block.items.map((item) => <li key={item}><RichText text={visibleCopy(item, article.path)} /></li>)}</ul>;
+                if (block.type === "ol") return <ol key={`${block.type}-${index}`}>{block.items.map((item) => <li key={item}><RichText text={visibleCopy(item, article.path)} /></li>)}</ol>;
+                if (block.type === "table") return (
+                  <div key={`${block.type}-${index}`} className={styles.tableWrap}>
+                    <table>
+                      <thead>
+                        <tr>
+                          {block.headers.map((header) => <th key={header} scope="col"><RichText text={visibleCopy(header, article.path)} /></th>)}
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {block.rows.map((row, rowIndex) => (
+                          <tr key={rowIndex}>
+                            {row.map((cell, cellIndex) => <td key={cellIndex}><RichText text={visibleCopy(cell, article.path)} /></td>)}
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
+                );
                 return <p key={`${block.type}-${index}`}><RichText text={visibleCopy(block.text, article.path)} /></p>;
               }) : article.sections.map((section) => (
                 <section key={section.heading}>

@@ -16,8 +16,9 @@ export async function generateMetadata({
   const page = getResourceBySegments(slug);
   if (!page) return {};
 
+  const title = page.seoTitle ?? page.title;
   return {
-    title: { absolute: page.seoTitle ?? page.title },
+    title: { absolute: title },
     description: page.metaDescription,
     alternates: { canonical: `${RESOURCE_SITE}${page.path}` },
     ...(page.lastChecked
@@ -32,6 +33,22 @@ export async function generateMetadata({
               "max-snippet": -1,
               "max-video-preview": -1,
             },
+          },
+        }
+      : {}),
+    ...(page.datePublished
+      ? {
+          keywords: ["hash oil", "cannabis oil", "distillate", "cannabis extract"],
+          openGraph: {
+            title,
+            description: page.metaDescription,
+            url: `${RESOURCE_SITE}${page.path}`,
+            type: "article" as const,
+          },
+          twitter: {
+            card: "summary" as const,
+            title,
+            description: page.metaDescription,
           },
         }
       : {}),
@@ -55,11 +72,12 @@ export default async function ResourceArticlePage({
       headline: page.title,
       description: page.metaDescription,
       mainEntityOfPage: canonical,
+      ...(page.datePublished ? { url: canonical, datePublished: page.datePublished } : {}),
       ...(page.dateModified ? { dateModified: page.dateModified } : {}),
       author: { "@type": "Organization", name: "Kennedy Loud Cannabis" },
       publisher: { "@type": "Organization", name: "Kennedy Loud Cannabis" },
     },
-    {
+    ...(page.omitBreadcrumbSchema ? [] : [{
       "@context": "https://schema.org",
       "@type": "BreadcrumbList",
       itemListElement: [
@@ -67,7 +85,7 @@ export default async function ResourceArticlePage({
         { "@type": "ListItem", position: 2, name: "Resources", item: `${RESOURCE_SITE}/resources` },
         { "@type": "ListItem", position: 3, name: page.title, item: canonical },
       ],
-    },
+    }]),
     ...(page.faqs?.length ? [{
       "@context": "https://schema.org",
       "@type": "FAQPage",

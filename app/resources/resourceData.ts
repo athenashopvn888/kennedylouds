@@ -1,3 +1,5 @@
+import { HASH_OIL_LABELS_ARTICLE } from "./hashOilLabelsArticle.ts";
+
 export type ResourceSection = {
   heading: string;
   body: string;
@@ -10,7 +12,9 @@ export type ResourceLink = {
 
 export type ResourceBlock =
   | { type: "h2" | "h3" | "p"; text: string }
-  | { type: "list"; items: string[] };
+  | { type: "list"; items: string[] }
+  | { type: "ol"; items: string[] }
+  | { type: "table"; headers: string[]; rows: string[][] };
 
 export type ResourceFaq = { question: string; answer: string };
 
@@ -28,6 +32,8 @@ export type ResourceArticle = {
   faqs?: ResourceFaq[];
   lastChecked?: string;
   dateModified?: string;
+  datePublished?: string;
+  omitBreadcrumbSchema?: boolean;
 };
 
 export const RESOURCE_BANNER = "/banners/KennedyLoud_Welcome_Banner.webp";
@@ -7433,6 +7439,8 @@ const PINKY_KLC01_ADDITIONS: ResourceArticle[] = [
 RESOURCE_HUB.sections.push({ heading: "Learn the Menu, Then Use the Live Menu", body: "Kennedy Loud's Resource Centre has two jobs. First, explain the words and categories that do not change every day. Second, point changing product details back to the current menu. Use the guides for: flower quality language; first-visit planning; THC; trichomes; aroma; growing methods; genetics; weed slang; cigarette terminology. Use the current category/product pages for: current products; prices; package details; flavours; strains; stock; availability. That keeps the Resource Centre useful even when the menu rotates. Add grouped cards Cannabis Basics Cannabis 101 → /resources/cannabis-101 First Visit to Kennedy Loud Cannabis → /resources/hillcrest-ave-visit-guide Weed Dispensary vs Cannabis Dispensary → /resources/cannabis-dispensary-vs-weed-dispensary Indica vs Sativa vs Hybrid → /resources/cannabis-101/indica-sativa-hybrid Strain vs Cultivar → /resources/cannabis-101/strain-vs-cultivar Landrace vs Hybrid → /resources/cannabis-101/landrace-vs-hybrid Weed Slang Explained → /resources/cannabis-101/weed-slang-glossary Flower Quality Kennedy Loud Weed & Flower Quality Guide → /resources/weed-flower-tier-guide What Does Good Weed Mean? → /resources/flower-guides/what-does-good-weed-mean Top Shelf, Mids & Quads → /resources/flower-guides/top-shelf-mids-quads THC vs Weed Quality → /resources/flower-guides/thc-vs-weed-quality Bag Appeal → /resources/flower-guides/bag-appeal Frosty Weed & Trichomes → /resources/flower-guides/trichomes-frosty-weed Gas, Loud & Terpy → /resources/flower-guides/terpenes-gas-loud-aroma Drying, Curing & Freshness → /resources/flower-guides/drying-curing-freshness Smalls vs Big Buds → /resources/flower-guides/smalls-vs-big-buds Growing & Production BC Grown / Indoor / Hydro / Outdoor → /resources/flower-guides/bc-grown-indoor-hydro-outdoor Craft vs Commercial Cannabis → /resources/flower-guides/craft-vs-commercial-cannabis Existing Menu & Visit Guides Preserve current cards for: Kennedy Road menu map; 24-hour Brampton dispensary guide; vapes & concentrates guide; Magic Stuff menu guide. Tobacco Information Native Cigarettes in Ontario → /resources/native-smokes-brampton-guide Do not make the Resource Centre card copy promise current cigarette brands/prices." });
 for (const page of RESOURCE_PAGES) Object.assign(page, PINKY_KLC01_OVERRIDES[page.path] || {});
 RESOURCE_PAGES.push(...PINKY_KLC01_ADDITIONS);
+RESOURCE_PAGES.push(HASH_OIL_LABELS_ARTICLE);
+ALL_RESOURCE_PAGES.push(HASH_OIL_LABELS_ARTICLE);
 
 export const RESOURCE_PATHS = ALL_RESOURCE_PAGES.map((page) => page.path);
 
