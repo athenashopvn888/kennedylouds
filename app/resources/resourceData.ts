@@ -1,4 +1,5 @@
 import { HASH_OIL_LABELS_ARTICLE } from "./hashOilLabelsArticle.ts";
+import { INFUSED_PREROLLS_ARTICLE } from "./infusedPreRollsArticle.ts";
 
 export type ResourceSection = {
   heading: string;
@@ -7440,7 +7441,9 @@ RESOURCE_HUB.sections.push({ heading: "Learn the Menu, Then Use the Live Menu", 
 for (const page of RESOURCE_PAGES) Object.assign(page, PINKY_KLC01_OVERRIDES[page.path] || {});
 RESOURCE_PAGES.push(...PINKY_KLC01_ADDITIONS);
 RESOURCE_PAGES.push(HASH_OIL_LABELS_ARTICLE);
+RESOURCE_PAGES.push(INFUSED_PREROLLS_ARTICLE);
 ALL_RESOURCE_PAGES.push(HASH_OIL_LABELS_ARTICLE);
+ALL_RESOURCE_PAGES.push(INFUSED_PREROLLS_ARTICLE);
 
 export const RESOURCE_PATHS = ALL_RESOURCE_PAGES.map((page) => page.path);
 
