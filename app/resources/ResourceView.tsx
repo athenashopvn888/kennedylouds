@@ -11,13 +11,16 @@ type ResourceViewProps = {
 };
 
 function RichText({ text }: { text: string }) {
-  if (!text.includes("**") && !text.includes("](")) return <>{text}</>;
-  const parts = text.split(/(\*\*[^*]+\*\*|\[[^\]]+\]\([^)]+\))/g).filter((part) => part.length > 0);
+  if (!text.includes("*") && !text.includes("](")) return <>{text}</>;
+  const parts = text.split(/(\*\*[^*]+\*\*|\[[^\]]+\]\([^)]+\)|\*[^*]+\*)/g).filter((part) => part.length > 0);
   return (
     <>
       {parts.map((part, index) => {
         if (part.startsWith("**") && part.endsWith("**")) {
           return <strong key={index}>{part.slice(2, -2)}</strong>;
+        }
+        if (part.startsWith("*") && part.endsWith("*")) {
+          return <em key={index}>{part.slice(1, -1)}</em>;
         }
         const link = /^\[([^\]]+)\]\((\/[^)]*)\)$/.exec(part);
         if (link && link[2].startsWith("/") && !link[2].startsWith("//")) {

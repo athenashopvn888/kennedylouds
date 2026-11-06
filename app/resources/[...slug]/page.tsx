@@ -38,7 +38,9 @@ export async function generateMetadata({
       : {}),
     ...(page.datePublished
       ? {
-          keywords: ["hash oil", "cannabis oil", "distillate", "cannabis extract"],
+          ...(page.path === "/resources/hash-oil-vs-cannabis-oil-labels"
+            ? { keywords: ["hash oil", "cannabis oil", "distillate", "cannabis extract"] }
+            : {}),
           openGraph: {
             title,
             description: page.metaDescription,
