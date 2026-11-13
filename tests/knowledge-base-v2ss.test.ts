@@ -5,10 +5,10 @@ import { TIER_SEO } from "../app/lib/tierSeoContent.ts";
 
 describe("KLC01 knowledge base V2 SS", () => {
   it("adds 15 new resources and expands the four approved owners", () => {
-    assert.equal(RESOURCE_PAGES.length, 26);
+    assert.equal(RESOURCE_PAGES.length, 27);
     const routes = new Set(RESOURCE_PAGES.map((page) => page.path));
-    assert.equal(routes.size, 26);
-    for (const route of ["/resources/cannabis-101", "/resources/flower-guides/what-does-good-weed-mean", "/resources/cannabis-101/weed-slang-glossary", "/resources/smoking-at-home-fire-safety", "/resources/hash-oil-vs-cannabis-oil-labels", "/resources/infused-pre-rolls-and-moon-rocks"]) assert.equal(routes.has(route), true);
+    assert.equal(routes.size, 27);
+    for (const route of ["/resources/cannabis-101", "/resources/flower-guides/what-does-good-weed-mean", "/resources/cannabis-101/weed-slang-glossary", "/resources/smoking-at-home-fire-safety", "/resources/hash-oil-vs-cannabis-oil-labels", "/resources/infused-pre-rolls-and-moon-rocks", "/resources/what-is-shatter-vs-wax"]) assert.equal(routes.has(route), true);
     for (const route of ["/resources/cannabis-dispensary-vs-weed-dispensary", "/resources/hillcrest-ave-visit-guide", "/resources/weed-flower-tier-guide", "/resources/native-smokes-brampton-guide"]) assert.ok((RESOURCE_PAGES.find((page) => page.path === route)?.blocks?.length || 0) > 5);
   });
 
