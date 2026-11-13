@@ -1,5 +1,6 @@
 import { HASH_OIL_LABELS_ARTICLE } from "./hashOilLabelsArticle.ts";
 import { INFUSED_PREROLLS_ARTICLE } from "./infusedPreRollsArticle.ts";
+import { SHATTER_VS_WAX_ARTICLE } from "./shatterVsWaxArticle.ts";
 
 export type ResourceSection = {
   heading: string;
@@ -7442,8 +7443,10 @@ for (const page of RESOURCE_PAGES) Object.assign(page, PINKY_KLC01_OVERRIDES[pag
 RESOURCE_PAGES.push(...PINKY_KLC01_ADDITIONS);
 RESOURCE_PAGES.push(HASH_OIL_LABELS_ARTICLE);
 RESOURCE_PAGES.push(INFUSED_PREROLLS_ARTICLE);
+RESOURCE_PAGES.push(SHATTER_VS_WAX_ARTICLE);
 ALL_RESOURCE_PAGES.push(HASH_OIL_LABELS_ARTICLE);
 ALL_RESOURCE_PAGES.push(INFUSED_PREROLLS_ARTICLE);
+ALL_RESOURCE_PAGES.push(SHATTER_VS_WAX_ARTICLE);
 
 export const RESOURCE_PATHS = ALL_RESOURCE_PAGES.map((page) => page.path);
 
