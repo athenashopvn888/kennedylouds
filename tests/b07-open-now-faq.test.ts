@@ -36,7 +36,7 @@ test("B07 open-now FAQ has unique title, meta, and H1 for 24h Brampton queries",
   const existingTitles = [
     "Kennedy Loud Cannabis | 24 Hour Weed Dispensary Brampton",
     gbpLocation.seoTitle,
-    "Kennedy Road Weed Dispensary | Open 24 Hours | Brampton",
+    "Kennedy Road Weed Dispensary near me | Open 24 Hours | Brampton",
     VISIT_TITLE,
     ...SEO_PAGES.map((page) => page.title),
   ];

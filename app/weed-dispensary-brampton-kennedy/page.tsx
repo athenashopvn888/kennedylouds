@@ -5,12 +5,12 @@ import { gateLinks } from "../lib/cigaretteGate";
 import { SHOW_CIGARETTES } from "../lib/siteConfig";
 
 export const metadata: Metadata = {
-  title: { absolute: "Kennedy Road Weed Dispensary | Open 24 Hours | Brampton" },
+  title: { absolute: "Kennedy Road Weed Dispensary near me | Open 24 Hours | Brampton" },
   description:
     "Kennedy Loud Cannabis is the 24-hour weed dispensary at 49 Hillcrest Ave Unit 104 in Brampton, on the Kennedy Road corridor. Call +1 (289) 206-1181. Adults 19+.",
   alternates: { canonical: "/weed-dispensary-brampton-kennedy" },
   openGraph: {
-    title: "Kennedy Road Weed Dispensary | Open 24 Hours | Brampton",
+    title: "Kennedy Road Weed Dispensary near me | Open 24 Hours | Brampton",
     description:
       "Walk-in Brampton dispensary on the Kennedy Road corridor at 49 Hillcrest Ave Unit 104. Open 24 hours. Adults 19+.",
   },
