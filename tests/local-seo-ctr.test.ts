@@ -45,7 +45,7 @@ test("homepage and Brampton landing titles are unique, CTR-oriented and absolute
   assert.match(homepage, /Kennedy Loud Cannabis \| 24 Hour Weed Dispensary Brampton/);
   assert.equal(gbpLocation.seoTitle, "Brampton Cannabis Dispensary – Hillcrest / Kennedy / Unit 104 Weed Dispensary");
   assert.match(landing, /absolute: gbpLocation\.seoTitle/);
-  assert.match(kennedy, /Kennedy Road Weed Dispensary \| Open 24 Hours \| Brampton/);
+  assert.match(kennedy, /Kennedy Road Weed Dispensary near me \| Open 24 Hours \| Brampton/);
   assert.notEqual(gbpLocation.seoTitle, "Kennedy Loud Cannabis | 24 Hour Weed Dispensary Brampton");
   assert.match(gbpLocation.metaDescription, /Brampton cannabis dispensary/);
   assert.match(gbpLocation.metaDescription, /49 Hillcrest Ave Unit 104/);

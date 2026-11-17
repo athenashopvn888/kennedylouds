@@ -37,7 +37,7 @@ test("B13 cannabis store guide has unique title, meta, and H1 for central Brampt
     gbpLocation.seoTitle,
     VISIT_TITLE,
     "24-Hour Dispensary Brampton FAQ | Open Now",
-    "Kennedy Road Weed Dispensary | Open 24 Hours | Brampton",
+    "Kennedy Road Weed Dispensary near me | Open 24 Hours | Brampton",
     ...SEO_PAGES.map((page) => page.title),
   ];
   assert.ok(!existingTitles.includes(STORE_TITLE));

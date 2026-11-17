@@ -30,7 +30,7 @@ test("B01 visit guide has unique title, meta, and H1 for Unit 104 findability", 
   const existingTitles = [
     "Kennedy Loud Cannabis | 24 Hour Weed Dispensary Brampton",
     gbpLocation.seoTitle,
-    "Kennedy Road Weed Dispensary | Open 24 Hours | Brampton",
+    "Kennedy Road Weed Dispensary near me | Open 24 Hours | Brampton",
     ...SEO_PAGES.map((page) => page.title),
   ];
   assert.ok(!existingTitles.includes(VISIT_TITLE));
