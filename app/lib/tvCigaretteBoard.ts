@@ -55,7 +55,7 @@ export function tv2CardItems<T extends ShelfItem>(
     }
     if (!show && shouldHideCigarette(it)) return false;
     return card.filter(it);
-  }).filter((it) => (show || card.id !== "CIGARETTES" ? !(daytime && isNicotineItem(it)) : true));
+  }).filter((it) => (card.id === "CIGARETTES" && show ? true : !(daytime && isNicotineItem(it))));
 }
 
 export function tv2CardTitle(card: { id: string; title: string }, show: boolean, wordingTitle?: string): string {
